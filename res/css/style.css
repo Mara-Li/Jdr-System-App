@@ -11,22 +11,6 @@ body{
     font-family: 'Josefin Sans', sans-serif;
 }
 
-header.page-header {
-    display: block;
-    height: 120px;
-    min-width: 120px;
-    color: #fff;
-    text-shadow: #000 0 0 .2em;
-    justify-content: center;
-    text-align: center;
-}
-
-header.page-header > h1 {
-    font: bold calc(1em + 2 * (100vw - 120px) / 100)
-    font-family: 'Josefin Sans', sans-sans-serif;
-    margin: 2%;
-}
-
 @media only screen and (max-width: 800px) {
     .flex-column{
         width: 95%;
@@ -52,11 +36,35 @@ header.page-header > h1 {
 
 header {
   display:block;
-  padding: 60px;
   text-align: center;
-  background: #1abc9c;
-  color: blue;
-  font-size: 30px;
+  background: grey;
+  color: black;
+  font-size: 15px;
+}
+
+.icon-bar {
+  width: 100%;
+  background-color: grey;
+  overflow: auto;
+  float:left;
+}
+
+.icon-bar a {
+  float: right;
+  width: 50%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #1abc9c ;
 }
 
 

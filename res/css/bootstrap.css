@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Lato:400,700,900,400italic");
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Josefin+Sans|Pangolin&display=swap');
 
 /*!
  * Bootstrap v2.3.1
@@ -225,7 +225,7 @@ textarea {
 
 body {
   margin: 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Josefin Sans", "Concert One", Josefin Sans, Concert One, sans-serif;
   font-size: 15px;
   line-height: 21px;
   color: #2c3e50;
@@ -2277,14 +2277,13 @@ table th[class*="span"],
 
 [class^="icon-"],
 [class*=" icon-"] {
-  display: inline-block;
+
   width: 14px;
   height: 14px;
-  margin-top: 1px;
+
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }

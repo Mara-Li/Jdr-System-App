@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Josefin+Sans|Pangolin&display=swap');
 body {
   background-color: #f6f6f6;
-  padding-top: 30px;
 }
 .main {
   background-color: #fff;
@@ -18,7 +18,51 @@ body {
   text-transform: none;
   line-height: 30px;
 }
-.sidebar-header-2 { margin-left: 10px; }
-.sidebar-header-3 { margin-left: 20px; }
+.sidebar-header-1 {
+  font-weight: bold;
+}
+.sidebar-header-2 {
+  margin-left: 10px;
+
+}
+.sidebar-header-3 {
+  margin-left: 20px;
+  border-left-style: double;
+  border-left-color:#1abc9c;
+  border-left-width: 4px;
+}
 .sidebar-header-4 { margin-left: 30px; }
 .sidebar-header-5 { margin-left: 40px; }
+
+header {
+  display:block;
+  text-align: center;
+  background: grey;
+  color: black;
+  font-size: 15px;
+}
+
+.icon-bar {
+  width: 100%;
+  background-color: grey;
+  overflow: auto;
+  height: auto;
+}
+
+.icon-bar a {
+  float: right;
+  width: 50%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #1abc9c ;
+}
