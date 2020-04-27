@@ -167,7 +167,30 @@ function createLogFromActualInput(){
   } //A faire plus tard quand le cadre aura été fait, partie 2 du programme
   //s'efface quand on actualise !
 
-  function clearAll(){} //Ajouter un bouton d'effacer tous les champs mais NE DOIT PAS EFFACER LES LOGS
+function clearLog(){}
+
+  function clearInput(){
+    elem_inputs.pv_max.value=100;
+    elem_inputs.pv_reste.value=100;
+    elem_inputs.bouclier.value=0;
+    elem_inputs.endurance.value=0;
+    elem_inputs.des_atq.value=0;
+    elem_inputs.des_def.value=0;
+    elem_inputs.arme.value=0;
+    elem_inputs.bonus.value=0;
+    elem_inputs.capacite_type.value=0;
+    elem_inputs.des_bonus_def.value=0;
+    elem_inputs.res_deg.value=0;
+    elem_inputs.res_pv.value=0;
+    elem_inputs.des_bonus_def.checked=0;
+    elem_inputs.atq_type.checked=1;
+    elem_inputs.capacite_type.checked=1;
+    elem_inputs.dist_atq.checked=1;
+    elem_inputs.des_esquive.checked=1;
+    elem_inputs.res_deg.innerHTML = '░';
+    elem_inputs.res_pv.innerHTML ='░';
+    capa_toggle(elem_inputs.atq_type);
+  } //Ajouter un bouton d'effacer tous les champs mais NE DOIT PAS EFFACER LES LOGS
 
   function test_none(t){
       lg=t.trim();
