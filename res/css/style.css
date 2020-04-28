@@ -72,6 +72,7 @@ body {
 header {
   display:block;
   text-align: center;
+  width: 100%;
   background: grey;
   color: black;
   font-size: 15px;
