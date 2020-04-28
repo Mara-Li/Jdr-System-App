@@ -1,173 +1,173 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Règle de jeu</title>
-    <link type="text/css" rel="stylesheet" href="res/css/bootstrap.css"/>
-    <link type="text/css" rel="stylesheet" href="res/css/bootstrap-responsive.css"/>
-    <link type="text/css" rel="stylesheet" href="res/css/pilcrow.css"/>
-    <link type="text/css" rel="stylesheet" href="res/css/hljs-github.min.css"/>
-    <link type="text/css" rel="stylesheet" href="res/css/style_regle.css"/>
-    <link rel="icon" type="image/png" href="res/img/logo.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  </head>
-  <header>
-    <div class="icon-bar">
-      <a class="readme" href="http://jdr-system.ovh/"><i class="fa fa-home"></i></a>
-      <a class="active" href="https://www.jdr-system.ovh/readme.html"><i class="fab fa-readme"></i></i></a>
-    </div>
-  </header>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Règle de jeu</title>
+  <link type="text/css" rel="stylesheet" href="res/css/bootstrap/bootstrap.min.css"/>
+  <link type="text/css" rel="stylesheet" href="res/css/bootstrap/bootstrap-responsive.min.css"/>
+  <link type="text/css" rel="stylesheet" href="res/css/pilcrow.css"/>
+  <link type="text/css" rel="stylesheet" href="res/css/hljs-github.min.css"/>
+  <link type="text/css" rel="stylesheet" href="res/css/style_regle.css"/>
+  <link rel="icon" type="image/png" href="res/img/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<header>
+  <div class="icon-bar">
+    <a class="readme" href="index.html"><i class="fa fa-home"></i></a>
+    <a class="active" href=""><i class="fab fa-readme"></i></i></a>
+  </div>
+</header>
 <body>
-
+  
   <div class="container-fluid">
     <div class="row-fluid">
       <div class="span3"><ul class="nav nav-list">
-    <li class="sidebar-header-1"><a href="#systeme-de-combat">SYSTEME DE COMBAT</a></li>
-    <li class="sidebar-header-2"><a href="#dégâts">Dégâts</a></li>
-    <li class="sidebar-header-2"><a href="#cas-des-duels-amicaux">Cas des duels amicaux</a></li>
-    <li class="sidebar-header-2"><a href="#bouclier">Bouclier</a></li>
-    <li class="sidebar-header-2"><a href="#capacité">Capacité</a></li>
-    <li class="sidebar-header-3"><a href="#bonus">Bonus</a></li>
-    <li class="sidebar-header-3"><a href="#les-primes">Les primes</a></li>
-    <li class="sidebar-header-2"><a href="#exceptions">Exceptions</a></li>
-    <li class="sidebar-header-1"><a href="#résumé">RÉSUMÉ</a></li>
-    <li class="sidebar-header-1"><a href="#utilisation">UTILISATION</a></li>
-</ul>
-      </div>
-      <div class="span9 main"><h1 id="systeme-de-combat"><a class="header-link" href="#systeme-de-combat"></a>SYSTEME DE COMBAT</h1>
-<p>La caractéristique que vous lancez pour votre défense est soit un dé d&#39;endurance ou d&#39;agilité. </p>
-<ul class="list">
-<li><p>L&#39;endurance vous permet d&#39;encaisser le coup, il recevra donc moins de dégâts.</p>
-</li>
-<li><p>L&#39;agilité vous permet d&#39;esquiver le coup (et donc de ne pas prendre de dégâts). De plus, pour réussir votre esquive, vous devez faire moitié moins que l&#39;adversaire. Ainsi, s&#39;il fait une attaque de 8, vous devez faire 4 ou moins. Certaines attaques deviennent donc impossible à esquiver à partir d&#39;un certains scores (1 et 0).</p>
-</li>
-</ul>
-<p>Il existe cependant des attaques qui ne rentrent dans cette catégorie : les altérations d&#39;état.</p>
-<ul class="list">
-<li>Les attaques mentales : Elles nécessitent une défense avec un dé d&#39;intelligence.</li>
-<li>Les attaques liés aux poisons et maladies : Elles nécessitent un dé de karma.</li>
-</ul>
-<p>Choisissez donc bien en fonction de vos caractéristiques !</p>
-<p>Vous devez OBLIGATOIREMENT lancer votre dé avant de déterminer votre action. Mais vous n&#39;êtes pas obligé d&#39;attendre le dé de défense de votre adversaire. Dans tous les cas, l&#39;action finale avec les dégâts sera après le lancé des protagonistes de l&#39;action. </p>
-<p>Dans le cas où il y aurait un 1 VS plusieurs, la personne en sous nombre doit lancé un dé de défense pour chaque attaque reçu et peut attaquer un certain nombre de personne en fonction de son rang.</p>
-<h2 id="dégâts"><a class="header-link" href="#dégâts"></a>Dégâts</h2>
-<p>Les dégâts sont déterminés en fonction de l&#39;écart de dé entre l&#39;attaquant et le défenseur dans le cas où le défenseur n&#39;a pas réussi à esquiver l&#39;attaque. Ainsi :</p>
-<ul class="list">
-<li><p>Ecart de 9 (voire+): Coup critique : L&#39;adversaire perd 50% de ses PV </p>
-</li>
-<li><p>De 8 à 7 : Très Bon dégât : Le défenseur perd 40% de ses pv. </p>
-</li>
-<li><p>De 6 à 5 : Bon dégât : Le défenseur perd 30% de ses pv. </p>
-</li>
-<li><p>De 4 à 3 : Dégât moyen: Le défenseur perd 20% de ses pv. </p>
-</li>
-<li><p>2 : Dégât faible : Le défenseur perd 10% de ses pv. </p>
-</li>
-<li><p>1 : Dégât très faible : Le défenseur perd 5% de ses pv. </p>
-</li>
-<li><p>0 : Le défenseur ne prend aucun dégât. </p>
-</li>
-</ul>
-<p>Dans le cas où le défenseur aurait encaissé le coup (dé d&#39;endurance), il perd moins de pv. </p>
-<p>En général, sa défense diminue de 10% les dégâts en fonction de la valeur de son dé et donc, de sa caractéristique d&#39;endurance. Ainsi, avec 8 d&#39;endurance, il diminuerait les dégât de 80% dans le cas d&#39;un coup critique (score de 0), et cela diminuerait jusqu&#39;à la valeur seuil de son dé. </p>
-<p>:warning: Attention, dans le cas où la personne posséderait une &quot;remise&quot;(diminution du dé), la valeur seuil n&#39;est plus la même que la caractéristique : le dé doit avoir une valeur strictement inférieure pour que l&#39;endurance soit validé. </p>
-<h2 id="cas-des-duels-amicaux"><a class="header-link" href="#cas-des-duels-amicaux"></a>Cas des duels amicaux</h2>
-<p>Lors d&#39;un combat entre PJ &quot;amicaux&quot;, vous ne perdez pas de pv et vous devez lancer un dé 10 pour déterminer celui qui a l&#39;initiative. La personne avec le plus grand score commence.</p>
-<h2 id="bouclier"><a class="header-link" href="#bouclier"></a>Bouclier</h2>
-<p>Les boucliers protègent des dégâts. Dans les faits, cela fonctionne exactement comme un encaissement avec un dé d&#39;endurance. Cependant, les résistances sont fixes et liés soit à votre équipement, soit au rang de votre adversaire. En général, il existe :</p>
-<ul class="list">
-<li>Armure légère : Diminution de 10%</li>
-<li>Armure moyenne : Diminution de 25%</li>
-<li>Armure lourde : Diminution de 50%.</li>
-</ul>
-<h2 id="capacité"><a class="header-link" href="#capacité"></a>Capacité</h2>
-<p>Avec la mise à jour 1.4, vous pouvez maintenant introduire directement les capacités aux calculs du programme.</p>
-<p>Ainsi :</p>
-<ul class="list">
-<li>Perforant correspond à un bonus de 15%, mais la capacité traversa toute les défense de l&#39;ennemi.</li>
-<li>Burst correspond à un simple bonus de 25% mais ses capacités traversent très mal les boucliers (Le bonus descendra à 12% à ce moment)</li>
-<li>Autre : Tout ce qui ne rentrerait pas dans les deux schémas précédents, mais dont vous souhaitez quand même qu&#39;ils bénéficient de la prime d&#39;un ultra coup-critique ou d&#39;un coup-critique. </li>
-</ul>
-<p>Il est à noté qu&#39;il y a de nombreux équilibrage vis à vis des dégâts qui ne sont pas détaillés ici. Vous les retrouverez dans le code dans les fonctions <code>degat_burst</code>, <code>degat_burst_bouclier</code>, <code>degat_perforant</code> et <code>degat_autre</code>.</p>
-<h3 id="bonus"><a class="header-link" href="#bonus"></a>Bonus</h3>
-<p>Certaines attaques ont des bonus très légers, ainsi :</p>
-<ul class="list">
-<li>Pouvoir : 10%</li>
-<li>Pistolet : 8%</li>
-<li>Fusil : 10%</li>
-<li>Artillerie : 15%</li>
-<li>Couteau: 5%</li>
-<li>Projectile : 5%</li>
-<li>Epée : 10%</li>
-<li>Contondant : 15%</li>
-<li>Autre : 0% - Mais vous pouvez choisir le bonus que vous voulez entrer</li>
-<li>Aucun : Absence de bonus - c&#39;est la valeur par défaut du programme.</li>
-</ul>
-<p>Evidemment, pour toutes les attaques, vous pouvez rajouter des bonus extérieur avec le champ correspondant. </p>
-<h3 id="les-primes"><a class="header-link" href="#les-primes"></a>Les primes</h3>
-<p>Dans le cas où votre personnage fait : </p>
-<ul class="list">
-<li>Un coup critique : Son bonus sera multiplié par 1,4.</li>
-<li>Un Ultra critique : Son bonus sera multiplié par 1.8.</li>
-</ul>
-<p>De plus, les deux ont un bonus d&#39;attaque très léger, afin d&#39;équilibré par rapport aux attaques normales. </p>
-<p>:warning: Lorsque l&#39;on multiplie, on ne prend pas en compte le &quot;pourcent&quot; (la division par 100).</p>
-<h2 id="exceptions"><a class="header-link" href="#exceptions"></a>Exceptions</h2>
-<p>Il existe TROIS exceptions aux systèmes de dégâts : </p>
-<ul class="list">
-<li><p>Les Ultra coup-critiques <em>d&#39;attaque</em> :  Lorsqu&#39;un PJ a un score de dés égal à 0, il obtient automatiquement le bonus de 50% et outrepasse la défense par endurance de son adversaire. </p>
-</li>
-<li><p>Les Ultra coup-critiques <em>de défense</em> : Lorsqu&#39;un combattant a un score de dés d&#39;endurance égal à 0, il annule automatiquement l&#39;attaque de son adversaire, quelque soit la valeur de son dé. </p>
-</li>
-<li><p>Les coup-critiques d&#39;attaque :  Lorsqu&#39;un combattant a un score de dés égal à 1, il annule la défense par endurance de son adversaire.</p>
-</li>
-</ul>
-<p>A noté où dans le cas où les deux combattant font des UCC d&#39;attaque et de défense (La probabilité est mince), c&#39;est l&#39;attaquant qui aura l&#39;avantage.</p>
-<h1 id="résumé"><a class="header-link" href="#résumé"></a>RÉSUMÉ</h1>
-<ul class="list">
-<li><p>Lancé de dés d&#39;attaque et de défense</p>
-<blockquote>
-<ul class="list">
-<li>L&#39;endurance permet d&#39;encaisser les dégâts. </li>
-<li>L&#39;esquive permet de ne pas prendre de dégât. Elle est réussit si le dé est moitié moins du dé d&#39;attaque de l&#39;adversaire.</li>
-</ul>
-</blockquote>
-</li>
-<li><p>Dés de 10 lié à votre caractéristiques</p>
-<blockquote>
-<ul class="list">
-<li>Remise : Valeur seuil = strictement inférieure à votre caractéristique (7 pour 8, 6 pour 7, etc).</li>
-<li>Pas de remise : Seuil = caractéristique</li>
-</ul>
-</blockquote>
-</li>
-<li><p>Meilleur jet : 0, pire jet : 10</p>
-<blockquote>
-<p>Un 0 correspond à un &quot;Ultra coup critique&quot; et un 1 à un &quot;coup critique&quot;. </p>
-</blockquote>
-</li>
-<li><p>Quand vous utilisez votre capacité ou quand vous attaquez avec votre pouvoir, vous devez lancer le dé lié à votre pouvoir.</p>
-</li>
-<li>De même, si vous attaquez en utilisant une arme, vous devez lancé la caractéristique liée.</li>
-</ul>
-<h1 id="utilisation"><a class="header-link" href="#utilisation"></a>UTILISATION</h1>
-<ul class="list">
-<li><strong>Défenseur</strong> : Les caractéristiques qui correspondent à la personne attaquée. Notons que la partie des PV restant se rempli automatiquement avec les PV max, puis se mettra à jour au fur et à mesure.</li>
-<li><strong>Attaquant</strong> : Le type d&#39;attaque, si elle est lancé par une personne ou un monstre, et si c&#39;est ou non une capacité. </li>
-<li><strong>Dés</strong> : Simplement le type de défense et les dés qui correspondent à l&#39;attaque et la défense. De plus, vous pouvez cocher ou non si la personne possède une remise pour sa défense. Vous pouvez choisir si la défense est une endurance ou esquive. Le programme calculera automatiquement si l&#39;esquive est esquivée (si vous avez la flemme).</li>
-<li><strong>Remise</strong> : Un bonus de départ sur les personnages, qui diminue la valeur des dés lancés. Voir plus haut pour l&#39;impact de ce bouton. </li>
-<li>Vous pouvez lancer le programme en appuyant sur le bouton mais aussi avec enter.</li>
-<li><strong>Résultat</strong> : Les PV restant (et le champ correspondant se met à jour) ainsi que les dégâts infligés. Vous pouvez donc enchainer sur plusieurs attaques sans avoir à reset entièrement le programme, si le défenseur est le même. </li>
-<li>Vous devez choisir si votre personnages attaque avec une capacité ou non. Par défaut, ce sont les attaques normales. En effet, un coup critique avec une capacité a un bonus différent qu&#39;un coup critique avec une attaque normale. Pour changer cela, il suffit de cliquer sur le bouton radio. </li>
-<li>Le bouton radio permet d&#39;activer un champ qui vous permet de choisir entre les capacités &#39;Burst&#39;, &#39;perforant&#39; ou &#39;Autre&#39;. </li>
-<li>Il n&#39;est malheureusement pas possible de calculer les actions de soutien ou de malus avec le programme, vous devez donc multiplier vos bonus par vous même en suivant la table.</li>
-<li>Vous n&#39;avez pas besoin de prendre en compte les capacités particulières d&#39;une attaque perforante, d&#39;un UCC et d&#39;un CC, ainsi que les bonus associés aux capacités : le programme s&#39;en charge aussi. Remplissez donc tous les champs sans vous souciez de cela.</li>
-</ul>
-      </div>
+        <li class="sidebar-header-1"><a href="#systeme-de-combat">SYSTEME DE COMBAT</a></li>
+        <li class="sidebar-header-2"><a href="#dégâts">Dégâts</a></li>
+        <li class="sidebar-header-2"><a href="#cas-des-duels-amicaux">Cas des duels amicaux</a></li>
+        <li class="sidebar-header-2"><a href="#bouclier">Bouclier</a></li>
+        <li class="sidebar-header-2"><a href="#capacité">Capacité</a></li>
+        <li class="sidebar-header-3"><a href="#bonus">Bonus</a></li>
+        <li class="sidebar-header-3"><a href="#les-primes">Les primes</a></li>
+        <li class="sidebar-header-2"><a href="#exceptions">Exceptions</a></li>
+        <li class="sidebar-header-1"><a href="#résumé">RÉSUMÉ</a></li>
+        <li class="sidebar-header-1"><a href="#utilisation">UTILISATION</a></li>
+      </ul>
+    </div>
+    <div class="span9 main"><h1 id="systeme-de-combat"><a class="header-link" href="#systeme-de-combat"></a>SYSTEME DE COMBAT</h1>
+      <p>La caractéristique que vous lancez pour votre défense est soit un dé d&#39;endurance ou d&#39;agilité. </p>
+      <ul class="list">
+        <li><p>L&#39;endurance vous permet d&#39;encaisser le coup, il recevra donc moins de dégâts.</p>
+        </li>
+        <li><p>L&#39;agilité vous permet d&#39;esquiver le coup (et donc de ne pas prendre de dégâts). De plus, pour réussir votre esquive, vous devez faire moitié moins que l&#39;adversaire. Ainsi, s&#39;il fait une attaque de 8, vous devez faire 4 ou moins. Certaines attaques deviennent donc impossible à esquiver à partir d&#39;un certains scores (1 et 0).</p>
+        </li>
+      </ul>
+      <p>Il existe cependant des attaques qui ne rentrent dans cette catégorie : les altérations d&#39;état.</p>
+      <ul class="list">
+        <li>Les attaques mentales : Elles nécessitent une défense avec un dé d&#39;intelligence.</li>
+        <li>Les attaques liés aux poisons et maladies : Elles nécessitent un dé de karma.</li>
+      </ul>
+      <p>Choisissez donc bien en fonction de vos caractéristiques !</p>
+      <p>Vous devez OBLIGATOIREMENT lancer votre dé avant de déterminer votre action. Mais vous n&#39;êtes pas obligé d&#39;attendre le dé de défense de votre adversaire. Dans tous les cas, l&#39;action finale avec les dégâts sera après le lancé des protagonistes de l&#39;action. </p>
+      <p>Dans le cas où il y aurait un 1 VS plusieurs, la personne en sous nombre doit lancé un dé de défense pour chaque attaque reçu et peut attaquer un certain nombre de personne en fonction de son rang.</p>
+      <h2 id="dégâts"><a class="header-link" href="#dégâts"></a>Dégâts</h2>
+      <p>Les dégâts sont déterminés en fonction de l&#39;écart de dé entre l&#39;attaquant et le défenseur dans le cas où le défenseur n&#39;a pas réussi à esquiver l&#39;attaque. Ainsi :</p>
+      <ul class="list">
+        <li><p>Ecart de 9 (voire+): Coup critique : L&#39;adversaire perd 50% de ses PV </p>
+        </li>
+        <li><p>De 8 à 7 : Très Bon dégât : Le défenseur perd 40% de ses pv. </p>
+        </li>
+        <li><p>De 6 à 5 : Bon dégât : Le défenseur perd 30% de ses pv. </p>
+        </li>
+        <li><p>De 4 à 3 : Dégât moyen: Le défenseur perd 20% de ses pv. </p>
+        </li>
+        <li><p>2 : Dégât faible : Le défenseur perd 10% de ses pv. </p>
+        </li>
+        <li><p>1 : Dégât très faible : Le défenseur perd 5% de ses pv. </p>
+        </li>
+        <li><p>0 : Le défenseur ne prend aucun dégât. </p>
+        </li>
+      </ul>
+      <p>Dans le cas où le défenseur aurait encaissé le coup (dé d&#39;endurance), il perd moins de pv. </p>
+      <p>En général, sa défense diminue de 10% les dégâts en fonction de la valeur de son dé et donc, de sa caractéristique d&#39;endurance. Ainsi, avec 8 d&#39;endurance, il diminuerait les dégât de 80% dans le cas d&#39;un coup critique (score de 0), et cela diminuerait jusqu&#39;à la valeur seuil de son dé. </p>
+      <p>:warning: Attention, dans le cas où la personne posséderait une &quot;remise&quot;(diminution du dé), la valeur seuil n&#39;est plus la même que la caractéristique : le dé doit avoir une valeur strictement inférieure pour que l&#39;endurance soit validé. </p>
+      <h2 id="cas-des-duels-amicaux"><a class="header-link" href="#cas-des-duels-amicaux"></a>Cas des duels amicaux</h2>
+      <p>Lors d&#39;un combat entre PJ &quot;amicaux&quot;, vous ne perdez pas de pv et vous devez lancer un dé 10 pour déterminer celui qui a l&#39;initiative. La personne avec le plus grand score commence.</p>
+      <h2 id="bouclier"><a class="header-link" href="#bouclier"></a>Bouclier</h2>
+      <p>Les boucliers protègent des dégâts. Dans les faits, cela fonctionne exactement comme un encaissement avec un dé d&#39;endurance. Cependant, les résistances sont fixes et liés soit à votre équipement, soit au rang de votre adversaire. En général, il existe :</p>
+      <ul class="list">
+        <li>Armure légère : Diminution de 10%</li>
+        <li>Armure moyenne : Diminution de 25%</li>
+        <li>Armure lourde : Diminution de 50%.</li>
+      </ul>
+      <h2 id="capacité"><a class="header-link" href="#capacité"></a>Capacité</h2>
+      <p>Avec la mise à jour 1.4, vous pouvez maintenant introduire directement les capacités aux calculs du programme.</p>
+      <p>Ainsi :</p>
+      <ul class="list">
+        <li>Perforant correspond à un bonus de 15%, mais la capacité traversa toute les défense de l&#39;ennemi.</li>
+        <li>Burst correspond à un simple bonus de 25% mais ses capacités traversent très mal les boucliers (Le bonus descendra à 12% à ce moment)</li>
+        <li>Autre : Tout ce qui ne rentrerait pas dans les deux schémas précédents, mais dont vous souhaitez quand même qu&#39;ils bénéficient de la prime d&#39;un ultra coup-critique ou d&#39;un coup-critique. </li>
+      </ul>
+      <p>Il est à noté qu&#39;il y a de nombreux équilibrage vis à vis des dégâts qui ne sont pas détaillés ici. Vous les retrouverez dans le code dans les fonctions <code>degat_burst</code>, <code>degat_burst_bouclier</code>, <code>degat_perforant</code> et <code>degat_autre</code>.</p>
+      <h3 id="bonus"><a class="header-link" href="#bonus"></a>Bonus</h3>
+      <p>Certaines attaques ont des bonus très légers, ainsi :</p>
+      <ul class="list">
+        <li>Pouvoir : 10%</li>
+        <li>Pistolet : 8%</li>
+        <li>Fusil : 10%</li>
+        <li>Artillerie : 15%</li>
+        <li>Couteau: 5%</li>
+        <li>Projectile : 5%</li>
+        <li>Epée : 10%</li>
+        <li>Contondant : 15%</li>
+        <li>Autre : 0% - Mais vous pouvez choisir le bonus que vous voulez entrer</li>
+        <li>Aucun : Absence de bonus - c&#39;est la valeur par défaut du programme.</li>
+      </ul>
+      <p>Evidemment, pour toutes les attaques, vous pouvez rajouter des bonus extérieur avec le champ correspondant. </p>
+      <h3 id="les-primes"><a class="header-link" href="#les-primes"></a>Les primes</h3>
+      <p>Dans le cas où votre personnage fait : </p>
+      <ul class="list">
+        <li>Un coup critique : Son bonus sera multiplié par 1,4.</li>
+        <li>Un Ultra critique : Son bonus sera multiplié par 1.8.</li>
+      </ul>
+      <p>De plus, les deux ont un bonus d&#39;attaque très léger, afin d&#39;équilibré par rapport aux attaques normales. </p>
+      <p>:warning: Lorsque l&#39;on multiplie, on ne prend pas en compte le &quot;pourcent&quot; (la division par 100).</p>
+      <h2 id="exceptions"><a class="header-link" href="#exceptions"></a>Exceptions</h2>
+      <p>Il existe TROIS exceptions aux systèmes de dégâts : </p>
+      <ul class="list">
+        <li><p>Les Ultra coup-critiques <em>d&#39;attaque</em> :  Lorsqu&#39;un PJ a un score de dés égal à 0, il obtient automatiquement le bonus de 50% et outrepasse la défense par endurance de son adversaire. </p>
+        </li>
+        <li><p>Les Ultra coup-critiques <em>de défense</em> : Lorsqu&#39;un combattant a un score de dés d&#39;endurance égal à 0, il annule automatiquement l&#39;attaque de son adversaire, quelque soit la valeur de son dé. </p>
+        </li>
+        <li><p>Les coup-critiques d&#39;attaque :  Lorsqu&#39;un combattant a un score de dés égal à 1, il annule la défense par endurance de son adversaire.</p>
+        </li>
+      </ul>
+      <p>A noté où dans le cas où les deux combattant font des UCC d&#39;attaque et de défense (La probabilité est mince), c&#39;est l&#39;attaquant qui aura l&#39;avantage.</p>
+      <h1 id="résumé"><a class="header-link" href="#résumé"></a>RÉSUMÉ</h1>
+      <ul class="list">
+        <li><p>Lancé de dés d&#39;attaque et de défense</p>
+          <blockquote>
+            <ul class="list">
+              <li>L&#39;endurance permet d&#39;encaisser les dégâts. </li>
+              <li>L&#39;esquive permet de ne pas prendre de dégât. Elle est réussit si le dé est moitié moins du dé d&#39;attaque de l&#39;adversaire.</li>
+            </ul>
+          </blockquote>
+        </li>
+        <li><p>Dés de 10 lié à votre caractéristiques</p>
+          <blockquote>
+            <ul class="list">
+              <li>Remise : Valeur seuil = strictement inférieure à votre caractéristique (7 pour 8, 6 pour 7, etc).</li>
+              <li>Pas de remise : Seuil = caractéristique</li>
+            </ul>
+          </blockquote>
+        </li>
+        <li><p>Meilleur jet : 0, pire jet : 10</p>
+          <blockquote>
+            <p>Un 0 correspond à un &quot;Ultra coup critique&quot; et un 1 à un &quot;coup critique&quot;. </p>
+          </blockquote>
+        </li>
+        <li><p>Quand vous utilisez votre capacité ou quand vous attaquez avec votre pouvoir, vous devez lancer le dé lié à votre pouvoir.</p>
+        </li>
+        <li>De même, si vous attaquez en utilisant une arme, vous devez lancé la caractéristique liée.</li>
+      </ul>
+      <h1 id="utilisation"><a class="header-link" href="#utilisation"></a>UTILISATION</h1>
+      <ul class="list">
+        <li><strong>Défenseur</strong> : Les caractéristiques qui correspondent à la personne attaquée. Notons que la partie des PV restant se rempli automatiquement avec les PV max, puis se mettra à jour au fur et à mesure.</li>
+        <li><strong>Attaquant</strong> : Le type d&#39;attaque, si elle est lancé par une personne ou un monstre, et si c&#39;est ou non une capacité. </li>
+        <li><strong>Dés</strong> : Simplement le type de défense et les dés qui correspondent à l&#39;attaque et la défense. De plus, vous pouvez cocher ou non si la personne possède une remise pour sa défense. Vous pouvez choisir si la défense est une endurance ou esquive. Le programme calculera automatiquement si l&#39;esquive est esquivée (si vous avez la flemme).</li>
+        <li><strong>Remise</strong> : Un bonus de départ sur les personnages, qui diminue la valeur des dés lancés. Voir plus haut pour l&#39;impact de ce bouton. </li>
+        <li>Vous pouvez lancer le programme en appuyant sur le bouton mais aussi avec enter.</li>
+        <li><strong>Résultat</strong> : Les PV restant (et le champ correspondant se met à jour) ainsi que les dégâts infligés. Vous pouvez donc enchainer sur plusieurs attaques sans avoir à reset entièrement le programme, si le défenseur est le même. </li>
+        <li>Vous devez choisir si votre personnages attaque avec une capacité ou non. Par défaut, ce sont les attaques normales. En effet, un coup critique avec une capacité a un bonus différent qu&#39;un coup critique avec une attaque normale. Pour changer cela, il suffit de cliquer sur le bouton radio. </li>
+        <li>Le bouton radio permet d&#39;activer un champ qui vous permet de choisir entre les capacités &#39;Burst&#39;, &#39;perforant&#39; ou &#39;Autre&#39;. </li>
+        <li>Il n&#39;est malheureusement pas possible de calculer les actions de soutien ou de malus avec le programme, vous devez donc multiplier vos bonus par vous même en suivant la table.</li>
+        <li>Vous n&#39;avez pas besoin de prendre en compte les capacités particulières d&#39;une attaque perforante, d&#39;un UCC et d&#39;un CC, ainsi que les bonus associés aux capacités : le programme s&#39;en charge aussi. Remplissez donc tous les champs sans vous souciez de cela.</li>
+      </ul>
     </div>
   </div>
+</div>
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="res/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="res/js/bootstrap.min.js"></script>
 </body>
 </html>

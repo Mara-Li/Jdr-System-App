@@ -66,7 +66,201 @@ class Elements_getter{
         return this;
     }
 }
+class LogObject{
+    constructor(pv_max, bouclier, endurance, arme, bonus, atq_type, capa_type, dist, des_atq, des_def, des_bonus_def, des_esquive, res_deg, pv_reste, date){
+        this.pv_max = parseInt(pv_max);
+        this.bouclier = parseInt(bouclier);
+        this.endurance = parseInt(endurance);
+        this.bonus = arme;
+        this.val_bonus = parseInt(bonus);
+        this.atq_type = parseInt(atq_type);
+        this.capa_type = capa_type;
+        this.dist = parseInt(dist);
+        this.des_atq = parseInt(des_atq);
+        this.des_def = parseInt(des_def);
+        this.des_bonus_def = des_bonus_def;
+        this.des_esquive = parseInt(des_esquive);
+        this.res_deg = parseInt(res_deg);
+        this.pv_reste = parseInt(pv_reste);
+        this.date = date;
+    }
 
+    formatDate(date){
+        return "jj/mm/aaaa a HHhMM".replace("jj", this.formatNumber(date.getDate())).replace("mm", this.formatNumber(date.getMonth()+1))
+        .replace("aaaa", this.formatNumber(date.getFullYear())).replace("HH", this.formatNumber(date.getHours()))
+        .replace("MM", this.formatNumber(date.getMinutes()));
+    }
+
+    formatNumber(num){
+        if(num < 10){
+        return "0" + num.toString();
+        }
+        return num.toString();
+    }
+
+    defToStr() {
+        var res =
+        "Defenseur:\n"+
+        "- Pv max: {pv_max}\n"+
+        "- Bouclier: {bouclier}\n"+
+        "- Endurance: {endurance}\n";
+        return res.replace("{pv_max}", this.pv_max)
+        .replace("{bouclier}", this.bouclier)
+        .replace("{endurance}", this.endurance);
+    }
+
+    defToHtml() {
+        var res =
+        "<span class=\"log-title\">Defenseur:</span>\n"+
+        "<ul>\n"+
+        " <li>Pv max: {pv_max}</li>\n"+
+        " <li>Bouclier: {bouclier}</li>\n"+
+        " <li>Endurance: {endurance}</li>\n"+
+        "</ul>\n";
+        return res.replace("{pv_max}", this.pv_max)
+        .replace("{bouclier}", this.bouclier)
+        .replace("{endurance}", this.endurance);
+    }
+
+    atqToStr(){
+        var res =
+        "Attaquant:\n"+
+        "- Bonus: {bonus}\n"+
+        "- Valeur du bonus: {val_bonus}\n"+
+        "- {atq_type}\n"+
+        "- {dist}\n";
+
+        if(!this.atq_type){
+        res = res.replace("{atq_type}", "Attaque normale");
+        }else{
+        res = res.replace("{atq_type}", "Capacité: {capa_type}");
+        }
+
+        if(!this.dist){
+        res = res.replace("{dist}", "Corps-à-corps");
+        }else{
+        res = res.replace("{dist}", "Distance");
+        }
+
+        return res.replace("{bonus}", this.bonus)
+        .replace("{val_bonus}", this.val_bonus)
+        .replace("{capa_type}", this.capa_type);
+    }
+
+    atqToHtml(){
+        var res =
+        "<span class=\"log-title\">Attaquant:</span>\n"+
+        "<ul>\n"+
+        " <li>Bonus: {bonus}</li>\n"+
+        " <li>Valeur du bonus: {val_bonus}</li>\n"+
+        " <li>{atq_type}</li>\n"+
+        " <li>{dist}</li>\n"+
+        "</ul>\n";
+
+        if(!this.atq_type){
+        res = res.replace("{atq_type}", "Attaque normale");
+        }else{
+        res = res.replace("{atq_type}", "Capacité: {capa_type}");
+        }
+
+        if(!this.dist){
+        res = res.replace("{dist}", "Corps-à-corps");
+        }else{
+        res = res.replace("{dist}", "Distance");
+        }
+
+        return res.replace("{bonus}", this.bonus)
+        .replace("{val_bonus}", this.val_bonus)
+        .replace("{capa_type}", this.capa_type);
+    }
+
+    desToStr(){
+        var res =
+        "Des:\n"+
+        "- Atq: {des_atq}\n"+
+        "- Def: {des_def}\n"+
+        "- Remise: {remise}\n"+
+        "- Type de défense: {des_esquive}\n";
+        if(this.des_bonus_def){
+        res = res.replace("{remise}", "Oui");
+        }else{
+        res = res.replace("{remise}", "Non");
+        }
+
+        if(!this.des_esquive){
+        res = res.replace("{des_esquive}", "Endurance");
+        }else{
+        res = res.replace("{des_esquive}", "Esquive");
+        }
+
+        return res.replace("{des_atq}", this.des_atq)
+        .replace("{des_def}", this.des_def);
+    }
+
+    desToHtml(){
+        var res =
+        "<span class=\"log-title\">Des:</span>\n"+
+        "<ul>\n"+
+        " <li>Atq: {des_atq}</li>\n"+
+        " <li>Def: {des_def}</li>\n"+
+        " <li>Remise: {remise}</li>\n"+
+        " <li>Type de défense: {des_esquive}</li>\n"+
+        "</ul>\n";
+        if(this.des_bonus_def){
+        res = res.replace("{remise}", "Oui");
+        }else{
+        res = res.replace("{remise}", "Non");
+        }
+
+        if(!this.des_esquive){
+        res = res.replace("{des_esquive}", "Endurance");
+        }else{
+        res = res.replace("{des_esquive}", "Esquive");
+        }
+
+        return res.replace("{des_atq}", this.des_atq)
+        .replace("{des_def}", this.des_def);
+    }
+
+    resToStr(){
+        var res =
+        "Resultats:\n"+
+        "- Degats: {res_deg}\n"+
+        "- Pv restants: {pv_reste}\n";
+
+        return res.replace("{res_deg}", this.res_deg)
+        .replace("{pv_reste}", this.pv_reste)
+    }
+
+    resToHtml(){
+        var res = 
+        "<span class=\"log-title\">Resultats:</span>\n"+
+        "<ul>\n"+
+        " <li>Degats: {res_deg}</li>\n"+
+        " <li>Pv restants: {pv_reste}</li>\n"+
+        "<ul>\n";
+
+        return res.replace("{res_deg}", this.res_deg)
+        .replace("{pv_reste}", this.pv_reste)
+    }
+
+    toHtml(){
+        var res =
+        "<div class=\"log-element\">"+
+        "<div class=\"log-date\">"+this.formatDate(this.date)+"</div>"+
+        "<div class=\"log-block\">"+this.defToHtml()+"</div><br>"+
+        "<div class=\"log-block\">"+this.atqToHtml()+"</div><br>"+
+        "<div class=\"log-block\">"+this.desToHtml()+"</div><br>"+
+        "<div class=\"log-block\">"+this.resToHtml()+"</div><hr></div>";
+        return res;
+    }
+
+    toString(){
+        return this.formatDate(this.date)+"\n\n"+
+        this.defToStr()+"\n"+this.atqToStr()+"\n"+
+        this.desToStr()+"\n"+this.resToStr()
+    }
+}
 
 var elem_inputs = new Elements_getter(elemIDs, radioGroupsName);
 
@@ -444,4 +638,14 @@ function vie_restante(finaux){
     elem_inputs.res_deg.innerHTML = finaux;
     elem_inputs.pv_reste.value = (vie <= 0 || isNaN(vie)) ? 0 : vie;
     elem_inputs.res_pv.innerHTML = (vie <= 0 || isNaN(vie)) ? "X" : vie;
+}
+
+function createLogFromActualInput(){
+    elem_inputs.refresh();
+    return new LogObject(elem_inputs.pv_max.valueAsNumber, elem_inputs.bouclier.valueAsNumber,
+      elem_inputs.endurance.valueAsNumber, elem_inputs.arme.selectedOptions[0].innerText,
+      elem_inputs.bonus.valueAsNumber, elem_inputs.atq_type.value, elem_inputs.capacite_type.selectedOptions[0].innerText,
+      elem_inputs.dist_atq.value, elem_inputs.des_atq.valueAsNumber, elem_inputs.des_def.valueAsNumber,
+      elem_inputs.des_bonus_def.checked, elem_inputs.des_esquive.value, parseInt(elem_inputs.res_deg.innerText),
+      elem_inputs.pv_reste.valueAsNumber, new Date())
 }
