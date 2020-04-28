@@ -50,7 +50,9 @@ window.onload = function() {
   } //A faire plus tard quand le cadre aura été fait, partie 2 du programme
   //s'efface quand on actualise !
 
-function clearLog(){}
+function clearLog(){
+  elem_inputs.log_box.innerHTML = '';
+}
 
   function clearInput(){
     elem_inputs.pv_max.value=100;
