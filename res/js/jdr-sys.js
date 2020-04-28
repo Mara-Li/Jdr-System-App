@@ -233,7 +233,7 @@ class LogObject{
     }
 
     resToHtml(){
-        var res = 
+        var res =
         "<span class=\"log-title\">Resultats:</span>\n"+
         "<ul>\n"+
         " <li>Degats: {res_deg}</li>\n"+
@@ -265,10 +265,9 @@ class LogObject{
 var elem_inputs = new Elements_getter(elemIDs, radioGroupsName);
 
 function calculate(){
-    //test check des erreurs
     elem_inputs.refresh();
     selection = parseInt(elem_inputs.atq_type.value); //valeur si on choisit une attaque normale ou une Capacité
-    if (selection == 0){ //est checké ? egale à 1 ?  égale à "Attaque normale" ?)
+    if (selection == 0){
         degat_normaux();
     }else {
         degat_type();
