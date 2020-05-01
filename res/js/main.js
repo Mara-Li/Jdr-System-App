@@ -9,9 +9,9 @@ window.onload = function() {
   elem_inputs.refresh();
   capa_toggle(elem_inputs.atq_type);
   elem_inputs.pv_max["old_value"] = elem_inputs.pv_max.valueAsNumber;
-  
+
   elem_inputs.pv_max.onchange = function() {
-    
+
     if(this.old_value > this.valueAsNumber){
       elem_inputs.pv_reste.valueAsNumber -= this.old_value - this.valueAsNumber;
     }else if(this.old_value < this.value){
@@ -21,7 +21,7 @@ window.onload = function() {
     this.old_value = this.valueAsNumber;
     elem_inputs.pv_reste.onchange();
   }
-  
+
   elem_inputs.pv_reste.onchange = function() {
     this.max = elem_inputs.pv_max.valueAsNumber;
     if(this.valueAsNumber >= elem_inputs.pv_max.valueAsNumber){
@@ -34,9 +34,9 @@ window.onload = function() {
       this.valueAsNumber = elem_inputs.pv_max.valueAsNumber;
     }
   }
-  
-  if(sessionStorage.logs){
-    logs = JSON.parse(sessionStorage.getItem("logs"));
+
+  if(localStorage.logs){
+    logs = JSON.parse(localStorage.getItem("logs"));
     logs = logs.map(elem => Object.assign(new LogObject(), elem));
     logs.forEach(elem => elem.date = Object.assign(new Date(), elem.date));
     logs.forEach(elem => elem_inputs.log_box.innerHTML = elem.toHtml()+"<hr>"+elem_inputs.log_box.innerHTML);
@@ -72,7 +72,7 @@ function downloadLogs(){
 function log_ecriture(){
   var log = createLogFromActualInput();
   logs[logs.length] = log;
-  sessionStorage.setItem("logs", JSON.stringify(logs));
+  localStorage.setItem("logs", JSON.stringify(logs));
   elem_inputs.log_box.innerHTML = log.toHtml()+"<hr>"+elem_inputs.log_box.innerHTML;
 } //A faire plus tard quand le cadre aura été fait, partie 2 du programme
 //s'efface quand on actualise !
@@ -80,7 +80,7 @@ function log_ecriture(){
 function clearLog(){
   elem_inputs.log_box.innerHTML = '';
   logs = [];
-  sessionStorage.removeItem("logs");
+  localStorage.removeItem("logs");
 }
 
 function clearInput(){
@@ -139,7 +139,7 @@ function capage_change(){
   var int_pv_restant=parseInt(elem_inputs.pv_reste.valu);
   var int_bonus=parseInt(elem_inputs.bonus.value);
   var int_defense=parseInt(elem_inputs.des_def.value);
-  
+
   if ((int_atq>10) || (int_atq<0)){
     elem_inputs.des_atq.onchange=function(){capage(this, 0, 10)}
   }
