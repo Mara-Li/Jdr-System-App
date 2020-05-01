@@ -27,6 +27,10 @@
     margin: 0 25%;
   }
 
+  .log-btn-group button{
+    margin: auto 0.5em;
+  }
+
 }
 
 @media only screen and (min-width: 1101px) {
@@ -51,6 +55,16 @@
   .log-block{
     width: 25%;
   }
+
+  .log-btn-group{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .log-btn-group button{
+    margin: 0.5em auto;
+  }
+
 }
 
 
@@ -208,6 +222,11 @@ label[for="res_deg"], label[for="res_pv"] {
   color: teal;
 }
 
+.log-btn-group{
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
 
 /*****
 * ID *
@@ -233,7 +252,6 @@ label[for="res_deg"], label[for="res_pv"] {
   overflow: auto;
 }
 
-#clr-btn{
+#clr-btn, #dl-btn{
   color: teal;
-  margin: auto 1em;
 }

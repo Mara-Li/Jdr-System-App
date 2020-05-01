@@ -127,7 +127,10 @@
         <div class="flex-break"></div>
         <div id="log" class="card">
             <span class="titre-card">Logs</span>
-            <button id="clr-btn" type="button" onclick="clearLog()"><i class="fas fa-trash"></i></button>
+            <div class="log-btn-group">
+                <button id="clr-btn" type="button" onclick="clearLog()"><i class="fas fa-trash"></i></button>
+                <button id="dl-btn" type="button" onclick="downloadLogs()"><i class="fas fa-file-download"></i></button>
+            </div>
             <div id="log_box" class="input-zone">
             </div>
         </div>

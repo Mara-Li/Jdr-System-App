@@ -649,5 +649,9 @@ function createLogFromActualInput(){
         elem_inputs.dist_atq.value, elem_inputs.des_atq.valueAsNumber, elem_inputs.des_def.valueAsNumber,
         elem_inputs.des_bonus_def.checked, elem_inputs.des_esquive.value, parseInt(elem_inputs.res_deg.innerText),
         elem_inputs.pv_reste.valueAsNumber, new Date())
-    }
+}
+
+function concatLogs(total, current){
+    return total + "\n=====================================\n"+current.toString();
+}
     
