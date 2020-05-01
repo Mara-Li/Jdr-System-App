@@ -108,22 +108,30 @@
                 </form>
             </div>
         </div>
+
+
+
         <div class="flex-break"></div>
         <div id="submit" class="card">
             <div class="input-zone">
                 <input type="button" class="titre-card-resultat" value="Résultat" onclick="calculate()">
             </div>
             <p>
-
             <label for="res_deg">Dégats finaux : </label>
             <span id="res_deg">░</span>
             <br>
             <label for="res_pv">PV restant :</label>
             <span id="res_pv">░</span>
+
+
             <br>
 
           </p>
+          <div class="result-btn-group">
+            <button id="refresh-btn" type="button" onclick="clearInput()"><i class="fas fa-sync-alt"></i></button>
+          </div>
         </div>
+
         <div class="flex-break"></div>
         <div id="log" class="card">
             <span class="titre-card">Logs</span>

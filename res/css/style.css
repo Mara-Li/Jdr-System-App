@@ -8,11 +8,11 @@
   form {
     margin: 0 10%;
   }
-  
+
   .flex-column {
     width: 95%;
   }
-  
+
   .card {
     width: 95%;
     flex-wrap: wrap;
@@ -20,6 +20,10 @@
 
   .titre-card {
     flex-basis: 100%;
+  }
+
+  .titre-card-resultat  {
+    flex-basis: 100%
   }
 
   .log-block{
@@ -42,7 +46,7 @@
     min-width: 50%;
     max-width: 80%;
   }
-  
+
   .card {
     min-width: 40%;
     max-width: 80%;
@@ -50,6 +54,10 @@
 
   .titre-card {
     flex: 1;
+  }
+
+  .titre-card-resultat {
+    flex: 3;
   }
 
   .log-block{
@@ -64,6 +72,11 @@
   .log-btn-group button{
     margin: 0.5em auto;
   }
+
+
+
+
+
 
 }
 
@@ -194,10 +207,15 @@ label[for="res_deg"], label[for="res_pv"] {
 }
 
 .titre-card-resultat {
+  font-weight: bold;
+  margin: 10px;
   color: teal;
   font-size: 1.5em;
   font-family: 'Concert One', cursive;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .input-zone {
@@ -228,6 +246,13 @@ label[for="res_deg"], label[for="res_pv"] {
   margin: auto;
 }
 
+.result-btn-group{
+  margin-left:auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 /*****
 * ID *
 ******/
@@ -243,8 +268,12 @@ label[for="res_deg"], label[for="res_pv"] {
   margin: auto;
 }
 
-#log, #submit {
+#log {
   width: 90%;
+}
+
+#submit {
+  width:50%;
 }
 
 #log_box {
@@ -252,6 +281,10 @@ label[for="res_deg"], label[for="res_pv"] {
   overflow: auto;
 }
 
-#clr-btn, #dl-btn{
+#clr-btn, #dl-btn {
   color: teal;
+}
+#refresh-btn{
+  color:teal;
+
 }
