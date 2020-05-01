@@ -45,7 +45,7 @@ class Elements_getter{
             this[name] = this.getValueFromRadio(name);
         });
     }
-    
+
     getValueFromRadio(group_name){
         var lst_radio = document.getElementsByName(group_name)
         for(var i = 0; i < lst_radio.length; i++){
@@ -55,7 +55,7 @@ class Elements_getter{
         };
         return undefined;
     }
-    
+
     refresh(){
         this._idLst.forEach(id => {
             this[id] = document.getElementById(id);
@@ -85,36 +85,36 @@ class LogObject{
         this.pv_reste = parseInt(pv_reste);
         this.date = Object.assign(new Date(), date);
     }
-    
+
     formatDate(date){
         return "jj/mm/aaaa a HHhMM".replace("jj", this.formatNumber(date.getDate())).replace("mm", this.formatNumber(date.getMonth()+1))
         .replace("aaaa", this.formatNumber(date.getFullYear())).replace("HH", this.formatNumber(date.getHours()))
         .replace("MM", this.formatNumber(date.getMinutes()));
     }
-    
+
     formatNumber(num){
         if(num < 10){
             return "0" + num.toString();
         }
         return num.toString();
     }
-    
+
     defToStr() {
         var res =
         "Defenseur:\n"+
-        "- Pv max: {pv_max}\n"+
+        "- PV max: {pv_max}\n"+
         "- Bouclier: {bouclier}\n"+
         "- Endurance: {endurance}\n";
         return res.replace("{pv_max}", this.pv_max)
         .replace("{bouclier}", this.bouclier)
         .replace("{endurance}", this.endurance);
     }
-    
+
     defToHtml() {
         var res =
         "<span class=\"log-title\">Defenseur:</span>\n"+
         "<ul>\n"+
-        " <li>Pv max: {pv_max}</li>\n"+
+        " <li>PV max: {pv_max}</li>\n"+
         " <li>Bouclier: {bouclier}</li>\n"+
         " <li>Endurance: {endurance}</li>\n"+
         "</ul>\n";
@@ -122,7 +122,7 @@ class LogObject{
         .replace("{bouclier}", this.bouclier)
         .replace("{endurance}", this.endurance);
     }
-    
+
     atqToStr(){
         var res =
         "Attaquant:\n"+
@@ -130,24 +130,24 @@ class LogObject{
         "- Valeur du bonus: {val_bonus}\n"+
         "- {atq_type}\n"+
         "- {dist}\n";
-        
+
         if(!this.atq_type){
             res = res.replace("{atq_type}", "Attaque normale");
         }else{
             res = res.replace("{atq_type}", "Capacité: {capa_type}");
         }
-        
+
         if(!this.dist){
             res = res.replace("{dist}", "Corps-à-corps");
         }else{
             res = res.replace("{dist}", "Distance");
         }
-        
+
         return res.replace("{bonus}", this.bonus)
         .replace("{val_bonus}", this.val_bonus)
         .replace("{capa_type}", this.capa_type);
     }
-    
+
     atqToHtml(){
         var res =
         "<span class=\"log-title\">Attaquant:</span>\n"+
@@ -157,24 +157,24 @@ class LogObject{
         " <li>{atq_type}</li>\n"+
         " <li>{dist}</li>\n"+
         "</ul>\n";
-        
+
         if(!this.atq_type){
             res = res.replace("{atq_type}", "Attaque normale");
         }else{
             res = res.replace("{atq_type}", "Capacité: {capa_type}");
         }
-        
+
         if(!this.dist){
             res = res.replace("{dist}", "Corps-à-corps");
         }else{
             res = res.replace("{dist}", "Distance");
         }
-        
+
         return res.replace("{bonus}", this.bonus)
         .replace("{val_bonus}", this.val_bonus)
         .replace("{capa_type}", this.capa_type);
     }
-    
+
     desToStr(){
         var res =
         "Des:\n"+
@@ -187,17 +187,17 @@ class LogObject{
         }else{
             res = res.replace("{remise}", "Non");
         }
-        
+
         if(!this.des_esquive){
             res = res.replace("{des_esquive}", "Endurance");
         }else{
             res = res.replace("{des_esquive}", "Esquive");
         }
-        
+
         return res.replace("{des_atq}", this.des_atq)
         .replace("{des_def}", this.des_def);
     }
-    
+
     desToHtml(){
         var res =
         "<span class=\"log-title\">Des:</span>\n"+
@@ -212,27 +212,27 @@ class LogObject{
         }else{
             res = res.replace("{remise}", "Non");
         }
-        
+
         if(!this.des_esquive){
             res = res.replace("{des_esquive}", "Endurance");
         }else{
             res = res.replace("{des_esquive}", "Esquive");
         }
-        
+
         return res.replace("{des_atq}", this.des_atq)
         .replace("{des_def}", this.des_def);
     }
-    
+
     resToStr(){
         var res =
         "Resultats:\n"+
         "- Degats: {res_deg}\n"+
         "- Pv restants: {pv_reste}\n";
-        
+
         return res.replace("{res_deg}", this.res_deg)
         .replace("{pv_reste}", this.pv_reste)
     }
-    
+
     resToHtml(){
         var res =
         "<span class=\"log-title\">Resultats:</span>\n"+
@@ -240,11 +240,11 @@ class LogObject{
         " <li>Degats: {res_deg}</li>\n"+
         " <li>Pv restants: {pv_reste}</li>\n"+
         "<ul>\n";
-        
+
         return res.replace("{res_deg}", this.res_deg)
         .replace("{pv_reste}", this.pv_reste)
     }
-    
+
     toHtml(){
         var res =
         "<div class=\"log-element\">"+
@@ -255,7 +255,7 @@ class LogObject{
         "<div class=\"log-block\">"+this.resToHtml()+"</div><hr></div>";
         return res;
     }
-    
+
     toString(){
         return this.formatDate(this.date)+"\n\n"+
         this.defToStr()+"\n"+this.atqToStr()+"\n"+
@@ -299,8 +299,8 @@ function degat_normaux(){
             }else { //esquive raté
                 endu_val=0;
                 endu_de=10;
-                
-                
+
+
             }
         }else {
             if (defe <= (atq/2)){ //esquive réussi : pas de dégât
@@ -313,7 +313,7 @@ function degat_normaux(){
             }
         }
     }
-    
+
     if (atq == 0){
         d = (0.5+bonus);
         endu_val = 0;
@@ -322,7 +322,7 @@ function degat_normaux(){
     }else if (atq == 1){
         endu_val=0;
     }
-    
+
     finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
     finaux = Math.trunc(finaux/1.4);
     max = finaux;
@@ -333,11 +333,11 @@ function degat_normaux(){
     }else if (pv <100){
         max=80;
     }
-    
+
     if (finaux > max){
         finaux = max;
     }
-    
+
     vie_restante(finaux);
 }
 
@@ -352,7 +352,7 @@ function degat_type(){
     var type_capa = parseInt(elem_inputs.capacite_type.value); //Valeur de la spinbox dans capacité ["Burst", "Autre", "Perforante"]
     var shield = parseInt(elem_inputs.bouclier.value)/100; //valeur du champ "Bouclier"
     var endu_val = parseInt(elem_inputs.endurance.value); //valeur champ "endurance" dans stats
-    
+
     switch (sel_defe) {
         case 0: //Endurance
         endu_de = defe;
@@ -378,7 +378,7 @@ function degat_type(){
         }
         break;
     }
-    
+
     switch (type_capa) {
         case 0: //burst
         if (shield != 0){
@@ -391,7 +391,7 @@ function degat_type(){
             [d, endu_val] = degat_burst(bonus, atq, defe, endu_val);
         }
         break;
-        
+
         case 1: //Perforant
         bonus_type = capacite_bonus(15);
         bonus = ((bonus_type + bonus) / 100);
@@ -399,7 +399,7 @@ function degat_type(){
         shield = 0;
         [d, endu_val] = degat_perforant(bonus, atq, defe, endu_val);
         break;
-        
+
         case 2: //Autre
         bonus_attaque = choix_bonus();
         bonus = capacite_bonus(bonus);
@@ -409,7 +409,7 @@ function degat_type(){
         [d, endu_val] = degat_autre(bonus, atq, defe, endu_val);
         break;
     }
-    
+
     finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
     finaux = Math.trunc(finaux/1.4);
     max = finaux;
@@ -481,7 +481,7 @@ function reussite_endurance(endu_de, endu_val, pv, d, shield){
     var d = Math.abs(Math.trunc(d * pv));
     var bouclier = Math.abs(Math.trunc(d * (1 - shield))); //au besoin, placé des int pour convertir les valeurs
     var remise = elem_inputs.des_bonus_def.checked; //checkbox "bonus"
-    
+
     if (remise){ //est check
         if ((endu_de > endu_val) || (endu_de == endu_val)){
             finaux = bouclier;
@@ -627,7 +627,7 @@ function phrase_esquive(finaux){
         }
     }
     return finaux;
-    
+
 }
 
 function vie_restante(finaux){
@@ -654,4 +654,3 @@ function createLogFromActualInput(){
 function concatLogs(total, current){
     return total + "\n=====================================\n"+current.toString();
 }
-    

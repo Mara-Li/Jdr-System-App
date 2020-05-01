@@ -67,6 +67,7 @@
   .log-btn-group{
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
   }
 
   .log-btn-group button{
@@ -148,6 +149,10 @@ label[for="res_deg"], label[for="res_pv"] {
   text-align: center;
 }
 
+p{
+  margin:auto;
+}
+
 
 /**********
 * Classes *
@@ -218,6 +223,8 @@ label[for="res_deg"], label[for="res_pv"] {
   align-items: center;
 }
 
+
+
 .input-zone {
   margin: 1em 0;
 }
@@ -243,7 +250,7 @@ label[for="res_deg"], label[for="res_pv"] {
 .log-btn-group{
   display: flex;
   align-items: center;
-  margin: auto;
+  margin: auto 1em;
 }
 
 .result-btn-group{
@@ -279,6 +286,7 @@ label[for="res_deg"], label[for="res_pv"] {
 #log_box {
   max-height: 25em;
   overflow: auto;
+  flex:10;
 }
 
 #clr-btn, #dl-btn {
