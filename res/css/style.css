@@ -232,3 +232,8 @@ label[for="res_deg"], label[for="res_pv"] {
   max-height: 25em;
   overflow: auto;
 }
+
+#clr-btn{
+  color: teal;
+  margin: auto 1em;
+}

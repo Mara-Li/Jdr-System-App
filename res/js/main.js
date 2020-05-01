@@ -34,6 +34,13 @@ window.onload = function() {
       this.valueAsNumber = elem_inputs.pv_max.valueAsNumber;
     }
   }
+
+  if(sessionStorage.logs){
+    logs = JSON.parse(sessionStorage.getItem("logs"));
+    logs = logs.map(elem => Object.assign(new LogObject(), elem));
+    logs.forEach(elem => elem.date = Object.assign(new Date(), elem.date));
+    logs.forEach(elem => elem_inputs.log_box.innerHTML = elem.toHtml()+"<hr>"+elem_inputs.log_box.innerHTML);
+  }
 }
 
   function capa_toggle(elem){
@@ -46,12 +53,15 @@ window.onload = function() {
 
   function log_ecriture(){
     var log = createLogFromActualInput();
+    logs[logs.length] = log;
+    sessionStorage.setItem("logs", JSON.stringify(logs));
     elem_inputs.log_box.innerHTML = log.toHtml()+"<hr>"+elem_inputs.log_box.innerHTML;
   } //A faire plus tard quand le cadre aura été fait, partie 2 du programme
   //s'efface quand on actualise !
 
 function clearLog(){
   elem_inputs.log_box.innerHTML = '';
+  sessionStorage.removeItem("logs");
 }
 
   function clearInput(){
