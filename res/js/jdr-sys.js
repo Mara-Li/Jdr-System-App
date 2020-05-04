@@ -324,9 +324,7 @@ function degat_normaux(){
     }
 
     finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
-    console.log(finaux)
     finaux = Math.trunc(finaux/1.4);
-    console.log(finaux)
     max = finaux;
     if (pv >=1000){
         max=200;
