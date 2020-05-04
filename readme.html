@@ -83,13 +83,12 @@
         <li>Armure lourde : Diminution de 50%.</li>
       </ul>
       <h2 id="capacité"><a class="header-link" href="#capacité"></a>Capacité</h2>
-      <p>Avec la mise à jour 1.4, vous pouvez maintenant introduire directement les capacités aux calculs du programme.</p>
-      <p>Ainsi :</p>
       <ul class="list">
         <li>Perforant correspond à un bonus de 15%, mais la capacité traversa toute les défense de l&#39;ennemi.</li>
         <li>Burst correspond à un simple bonus de 25% mais ses capacités traversent très mal les boucliers (Le bonus descendra à 12% à ce moment)</li>
-        <li>Autre : Tout ce qui ne rentrerait pas dans les deux schémas précédents, mais dont vous souhaitez quand même qu&#39;ils bénéficient de la prime d&#39;un ultra coup-critique ou d&#39;un coup-critique. </li>
+        <li>Autre : Tout ce qui ne rentrerait pas dans les deux schémas précédents, mais dont vous souhaitez quand même qu&#39;ils bénéficient de la prime d&#39;un ultra coup-critique ou d&#39;un coup-critique. De plus, ce type de capacité prend en compte les bonus des armes ou des pouvoirs.</li>
       </ul>
+      <p> Contraitement à la capacité "autre", les capacités "Perforantes" et "Burst" ne prennent pas en compte les bonus des armes ou des pouvoirs : le bonus de la capacité se substitue au bonus de l'arme ou du pouvoir. Cependant, vous pouvez tout de même rentrer des bonus manuellement, et ces derniers bénéficerons tout de même du bonus dû aux UCC et aux CC. <p>
       <p>Il est à noté qu&#39;il y a de nombreux équilibrage vis à vis des dégâts qui ne sont pas détaillés ici. Vous les retrouverez dans le code dans les fonctions <code>degat_burst</code>, <code>degat_burst_bouclier</code>, <code>degat_perforant</code> et <code>degat_autre</code>.</p>
       <h3 id="bonus"><a class="header-link" href="#bonus"></a>Bonus</h3>
       <p>Certaines attaques ont des bonus très légers, ainsi :</p>

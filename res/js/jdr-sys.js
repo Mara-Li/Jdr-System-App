@@ -420,13 +420,19 @@ function degat_type(){
     finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
     finaux = Math.trunc(finaux/1.4);
     max = finaux;
-    if (pv >= 1000){
-        max = 200;
-    }else if ((pv > 100) && (pv < 1000)){
-        max = 100;
-    }else if (pv <= 100){
-        max = 80;
-    }
+    if (pv >=1000){
+        max=200;
+    }else if ((pv >=900) && (pv <1000)){
+        max=180;
+    }else if ((pv >=700)&&(pv <900)){
+        max=140;
+    }else if ((pv >=300)&&(pv <700)){
+        max=100;
+    }else if ((pv >=100)&&(pv <300)){
+        max=80;
+    }else if (pv <100){
+        max=50;
+      }
     if (finaux > max){
         finaux = max;
     };
