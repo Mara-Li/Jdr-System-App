@@ -334,13 +334,15 @@ function degat_normaux(){
         max=180;
     }else if ((pv >=700)&&(pv <900)){
         max=140;
-    }else if ((pv >=300)&&(pv <700)){
+    } else if ((pv>=500)&&(pv<700)){
+      max=120;
+    }else if ((pv >=300)&&(pv <500)){
         max=100;
     }else if ((pv >=100)&&(pv <300)){
         max=80;
     }else if (pv <100){
         max=50;
-    }
+      }
 
     if (finaux > max){
         finaux = max;
@@ -426,7 +428,9 @@ function degat_type(){
         max=180;
     }else if ((pv >=700)&&(pv <900)){
         max=140;
-    }else if ((pv >=300)&&(pv <700)){
+    } else if ((pv>=500)&&(pv<700)){
+      max=120;
+    }else if ((pv >=300)&&(pv <500)){
         max=100;
     }else if ((pv >=100)&&(pv <300)){
         max=80;
