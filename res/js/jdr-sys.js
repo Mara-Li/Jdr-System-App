@@ -324,20 +324,27 @@ function degat_normaux(){
     }
 
     finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
+    console.log(finaux)
     finaux = Math.trunc(finaux/1.4);
+    console.log(finaux)
     max = finaux;
     if (pv >=1000){
         max=200;
-    }else if ((pv >100) && (pv <1000)){
+    }else if ((pv >=900) && (pv <1000)){
+        max=180;
+    }else if ((pv >=700)&&(pv <900)){
+        max=140;
+    }else if ((pv >=300)&&(pv <700)){
         max=100;
-    }else if (pv <100){
+    }else if ((pv >=100)&&(pv <300)){
         max=80;
+    }else if (pv <100){
+        max=50;
     }
 
     if (finaux > max){
         finaux = max;
     }
-
     vie_restante(finaux);
 }
 
@@ -402,10 +409,10 @@ function degat_type(){
 
         case 2: //Autre
         bonus_attaque = choix_bonus();
-        bonus = capacite_bonus(bonus);
         bonus = ((bonus_attaque + bonus) / 100);
+        bonus = capacite_bonus(bonus);
         endu_val = parseInt(elem_inputs.endurance.value); //récupérer la valeur du champ d'endurance
-        shield = parseInt(elem_inputs.shield.value);
+        shield = parseInt(elem_inputs.bouclier.value);
         [d, endu_val] = degat_autre(bonus, atq, defe, endu_val);
         break;
     }

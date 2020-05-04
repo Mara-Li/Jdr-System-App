@@ -8,18 +8,21 @@ window.onkeydown = function(evt){
 window.onload = function() {
   elem_inputs.refresh();
   capa_toggle(elem_inputs.atq_type);
+  elem_inputs.arme.onchange=bonus_toggle;
+  elem_inputs.arme.onchange();
+
   elem_inputs.pv_max["old_value"] = elem_inputs.pv_max.valueAsNumber;
 
   elem_inputs.pv_max.onchange = function() {
 
     if(this.old_value > this.valueAsNumber){
-      elem_inputs.pv_reste.valueAsNumber -= this.old_value - this.valueAsNumber;
+      elem_inputs.pv_reste.valueAsNumber = this.valueAsNumber;
     }else if(this.old_value < this.value){
-      elem_inputs.pv_reste.valueAsNumber += this.valueAsNumber - this.old_value;
+      elem_inputs.pv_reste.valueAsNumber = this.valueAsNumber;
     }
     capage(this, 0)
     this.old_value = this.valueAsNumber;
-    elem_inputs.pv_reste.onchange();
+
   }
 
   elem_inputs.pv_reste.onchange = function() {
@@ -34,6 +37,8 @@ window.onload = function() {
       this.valueAsNumber = elem_inputs.pv_max.valueAsNumber;
     }
   }
+  elem_inputs.pv_max.onchange();
+  elem_inputs.pv_reste.onchange();
 
   if(localStorage.logs){
     logs = JSON.parse(localStorage.getItem("logs"));
@@ -43,18 +48,42 @@ window.onload = function() {
   }
 }
 
+function capa_arme_toggle(elem){
+  if (parseInt(elem.value)==0||parseInt(elem.value)==1){
+    elem_inputs.arme.disabled = true;
+    elem_inputs.arme.value=9;
+    bonus_toggle()
+  }else{
+    elem_inputs.arme.disabled = false;
+    elem_inputs.arme.value=0;
+    bonus_toggle();
+  }
+}
+
 function capa_toggle(elem){
   if(parseInt(elem.value)){
     elem_inputs.capacite_type.disabled = false;
-  }else{
+    elem_inputs.arme.disabled = true;
+    capa_arme_toggle(document.getElementById("capacite_type"));
+ }else{
     elem_inputs.capacite_type.disabled = true;
+    elem_inputs.arme.disabled = false;
+  }
+}
+
+function bonus_toggle(){
+  if (elem_inputs.arme.value==0){
+    elem_inputs.bonus.disabled=true;
+  }
+  else {
+    elem_inputs.bonus.disabled=false;
   }
 }
 
 function downloadLogs(){
 
   if(!logs.length){
-    alert("Pas de logs à écrire !");
+    alert("Pas de logs à télécharger !");
     return;
   }
 
@@ -104,6 +133,9 @@ function clearInput(){
   elem_inputs.res_deg.innerHTML = '░';
   elem_inputs.res_pv.innerHTML ='░';
   capa_toggle(elem_inputs.atq_type);
+  elem_inputs.arme.onchange=bonus_toggle;
+  elem_inputs.arme.onchange();
+
 } //Ajouter un bouton d'effacer tous les champs mais NE DOIT PAS EFFACER LES LOGS
 
 function test_none(t){
