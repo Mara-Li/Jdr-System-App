@@ -91,7 +91,7 @@ function formatNumber(num){
 }
 
 function formatDate(date){
-    return "jj-mm-aaaa à HH:MM".replace("jj", this.formatNumber(date.getDate())).replace("mm", this.formatNumber(date.getMonth()+1))
+    return "jj-mm-aaaa à HHhMM".replace("jj", this.formatNumber(date.getDate())).replace("mm", this.formatNumber(date.getMonth()+1))
     .replace("aaaa", this.formatNumber(date.getFullYear())).replace("HH", this.formatNumber(date.getHours()))
     .replace("MM", this.formatNumber(date.getMinutes()));
 }
