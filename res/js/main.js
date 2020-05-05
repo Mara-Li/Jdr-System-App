@@ -84,15 +84,27 @@ function bonus_toggle(){
   }
 }
 
-function downloadLogs(){
+function formatNumber(num){
+    if(num < 10){
+        return "0" + num.toString();
+    }return num.toString();
+}
 
+function formatDate(date){
+    return "jj-mm-aaaa à HH:MM".replace("jj", this.formatNumber(date.getDate())).replace("mm", this.formatNumber(date.getMonth()+1))
+    .replace("aaaa", this.formatNumber(date.getFullYear())).replace("HH", this.formatNumber(date.getHours()))
+    .replace("MM", this.formatNumber(date.getMinutes()));
+}
+
+function downloadLogs(){
   if(!logs.length){
-    alert("Pas de logs à télécharger !");
+    alert("Log vide");
     return;
   }
-
   var a    = document.createElement('a')
-  a.download = "logs.txt";
+  var moment=new Date();
+  moment="Log du "+formatDate(moment);
+  a.download = moment;
   a.href = "data:text/plain;charset=utf-8," + encodeURIComponent(logs.reduce(concatLogs));
   a.style.display = "none";
 

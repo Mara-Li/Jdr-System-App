@@ -87,7 +87,7 @@ class LogObject{
     }
 
     formatDate(date){
-        return "jj/mm/aaaa a HHhMM".replace("jj", this.formatNumber(date.getDate())).replace("mm", this.formatNumber(date.getMonth()+1))
+        return "jj/mm/aaaa à HHhMM".replace("jj", this.formatNumber(date.getDate())).replace("mm", this.formatNumber(date.getMonth()+1))
         .replace("aaaa", this.formatNumber(date.getFullYear())).replace("HH", this.formatNumber(date.getHours()))
         .replace("MM", this.formatNumber(date.getMinutes()));
     }
@@ -101,10 +101,10 @@ class LogObject{
 
     defToStr() {
         var res =
-        "Defenseur:\n"+
-        "- PV max: {pv_max}\n"+
-        "- Bouclier: {bouclier}\n"+
-        "- Endurance: {endurance}\n";
+        "**Défenseur :**\n"+
+        "- *PV max :* {pv_max}\n"+
+        "- *Bouclier :* {bouclier}\n"+
+        "- *Endurance :* {endurance}\n";
         return res.replace("{pv_max}", this.pv_max)
         .replace("{bouclier}", this.bouclier)
         .replace("{endurance}", this.endurance);
@@ -112,11 +112,11 @@ class LogObject{
 
     defToHtml() {
         var res =
-        "<span class=\"log-title\">Defenseur:</span>\n"+
+        "<span class=\"log-title\"><b>Défenseur :</b></span>\n"+
         "<ul>\n"+
-        " <li>PV max: {pv_max}</li>\n"+
-        " <li>Bouclier: {bouclier}</li>\n"+
-        " <li>Endurance: {endurance}</li>\n"+
+        " <li><i>PV max :</i> {pv_max}</li>\n"+
+        " <li><i>Bouclier :</i> {bouclier}</li>\n"+
+        " <li><i>Endurance :</i> {endurance}</li>\n"+
         "</ul>\n";
         return res.replace("{pv_max}", this.pv_max)
         .replace("{bouclier}", this.bouclier)
@@ -124,12 +124,42 @@ class LogObject{
     }
 
     atqToStr(){
+      var shield = parseInt(elem_inputs.bouclier.value)/100;
+      var bonus;
+      var bonus_type;
+      var bonus_attaque;
+      var type_capa = parseInt(elem_inputs.capacite_type.value);
+      if (isNaN(this.val_bonus)){
+        bonus=0;
+      }
+      bonus=choix_bonus();
+
+      if (this.atq_type) {
+        if(type_capa==0) {
+            //burst
+            if (shield != 0){
+                bonus_type = capacite_bonus(20);
+                console.log(bonus_type)
+                bonus=bonus_type+choix_bonus();
+              }else{
+                  bonus_type = capacite_bonus(25);
+                  bonus=bonus_type+choix_bonus();
+                }
+              }else if (type_capa==1){
+                bonus_type = capacite_bonus(15);
+                bonus=bonus_type+choix_bonus();
+              } else if (type_capa==2) {
+                bonus_attaque = choix_bonus();
+                bonus = (bonus_attaque + bonus);
+                bonus = capacite_bonus(bonus);
+            }
+      }
         var res =
-        "Attaquant:\n"+
-        "- Bonus: {bonus}\n"+
-        "- Valeur du bonus: {val_bonus}\n"+
-        "- {atq_type}\n"+
-        "- {dist}\n";
+        "**Attaquant :**\n"+
+        "- *Bonus :* {bonus}\n"+
+        "- *Valeur du bonus :* {val_bonus}\n"+
+        "- *{atq_type}*\n"+
+        "- *{dist}*\n";
 
         if(!this.atq_type){
             res = res.replace("{atq_type}", "Attaque normale");
@@ -144,16 +174,47 @@ class LogObject{
         }
 
         return res.replace("{bonus}", this.bonus)
-        .replace("{val_bonus}", this.val_bonus)
+        .replace("{val_bonus}", bonus)
         .replace("{capa_type}", this.capa_type);
     }
 
     atqToHtml(){
+      var bonus_attaque;
+      var bonus_type;
+      var shield = parseInt(elem_inputs.bouclier.value)/100;
+      var bonus;
+      var type_capa = parseInt(elem_inputs.capacite_type.value);
+      if (isNaN(this.val_bonus)){
+        bonus=0;
+      }
+      bonus=choix_bonus();
+
+      if (this.atq_type) {
+        if(type_capa==0) {
+            //burst
+            if (shield != 0){
+                bonus_type = capacite_bonus(20);
+                console.log(bonus_type)
+                bonus=bonus_type+choix_bonus();
+              }else{
+                  bonus_type = capacite_bonus(25);
+                  bonus=bonus_type+choix_bonus();
+                }
+              }else if (type_capa==1){
+                bonus_type = capacite_bonus(15);
+                bonus=bonus_type+choix_bonus();
+              } else if (type_capa==2) {
+                bonus_attaque = choix_bonus();
+                bonus = (bonus_attaque + bonus);
+                bonus = capacite_bonus(bonus);
+            }
+      }
+
         var res =
-        "<span class=\"log-title\">Attaquant:</span>\n"+
+        "<span class=\"log-title\"><b>Attaquant :</b></span>\n"+
         "<ul>\n"+
-        " <li>Bonus: {bonus}</li>\n"+
-        " <li>Valeur du bonus: {val_bonus}</li>\n"+
+        " <li><i>Bonus :</i> {bonus}</li>\n"+
+        " <li><i>Valeur du bonus :</i> {val_bonus}</li>\n"+
         " <li>{atq_type}</li>\n"+
         " <li>{dist}</li>\n"+
         "</ul>\n";
@@ -171,17 +232,18 @@ class LogObject{
         }
 
         return res.replace("{bonus}", this.bonus)
-        .replace("{val_bonus}", this.val_bonus)
+
+        .replace("{val_bonus}", bonus)
         .replace("{capa_type}", this.capa_type);
     }
 
     desToStr(){
         var res =
-        "Des:\n"+
-        "- Atq: {des_atq}\n"+
-        "- Def: {des_def}\n"+
-        "- Remise: {remise}\n"+
-        "- Type de défense: {des_esquive}\n";
+        "**Dés :**\n"+
+        "- *Atq :* {des_atq}\n"+
+        "- *Def :* {des_def}\n"+
+        "- *Remise :* {remise}\n"+
+        "- *Type de défense :* {des_esquive}\n";
         if(this.des_bonus_def){
             res = res.replace("{remise}", "Oui");
         }else{
@@ -200,12 +262,12 @@ class LogObject{
 
     desToHtml(){
         var res =
-        "<span class=\"log-title\">Des:</span>\n"+
+        "<span class=\"log-title\"><b>Dés :</b></span>\n"+
         "<ul>\n"+
-        " <li>Atq: {des_atq}</li>\n"+
-        " <li>Def: {des_def}</li>\n"+
-        " <li>Remise: {remise}</li>\n"+
-        " <li>Type de défense: {des_esquive}</li>\n"+
+        " <li><i>ATQ</i> : {des_atq}</li>\n"+
+        " <li><i>DEF :</i> {des_def}</li>\n"+
+        " <li><i>Remise :</i> {remise}</li>\n"+
+        " <li><i>Type de défense :</i> {des_esquive}</li>\n"+
         "</ul>\n";
         if(this.des_bonus_def){
             res = res.replace("{remise}", "Oui");
@@ -225,9 +287,9 @@ class LogObject{
 
     resToStr(){
         var res =
-        "Resultats:\n"+
-        "- Degats: {res_deg}\n"+
-        "- Pv restants: {pv_reste}\n";
+        "**Résultats :**\n"+
+        "- *Dégâts :* {res_deg}\n"+
+        "- *PV restants :* {pv_reste}\n";
 
         return res.replace("{res_deg}", this.res_deg)
         .replace("{pv_reste}", this.pv_reste)
@@ -235,10 +297,10 @@ class LogObject{
 
     resToHtml(){
         var res =
-        "<span class=\"log-title\">Resultats:</span>\n"+
+        "<span class=\"log-title\"><b>Résultats :</b></span>\n"+
         "<ul>\n"+
-        " <li>Degats: {res_deg}</li>\n"+
-        " <li>Pv restants: {pv_reste}</li>\n"+
+        " <li><i>Dégâts :</i> <b>{res_deg}</b></li>\n"+
+        " <li><i>PV restants :</i> <b>{pv_reste}</b></li>\n"+
         "<ul>\n";
 
         return res.replace("{res_deg}", this.res_deg)
@@ -408,6 +470,9 @@ function degat_type(){
         break;
 
         case 2: //Autre
+        if (isNaN(bonus)){
+          bonus=0;
+        }
         bonus_attaque = choix_bonus();
         bonus = ((bonus_attaque + bonus) / 100);
         bonus = capacite_bonus(bonus);
@@ -446,6 +511,9 @@ function choix_bonus(){
     var bonus = parseInt(elem_inputs.arme.value);
     var bonus_val = parseInt(elem_inputs.bonus.value);
     var dist = parseInt(elem_inputs.dist_atq.value); //récupération du bouton distance sur la boite bonus
+    if (isNaN(bonus_val)){
+      bonus_val=0;
+    }
     switch (bonus) {
         case 0: //Aucun
         b = 0;
@@ -490,7 +558,6 @@ function choix_bonus(){
     return b;
 }
 
-
 function reussite_endurance(endu_de, endu_val, pv, d, shield){
     var finaux;
     var d = Math.abs(Math.trunc(d * pv));
@@ -519,8 +586,6 @@ function reussite_endurance(endu_de, endu_val, pv, d, shield){
     }
     return finaux;
 }
-
-
 
 function capacite_bonus(bonus){
     var atq = parseInt(elem_inputs.des_atq.value) //valeur dé champ Attaque
@@ -667,5 +732,5 @@ function createLogFromActualInput(){
 }
 
 function concatLogs(total, current){
-    return total + "\n=====================================\n"+current.toString();
+    return total + "\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ \n"+current.toString();
 }
