@@ -74,9 +74,11 @@ function capa_toggle(elem){
 function bonus_toggle(){
   if (elem_inputs.arme.value==0){
     elem_inputs.bonus.disabled=true;
+    elem_inputs.bonus.value='';
   }
   else {
     elem_inputs.bonus.disabled=false;
+    elem_inputs.bonus.value=0;
   }
 }
 

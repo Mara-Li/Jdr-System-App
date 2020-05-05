@@ -389,7 +389,7 @@ function degat_type(){
     switch (type_capa) {
         case 0: //burst
         if (shield != 0){
-            bonus_type = capacite_bonus(15);
+            bonus_type = capacite_bonus(20);
             bonus = (bonus_type + bonus) / 100;
             [d, endu_val] = degat_burst_bouclier(bonus, atq, defe, endu_val);
         }else{
