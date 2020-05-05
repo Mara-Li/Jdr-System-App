@@ -68,6 +68,8 @@ function capa_toggle(elem){
  }else{
     elem_inputs.capacite_type.disabled = true;
     elem_inputs.arme.disabled = false;
+    elem_inputs.arme.value=0;
+    bonus_toggle();
   }
 }
 
