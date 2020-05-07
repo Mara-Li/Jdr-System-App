@@ -523,7 +523,7 @@ function choix_bonus(){
         break;
         case 2: //Fusil
         b = 10 + bonus_val;
-        if (dist) { //est checked
+        if (!dist) { //est checked
             b = b + 5;
         };
         break;
@@ -541,6 +541,9 @@ function choix_bonus(){
         break;
         case 7: //Pistolet
         b = 8 + bonus_val;
+        if (dist) {
+          b=b-3;
+        }
         break;
         case 8: //Artillerie
         b = 15 + bonus_val;
