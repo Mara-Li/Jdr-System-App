@@ -13,6 +13,8 @@
   <link rel="icon" type="image/png" href="res/img/logo.png" />
   <link rel="apple-touch-icon" href="res/img/logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <header>
@@ -32,6 +34,10 @@
         <li class="sidebar-header-3"><a href="#bonus">Bonus</a></li>
         <li class="sidebar-header-3"><a href="#les-primes">Les primes</a></li>
         <li class="sidebar-header-2"><a href="#exceptions">Exceptions</a></li>
+        <li class="sidebar-header-1"><a href="#Formule">FORMULES MATHÉMATIQUES</a></li>
+        <li class="sidebar-header-2"><a href="#Formule_base">Formule de base</a></li>
+        <li class="sidebar-header-2"><a href="#Equilibrage">Équilibrage des compétences</a></li>
+        <li class="sidebar-header-2"><a href="#Seuil">Seuil : Dégâts maximum</a></li>
         <li class="sidebar-header-1"><a href="#résumé">RÉSUMÉ</a></li>
         <li class="sidebar-header-1"><a href="#utilisation">UTILISATION</a></li>
       </ul>
@@ -94,8 +100,8 @@
       <p>Certaines attaques ont des bonus très légers, ainsi :</p>
       <ul class="list">
         <li>Pouvoir : 10%</li>
-        <li>Pistolet : 8%</li>
-        <li>Fusil : 10%</li>
+        <li>Pistolet : 8%. Mais, à distance, le pistolet n'a qu'un bonus de 5%.</li>
+        <li>Fusil : 10%. Au corps à corps, le fusil fait 5% de dégât en plus.</li>
         <li>Artillerie : 15%</li>
         <li>Couteau: 5%</li>
         <li>Projectile : 5%</li>
@@ -124,6 +130,40 @@
         </li>
       </ul>
       <p>A noté où dans le cas où les deux combattant font des UCC d&#39;attaque et de défense (La probabilité est mince), c&#39;est l&#39;attaquant qui aura l&#39;avantage.</p>
+
+      <h1 id="Formule"><a class="header-link" href="#formule"></a>FORMULES MATHÉMATIQUES</h1>
+      <p>Pour les petits malins qui chercheraient à connaître les formules mathématiques sans avoir à fouiller le code, les voici :</p>
+      <h2 id="Formule_base"><a class="header-link" href="#formule_base"></a>Formule de base</h2>
+      <ul class="list">
+        <li><p> Dégât : Tout d'abord, se reporter à la table correspondante à la différence entre l'attaque et la défense, puis : $$d = valeur\hspace{10px}de\hspace{10px}différence + bonus$$</p></li>
+        <li><p> PV perdu : $$ d=d * pv \hspace{10px} maximum$$</p></li>
+        <li><p> Bouclier : $$ d=d * (1-bouclier)$$</p></li>
+        <li><p> Endurance : $$ finaux = bouclier * \frac{1-[10*(endurance - défense)+1]}{100}$$</p></li>
+      </ul>
+        <p> Les dégâts finaux sont calculés sur cette dernière valeur, et les pv restants sont donc :</p>
+        $$pv\hspace{10px}maximum-finaux$$
+
+        <p><b> Attention !!</b> Les dégâts finaux sont <b>toujours</b> divisés par 1.4.</p>
+          <h2 id="Equilibrage"><a class="header-link" href="#equilibrage"></a>Équilibrage des compétences</h2>
+        <p>De plus, les bonus "d'équilibrage" lors d'un UCC (dé d'attaque égale à 0), sont tels que :</p>
+        <ul class="list">
+        <li><p> Dégât de burst (en absence de bouclier) : $$\frac{25}{100}*bonus$$</p></li>
+        <li><p> Dégât de burst (en présence de bouclier) : $$\frac{38}{100}*bonus$$</p></li>
+        <li><p> Dégât perforant : $$\frac{40}{100}*bonus$$</p></li>
+        <li><p> Dégât autre : $$\frac{50}{100}*bonus$$</p></li>
+      </ul>
+      <h2 id="Seuil"><a class="header-link" href="#seuil"></a>Seuil : Dégâts maximum</h2>
+        <p>Il ne faut pas oublier que les dégâts sont capés au-delà d'une certaine valeur, ainsi :</p>
+        <ul class="list">
+        <li><p> A moins de 100 pv : -50 pv maximum</p></li>
+        <li><p>Entre 100 et 299 pv : -80 pv maximum</p> </li>
+        <li><p> Entre 300 et 499 pv : -100 pv maximum </p></li>
+        <li><p> Entre 500 et 699 pv : -120 pv maximum </p></li>
+        <li><p> Entre 700 à 899 pv : -140 pv maximum</p></li>
+        <li><p> Entre 900 et 999 pv : -180 pv maximum</p></li>
+        <li><p> Au delà de 1000 pv : -200 pv maximum</p></li>
+      </ul>
+
       <h1 id="résumé"><a class="header-link" href="#résumé"></a>RÉSUMÉ</h1>
       <ul class="list">
         <li><p>Lancé de dés d&#39;attaque et de défense</p>
