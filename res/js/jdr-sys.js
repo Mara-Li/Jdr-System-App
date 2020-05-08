@@ -136,23 +136,21 @@ class LogObject{
 
       if (this.atq_type) {
         if(type_capa==0) {
-            //burst
-            if (shield != 0){
-                bonus_type = capacite_bonus(20);
-                console.log(bonus_type)
-                bonus=bonus_type+choix_bonus();
-              }else{
-                  bonus_type = capacite_bonus(25);
-                  bonus=bonus_type+choix_bonus();
-                }
-              }else if (type_capa==1){
-                bonus_type = capacite_bonus(15);
-                bonus=bonus_type+choix_bonus();
-              } else if (type_capa==2) {
-                bonus_attaque = choix_bonus();
-                bonus = (bonus_attaque + bonus);
-                bonus = capacite_bonus(bonus);
-            }
+             //burst
+             if (shield != 0){
+                 bonus_type=choix_bonus()+20;
+                 bonus = capacite_bonus(bonus_type);
+
+               }else{
+                   bonus_type = choix_bonus()+25;
+                   bonus=capacite_bonus(bonus_type);
+                 }
+               }else if (type_capa==1){
+                 bonus_type = choix_bonus()+15;
+                 bonus=capacite_bonus(bonus_type);
+               } else if (type_capa==2) {
+                 bonus = capacite_bonus(bonus);
+             }
       }
         var res =
         "**Attaquant :**\n"+
@@ -191,23 +189,21 @@ class LogObject{
 
       if (this.atq_type) {
         if(type_capa==0) {
-            //burst
-            if (shield != 0){
-                bonus_type = capacite_bonus(20);
-                console.log(bonus_type)
-                bonus=bonus_type+choix_bonus();
-              }else{
-                  bonus_type = capacite_bonus(25);
-                  bonus=bonus_type+choix_bonus();
-                }
-              }else if (type_capa==1){
-                bonus_type = capacite_bonus(15);
-                bonus=bonus_type+choix_bonus();
-              } else if (type_capa==2) {
-                bonus_attaque = choix_bonus();
-                bonus = (bonus_attaque + bonus);
-                bonus = capacite_bonus(bonus);
-            }
+             //burst
+             if (shield != 0){
+                 bonus_type=choix_bonus()+20;
+                 bonus = capacite_bonus(bonus_type);
+
+               }else{
+                   bonus_type = choix_bonus()+25;
+                   bonus=capacite_bonus(bonus_type);
+                 }
+               }else if (type_capa==1){
+                 bonus_type = choix_bonus()+15;
+                 bonus=capacite_bonus(bonus_type);
+               } else if (type_capa==2) {
+                 bonus = capacite_bonus(bonus);
+             }
       }
 
         var res =
