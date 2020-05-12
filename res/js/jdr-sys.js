@@ -543,7 +543,7 @@ function choix_bonus(){
         break;
         case 8: //Artillerie
         b = 15 + bonus_val;
-        if (dist) { //est check
+        if (!dist) { //est check
             b = b + 10;
         };
         break;
