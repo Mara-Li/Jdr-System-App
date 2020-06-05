@@ -3,7 +3,7 @@
 *  des_esquive -> 0 pour Endurance, 1 pour esquive raté
 *
 *  arme -> 0 pour aucun, 1 pour pouvoir, 2 fusil, 3 projectile, 4 épée,
-*          5 contondant, 6 couteau, 7 pistolet, 8 canon, 9 autre
+*          5 contondant, 6 couteau, 7 pistolet, 8 Canon, 9 autre
 *
 *  atq_type -> 0 pour atq normale, 1 pour capacité
 *
@@ -541,7 +541,7 @@ function choix_bonus(){
           b=b-3;
         }
         break;
-        case 8: //canon
+        case 8: //Canon
         b = 15 + bonus_val;
         if (!dist) { //est check
             b = b + 10;
