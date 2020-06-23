@@ -646,7 +646,7 @@ function degat_burst(bonus, atq, defe, endu_val){
 function degat_burst_bouclier(bonus, atq, defe, endu_val){
     let d;
     if (atq == 0){
-        d = (0.45 + bonus);
+        d = (0.5 + bonus);
         endu_val = 0;
     }else if (defe == 0){
         d = 0;
