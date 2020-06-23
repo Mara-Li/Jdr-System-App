@@ -458,7 +458,7 @@ function degat_type(){
         break;
 
         case 1: //Perforant
-        bonus_type = capacite_bonus(15);
+        bonus_type = capacite_bonus(20);
         bonus = ((bonus_type + bonus) / 100);
         endu_val = 0;
         shield = 0;
@@ -631,7 +631,7 @@ function calculate_degat(bonus, atq, defe){
 function degat_burst(bonus, atq, defe, endu_val){
     let d;
     if (atq == 0) {
-        d = 0.25 + bonus;
+        d = 0.55 + bonus;
         endu_val = 0;
     }else if (defe == 0){
         d = 0;
@@ -646,7 +646,7 @@ function degat_burst(bonus, atq, defe, endu_val){
 function degat_burst_bouclier(bonus, atq, defe, endu_val){
     let d;
     if (atq == 0){
-        d = (0.38 + bonus);
+        d = (0.45 + bonus);
         endu_val = 0;
     }else if (defe == 0){
         d = 0;
@@ -661,7 +661,7 @@ function degat_burst_bouclier(bonus, atq, defe, endu_val){
 function degat_perforant(bonus, atq, defe, endu_val){
     var d;
     if (atq == 0){
-        d = (0.4 + bonus);
+        d = (0.60 + bonus);
         endu_val = 0;
     }else if (defe == 0){
         d = 0;
