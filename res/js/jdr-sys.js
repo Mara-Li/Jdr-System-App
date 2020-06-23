@@ -142,11 +142,11 @@ class LogObject{
                  bonus = capacite_bonus(bonus_type);
 
                }else{
-                   bonus_type = choix_bonus()+25;
+                   bonus_type = choix_bonus()+30;
                    bonus=capacite_bonus(bonus_type);
                  }
                }else if (type_capa==1){
-                 bonus_type = choix_bonus()+15;
+                 bonus_type = choix_bonus()+20;
                  bonus=capacite_bonus(bonus_type);
                } else if (type_capa==2) {
                  bonus = capacite_bonus(bonus);
@@ -195,11 +195,11 @@ class LogObject{
                  bonus = capacite_bonus(bonus_type);
 
                }else{
-                   bonus_type = choix_bonus()+25;
+                   bonus_type = choix_bonus()+30;
                    bonus=capacite_bonus(bonus_type);
                  }
                }else if (type_capa==1){
-                 bonus_type = choix_bonus()+15;
+                 bonus_type = choix_bonus()+20;
                  bonus=capacite_bonus(bonus_type);
                } else if (type_capa==2) {
                  bonus = capacite_bonus(bonus);
@@ -451,7 +451,7 @@ function degat_type(){
             bonus = (bonus_type + bonus) / 100;
             [d, endu_val] = degat_burst_bouclier(bonus, atq, defe, endu_val);
         }else{
-            bonus_type = capacite_bonus(25);
+            bonus_type = capacite_bonus(30);
             bonus = ((bonus + bonus_type) / 100);
             [d, endu_val] = degat_burst(bonus, atq, defe, endu_val);
         }
@@ -661,7 +661,7 @@ function degat_burst_bouclier(bonus, atq, defe, endu_val){
 function degat_perforant(bonus, atq, defe, endu_val){
     var d;
     if (atq == 0){
-        d = (0.60 + bonus);
+        d = (0.55 + bonus);
         endu_val = 0;
     }else if (defe == 0){
         d = 0;

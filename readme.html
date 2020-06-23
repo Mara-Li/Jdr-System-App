@@ -90,9 +90,9 @@
       </ul>
       <h2 id="capacité"><a class="header-link" href="#capacité"></a>Capacité</h2>
       <ul class="list">
-        <li>Perforant correspond à un bonus de 15%, mais la capacité traversa toute les défense de l&#39;ennemi.</li>
-        <li>Burst correspond à un simple bonus de 25% mais ses capacités traversent très mal les boucliers (Le bonus descendra à 20% à ce moment)</li>
-        <li>Autre : Tout ce qui ne rentrerait pas dans les deux schémas précédents, mais dont vous souhaitez quand même qu&#39;ils bénéficient de la prime d&#39;un ultra-réussite-critique ou d&#39;un réussite-critique. De plus, ce type de capacité prend en compte les bonus des armes ou des pouvoirs.</li>
+        <li>Perforant correspond à un bonus de 20%, mais la capacité traversa toute les défense de l&#39;ennemi.</li>
+        <li>Burst correspond à un simple bonus de 30% mais ses capacités traversent très mal les boucliers (Le bonus descendra à 20% à ce moment)</li>
+        <li>Autre : Tout ce qui ne rentrerait pas dans les deux schémas précédents, mais dont vous souhaitez quand même qu&#39;ils bénéficient de la prime d&#39;une ultra-réussite-critique ou d&#39;une réussite-critique. De plus, ce type de capacité prend en compte les bonus des armes ou des pouvoirs.</li>
       </ul>
       <p> Contraitement à la capacité "autre", les capacités "Perforantes" et "Burst" ne prennent pas en compte les bonus des armes ou des pouvoirs : le bonus de la capacité se substitue au bonus de l'arme ou du pouvoir. Cependant, vous pouvez tout de même rentrer des bonus manuellement, et ces derniers bénéficerons tout de même du bonus dû aux URC et aux RC. <p>
       <p>Il est à noté qu&#39;il y a de nombreux équilibrage vis à vis des dégâts qui ne sont pas détaillés ici. Vous les retrouverez dans le code dans les fonctions <code>degat_burst</code>, <code>degat_burst_bouclier</code>, <code>degat_perforant</code> et <code>degat_autre</code>.</p>
@@ -114,11 +114,11 @@
       <h2 id="exceptions"><a class="header-link" href="#exceptions"></a>Exceptions</h2>
       <p>Il existe TROIS exceptions aux systèmes de dégâts : </p>
       <ul class="list">
-        <li><p>Les ultra-réussite-critiques <em>d&#39;attaque</em> :  Lorsqu&#39;un PJ a un score de dés égal à 0, il obtient automatiquement le bonus de 50% et outrepasse la défense par endurance de son adversaire. Il faut cependant noter que seules les personnes possédant une remise peuvent avoir un URC. En outre, ce bonus est différent dans le cas où la personne utilise une compétence : on n'outrepasse uniquement que la défense de l'adversaire, et le bonus de la compétence est alors multiplié par la prime correspondante.</p>
+        <li><p>Les ultra-réussites-critiques <em>d&#39;attaque</em> :  Lorsqu&#39;un PJ a un score de dés égal à 0, il obtient automatiquement le bonus de 50% et outrepasse la défense par endurance de son adversaire. Il faut cependant noter que seules les personnes possédant une remise peuvent avoir un URC. En outre, ce bonus est différent dans le cas où la personne utilise une compétence : on n'outrepasse uniquement que la défense de l'adversaire, et le bonus de la compétence est alors multiplié par la prime correspondante.</p>
         </li>
-        <li><p>Les ultra-réussite-critiques <em>de défense</em> : Lorsqu&#39;un combattant a un score de dés d&#39;endurance égal à 0, il annule automatiquement l&#39;attaque de son adversaire, quelque soit la valeur de son dé. </p>
+        <li><p>Les ultra-réussites-critiques <em>de défense</em> : Lorsqu&#39;un combattant a un score de dés d&#39;endurance égal à 0, il annule automatiquement l&#39;attaque de son adversaire, quelque soit la valeur de son dé. </p>
         </li>
-        <li><p>Les réussite-critiques d&#39;attaque :  Lorsqu&#39;un combattant a un score de dés égal à 1, il annule la défense par endurance de son adversaire.
+        <li><p>Les réussites-critiques d&#39;attaque :  Lorsqu&#39;un combattant a un score de dés égal à 1, il annule la défense par endurance de son adversaire.
           Dans le cas où une compétence est utilisée, elle est multipliée par la prime correspondante, et n'annulera pas la défense de son adversaire.</p>
         </li>
       </ul>
