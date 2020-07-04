@@ -110,6 +110,11 @@ input {
   margin-right: 0;
 }
 
+input#des_bonus_def {
+  vertical-align: text-bottom;
+}
+
+
 input[type="button"] {
   font-size: 20px;
   display: block;
