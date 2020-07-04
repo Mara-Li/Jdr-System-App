@@ -137,7 +137,7 @@ label[for="pv_max"], label[for="pv_reste"], label[for="bouclier"], label[for="en
 
 label[for="bonus"] {
   display: block;
-  width: 150px;
+  width: 75px;
   float: left;
 }
 
@@ -248,9 +248,9 @@ p{
 }
 
 .log-btn-group{
-  display: flex;
+  display: grid;
   align-items: center;
-  margin: auto 1em;
+  margin: auto;
 }
 
 .result-btn-group{
@@ -269,8 +269,7 @@ p{
 
 #res_pv, #res_deg {
   font-family: 'Pangolin', cursive;
-  display: block;
-  float: left;
+  display: inline-block;
   margin: auto;
 }
 
