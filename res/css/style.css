@@ -134,7 +134,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-o-inner-
   margin: 0;
 }
 
-label[for="pv_max"], label[for="pv_reste"], label[for="bouclier"], label[for="endurance"] {
+label[for="pv_max"], label[for="pv_reste"], label[for="bouclier"], label[for="endurance"], label[for="agi"] {
   display: block;
   width: 150px;
   float: left;
@@ -268,7 +268,7 @@ p{
 * ID *
 ******/
 
-#endurance, #bouclier {
+#endurance, #bouclier,  {
   width: 100px;
 }
 

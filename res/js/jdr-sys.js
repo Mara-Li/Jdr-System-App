@@ -17,6 +17,7 @@ const elemIDs = [
     "pv_reste",
     "bouclier",
     "endurance",
+		"agi",
     "des_atq",
     "des_def",
     "arme",
@@ -68,10 +69,11 @@ class Elements_getter{
 }
 
 class LogObject{
-    constructor(pv_max, bouclier, endurance, arme, bonus, atq_type, capa_type, dist, des_atq, des_def, des_bonus_def, des_esquive, res_deg, pv_reste, date){
+    constructor(pv_max, bouclier, endurance, agi, arme, bonus, atq_type, capa_type, dist, des_atq, des_def, des_bonus_def, des_esquive, res_deg, pv_reste, date){
         this.pv_max = parseInt(pv_max);
         this.bouclier = parseInt(bouclier);
         this.endurance = parseInt(endurance);
+				this.agi = parseInt(agi);
         this.bonus = arme;
         this.val_bonus = parseInt(bonus);
         this.atq_type = parseInt(atq_type);
@@ -105,9 +107,11 @@ class LogObject{
         "- *PV max :* {pv_max}\n"+
         "- *Bouclier :* {bouclier}\n"+
         "- *Endurance :* {endurance}\n";
+				"- *Agilité :* {agi}\n";
         return res.replace("{pv_max}", this.pv_max)
         .replace("{bouclier}", this.bouclier)
-        .replace("{endurance}", this.endurance);
+        .replace("{endurance}", this.endurance)
+				.replace("{agi}", this.agi);
     }
 
     defToHtml() {
@@ -117,10 +121,14 @@ class LogObject{
         " <li><i>PV max :</i> {pv_max}</li>\n"+
         " <li><i>Bouclier :</i> {bouclier}</li>\n"+
         " <li><i>Endurance :</i> {endurance}</li>\n"+
+				" <li><i>Agilité :</i> {agi}</li>\n"+
+
         "</ul>\n";
         return res.replace("{pv_max}", this.pv_max)
         .replace("{bouclier}", this.bouclier)
-        .replace("{endurance}", this.endurance);
+        .replace("{endurance}", this.endurance)
+				.replace("{agi}", this.agi);
+
     }
 
     atqToStr(){
@@ -344,6 +352,7 @@ function degat_normaux(){
     var atq = parseInt(elem_inputs.des_atq.value); //champ attaque dans dé
     var defe = parseInt(elem_inputs.des_def.value); //champ défense dans dé
     var endu_val = parseInt(elem_inputs.endurance.value); //valeur de l'endurance dans les stats
+		var agi_val = parseInt(elem_inputs.agi.value); //valeur de l'agi dans les stats
     var shield = parseInt(elem_inputs.bouclier.value)/100; //valeur du champ "bouclier"
     d=calculate_degat(bonus, atq, defe);
     sel_def = parseInt(elem_inputs.des_esquive.value); //insérer le nom qui correspond
@@ -351,7 +360,7 @@ function degat_normaux(){
         endu_de=defe;
     }else{ //Esquive & test (valeur = 1)
         if (remise) {
-            if (defe < (atq/2)){ //esquive réussi : Pas de dégât
+            if (defe < (agi_val/2)){ //esquive réussi : Pas de dégât
                 defe=0;
                 endu_de=0;
             }else { //esquive raté
@@ -361,7 +370,7 @@ function degat_normaux(){
 
             }
         }else {
-            if (defe <= (atq/2)){ //esquive réussi : pas de dégât
+            if (defe <= (agi_val/2)){ //esquive réussi : pas de dégât
                 defe=0;
                 endu_de=0;
             }
@@ -417,6 +426,7 @@ function degat_type(){
     var type_capa = parseInt(elem_inputs.capacite_type.value); //Valeur de la spinbox dans capacité ["Burst", "Autre", "Perforante"]
     var shield = parseInt(elem_inputs.bouclier.value)/100; //valeur du champ "Bouclier"
     var endu_val = parseInt(elem_inputs.endurance.value); //valeur champ "endurance" dans stats
+		var agi_val = parseInt(elem_inputs.agi.value); //valeur champ "agi" dans stats
 
     switch (sel_defe) {
         case 0: //Endurance
@@ -424,7 +434,7 @@ function degat_type(){
         break;
         case 1: //Esquive
         if (remise) {
-            if (defe < (atq/2)){
+            if (defe < (agi_val/2)){
                 defe=0;
                 endu_de=0;
             }else {
@@ -433,7 +443,7 @@ function degat_type(){
             }
         }
         else {
-            if (defe <= (atq/2)){
+            if (defe <= (agi_val/2)){
                 defe=0;
                 endu_de=0;
             }else {
@@ -559,7 +569,7 @@ function choix_bonus(){
 
 function reussite_endurance(endu_de, endu_val, pv, d, shield){
     var finaux;
-    var d = Math.abs(Math.trunc(d * pv));
+    var d = Math.abs(Math.trunc(d * 20));
     var bouclier = Math.abs(Math.trunc(d * (1 - shield))); //au besoin, placé des int pour convertir les valeurs
     var remise = elem_inputs.des_bonus_def.checked; //checkbox "bonus"
 
@@ -693,14 +703,15 @@ function phrase_esquive(finaux){
     var atq = parseInt(elem_inputs.des_atq.value); //champ attaque dans dé
     var defe = parseInt(elem_inputs.des_def.value); //champ défense dans dé
     sel_def = parseInt(elem_inputs.des_esquive.value);
+		var agi_val = parseInt(elem_inputs.agi.value); //valeur de l'agi dans les stats
     if (sel_def){
         if (remise){
-            if (defe < (atq/2)){
+            if (defe < (agi_val/2)){
                 finaux='Esquive réussie';
             }
         }
         else {
-            if (defe <= (atq/2)){
+            if (defe <= (agi_val/2)){
                 finaux='Esquive réussie';
             }
         }
@@ -723,7 +734,7 @@ function vie_restante(finaux){
 function createLogFromActualInput(){
     elem_inputs.refresh();
     return new LogObject(elem_inputs.pv_max.valueAsNumber, elem_inputs.bouclier.valueAsNumber,
-        elem_inputs.endurance.valueAsNumber, elem_inputs.arme.selectedOptions[0].innerText,
+        elem_inputs.endurance.valueAsNumber, elem_inputs.agi.valueAsNumber, elem_inputs.arme.selectedOptions[0].innerText,
         elem_inputs.bonus.valueAsNumber, elem_inputs.atq_type.value, elem_inputs.capacite_type.selectedOptions[0].innerText,
         elem_inputs.dist_atq.value, elem_inputs.des_atq.valueAsNumber, elem_inputs.des_def.valueAsNumber,
         elem_inputs.des_bonus_def.checked, elem_inputs.des_esquive.value, parseInt(elem_inputs.res_deg.innerText),
