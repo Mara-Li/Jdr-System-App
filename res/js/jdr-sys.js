@@ -391,7 +391,6 @@ function degat_normaux(){
     }
 
     finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
-    finaux = Math.trunc(finaux/1.4);
     max = finaux;
     if (pv >=1000){
         max=200;
@@ -489,7 +488,6 @@ function degat_type(){
     }
 
     finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
-    finaux = Math.trunc(finaux/1.4);
     max = finaux;
     if (pv >=1000){
         max=200;
