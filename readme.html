@@ -61,17 +61,17 @@
       <h2 id="dégâts"><a class="header-link" href="#dégâts"></a>Dégâts</h2>
       <p>Les dégâts sont déterminés en fonction de l&#39;écart de dé entre l&#39;attaquant et le défenseur dans le cas où le défenseur n&#39;a pas réussi à esquiver l&#39;attaque. Ainsi :</p>
       <ul class="list">
-        <li><p>Ecart de 9 (voire+): Coup critique : L&#39;adversaire perd 50% de 20 PV, donc, 10 PV. </p>
+        <li><p>Ecart de 9 (voire+): Coup critique : L&#39;adversaire perd 50% de 100 PV, donc, 50 PV. </p>
         </li>
-        <li><p>De 8 à 7 : Très Bon dégât : Le défenseur perd 40% de 20 PV, donc 8 PV. </p>
+        <li><p>De 8 à 7 : Très Bon dégât : Le défenseur perd 40% de 100 PV, donc 40 PV. </p>
         </li>
-        <li><p>De 6 à 5 : Bon dégât : Le défenseur perd 30% de 20 PV, donc 6 PV. </p>
+        <li><p>De 6 à 5 : Bon dégât : Le défenseur perd 30% de 100 PV, donc 30 PV. </p>
         </li>
-        <li><p>De 4 à 3 : Dégât moyen: Le défenseur perd 20% de 20, donc 4 PV. </p>
+        <li><p>De 4 à 3 : Dégât moyen: Le défenseur perd 20% de 100 PV, donc 20 PV. </p>
         </li>
-        <li><p>2 : Dégât faible : Le défenseur perd 10% de 20 PV, donc 2 PV. </p>
+        <li><p>2 : Dégât faible : Le défenseur perd 10% de 100 PV, donc 10 PV. </p>
         </li>
-        <li><p>1 : Dégât très faible : Le défenseur perd 5% de 20 PV, donc 1 PV. </p>
+        <li><p>1 : Dégât très faible : Le défenseur perd 5% de 100 PV, donc 5 PV. </p>
         </li>
         <li><p>0 : Le défenseur ne prend aucun dégât. </p>
         </li>
@@ -137,7 +137,7 @@
       <h2 id="Formule_base"><a class="header-link" href="#formule_base"></a>Formule de base</h2>
       <ul class="list">
         <li><p> Dégât : Tout d'abord, se reporter à la table correspondante à la différence entre l'attaque et la défense, puis : </p> <p class="math">$$d = valeur\hspace{10px}de\hspace{10px}différence + bonus$$</p></li>
-        <li><p> PV perdu : </p> <p class="math">$$ d=d * 20 \hspace{10px}$$</p></li>
+        <li><p> PV perdu : </p> <p class="math">$$ d=d * 100 \hspace{10px}$$</p></li>
         <li><p> Bouclier : </p> <p class="math">$$ d=d * (1-bouclier)$$</p></li>
         <li><p> Endurance : </p> <p class="math">$$ finaux = bouclier * \frac{1-[10*(endurance - défense)+1]}{100}$$</p></li>
       </ul>

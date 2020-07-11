@@ -567,7 +567,7 @@ function choix_bonus(){
 
 function reussite_endurance(endu_de, endu_val, pv, d, shield){
     var finaux;
-    var d = Math.abs(Math.trunc(d * 20));
+    var d = Math.abs(Math.trunc(d * 100));
     var bouclier = Math.abs(Math.trunc(d * (1 - shield))); //au besoin, placé des int pour convertir les valeurs
     var remise = elem_inputs.des_bonus_def.checked; //checkbox "bonus"
 
