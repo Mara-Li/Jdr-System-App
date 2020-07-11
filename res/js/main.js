@@ -186,13 +186,12 @@ function capage_change(){
   var int_shield=parseInt(elem_inputs.bouclier.value);
   var int_dice_endu=parseInt(elem_inputs.endurance.value);
 	var int_dice_agi=parseInt(elem_inputs.agi.value);
-  var int_pv_restant=parseInt(elem_inputs.pv_reste.value);
+  var int_pv_restant=parseInt(elem_inputs.pv_reste.valu);
   var int_bonus=parseInt(elem_inputs.bonus.value);
   var int_defense=parseInt(elem_inputs.des_def.value);
 
   if ((int_atq>10) || (int_atq<0)){
     elem_inputs.des_atq.onchange=function(){capage(this, 0, 10)}
-		console.log(int_atq)
   }
   if ((int_defense >10)||(int_defense<0)){
     elem_inputs.des_def.onchange=function(){capage(this, 0, 10)}
@@ -201,7 +200,7 @@ function capage_change(){
     elem_inputs.endurance.onchange=function(){capage(this, 0, 10)}
   }
 	if ((int_dice_agi >10)||(int_dice_agi<0)) {
-		elem_inputs.agi.onchange=function(){capage(this, 0, 10)}
+		elem_inputs.endurance.onchange=function(){capage(this, 0, 10)}
 	}
   if ((int_bonus >100)||(int_bonus<0)){
     elem_inputs.bonus.onchange=function(){capage(this, 0, 100)}
