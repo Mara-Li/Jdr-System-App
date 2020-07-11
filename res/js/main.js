@@ -199,9 +199,6 @@ function capage_change(){
   if ((int_dice_endu >10)||(int_dice_endu<0)) {
     elem_inputs.endurance.onchange=function(){capage(this, 0, 10)}
   }
-	if ((int_dice_agi >10)||(int_dice_agi<0)) {
-		elem_inputs.endurance.onchange=function(){capage(this, 0, 10)}
-	}
   if ((int_bonus >100)||(int_bonus<0)){
     elem_inputs.bonus.onchange=function(){capage(this, 0, 100)}
   }
