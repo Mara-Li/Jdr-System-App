@@ -61,12 +61,12 @@ window.onload = function() {
 	elem_inputs.agi.onchange();
 
 	elem_inputs.bouclier.onchange = function (){
-		capage(this, 0);
+		capage(this, 0, 100);
 	}
 	elem_inputs.bouclier.onchange();
 
 	elem_inputs.bonus.onchange = function (){
-		capage(this, 0);
+		capage(this, 0, 100);
 	}
 	elem_inputs.bonus.onchange();
 
