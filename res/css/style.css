@@ -34,6 +34,11 @@
   .log-btn-group button{
     margin: auto 0.5em;
   }
+	input[type="number"] {
+		max-width: 10%;
+		width: 100px;
+		-moz-appearance: textfield;
+	}
 
 }
 
@@ -74,8 +79,11 @@
     margin: 0.5em auto;
   }
 
-
-
+	input[type="number"] {
+	  max-width: 20%;
+	  width: 100px;
+	  -moz-appearance: textfield;
+	}
 
 
 
@@ -122,11 +130,6 @@ input[type="button"] {
   margin: auto;
 }
 
-input[type="number"] {
-  max-width: 20%;
-  width: 100px;
-  -moz-appearance: textfield;
-}
 
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-o-inner-spin-button {
   -o-appearance: none;
