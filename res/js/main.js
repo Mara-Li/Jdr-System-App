@@ -14,13 +14,12 @@ window.onload = function() {
   elem_inputs.pv_max["old_value"] = elem_inputs.pv_max.valueAsNumber;
 
   elem_inputs.pv_max.onchange = function() {
-
+		capage(this, 100)
     if(this.old_value > this.valueAsNumber){
       elem_inputs.pv_reste.valueAsNumber = this.valueAsNumber;
     }else if(this.old_value < this.value){
       elem_inputs.pv_reste.valueAsNumber = this.valueAsNumber;
     }
-    capage(this, 0)
     this.old_value = this.valueAsNumber;
 
   }
@@ -41,38 +40,32 @@ window.onload = function() {
   elem_inputs.pv_max.onchange();
   elem_inputs.pv_reste.onchange();
 
-	elem_inputs.des_atq.onchange = function ()
-	{
+	elem_inputs.des_atq.onchange = function (){
 		capage(this, 0, 10);
 	}
 	elem_inputs.des_atq.onchange();
 
-	elem_inputs.des_def.onchange = function ()
-	{
+	elem_inputs.des_def.onchange = function (){
 		capage(this, 0, 10);
 	}
 	elem_inputs.des_def.onchange();
 
-	elem_inputs.endurance.onchange = function ()
-	{
+	elem_inputs.endurance.onchange = function (){
 		capage(this, 0, 10);
 	}
 	elem_inputs.endurance.onchange();
 
-	elem_inputs.agi.onchange = function ()
-	{
+	elem_inputs.agi.onchange = function (){
 		capage(this, 0, 10);
 	}
 	elem_inputs.agi.onchange();
 
-	elem_inputs.bouclier.onchange = function ()
-	{
+	elem_inputs.bouclier.onchange = function (){
 		capage(this, 0, 10);
 	}
 	elem_inputs.bouclier.onchange();
 
-	elem_inputs.bonus.onchange = function ()
-	{
+	elem_inputs.bonus.onchange = function (){
 		capage(this, 0, 10);
 	}
 	elem_inputs.bonus.onchange();
