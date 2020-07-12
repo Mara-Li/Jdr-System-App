@@ -39,6 +39,11 @@
 		width: 40px;
 		-moz-appearance: textfield;
 	}
+	.titre-card-button {
+		  flex-basis: 100%;
+			margin:10px;
+	}
+
 
 }
 
@@ -60,6 +65,13 @@
   .titre-card {
     flex: 1;
   }
+
+	.titre-card-button {
+		flex: 1;
+    flex-direction: column;
+		margin-bottom: -10%;
+		margin-left: -10%;
+	}
 
   .titre-card-resultat {
     flex: 3;
@@ -217,6 +229,16 @@ p{
 .titre-card {
   font-weight: bold;
   margin: 10px;
+  color: teal;
+  font-size: 1.5em;
+  font-family: 'Concert One', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titre-card-button {
+  font-weight: bold;
   color: teal;
   font-size: 1.5em;
   font-family: 'Concert One', cursive;
