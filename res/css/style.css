@@ -134,7 +134,13 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-o-inner-
   margin: 0;
 }
 
-label[for="pv_max"], label[for="pv_reste"], label[for="bouclier"], label[for="endurance"], label[for="agi"] {
+label[for="bouclier"], label[for="endurance"], label[for="agi"] {
+  display: block;
+  width: 150px;
+  float: left;
+}
+
+label[for="pv_max"], label[for="pv_reste"] {
   display: block;
   width: 150px;
   float: left;
@@ -276,6 +282,16 @@ p{
   font-family: 'Pangolin', cursive;
   display: inline-block;
   margin: auto;
+}
+
+#sep {
+	font-family: 'Josefin Sans', cursive;
+	display: inline-block;
+	margin: auto;
+	color: #B97575;
+	font-size:150%;
+	vertical-align: sub;
+	line-height: 0%;
 }
 
 #log {

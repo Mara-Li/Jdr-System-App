@@ -27,13 +27,9 @@
                 <span class="titre-card">Defenseur</span>
                 <form>
                   <div class="input-zone">
-                    <label for="pv_reste">PV (restant)</label>
-                    <input type="number" onfocus="this.select()" pattern="[0-9]*" inputmode="numeric" id="pv_reste" value="100" min="0">
+                    <label for="pv_reste">PV</label>
+                    <input type="number" onfocus="this.select()" pattern="[0-9]*" inputmode="numeric" id="pv_reste" value="100" min="0"> <span id="sep"> / </span> <input type="number" onfocus="this.select()" pattern="[0-9]*" inputmode="numeric" id="pv_max" value="100" min="100">
                   </div>
-                    <div class="input-zone">
-                      <label for="pv_max">PV (totaux)</label>
-                      <input type="number" onfocus="this.select()" pattern="[0-9]*" inputmode="numeric" id="pv_max" value="100"  min="100">
-                    </div>
                     <div class="input-zone">
                       <label for="bouclier">Bouclier</label>
                       <input type="number" onfocus="this.select()" pattern="[0-9]*" inputmode="numeric" id="bouclier" value="0"  min="0" max="100">
