@@ -190,15 +190,20 @@ function clearInput(){
   elem_inputs.res_deg.value=0;
   elem_inputs.res_pv.value=0;
   elem_inputs.des_bonus_def.checked=0;
+	elem_inputs.des_esquive.checked=1;
   elem_inputs.atq_type.checked=1;
   elem_inputs.capacite_type.checked=1;
   elem_inputs.dist_atq.checked=1;
-	elem_inputs.des_esquive.checked=1;
+	elem_inputs.des_esquive.value=0;
   elem_inputs.res_deg.innerHTML = '░';
   elem_inputs.res_pv.innerHTML ='░';
   capa_toggle(elem_inputs.atq_type);
   elem_inputs.arme.onchange=bonus_toggle;
   elem_inputs.arme.onchange();
+	elem_inputs.endurance.onchange=def_toggle;
+	elem_inputs.endurance.onchange();
+	elem_inputs.agi.onchange=def_toggle;
+	elem_inputs.agi.onchange();
 }
 
 function test_none(t){
