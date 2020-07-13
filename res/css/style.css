@@ -42,6 +42,7 @@
 	.titre-card-button {
 		  flex-basis: 100%;
 			margin:10px;
+			margin-top:0;
 	}
 
 
@@ -68,8 +69,8 @@
 
 	.titre-card-button {
 		flex: 1;
-    flex-direction: column;
-		margin-bottom: -10%;
+    flex-direction: row;
+		margin-bottom: -5%;
 		margin-left: -10%;
 	}
 
@@ -299,11 +300,7 @@ p{
 * ID *
 ******/
 
-<<<<<<< HEAD
 #endurance, #bouclier, #agi  {
-=======
-#endurance, #bouclier, #agi {
->>>>>>> dev
   width: 100px;
 }
 
