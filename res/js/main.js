@@ -194,7 +194,7 @@ function clearInput(){
 	   elem_inputs.atq_type.checked=1;
 	   elem_inputs.capacite_type.checked=1;
 	   elem_inputs.dist_atq.checked=1;
-	 	elem_inputs.des_esquive.value=0;
+	 	elem_inputs.des_esquive.checked=1;
 	   elem_inputs.res_deg.innerHTML = '░';
 	   elem_inputs.res_pv.innerHTML ='░';
 	   capa_toggle(elem_inputs.atq_type);
