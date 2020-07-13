@@ -179,10 +179,10 @@ function clearInput(){
   elem_inputs.pv_max.value=100;
   elem_inputs.pv_reste.value=100;
   elem_inputs.bouclier.value=0;
-  elem_inputs.endurance.value=0;
-	elem_inputs.agi.value='';
   elem_inputs.des_atq.value=0;
   elem_inputs.des_def.value=0;
+	elem_inputs.endurance.value=0;
+	elem_inputs.agi.value='';
   elem_inputs.arme.value=0;
   elem_inputs.bonus.value='';
   elem_inputs.capacite_type.value=0;
@@ -193,13 +193,12 @@ function clearInput(){
   elem_inputs.atq_type.checked=1;
   elem_inputs.capacite_type.checked=1;
   elem_inputs.dist_atq.checked=1;
-  elem_inputs.des_esquive.checked=1;
+	elem_inputs.des_esquive.checked=1;
   elem_inputs.res_deg.innerHTML = '░';
   elem_inputs.res_pv.innerHTML ='░';
   capa_toggle(elem_inputs.atq_type);
   elem_inputs.arme.onchange=bonus_toggle;
   elem_inputs.arme.onchange();
-
 }
 
 function test_none(t){
