@@ -299,7 +299,11 @@ p{
 * ID *
 ******/
 
+<<<<<<< HEAD
 #endurance, #bouclier, #agi  {
+=======
+#endurance, #bouclier, #agi {
+>>>>>>> dev
   width: 100px;
 }
 
