@@ -10,6 +10,10 @@ window.onload = function() {
   capa_toggle(elem_inputs.atq_type);
   elem_inputs.arme.onchange=bonus_toggle;
   elem_inputs.arme.onchange();
+	elem_inputs.endurance.onchange=def_toggle;
+	elem_inputs.endurance.onchange();
+	elem_inputs.agi.onchange=def_toggle;
+	elem_inputs.agi.onchange();
 
   elem_inputs.pv_max["old_value"] = elem_inputs.pv_max.valueAsNumber;
 
@@ -50,25 +54,10 @@ window.onload = function() {
 	}
 	elem_inputs.des_def.onchange();
 
-	elem_inputs.endurance.onchange = function (){
-		capage(this, 0, 10);
-	}
-	elem_inputs.endurance.onchange();
-
-	elem_inputs.agi.onchange = function (){
-		capage(this, 0, 10);
-	}
-	elem_inputs.agi.onchange();
-
 	elem_inputs.bouclier.onchange = function (){
 		capage(this, 0, 100);
 	}
 	elem_inputs.bouclier.onchange();
-
-	elem_inputs.bonus.onchange = function (){
-		capage(this, 0, 100);
-	}
-	elem_inputs.bonus.onchange();
 
   if(localStorage.logs){
     logs = JSON.parse(localStorage.getItem("logs"));
@@ -111,8 +100,37 @@ function bonus_toggle(){
   else {
     elem_inputs.bonus.disabled=false;
     elem_inputs.bonus.value=0;
+		elem_inputs.bonus.onchange = function (){
+			capage(this, 0, 100);
+		}
+		elem_inputs.bonus.onchange();
   }
 }
+
+function def_toggle(){
+	elem_inputs.refresh();
+	if (elem_inputs.des_esquive.value==0){
+		elem_inputs.agi.value='';
+		elem_inputs.endurance.value=0;
+		elem_inputs.agi.disabled=true;
+		elem_inputs.endurance.disabled=false;
+		elem_inputs.endurance.onchange=function(){
+			capage(this, 0, 10)
+		}
+		elem_inputs.endurance.onchange();
+	}
+	else{
+		elem_inputs.endurance.value='';
+		elem_inputs.agi.value=0;
+		elem_inputs.agi.disabled=false;
+		elem_inputs.endurance.disabled=true;
+	elem_inputs.agi.onchange=function(){
+		capage(this, 0, 10)
+	}
+	elem_inputs.agi.onchange();
+}
+}
+
 
 function formatNumber(num){
     if(num < 10){
@@ -162,11 +180,11 @@ function clearInput(){
   elem_inputs.pv_reste.value=100;
   elem_inputs.bouclier.value=0;
   elem_inputs.endurance.value=0;
-	elem_inputs.agi.value=0;
+	elem_inputs.agi.value='';
   elem_inputs.des_atq.value=0;
   elem_inputs.des_def.value=0;
   elem_inputs.arme.value=0;
-  elem_inputs.bonus.value=0;
+  elem_inputs.bonus.value='';
   elem_inputs.capacite_type.value=0;
   elem_inputs.des_bonus_def.value=0;
   elem_inputs.res_deg.value=0;
@@ -182,7 +200,7 @@ function clearInput(){
   elem_inputs.arme.onchange=bonus_toggle;
   elem_inputs.arme.onchange();
 
-} //Ajouter un bouton d'effacer tous les champs mais NE DOIT PAS EFFACER LES LOGS
+}
 
 function test_none(t){
   lg=t.trim();
