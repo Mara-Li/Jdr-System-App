@@ -176,8 +176,30 @@ label[for="res_deg"], label[for="res_pv"] {
   text-align: center;
 }
 
+label[for="des_attaque"], label[for=des_defense]{
+	width:100%;
+}
 p{
   margin:auto;
+}
+
+input[type="radio"]{
+	/* remove standard background appearance */
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+/* create custom radiobutton appearance */
+display: inline-block;
+width: 15px;
+height: 15px;
+/* background-color only for content */
+background-clip: content-box;
+background-color: #e7e6e7;
+border-radius: 50%;
+}
+/* appearance for checked radiobutton */
+input[type="radio"]:checked {
+  background-color: teal;
 }
 
 
@@ -260,6 +282,10 @@ p{
   align-items: center;
 }
 
+/* optional styles for centering radiobuttons */
+.des_esquive checked {
+	background-color: :red;
+}
 
 
 .input-zone {
@@ -300,8 +326,8 @@ p{
 * ID *
 ******/
 
-#endurance, #bouclier, #agi  {
-  width: 100px;
+#des_atq {
+	width:100px;
 }
 
 #res_pv, #res_deg {
@@ -339,5 +365,4 @@ p{
 }
 #refresh-btn{
   color:teal;
-
 }
