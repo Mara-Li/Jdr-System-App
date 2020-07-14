@@ -444,7 +444,7 @@ function calculate() {
 }
 
 function roundir(x) {
-  return Number.parseFloat(x).toFixed(2);
+  return Math.trunc(Number.parseFloat(x).toFixed(2));
 }
 
 function degat_normaux() {
@@ -459,7 +459,6 @@ function degat_normaux() {
 	var agi_val = parseInt(elem_inputs.agi.value); //valeur de l'agi dans les stats
 	var shield = parseInt(elem_inputs.bouclier.value) / 100; //valeur du champ "bouclier"
 	d = calculate_degat(bonus, atq, defe);
-	console.log(d);
 	sel_def = parseInt(elem_inputs.des_esquive.value); //insérer le nom qui correspond
 	if (!sel_def) { //Endurance (valeur = 0)
 		endu_de = defe;
@@ -582,11 +581,12 @@ function degat_type() {
 	finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
 	max = finaux;
 	if ((pv >= 100) && (pv < 200)) {
-		max = (pv)/2;
+		max = Math.trunc((pv)/2);
 	}
 	if (finaux > max) {
 		finaux = max;
 	};
+	finaux=Math.trunc(finaux);
 	vie_restante(finaux);
 }
 
@@ -671,7 +671,7 @@ function reussite_endurance(endu_de, endu_val, pv, d, shield) {
 	if (finaux >= pv) {
 		finaux = pv;
 	}
-	return finaux;
+	return Math.trunc(finaux);
 }
 
 function capacite_bonus(bonus) {
