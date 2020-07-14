@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
+<html><head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="res/css/style.css">
         <script src="res/js/jdr-sys.js"></script>
         <script src="res/js/main.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="res/img/logo.png" />
+        <link rel="icon" type="image/png" href="res/img/logo.png">
         <link rel="apple-touch-icon" href="res/img/logo.png">
         <meta name="apple-mobile-web-app-capable" content="yes">
 				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -30,13 +28,13 @@
                       <label for="des_atq">ATQ</label>
                       <input type="number" onfocus="this.select()" pattern="[0-9]*" inputmode="numeric" id="des_atq" value="0" min="0" max="10">
                   </div>
+                  
                   <div class="input-zone">
                       <label for="des_def">DEF</label>
                       <input type="number" onfocus="this.select()" pattern="[0-9]*" inputmode="numeric" id="des_def" value="0" min="0" max="10">
                       <input type="checkbox" id="des_bonus_def">
                       <label for="des_bonus_def">Remise</label>
-                  </div>
-                  <div class="input-zone">
+                  </div><div class="input-zone">
                       <input type="radio" name="des_esquive" value="0" checked="checked" onclick="def_toggle()">
                       <label for="des_esquive">Endurance</label>
                   </div>
@@ -66,7 +64,7 @@
 										</div>
                 </form>
             </div>
-            <div class="flex-break"></div>
+            
             
           </div>
         <div class="flex-column">
@@ -97,7 +95,7 @@
                   <div class="input-zone">
                       <input type="radio" id="capa" name="atq_type" value="1" onclick="capa_toggle(this)">
                       <label for="capacite">Capacité</label>
-                      <select id="capacite_type" disabled="" onchange="capa_arme_toggle(this)">
+                      <select id="capacite_type" onchange="capa_arme_toggle(this)" disabled="">
                           <option value="0">Burst</option>
                           <option value="1">Perforant</option>
                           <option value="2">Autre</option>
@@ -114,17 +112,20 @@
 
 
 
-        <div class="flex-break"></div>
+        
         <div id="submit" class="card">
             <div class="input-zone">
                 <input type="button" class="titre-card-resultat" value="Résultat" onclick="calculate()">
             </div>
-            <p>
+            <p style="
+    margin-right: auto;
+    margin-left: auto;
+">
             <label for="res_deg">Dégats finaux : </label>
-            <span id="res_deg">░</span>
+            <span id="res_deg">50</span>
             <br>
             <label for="res_pv">PV restant :</label>
-            <span id="res_pv">░</span>
+            <span id="res_pv">X</span>
 
 
             <br>
@@ -135,14 +136,389 @@
           </div>
         </div>
 
-        <div class="flex-break"></div>
+        
         <div id="log" class="card">
             <span class="titre-card">Logs</span>
             <div class="titre-card-button">
                 <button id="clr-btn" type="button" onclick="clearLog()"><i class="fas fa-trash"></i></button>
                 <button id="dl-btn" type="button" onclick="downloadLogs()"><i class="fas fa-file-download"></i></button>
             </div>
-            <div id="log_box" class="input-zone"><div class="log-element"><div class="log-date">14/07/2020 à 21:29</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+            <div id="log_box" class="input-zone"><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i>Endurance :</i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 0</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Endurance</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>50</b></li>
+ <li><i>PV restants :</i> <b>0</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i>Endurance :</i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 0</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Endurance</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>50</b></li>
+ <li><i>PV restants :</i> <b>50</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i>Endurance :</i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 0</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Endurance</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>50</b></li>
+ <li><i>PV restants :</i> <b>0</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i>Endurance :</i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 0</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Endurance</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>50</b></li>
+ <li><i>PV restants :</i> <b>0</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i>Endurance :</i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 0</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Endurance</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>50</b></li>
+ <li><i>PV restants :</i> <b>50</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i> Agilité : </i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 0</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Esquive</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>Aucun</b></li>
+ <li><i>PV restants :</i> <b>100</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i> Agilité : </i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 0</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Esquive</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>Aucun</b></li>
+ <li><i>PV restants :</i> <b>100</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i> Agilité : </i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 0</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Esquive</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>Aucun</b></li>
+ <li><i>PV restants :</i> <b>100</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i> Agilité : </i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 0</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Esquive</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>Aucun</b></li>
+ <li><i>PV restants :</i> <b>100</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i> Agilité : </i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 100</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Esquive</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>Aucun</b></li>
+ <li><i>PV restants :</i> <b>100</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i> Agilité : </i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 109</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Esquive</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>Aucun</b></li>
+ <li><i>PV restants :</i> <b>100</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i> Agilité : </i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 0</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Esquive</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>Aucun</b></li>
+ <li><i>PV restants :</i> <b>100</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i> Agilité : </i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 0</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Esquive</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>Aucun</b></li>
+ <li><i>PV restants :</i> <b>100</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i> Agilité : </i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 0</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Esquive</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>Aucun</b></li>
+ <li><i>PV restants :</i> <b>100</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:32</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
+<ul>
+ <li><i>PV max :</i> 100</li>
+ <li><i>Bouclier :</i> 0</li>
+ <li><i> Agilité : </i> 0</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Attaquant :</b></span>
+<ul>
+ <li><i>Bonus :</i> Aucun</li>
+ <li><i>Valeur du bonus :</i> 0</li>
+ <li>Attaque normale</li>
+ <li>Corps-à-corps</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Dés :</b></span>
+<ul>
+ <li><i>ATQ</i> : 0</li>
+ <li><i>DEF :</i> 0</li>
+ <li><i>Remise :</i> Non</li>
+ <li><i>Type de défense :</i> Esquive</li>
+</ul>
+</div><br><div class="log-block"><span class="log-title"><b>Résultats :</b></span>
+<ul>
+ <li><i>Dégâts :</i> <b>Aucun</b></li>
+ <li><i>PV restants :</i> <b>100</b></li>
+<ul>
+</ul></ul></div><hr></div><hr><div class="log-element"><div class="log-date">14/07/2020 à 21:29</div><div class="log-block"><span class="log-title"><b>Défenseur :</b></span>
 <ul>
  <li><i>PV max :</i> 100</li>
  <li><i>Bouclier :</i> 0</li>
@@ -395,7 +771,4 @@
 </ul></ul></div><hr></div><hr>
             </div>
         </div>
-    
-
-</body>
-</html>
+</body></html>
