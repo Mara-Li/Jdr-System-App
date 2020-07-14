@@ -114,32 +114,82 @@ class LogObject {
 	}
 
 	defToStr() {
-		var res =
-			"**Défenseur :**\n" +
-			"- *PV max :* {pv_max}\n" +
-			"- *Bouclier :* {bouclier}\n" +
-			"- *Endurance :* {endurance}\n";
-		"- *Agilité :* {agi}\n";
-		return res.replace("{pv_max}", this.pv_max)
-			.replace("{bouclier}", this.bouclier)
-			.replace("{endurance}", this.endurance)
-			.replace("{agi}", this.agi);
+		if (isNaN (this.endurance)) {
+			var res =
+				"**Défenseur :**\n" +
+				"- *PV max :* {pv_max}\n" +
+				"- *Bouclier :* {bouclier}\n" +
+				"- *Agilité :* {agi}\n";
+			return res.replace("{pv_max}", this.pv_max)
+				.replace("{bouclier}", this.bouclier)
+				.replace("{agi}", this.agi);
+		}
+		else if (isNaN (this.agi)) {
+			var res =
+				"**Défenseur :**\n" +
+				"- *PV max :* {pv_max}\n" +
+				"- *Bouclier :* {bouclier}\n" +
+				"- *Endurance :* {endurance}\n";
+			return res.replace("{pv_max}", this.pv_max)
+				.replace("{bouclier}", this.bouclier)
+				.replace("{endurance}", this.endurance)
+		}
+		else {
+			var res =
+				"**Défenseur :**\n" +
+				"- *PV max :* {pv_max}\n" +
+				"- *Bouclier :* {bouclier}\n" +
+				"- *Endurance :* {endurance}\n";
+				"- *Agilité :* {agi}\n";
+			return res.replace("{pv_max}", this.pv_max)
+				.replace("{bouclier}", this.bouclier)
+				.replace("{endurance}", this.endurance)
+				.replace("{agi}", this.agi);
+		}
 	}
 
 	defToHtml() {
-		var res =
-			"<span class=\"log-title\"><b>Défenseur :</b></span>\n" +
-			"<ul>\n" +
-			" <li><i>PV max :</i> {pv_max}</li>\n" +
-			" <li><i>Bouclier :</i> {bouclier}</li>\n" +
-			" <li><i>Endurance :</i> {endurance}</li>\n" +
-			" <li><i>Agilité :</i> {agi}</li>\n" +
+		if (isNaN (this.endurance)) {
+			var res =
+				"<span class=\"log-title\"><b>Défenseur :</b></span>\n" +
+				"<ul>\n" +
+				" <li><i>PV max :</i> {pv_max}</li>\n" +
+				" <li><i>Bouclier :</i> {bouclier}</li>\n" +
+				" <li><i> Agilité : </i> {agi}</li>\n" +
 
-			"</ul>\n";
-		return res.replace("{pv_max}", this.pv_max)
-			.replace("{bouclier}", this.bouclier)
-			.replace("{endurance}", this.endurance)
-			.replace("{agi}", this.agi);
+				"</ul>\n";
+			return res.replace("{pv_max}", this.pv_max)
+				.replace("{bouclier}", this.bouclier)
+				.replace("{agi}", this.agi)
+		}
+		else if (isNaN (this.agi)) {
+			var res =
+				"<span class=\"log-title\"><b>Défenseur :</b></span>\n" +
+				"<ul>\n" +
+				" <li><i>PV max :</i> {pv_max}</li>\n" +
+				" <li><i>Bouclier :</i> {bouclier}</li>\n" +
+				" <li><i>Endurance :</i> {endurance}</li>\n" +
+
+				"</ul>\n";
+			return res.replace("{pv_max}", this.pv_max)
+				.replace("{bouclier}", this.bouclier)
+				.replace("{endurance}", this.endurance)
+		}
+		else {
+			var res =
+				"<span class=\"log-title\"><b>Défenseur :</b></span>\n" +
+				"<ul>\n" +
+				" <li><i>PV max :</i> {pv_max}</li>\n" +
+				" <li><i>Bouclier :</i> {bouclier}</li>\n" +
+				" <li><i>Endurance :</i> {endurance}</li>\n" +
+				" <li><i> Agilité : </i> {agi}</li>\n" +
+
+				"</ul>\n";
+			return res.replace("{pv_max}", this.pv_max)
+				.replace("{bouclier}", this.bouclier)
+				.replace("{endurance}", this.endurance)
+				.replace("{agi}", this.agi)
+		}
 
 	}
 
