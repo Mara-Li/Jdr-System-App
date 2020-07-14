@@ -355,6 +355,10 @@ function calculate() {
 	log_ecriture();
 }
 
+function roundir(x) {
+  return Number.parseFloat(x).toFixed(2);
+}
+
 function degat_normaux() {
 	var remise = elem_inputs.des_bonus_def.checked;
 	var d, endu_de, finaux, max;
@@ -367,6 +371,7 @@ function degat_normaux() {
 	var agi_val = parseInt(elem_inputs.agi.value); //valeur de l'agi dans les stats
 	var shield = parseInt(elem_inputs.bouclier.value) / 100; //valeur du champ "bouclier"
 	d = calculate_degat(bonus, atq, defe);
+	console.log(d);
 	sel_def = parseInt(elem_inputs.des_esquive.value); //insérer le nom qui correspond
 	if (!sel_def) { //Endurance (valeur = 0)
 		endu_de = defe;
@@ -378,8 +383,6 @@ function degat_normaux() {
 			} else { //esquive raté
 				endu_val = 0;
 				endu_de = 10;
-
-
 			}
 		} else {
 			if (defe <= (agi_val / 2)) { //esquive réussi : pas de dégât
@@ -393,30 +396,21 @@ function degat_normaux() {
 	}
 
 	if (atq == 0) {
-		d = (0.5 + bonus);
+		d = (0.9 + bonus);
 		endu_val = 0;
+
 	} else if (defe == 0) {
 		d = 0;
 	} else if (atq == 1) {
-		endu_val = 0;
+		d=d-bonus;
+		d=d*1.4+bonus;
+		d=roundir(d);
 	}
 
 	finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
 	max = finaux;
-	if (pv >= 1000) {
-		max = 200;
-	} else if ((pv >= 900) && (pv < 1000)) {
-		max = 180;
-	} else if ((pv >= 700) && (pv < 900)) {
-		max = 140;
-	} else if ((pv >= 500) && (pv < 700)) {
-		max = 120;
-	} else if ((pv >= 300) && (pv < 500)) {
-		max = 100;
-	} else if ((pv >= 100) && (pv < 300)) {
-		max = 80;
-	} else if (pv < 100) {
-		max = 50;
+	if ((pv >= 100) && (pv < 200)) {
+		max = pv/2;
 	}
 
 	if (finaux > max) {
@@ -499,20 +493,8 @@ function degat_type() {
 
 	finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
 	max = finaux;
-	if (pv >= 1000) {
-		max = 200;
-	} else if ((pv >= 900) && (pv < 1000)) {
-		max = 180;
-	} else if ((pv >= 700) && (pv < 900)) {
-		max = 140;
-	} else if ((pv >= 500) && (pv < 700)) {
-		max = 120;
-	} else if ((pv >= 300) && (pv < 500)) {
-		max = 100;
-	} else if ((pv >= 100) && (pv < 300)) {
-		max = 80;
-	} else if (pv < 100) {
-		max = 50;
+	if ((pv >= 100) && (pv < 200)) {
+		max = (pv)/2;
 	}
 	if (finaux > max) {
 		finaux = max;
@@ -608,8 +590,10 @@ function capacite_bonus(bonus) {
 	var atq = parseInt(elem_inputs.des_atq.value) //valeur dé champ Attaque
 	if (atq == 0) {
 		bonus = bonus * 1.8;
+		bonus=roundir(bonus);
 	} else if (atq == 1) {
 		bonus = bonus * 1.4;
+		bonus=roundir(bonus);
 	}
 	return bonus;
 }
