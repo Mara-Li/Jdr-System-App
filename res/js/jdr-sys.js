@@ -162,7 +162,33 @@ class LogObject {
 				.replace("{bouclier}", this.bouclier)
 				.replace("{agi}", this.agi)
 		}
+		else if (this.endurance == null) {
+			var res =
+				"<span class=\"log-title\"><b>Défenseur :</b></span>\n" +
+				"<ul>\n" +
+				" <li><i>PV max :</i> {pv_max}</li>\n" +
+				" <li><i>Bouclier :</i> {bouclier}</li>\n" +
+				" <li><i> Agilité : </i> {agi}</li>\n" +
+
+				"</ul>\n";
+			return res.replace("{pv_max}", this.pv_max)
+				.replace("{bouclier}", this.bouclier)
+				.replace("{agi}", this.agi)
+		}
 		else if (isNaN (this.agi)) {
+			var res =
+				"<span class=\"log-title\"><b>Défenseur :</b></span>\n" +
+				"<ul>\n" +
+				" <li><i>PV max :</i> {pv_max}</li>\n" +
+				" <li><i>Bouclier :</i> {bouclier}</li>\n" +
+				" <li><i>Endurance :</i> {endurance}</li>\n" +
+
+				"</ul>\n";
+			return res.replace("{pv_max}", this.pv_max)
+				.replace("{bouclier}", this.bouclier)
+				.replace("{endurance}", this.endurance)
+		}
+		else if (this.agi == null) {
 			var res =
 				"<span class=\"log-title\"><b>Défenseur :</b></span>\n" +
 				"<ul>\n" +
@@ -352,6 +378,12 @@ class LogObject {
 	}
 
 	resToStr() {
+		if (isNaN(this.res_deg)){
+			this.res_deg="Aucun";
+		}
+		if (this.res_deg == null ) {
+			this.res_deg="Aucun";
+		}
 		var res =
 			"**Résultats :**\n" +
 			"- *Dégâts :* {res_deg}\n" +
@@ -362,6 +394,12 @@ class LogObject {
 	}
 
 	resToHtml() {
+		if (isNaN(this.res_deg)){
+			this.res_deg="Aucun";
+		}
+		if (this.res_deg == null ) {
+			this.res_deg="Aucun";
+		}
 		var res =
 			"<span class=\"log-title\"><b>Résultats :</b></span>\n" +
 			"<ul>\n" +
