@@ -13,20 +13,20 @@
  */
 
 const elemIDs = [
-	"pv_max",
-	"pv_reste",
-	"bouclier",
-	"endurance",
-	"agi",
-	"des_atq",
-	"des_def",
-	"arme",
-	"bonus",
-	"capacite_type",
-	"des_bonus_def",
-	"res_deg",
-	"res_pv",
-	"log_box"
+	["pv_max", 100],
+	["pv_reste", 100],
+	["bouclier", 0],
+	["endurance", 0],
+	["agi", ''],
+	["des_atq", 0],
+	["des_def", 0],
+	["arme", 0],
+	["bonus", ''],
+	["capacite_type", 0],
+	["des_bonus_def", null],
+	["res_deg", null],
+	["res_pv", null],
+	["log_box", null]
 ];
 
 const radioGroupsName = [
@@ -39,11 +39,23 @@ class Elements_getter {
 	constructor(lstID, lstRadio) {
 		this._idLst = lstID;
 		this._radioLst = lstRadio;
-		lstID.forEach(id => {
-			this[id] = document.getElementById(id);
-		});
-		lstRadio.forEach(name => {
-			this[name] = this.getValueFromRadio(name);
+		this.refresh();
+	}
+
+	resetInputs() {
+		this._idLst.forEach(pair => {
+			if (pair[1] != null) {
+				this[pair[0]].value = pair[1];
+			}
+		})
+	}
+
+	resetAllRadio() {
+		this._radioLst.forEach(name => {
+			var radioButtons = document.getElementsByName(name);
+			for (var i = 0; i < radioButtons.length; i++) {
+				radioButtons[i].checked = (i == 0 ? true : false);
+			}
 		});
 	}
 
@@ -58,8 +70,8 @@ class Elements_getter {
 	}
 
 	refresh() {
-		this._idLst.forEach(id => {
-			this[id] = document.getElementById(id);
+		this._idLst.forEach(pair => {
+			this[pair[0]] = document.getElementById(pair[0]);
 		});
 		this._radioLst.forEach(name => {
 			this[name] = this.getValueFromRadio(name);
