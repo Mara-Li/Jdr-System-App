@@ -241,12 +241,6 @@ label[for="pv_max"], label[for="pv_reste"] {
   float: left;
 }
 
-label[for="bonus"] {
-  display: block;
-  width: 75px;
-  float: left;
-	margin: 1%;
-}
 
 label[for="res_deg"], label[for="res_pv"] {
   display:block;
