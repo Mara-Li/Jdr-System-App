@@ -278,6 +278,7 @@ input[type="radio"] {
 /* appearance for checked radiobutton */
 input[type="radio"]:checked {
 	background-color: #3d74c5;
+	border: 1px solid #3d74c5;
 }
 
 input[type="checkbox"] {
@@ -293,6 +294,7 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked{
 	background-color: #3d74c5;
+	border: 1px solid #3d74c5;
 }
 
 /**********
@@ -467,13 +469,13 @@ input[type="checkbox"]:checked{
 	transform: translateY(4px);
 }
 
-#refresh-btn {
+#refresh-btn, #theme {
 	color: #3d74c5;
 	border: 1px solid;
 	border-radius: 5px;
 }
 
-#refresh-btn:active{
+#refresh-btn:active, #theme:active{
 	box-shadow: 0 1px #666;
 	transform: translateY(4px);
 }

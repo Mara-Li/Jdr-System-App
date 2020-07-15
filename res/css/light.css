@@ -61,7 +61,7 @@
 
 		select:disabled {
 			background-color: white;
-			border: 1px dashed;
+			border: 1px solid #cfcfcf80;
 			background-size: 0px;
 			color: grey;
 		}
@@ -135,7 +135,7 @@
 
 		select:disabled {
 			background-color: white;
-			border: 1px dashed;
+			border: 1px solid #cfcfcf80;
 			background-size: 0px;
 			color: grey;
 		}
@@ -445,13 +445,13 @@ input[type="checkbox"]:checked{
 	box-shadow: 0 1px #666;
 	transform: translateY(4px);
 }
-#refresh-btn{
+#refresh-btn, #theme{
   color:teal;
 	border: 1px solid;
 	border-radius: 5px;
 }
 
-#refresh-btn:active{
+#refresh-btn:active, #theme:active{
 	box-shadow: 0 1px #666;
 	transform: translateY(4px);
 }

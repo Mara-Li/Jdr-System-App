@@ -2,7 +2,8 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="res/css/style.css">
+	<link rel="stylesheet" href="res/css/style.css" title="dark">
+	<link rel="alternate stylesheet" href="res/css/light.css" title="light">
 	<script src="res/js/jdr-sys.js"></script>
 	<script src="res/js/main.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +23,6 @@
 			<a class="readme" href="readme.html"><i class="fab fa-readme"></i></a>
 		</div>
 	</header>
-
 	<div class="flex-column">
 		<div id="dés" class="card">
 			<span class="titre-card">Dés</span>
@@ -130,13 +130,12 @@
 			<br>
 			<label for="res_pv">PV restant :</label>
 			<span id="res_pv">░</span>
-
-
 			<br>
-
+			<br>
 		</p>
 		<div class="result-btn-group">
 			<button id="refresh-btn" type="button" onclick="clearInput()"><i class="fas fa-sync-alt"></i></button>
+			<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
 		</div>
 	</div>
 
