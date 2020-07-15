@@ -188,7 +188,7 @@ header {
 
 input {
 	margin-right: 0;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
 	font-size:100%;
 }
 
@@ -263,7 +263,7 @@ p {
 
 select {
 	border-radius: 5px;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
 	font-size: 100%;
 	border: 1px solid #3c3c3c;
 }
