@@ -156,10 +156,13 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-o-inner-
 }
 
 input[type=number]:disabled{
-	background-color: #383838;
+	background-color: #2b2b2b;
 	border: 0px;
-	/*! background-image: linear-gradient(26deg, #000000 5%, #ffffff 5%, #ffffff 50%, #000000 50%, #000000 55%, #ffffff 55%, #ffffff 100%); */
-	/* ! background-size: 10.00px 4.88px;*/
+	/* background-image: linear-gradient(140deg, #c3c3c3 10%, #232627 10%, #232627 50%, #c3c3c3 50%, #c3c3c3 60%, #232627 60%, #232627 100%);
+	background-size: 5.00px 4.20px;*/
+  background-image: radial-gradient(circle, #c3c3c3 10%, transparent 10%), radial-gradient(circle, #c3c3c3 10%, transparent 10%);
+	background-size: 7px 5px;
+	background-position: 0 0, 4px 7px;
 }
 
 
