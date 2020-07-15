@@ -381,14 +381,8 @@ input[type="checkbox"]:checked{
 
 .titre-card-resultat {
 	font-weight: bold;
-	margin: 10px;
 	color: #3d74c5;
 	font-size: 1.5em;
-	font-family: 'Concert One', cursive;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 /* optional styles for centering radiobuttons */
