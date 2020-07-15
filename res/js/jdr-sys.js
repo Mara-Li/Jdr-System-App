@@ -483,18 +483,17 @@ function degat_normaux() {
 	}
 
 	if (atq == 0) {
-		d = (0.9 + bonus);
+		d = d-bonus;
+		d = d*1.8+bonus;
+		d = roundir(d);
 		endu_val = 0;
 
 	} else if (defe == 0) {
 		d = 0;
 	} else if (atq == 1) {
 		d=d-bonus;
-		console.log(d)
 		d=d*1.4+bonus;
-		console.log(d)
 		d=roundir(d);
-		console.log(d);
 	}
 
 	finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
@@ -694,13 +693,13 @@ function calculate_degat(bonus, atq, defe) {
 	d = Math.abs(atq - defe);
 	switch (d) {
 		case 0:
-			d = (0 + bonus);
-			break;
-		case 1:
 			d = (0.05 + bonus);
 			break;
+		case 1:
+			d = (0.10 + bonus);
+			break;
 		case 2:
-			d = (0.1 + bonus);
+			d = (0.10 + bonus);
 			break;
 		case 3: //En cas de 3 ou de 4, faire d = 0.2 + bonus
 		case 4:
@@ -724,7 +723,7 @@ function calculate_degat(bonus, atq, defe) {
 function degat_burst(bonus, atq, defe, endu_val) {
 	let d;
 	if (atq == 0) {
-		d = 0.55 + bonus;
+		d = calculate_degat(bonus, atq, defe);
 		endu_val = 0;
 	} else if (defe == 0) {
 		d = 0;
@@ -739,7 +738,7 @@ function degat_burst(bonus, atq, defe, endu_val) {
 function degat_burst_bouclier(bonus, atq, defe, endu_val) {
 	let d;
 	if (atq == 0) {
-		d = (0.5 + bonus);
+		d = calculate_degat(bonus, atq, defe);
 		endu_val = 0;
 	} else if (defe == 0) {
 		d = 0;
@@ -754,7 +753,7 @@ function degat_burst_bouclier(bonus, atq, defe, endu_val) {
 function degat_perforant(bonus, atq, defe, endu_val) {
 	var d;
 	if (atq == 0) {
-		d = (0.55 + bonus);
+		d = calculate_degat(bonus, atq, defe);
 		endu_val = 0;
 	} else if (defe == 0) {
 		d = 0;
@@ -769,7 +768,7 @@ function degat_perforant(bonus, atq, defe, endu_val) {
 function degat_autre(bonus, atq, defe, endu_val) {
 	var d;
 	if (atq == 0) {
-		d = (0.5 + bonus);
+		d = calculate_degat(bonus, atq, defe);
 		endu_val = 0;
 	} else if (defe == 0) {
 		d = 0;
