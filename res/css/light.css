@@ -150,6 +150,16 @@
 * Html tags *
 *************/
 
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox,
+.input-zone {
+	-webkit-appearance: none !important;
+}
+
 body {
   margin: 0;
   width: 100%;
