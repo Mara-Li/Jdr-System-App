@@ -56,14 +56,19 @@ select {
   appearance: none;
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%238C98F2'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
   background-size: 12px;
-  background-position: 100% center;
+  background-position: 100% bottom;
   background-repeat: no-repeat;
   background-color: #efefef;
-margin-bottom:-5%;
 }
 
 select:disabled {
-background-color: black;}
+	background-color: #2b2b2b;
+	border: 0px;
+	/* background-image: linear-gradient(140deg, #c3c3c3 10%, #232627 10%, #232627 50%, #c3c3c3 50%, #c3c3c3 60%, #232627 60%, #232627 100%);
+	background-size: 5.00px 4.20px;*/
+  background-image: radial-gradient(circle, #c3c3c3 10%, transparent 10%), radial-gradient(circle, #c3c3c3 10%, transparent 10%);
+	background-size: 7px 5px;
+	background-position: 0 0, 4px 7px;}
 }
 
 @media only screen and (min-width: 1101px) {
