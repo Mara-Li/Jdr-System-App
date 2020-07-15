@@ -44,6 +44,11 @@
 			margin:10px;
 			margin-top:0;
 	}
+.input-zone {
+
+-webkit-appearance: none !important ;
+border-radius: 0 !important ;
+}
 
 
 }
@@ -112,7 +117,8 @@ input.text,
 input[type="text"],
 input[type="button"],
 input[type="submit"],
-.input-checkbox {
+.input-checkbox,
+.input-zone {
 -webkit-appearance: none !important ;
 border-radius: 0 !important ;
 }
