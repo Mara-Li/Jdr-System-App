@@ -37,7 +37,7 @@
 	input[type="number"] {
 		max-width: 20%;
 		width: 40px;
-		-moz-appearance: textfield;
+		-moz-appearance: none;
 	}
 	.titre-card-button {
 		  flex-basis: 100%;
