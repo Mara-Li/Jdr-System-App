@@ -38,6 +38,9 @@
 		max-width: 20%;
 		width: 40px;
 		-moz-appearance: none;
+		border: 1px solid #3c3c3c;
+		background-color: #2d2f2f;
+		color: #c3c3c3;
 	}
 
 	.titre-card-button {
@@ -55,7 +58,9 @@
 		background-position-x: 100%;
  		background-position-y: center;
 		background-repeat: no-repeat;
-		background-color: white;
+		background-color: #2d2f2f;
+		color: #c3c3c3;
+		text-indent:5px;
 	}
 
 	select:disabled {
@@ -114,6 +119,10 @@
 		max-width: 20%;
 		width: 100px;
 		-moz-appearance: textfield;
+		border: 1px solid #3c3c3c;
+		background-color: #2d2f2f;
+		color: #c3c3c3;
+
 	}
 
 	select {
@@ -126,6 +135,9 @@
 		background-position-y: center;
 		background-repeat: no-repeat;
 		background-color: white;
+		background-color: #2d2f2f;
+		color: #c3c3c3;
+		text-indent:5px;
 	}
 
 	select:disabled {
@@ -161,9 +173,6 @@ body {
 }
 
 input, textarea, select, button {
-	background-color: #2d2f2f;
-	border: 1px solid #3c3c3c;
-	color: #c3c3c3;
 	border-radius: 5px;
 }
 
@@ -178,6 +187,8 @@ header {
 
 input {
 	margin-right: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size:100%;
 }
 
 input#des_bonus_def {
@@ -191,6 +202,7 @@ input[type="button"] {
 	margin: auto;
 	border: 1px solid;
 	border-radius: 5px;
+	background-color: #2d2f2f;
 }
 
 input[type="button"]:active {
@@ -251,6 +263,8 @@ p {
 
 select {
 	border-radius: 5px;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 100%;
 }
 
 select:disabled {
@@ -278,7 +292,6 @@ input[type="radio"] {
 /* appearance for checked radiobutton */
 input[type="radio"]:checked {
 	background-color: #3d74c5;
-	border: 1px solid #3d74c5;
 }
 
 input[type="checkbox"] {
@@ -462,6 +475,7 @@ input[type="checkbox"]:checked{
 	color: #3d74c5;
 	border: 1px solid;
 	border-radius: 5px;
+	background-color: #2d2f2f;
 }
 
 #clr-btn:active, #dl-btn:active{
@@ -473,6 +487,7 @@ input[type="checkbox"]:checked{
 	color: #3d74c5;
 	border: 1px solid;
 	border-radius: 5px;
+	background-color: #2d2f2f;
 }
 
 #refresh-btn:active, #theme:active{
