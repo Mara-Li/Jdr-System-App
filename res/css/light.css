@@ -183,9 +183,8 @@ header {
 
 input {
   margin-right: 0;
-	font-family: ;
-	font-size:100%;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
+	font-size: 80%;
 
 }
 
@@ -263,7 +262,6 @@ p{
 select {
 	border-radius: 5px;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
-	font-size: 100%;
 	border: 1px solid grey;
 
 }
@@ -423,8 +421,8 @@ input[type="checkbox"]:checked{
 * ID *
 ******/
 
-#des_atq {
-	width:100px;
+#des_atq, #des_def {
+	width:100%;
 }
 
 #res_pv, #res_deg {
