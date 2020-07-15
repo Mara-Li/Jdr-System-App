@@ -370,16 +370,6 @@ input[type="checkbox"]:checked{
 	align-items: center;
 }
 
-.titre-card-button {
-	font-weight: bold;
-	color: #3d74c5;
-	font-size: 1.5em;
-	font-family: 'Concert One', cursive;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .titre-card-resultat {
 	font-weight: bold;
 	margin: 10px;

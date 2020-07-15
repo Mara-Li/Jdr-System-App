@@ -42,11 +42,6 @@
 		border: 1px solid grey;
 
 	}
-	.titre-card-button {
-		  flex-basis: 100%;
-			margin:10px;
-			margin-top:0;
-	}
 
 	select {
 			-webkit-appearance: none;
@@ -358,26 +353,11 @@ input[type="checkbox"]:checked{
   align-items: center;
 }
 
-.titre-card-button {
-  font-weight: bold;
-  color: teal;
-  font-size: 1.5em;
-  font-family: 'Concert One', cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .titre-card-resultat {
   font-weight: bold;
-  margin: 10px;
   color: teal;
   font-size: 1.5em;
   font-family: 'Concert One', cursive;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* optional styles for centering radiobuttons */
