@@ -113,9 +113,15 @@ body {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  color: black;
-  background-color: rgb(207, 207, 207);
+  color: #c3c3c3;
+  background-color: rgb(37, 37, 37);
   font-family: 'Josefin Sans', sans-serif;
+}
+
+html, input, textarea, select, button {
+	background-color:#2d2f2f;
+	border:1px solid #3c3c3c;
+	color:#c3c3c3;
 }
 
 header {
@@ -140,6 +146,7 @@ input[type="button"] {
   display: block;
   margin-right: 10px;
   margin: auto;
+	border: 1px solid;
 }
 
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-o-inner-spin-button {
@@ -149,7 +156,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-o-inner-
 }
 
 input[type=number]:disabled{
-	background-color: #4e4f4f21;
+	background-color: #383838;
 	border: 0px;
 	/*! background-image: linear-gradient(26deg, #000000 5%, #ffffff 5%, #ffffff 50%, #000000 50%, #000000 55%, #ffffff 55%, #ffffff 100%); */
 	/* ! background-size: 10.00px 4.88px;*/
@@ -201,12 +208,23 @@ width: 15px;
 height: 15px;
 /* background-color only for content */
 background-clip: content-box;
-background-color: #e7e6e7;
+background-color: #383838;
 border-radius: 50%;
 }
 /* appearance for checked radiobutton */
 input[type="radio"]:checked {
-  background-color: teal;
+  background-color: #3d74c5;
+}
+
+input[type="checkbox"]{
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance:none;
+	box-shadow: none;
+	background-color: #383838;
+	width: 15px !important;
+  height: 15px !important;
 }
 
 
@@ -236,7 +254,11 @@ input[type="radio"]:checked {
 }
 
 .active {
-  background-color: #1abc9c ;
+  background-color: #2d2d2d ;
+}
+
+.readme {
+	background-color:#383838;
 }
 
 .flex-column {
@@ -248,7 +270,7 @@ input[type="radio"]:checked {
 }
 
 .card {
-  background-color: white;
+  background-color: #2d2f2f;
   box-shadow: 0.2em 0.2em 0.6em black;
   margin: 3% auto;
   padding: 2%;
@@ -259,7 +281,7 @@ input[type="radio"]:checked {
 .titre-card {
   font-weight: bold;
   margin: 10px;
-  color: teal;
+  color: #3d74c5;
   font-size: 1.5em;
   font-family: 'Concert One', cursive;
   display: flex;
@@ -269,7 +291,7 @@ input[type="radio"]:checked {
 
 .titre-card-button {
   font-weight: bold;
-  color: teal;
+  color: #3d74c5;
   font-size: 1.5em;
   font-family: 'Concert One', cursive;
   display: flex;
@@ -280,7 +302,7 @@ input[type="radio"]:checked {
 .titre-card-resultat {
   font-weight: bold;
   margin: 10px;
-  color: teal;
+  color: #3d74c5;
   font-size: 1.5em;
   font-family: 'Concert One', cursive;
   text-align: center;
@@ -305,7 +327,7 @@ input[type="radio"]:checked {
 }
 
 .log-date{
-  color: teal;
+  color: #3d74c5;
   flex-basis: 100%;
   text-align: center;
   margin-bottom: 1em;
@@ -314,7 +336,7 @@ input[type="radio"]:checked {
 }
 
 .log-title{
-  color: teal;
+  color: #3d74c5;
 }
 
 .log-btn-group{
@@ -347,7 +369,7 @@ input[type="radio"]:checked {
 	font-family: 'Josefin Sans', cursive;
 	display: inline-block;
 	margin: auto;
-	color: teal;
+	color: #3d74c5;
 	font-size:150%;
 	vertical-align: sub;
 	line-height: 0%;
@@ -368,8 +390,10 @@ input[type="radio"]:checked {
 }
 
 #clr-btn, #dl-btn {
-  color: teal;
+  color: #3d74c5;
+	border:1px solid;
 }
 #refresh-btn{
-  color:teal;
+  color:#3d74c5;
+	border: 1px solid;
 }
