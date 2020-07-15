@@ -50,7 +50,7 @@
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
-		background: url("../img/arrow.png");
+		background: url("../img/arrow.svg");
 		background-size: 15px;
 		background-position-x: 100%;
  		background-position-y: center;
@@ -120,7 +120,7 @@
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
-		background: url("../img/arrow.png");
+		background: url("../img/arrow.svg");
 		background-size: 15px;
 		background-position-x: 100%;
 		background-position-y: center;
