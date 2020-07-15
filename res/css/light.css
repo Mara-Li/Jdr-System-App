@@ -422,12 +422,12 @@ input[type="checkbox"]:checked{
 ******/
 
 #des_atq {
-	width:100%;
+	width:100px;
 }
 
 #des_def {
 	margin-right:10px;
-	width:100%;
+	width:100px;
 	margin-left: 2px;
 }
 
