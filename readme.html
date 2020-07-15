@@ -5,15 +5,17 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Règle de jeu</title>
-  <link type="text/css" rel="stylesheet" href="res/css/bootstrap/bootstrap.min.css"/>
+  <link rel="stylesheet" href="res/css/bootstrap/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="res/css/bootstrap/bootstrap-responsive.min.css"/>
   <link type="text/css" rel="stylesheet" href="res/css/pilcrow.css"/>
   <link type="text/css" rel="stylesheet" href="res/css/hljs-github.min.css"/>
-  <link type="text/css" rel="stylesheet" href="res/css/style_regle.css"/>
+	<link rel="stylesheet" href="res/css/style_regle.css" title="dark">
+	<link rel="alternate stylesheet" href="res/css/regle_light.css" title="light">
   <link rel="icon" type="image/png" href="res/img/logo.png" />
   <link rel="apple-touch-icon" href="res/img/logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script src="res/js/style_regle.js"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
@@ -37,9 +39,8 @@
         <li class="sidebar-header-1"><a href="#Formule">FORMULES MATHÉMATIQUES</a></li>
         <li class="sidebar-header-2"><a href="#Formule_base">Formule de base</a></li>
         <li class="sidebar-header-2"><a href="#Equilibrage">Équilibrage des compétences</a></li>
-        <li class="sidebar-header-2"><a href="#Seuil">Seuil : Dégâts maximum</a></li>
         <li class="sidebar-header-1"><a href="#résumé">RÉSUMÉ</a></li>
-        <li class="sidebar-header-1"><a href="#utilisation">UTILISATION</a></li>
+				<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
       </ul>
     </div>
     <div class="span9 main"><h1 id="systeme-de-combat"><a class="header-link" href="#systeme-de-combat"></a>SYSTEME DE COMBAT</h1>
@@ -114,12 +115,11 @@
       <h2 id="exceptions"><a class="header-link" href="#exceptions"></a>Exceptions</h2>
       <p>Il existe TROIS exceptions aux systèmes de dégâts : </p>
       <ul class="list">
-        <li><p>Les ultra-réussites-critiques <em>d&#39;attaque</em> :  Lorsqu&#39;un PJ a un score de dés égal à 0, il obtient automatiquement le bonus de 50% et outrepasse la défense par endurance de son adversaire. Il faut cependant noter que seules les personnes possédant une remise peuvent avoir un URC. En outre, ce bonus est différent dans le cas où la personne utilise une compétence : on n'outrepasse uniquement que la défense de l'adversaire, et le bonus de la compétence est alors multiplié par la prime correspondante.</p>
+        <li><p>Les ultra-réussites-critiques <em>d&#39;attaque</em> :  Lorsqu'un PJ a un score de dés égal à 0, il obtient automatiquement le bonus de 90% et outrepasse la défense par endurance de son adversaire. Il faut cependant noter que seules les personnes possédant une remise peuvent avoir une UR. En outre, entre 100 et 200 PV, les dégâts maximaux sont capés à la moitié des pv, afin d'éviter les OS. Si une compétence est utilisée, le bonus est multiplié par la prime et les dégâts passe à travers la défense. </p>
         </li>
-        <li><p>Les ultra-réussites-critiques <em>de défense</em> : Lorsqu&#39;un combattant a un score de dés d&#39;endurance égal à 0, il annule automatiquement l&#39;attaque de son adversaire, quelque soit la valeur de son dé. </p>
+        <li><p>Les ultra-réussites-critiques <em>de défense</em> : Lorsqu&#39;un combattant a un score de dés d&#39;endurance ou d'agilité égal à 0, il annule automatiquement l&#39;attaque de son adversaire, quelque soit la valeur de son dé. </p>
         </li>
-        <li><p>Les réussites-critiques d&#39;attaque :  Lorsqu&#39;un combattant a un score de dés égal à 1, il annule la défense par endurance de son adversaire.
-          Dans le cas où une compétence est utilisée, elle est multipliée par la prime correspondante, et n'annulera pas la défense de son adversaire.</p>
+        <li><p>Les réussites-critiques d&#39;attaque :  Lorsqu'un combattant a un score de dés égal à 1, les dégâts sont multipliés par 1.4, exactement comme dans le cas d'une compétence. </p>
         </li>
       </ul>
       <p>A noté où dans le cas où les deux combattant font des URC d&#39;attaque et de défense (La probabilité est mince), c&#39;est l&#39;attaquant qui aura l&#39;avantage.</p>
@@ -151,18 +151,6 @@
         <li><p> Dégât perforant : </p> <p class="math">$$\frac{60}{100}*bonus$$</p></li>
         <li><p> Dégât autre : </p> <p class="math">$$\frac{50}{100}*bonus$$</p></li>
       </ul>
-      <h2 id="Seuil"><a class="header-link" href="#seuil"></a>Seuil : Dégâts maximum</h2>
-        <p>Il ne faut pas oublier que les dégâts sont capés au-delà d'une certaine valeur, ainsi :</p>
-        <ul class="list">
-        <li><p> A moins de 100 pv : -50 pv maximum</p></li>
-        <li><p>Entre 100 et 299 pv : -80 pv maximum</p> </li>
-        <li><p> Entre 300 et 499 pv : -100 pv maximum </p></li>
-        <li><p> Entre 500 et 699 pv : -120 pv maximum </p></li>
-        <li><p> Entre 700 à 899 pv : -140 pv maximum</p></li>
-        <li><p> Entre 900 et 999 pv : -180 pv maximum</p></li>
-        <li><p> Au delà de 1000 pv : -200 pv maximum</p></li>
-      </ul>
-
       <h1 id="résumé"><a class="header-link" href="#résumé"></a>RÉSUMÉ</h1>
       <ul class="list">
         <li><p>Lancé de dés d&#39;attaque et de défense</p>
@@ -190,19 +178,6 @@
         <li><p>Quand vous utilisez votre capacité ou quand vous attaquez avec votre pouvoir, vous devez lancer le dé lié à votre pouvoir.</p>
         </li>
         <li>De même, si vous attaquez en utilisant une arme, vous devez lancé la caractéristique liée.</li>
-      </ul>
-      <h1 id="utilisation"><a class="header-link" href="#utilisation"></a>UTILISATION</h1>
-      <ul class="list">
-        <li><strong>Défenseur</strong> : Les caractéristiques qui correspondent à la personne attaquée. Notons que la partie des PV restant se rempli automatiquement avec les PV max, puis se mettra à jour au fur et à mesure.</li>
-        <li><strong>Attaquant</strong> : Le type d&#39;attaque, si elle est lancé par une personne ou un monstre, et si c&#39;est ou non une capacité. </li>
-        <li><strong>Dés</strong> : Simplement le type de défense et les dés qui correspondent à l&#39;attaque et la défense. De plus, vous pouvez cocher ou non si la personne possède une remise pour sa défense. Vous pouvez choisir si la défense est une endurance ou esquive. Le programme calculera automatiquement si l&#39;esquive est esquivée (si vous avez la flemme).</li>
-        <li><strong>Remise</strong> : Un bonus de départ sur les personnages, qui diminue la valeur des dés lancés. Voir plus haut pour l&#39;impact de ce bouton. </li>
-        <li>Vous pouvez lancer le programme en appuyant sur le bouton mais aussi avec enter.</li>
-        <li><strong>Résultat</strong> : Les PV restant (et le champ correspondant se met à jour) ainsi que les dégâts infligés. Vous pouvez donc enchainer sur plusieurs attaques sans avoir à reset entièrement le programme, si le défenseur est le même. </li>
-        <li>Vous devez choisir si votre personnages attaque avec une capacité ou non. Par défaut, ce sont les attaques normales. En effet, un coup critique avec une capacité a un bonus différent qu&#39;un coup critique avec une attaque normale. Pour changer cela, il suffit de cliquer sur le bouton radio. </li>
-        <li>Le bouton radio permet d&#39;activer un champ qui vous permet de choisir entre les capacités &#39;Burst&#39;, &#39;perforant&#39; ou &#39;Autre&#39;. </li>
-        <li>Il n&#39;est malheureusement pas possible de calculer les actions de soutien ou de malus avec le programme, vous devez donc multiplier vos bonus par vous même en suivant la table.</li>
-        <li>Vous n&#39;avez pas besoin de prendre en compte les capacités particulières d&#39;une attaque perforante, d&#39;un URC et d&#39;un RC, ainsi que les bonus associés aux capacités : le programme s&#39;en charge aussi. Remplissez donc tous les champs sans vous souciez de cela.</li>
       </ul>
     </div>
   </div>
