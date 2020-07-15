@@ -333,6 +333,7 @@ input[type="checkbox"]{
 
 .input-zone {
   margin: 1em 0;
+ -webkit-appearance:none;
 }
 
 .log-element{
