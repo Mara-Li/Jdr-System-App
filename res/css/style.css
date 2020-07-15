@@ -140,6 +140,8 @@
 		background-color: #2d2f2f;
 		color: #c3c3c3;
 		text-indent:5px;
+		font-size:100%;
+
 	}
 
 	select:disabled {
@@ -147,6 +149,8 @@
 		border: 0px;
 		background-size: 0px;
 		color: grey;
+		font-size: 100%;
+
 	}
 }
 
@@ -243,6 +247,7 @@ label[for="bonus"] {
 	display: block;
 	width: 75px;
 	float: left;
+	margin:1%;
 }
 
 label[for="res_deg"], label[for="res_pv"] {
@@ -264,7 +269,6 @@ p {
 select {
 	border-radius: 5px;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
-	font-size: 100%;
 	border: 1px solid #3c3c3c;
 }
 

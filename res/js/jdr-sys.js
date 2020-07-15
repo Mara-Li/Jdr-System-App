@@ -444,7 +444,7 @@ function calculate() {
 }
 
 function roundir(x) {
-  return Math.trunc(Number.parseFloat(x).toFixed(2));
+  return Number.parseFloat(x).toFixed(2);
 }
 
 function degat_normaux() {
@@ -490,8 +490,11 @@ function degat_normaux() {
 		d = 0;
 	} else if (atq == 1) {
 		d=d-bonus;
+		console.log(d)
 		d=d*1.4+bonus;
+		console.log(d)
 		d=roundir(d);
+		console.log(d);
 	}
 
 	finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
