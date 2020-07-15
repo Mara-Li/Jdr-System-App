@@ -57,6 +57,7 @@
 	 		background-position-y: center;
 			background-repeat: no-repeat;
 			background-color: white;
+			text-indent: 5px;
 		}
 
 		select:disabled {
@@ -130,6 +131,7 @@
 	 		background-position-y: center;
 			background-repeat: no-repeat;
 			background-color: white;
+			text-indent: 5px;
 
 		}
 
@@ -169,10 +171,13 @@ header {
 
 input {
   margin-right: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size:100%;
 }
 
 input#des_bonus_def {
   vertical-align: text-bottom;
+
 }
 
 input[type="button"] {
@@ -241,6 +246,14 @@ label[for="des_attaque"], label[for=des_defense]{
 }
 p{
   margin:auto;
+}
+
+select {
+	border-radius: 5px;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 100%;
+	border: 1px solid grey;
+
 }
 
 input[type="radio"]{

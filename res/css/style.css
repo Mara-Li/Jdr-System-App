@@ -265,6 +265,7 @@ select {
 	border-radius: 5px;
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 100%;
+	border: 1px solid #3c3c3c;
 }
 
 select:disabled {
