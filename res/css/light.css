@@ -120,6 +120,7 @@
 	  width: 100px;
 	  -moz-appearance: textfield;
 		border: 1px solid grey;
+		font-size:100%;
 
 	}
 
@@ -184,7 +185,6 @@ header {
 input {
   margin-right: 0;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
-	font-size: 80%;
 
 }
 
@@ -421,8 +421,14 @@ input[type="checkbox"]:checked{
 * ID *
 ******/
 
-#des_atq, #des_def {
+#des_atq {
 	width:100%;
+}
+
+#des_def {
+	margin-right:10px;
+	width:100%;
+	margin-left: 2px;
 }
 
 #res_pv, #res_deg {
