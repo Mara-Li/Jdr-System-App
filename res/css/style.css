@@ -114,11 +114,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   color: #c3c3c3;
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(28, 30, 31);
   font-family: 'Josefin Sans', sans-serif;
 }
 
-html, input, textarea, select, button {
+input, textarea, select, button {
 	background-color:#2d2f2f;
 	border:1px solid #3c3c3c;
 	color:#c3c3c3;
@@ -270,7 +270,7 @@ input[type="checkbox"]{
 }
 
 .card {
-  background-color: #2d2f2f;
+  background-color: rgb(35,38,39);
   box-shadow: 0.2em 0.2em 0.6em black;
   margin: 3% auto;
   padding: 2%;
