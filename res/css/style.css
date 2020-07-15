@@ -2,6 +2,7 @@
 * Import and media queries *
 ****************************/
 @import url('https://fonts.googleapis.com/css?family=Concert+One|Josefin+Sans|Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
 
 @media only screen and (max-width: 1100px) {
 	form {
@@ -364,7 +365,6 @@ input[type="checkbox"]:checked{
 	margin: 10px;
 	color: #3d74c5;
 	font-size: 1.5em;
-	font-family: 'Concert One', cursive;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -383,7 +383,7 @@ input[type="checkbox"]:checked{
 	font-weight: bold;
 	color: #3d74c5;
 	font-size: 1.5em;
-	font-family: 'Concert One', cursive;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
 
 }
 

@@ -3,7 +3,7 @@
 ****************************/
 
 @import url('https://fonts.googleapis.com/css?family=Concert+One|Josefin+Sans|Pangolin&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
 @media only screen and (max-width: 1100px) {
   form {
     margin: 0 10%;
@@ -347,7 +347,7 @@ input[type="checkbox"]:checked{
   margin: 10px;
   color: teal;
   font-size: 1.5em;
-  font-family: 'Concert One', cursive;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -366,7 +366,7 @@ input[type="checkbox"]:checked{
   font-weight: bold;
   color: teal;
   font-size: 1.5em;
-	font-family: 'Concert One', cursive;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
 
 }
 
