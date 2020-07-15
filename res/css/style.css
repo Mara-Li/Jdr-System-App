@@ -431,8 +431,10 @@ appearance: none;
 #clr-btn, #dl-btn {
   color: #3d74c5;
 	border:1px solid;
+border-radius: 1%;
 }
 #refresh-btn{
   color:#3d74c5;
 	border: 1px solid;
+border-radius: 1%;
 }
