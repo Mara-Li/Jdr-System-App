@@ -383,6 +383,8 @@ input[type="checkbox"]:checked{
 	font-weight: bold;
 	color: #3d74c5;
 	font-size: 1.5em;
+	font-family: 'Concert One', cursive;
+
 }
 
 /* optional styles for centering radiobuttons */
