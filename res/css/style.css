@@ -339,7 +339,10 @@ input[type="checkbox"]{
 
 .input-zone {
   margin: 1em 0;
- -webkit-appearance:none;
+-moz-appearance: none;
+-webkit-appearance: none;
+appearance: none;
+
 }
 
 .log-element{
