@@ -157,7 +157,10 @@
 			font-size: 100%;
 
 		}
-
+		#endurance, #esquive {
+			width:150px;
+			display:inline-block;
+		}
 }
 
 
@@ -240,18 +243,16 @@ input, textarea, select, button {
 }
 
 label {
-	vertical-align: text-bottom;
+	margin-top:3%;
 }
 
 label[for="bouclier"], label[for="endurance"], label[for="agi"] {
-  display: block;
-  width: 150px;
+  width: 35%;
   float: left;
 }
 
 label[for="pv_max"], label[for="pv_reste"] {
-  display: block;
-  width: 150px;
+  width: 35%;
   float: left;
 }
 
@@ -270,7 +271,7 @@ label[for="des_attaque"], label[for=des_defense]{
 
 label[for="des_def"], label[for="des_atq"] {
 	display:block;
-	width:150px;
+	width:35%;
 	float:left;
 }
 
@@ -280,7 +281,6 @@ label[for="capacite"] {
 }
 
 label[for="bonus"] {
-	display:inline-block;
 	width: 35%;
 	vertical-align: text-bottom;
 }
@@ -509,10 +509,9 @@ input[type="checkbox"]:checked{
 }
 
 #endurance, #esquive {
-	width:150px;
 	display:inline-block;
 }
 
 #capacite_type, #arme {
-	vertical-align: bottom;
+	vertical-align: baseline;
 }
