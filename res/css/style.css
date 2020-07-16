@@ -37,7 +37,7 @@
 
 	input[type="number"] {
 		max-width: 20%;
-		width: 40px;
+		width: 100px;
 		-moz-appearance: none;
 		border: 1px solid #3c3c3c;
 		background-color: #2d2f2f;
@@ -73,8 +73,15 @@
 		background-size: 0px;
 		color: grey;
 	}
-}
 
+
+	#submit {
+		align-items: center;
+		align-content: center;
+		display:flex;
+		flex-direction: column;
+	}
+}
 @media only screen and (min-width: 1101px) {
 	form {
 		flex: 3;
@@ -236,6 +243,10 @@ input[type=number]:disabled {
 	background-position: 0 0, 4px 7px;
 }
 
+label {
+	vertical-align: text-bottom;
+}
+
 label[for="bouclier"], label[for="endurance"], label[for="agi"] {
 	display: block;
 	width: 150px;
@@ -258,6 +269,23 @@ label[for="res_deg"], label[for="res_pv"] {
 
 label[for="des_attaque"], label[for=des_defense] {
 	width: 100%;
+}
+
+label[for="capacite"] {
+	width: calc(35%-20px);
+	display:inline-block;
+}
+
+label[for="bonus"] {
+	display:inline-block;
+	width: 35%;
+	vertical-align: text-bottom;
+}
+
+label[for="des_def"], label[for="des_atq"] {
+	display:block;
+	width:150px;
+	float:left;
 }
 
 p {
@@ -437,7 +465,6 @@ input[type="checkbox"]:checked{
 
 #des_def {
 	margin-right:10px;
-	margin-left:2px;
 }
 
 #res_pv, #res_deg {
@@ -492,4 +519,12 @@ input[type="checkbox"]:checked{
 #refresh-btn:active, #theme:active{
 	box-shadow: 0 1px #666;
 	transform: translateY(4px);
+}
+
+#endurance, #esquive {
+	width:150px;
+	display:inline-block;
+}
+#capacite_type, #arme {
+	vertical-align: bottom;
 }
