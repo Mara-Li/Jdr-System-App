@@ -512,7 +512,7 @@ input[type="checkbox"]:checked{
 	color: #3d74c5;
 	border:0;
 	border-radius: 5px;
-	background-color: #2d2f2f;
+	background-color: black;
 }
 
 
