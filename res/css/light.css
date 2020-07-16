@@ -163,8 +163,12 @@
 			background-size: 0px;
 			color: grey;
 			font-size: 100%;
-
 		}
+
+    #dl-btn {
+     margin-left: 10%;
+
+
 		#endu_stats, #esquive_stats {
 			width:150px;
 			display:inline-block;
@@ -510,6 +514,8 @@ input[type="checkbox"]:checked{
 	border: 1px solid;
 	border-radius: 5px;
 }
+
+
 #clr-btn:active, #dl-btn:active{
 	box-shadow: 0 1px #666;
 	transform: translateY(4px);
