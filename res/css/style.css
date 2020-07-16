@@ -86,6 +86,10 @@
 		margin-right: 1%;
 
 	}
+
+	#esquive_stats {
+		padding-right: 10%;
+	}
 }
 @media only screen and (min-width: 1101px) {
 	form {
