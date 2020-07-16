@@ -195,9 +195,6 @@ body {
 	font-family: 'Josefin Sans', sans-serif;
 }
 
-input, textarea, select, button {
-	border-radius: 5px;
-}
 
 header {
 	display: block;
@@ -513,17 +510,11 @@ input[type="checkbox"]:checked{
 
 #refresh-btn, #theme {
 	color: #3d74c5;
-	border: 1px solid;
+	border:0;
 	border-radius: 5px;
 	background-color: #2d2f2f;
 }
 
-#menu-btn {
-	color:#3d74c5;
-	border-radius:5px;
-	background-color: #2d2f2f;
-	border-radius: 0;
-}
 
 #refresh-btn:active, #theme:active, #menu:active{
 	box-shadow: 0 1px #666;

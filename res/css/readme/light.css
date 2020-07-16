@@ -238,9 +238,6 @@ input[type=number]:disabled{
 	background-position: 0 0, 4px 7px;
 }
 
-input, textarea, select, button {
-	border-radius: 5px;
-}
 
 label {
 	margin-top:3%;
@@ -494,16 +491,15 @@ input[type="checkbox"]:checked{
 	border-radius: 5px;
 }
 
-
 #clr-btn:active, #dl-btn:active, #menu-btn:active {
 	box-shadow: 0 1px #666;
 	transform: translateY(4px);
 }
 
 #refresh-btn, #theme{
-  color:teal;
-	border: 1px solid;
-	border-radius: 5px;
+  color:white;
+	border: 0;
+	background-color: teal;
 }
 
 #refresh-btn:active, #theme:active{

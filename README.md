@@ -1,17 +1,19 @@
+<dl>
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
+<link rel="alternate stylesheet" href="res/css/readme/light.css" title="light">
+<script src="res/js/main.js"></script>
+<title>Règle de jeux</title>
 
-- [Résumé](#rsum)
-- [La défense](#la-dfense)
-- [Dégâts](#dgts)
-- [Bouclier](#bouclier)
-- [Cases et déplacement](#cases-et-dplacement)
-- [Effets des réussites critiques](#effets-des-russites-critiques)
-	- [Sur les capacités](#sur-les-capacits)
-	- [Sur les attaques "normales" (hors capacités)](#sur-les-attaques-normales-hors-capacits)
-- [Armes](#armes)
+<header>
+	<div class="icon-bar">
+		<a class="active" href=""><i class="fa fa-home"></i></a>
+		<a class="readme" href="readme.html"><i class="fab fa-readme"></i></a>
+	</div>
+	<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
+</header>
+</dl>
 
-<!-- /TOC -->
 
 Avant de rentrer dans le vif du sujet, je dois vous parler du système de combat. Tout d'abord, il faut savoir que tout est automatisé, vous n'avez pas à calculer vos dégâts, je m'occupe de tout.
 
@@ -54,17 +56,17 @@ Dans le cas où il y aurait un 1 VS plusieurs, la personne en sous nombre doit l
 
 Les dégâts sont déterminés en fonction de l'écart de dé entre l'attaquant et le défenseur dans le cas où le défenseur n'a pas réussi à esquiver l'attaque. Ainsi, plus la différence est haute, plus le défenseur perdra de pv. Il est à savoir que les dégâts sont calculés sur une base de 100 PV. Ainsi :
 
-Ecart de 9 (voire+): Coup critique : L'adversaire perd 50 PV.
+- Ecart de 9 (voire+): Coup critique : L'adversaire perd 50 PV.
 
-De 8 à 7 : Très Bon dégât : Le défenseur perd 40 PV.
+- De 8 à 7 : Très Bon dégât : Le défenseur perd 40 PV.
 
-De 6 à 5 : Bon dégât : Le défenseur perd 30 PV.
+- De 6 à 5 : Bon dégât : Le défenseur perd 30 PV.
 
-De 4 à 3 : Dégât moyen: Le défenseur perd 20 PV.
+- De 4 à 3 : Dégât moyen: Le défenseur perd 20 PV.
 
-1- 2  : Dégât faible : Le défenseur perd 10 PV.
+- De 1 à 2  : Dégât faible : Le défenseur perd 10 PV.
 
-0 : Dégâts très faible, le défenseur perd 5 PV.
+- 0 : Dégâts très faible, le défenseur perd 5 PV.
 
 Dans le cas où le défenseur aurait encaissé le coup (dé d'endurance), il perd moins de pv. La valeur de sa caractéristique est une valeur seuil, et plus le dés sera bas mieux le défenseur encaisse. Un score de 0 étant un URC, la personne encaisse tous les dégâts.
 
@@ -121,8 +123,8 @@ Le calculs des dégâts des compétences offensives sont automatisés, vous n'av
 
 A savoir que seuls les implants permettent d'atteindre le score de 0.
 
--   Les Ultra réussite- critiques d'attaque : Les dégâts sont multipliés par 1.8 et on outrepasse la défense de l'adversaire.
--   Les UltraRC de défense: Lorsqu'un combattant a un score de dés d'endurance ou d'agilité égal à 0, il annule automatiquement l'attaque de son adversaire, quelque soit la valeur de son dé, sauf dans le cas où l'autre attaquant aura un 0 en endurance. Dans ce cas, le défenseur perdra 9 PV.
+-   Les Ultra critiques d'attaque : Les dégâts sont multipliés par 1.8 et on outrepasse la défense de l'adversaire.
+-   Les Ultra critique de défense: Lorsqu'un combattant a un score de dés d'endurance ou d'agilité égal à 0, il annule automatiquement l'attaque de son adversaire, quelque soit la valeur de son dé, sauf dans le cas où l'autre attaquant aura un 0 en endurance. Dans ce cas, le défenseur perdra 9 PV.
 
 -   Les réussite- critique d'attaque :  Lorsqu'un combattant a un score de dés égal à 1, le score est multiplié par 1.4, exactement comme dans le cas d'une compétence.
 
@@ -130,36 +132,63 @@ A noter que lors d'une UC d'esquive, le combattant bénéficie d'une riposte ave
 
 # Armes
 
--   **ARME BLANCHE** → _FORCE_
+##  Armes liées à la force
 
-    -   Couteau  : 5% -  Utilisation gratuite un tour sur deux. Si double couteau, il est possible d'activer le bonus en même temps et de donner 4 coups un tour sur deux.
-    -   Epée : 10%
-         → Uniquement utilisable au corps à corps (rang 1)
+Dans la majorité des cas, les armes blanches et contondantes ne sont utilisables qu'au corps à corps, mais le programme permet d'utiliser des armes blanches à distances. Cela permet donc la création d'arme blanche de semi-distance.
 
--   **PROJECTILES** : 5% → _PRÉCISION_
-    		→ Rang 1 à 2
+### Arme blanche :
 
-    > Exemple : Grenade, bombe, couteau...
+#### Couteau  :
 
--   **ARME À FEU** : → _PRÉCISION_
+- **Bonus** : 5%
+- Utilisation gratuite un tour sur deux. Si double couteau, il est possible d'activer le bonus en même temps et de donner 4 coups un tour sur deux.
 
-    -   _Pistolet_ : 8% -  8 charges
-           →  Rang 1 à 2
-           →  Malus de +2 au dé de PRECISION si utilisé sur le rang 3
-    -   _Fusil_ : 10% -  12 charges
-         →  Rang 2 à 3
-        -   Malus de +1 au dé de PRECISION et bonus de 5% sur les dégât sur RANG 1.
+#### **Epée**
 
--   **CANON** :  15% - 15 charges → _FORCE_
-           → Rang 2 à 3
-           → Bonus de 10% sur le dégât sur RANG 1.
-        \-  Limité à une fois tous les 3 tours
-        \-  A besoin de minimum 4 en force
-        \-  Occasionne +2 sur dés d'agilité
-        \-  Ne peut pas porter de module
+- **Bonus** : 10%
 
-    > Les artilleurs n'ont pas de malus d'agilités et n'ont pas besoin d'avoir 4 en force pour pouvoir porter ses armes
+###  Arme contondante
 
--   **CONTONDANT** : 15% → _FORCE_
-    -   Utilisable uniquement au corps à corps (RANG 1)
-    -   A besoin de minimum 4 en force
+- **Bonus** : 15%
+- **Pré-requis** : 4 en force
+
+## Arme liée à la précision
+
+###  **PROJECTILES**
+
+- **Bonus** : 5 %
+- **Placement** : Rang 1 à 2
+> Exemple : Grenade, bombe, couteau...
+
+###  **ARME À FEU** :
+
+#### Pistolet :
+
+- **Nombre de balles (ou charges)** : 8
+- **Bonus** : 8%
+- **Placement** : 1 à 2
+- **Malus de placement ** : +2 Précision (rang 3)
+
+
+#### Fusil :
+
+- **Nombre de balles (ou charges) ** : 12
+- **Bonus** : 10%
+- **Placement** : Rang 2 à 3
+- ** Bonus de placement** : +5% (rang 1)
+- **Malus de placement** : +1 Précision (rang 1)
+
+
+### Canon :
+
+- **Bonus** : 20%
+- **Malus** : +2 en agilité
+- **Pré-requis** : 4 en force
+- **Placement** : Rang 2 à 3
+- **Limitation** :
+	- Une fois tous les 3 tours.
+	- Ne peut pas porter de modules
+- **Bonus de placement** : +10% (rang 1)
+- **Malus de placement** : +2 précision
+
+> Les artilleurs n'ont pas de malus d'agilités et n'ont pas besoin d'avoir 4 en force pour pouvoir porter ses armes.
