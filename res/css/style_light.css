@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Concert+One|Josefin+Sans|Pangolin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
+
 @media only screen and (max-width: 1100px) {
   form {
     margin: 0 10%;
@@ -78,10 +79,10 @@
 			flex-direction: column;
 		}
 
-    #clr-btn {
+  #clr-btn {
       margin-right: 1%;
-
     }
+
     #esquive_stats {
       padding-left: 10%;
     }

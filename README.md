@@ -1,7 +1,70 @@
 <dl>
-
 <link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
 <link rel="alternate stylesheet" href="res/css/readme/light.css" title="light">
+
+button {
+	width:100%;
+	height:50px;
+	top:0;
+	}
+
+	div#readme{
+		border:0;
+	}
+	p{
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: large;
+	}
+	.element.style{
+		background-color:transparent;
+	}
+	.index {
+		background-color:#383838;
+	}
+	.active {
+		background-color:#2d2d2d
+	}
+	li {
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: large;
+	}
+	h2{
+		font-family: 'M PLUS Rounded 1c', sans-serif;
+	}
+	h1{
+		font-family: 'M PLUS Rounded 1c', sans-serif;
+	}
+	h3{
+		font-family: 'M PLUS Rounded 1c', sans-serif;
+	}
+	h4{
+		font-family: 'M PLUS Rounded 1c', sans-serif;
+	}
+
+
+</style>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
+<link rel="alternate stylesheet" href="res/css/readme/light.css" title="light">
+<script src="res/js/style_regle.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="res/img/logo.png">
+<link rel="apple-touch-icon" href="res/img/logo.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<title>Système JdR</title>
+</head>
+
+<header>
+    <div class="icon-bar">
+			  <a class="index" href="index.html"><i class="fas fa-calculator"></i></a>
+        <a class="active" href><i class="fab fa-readme"></i></a>
+    </div>
+</header>
+</dl>
+<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
+
 <script src="res/js/main.js"></script>
 <title>Règle de jeux</title>
 
@@ -192,3 +255,6 @@ Dans la majorité des cas, les armes blanches et contondantes ne sont utilisable
 - **Malus de placement** : +2 précision
 
 > Les artilleurs n'ont pas de malus d'agilités et n'ont pas besoin d'avoir 4 en force pour pouvoir porter ses armes.
+
+# Calculs 
+
