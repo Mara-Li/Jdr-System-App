@@ -165,9 +165,13 @@
 
 	}
 
-	#endurance, #esquive {
+
+	#endu_stats, #esquive_stats {
 		width:150px;
 		display:inline-block;
+	}
+	#endu_stats {
+		width: 35%;
 	}
 }
 
@@ -224,6 +228,7 @@ input[type="button"] {
 	border: 1px solid;
 	border-radius: 5px;
 	background-color: #2d2f2f;
+	font-family:'M PLUS Rounded 1c', sans-serif;
 }
 
 input[type="button"]:active {
@@ -400,6 +405,7 @@ input[type="checkbox"]:checked{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-family:'M PLUS Rounded 1c', sans-serif;
 }
 
 .titre-card-button {
@@ -528,6 +534,6 @@ input[type="checkbox"]:checked{
 	vertical-align: baseline;
 }
 
-#endurance, #esquive {
+#endu_stats, #esquive_stats {
 	display:inline-block;
 }

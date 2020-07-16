@@ -157,9 +157,13 @@
 			font-size: 100%;
 
 		}
-		#endurance, #esquive {
+		#endu_stats, #esquive_stats {
 			width:150px;
 			display:inline-block;
+		}
+
+		#endu_stats {
+			width:35%;
 		}
 }
 
@@ -215,6 +219,7 @@ input[type="button"] {
   margin: auto;
 	border: 1px solid;
 	border-radius: 5px;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 input[type="button"]:active {
@@ -508,7 +513,7 @@ input[type="checkbox"]:checked{
 	transform: translateY(4px);
 }
 
-#endurance, #esquive {
+#endu_stats, #esquive_stats {
 	display:inline-block;
 }
 
