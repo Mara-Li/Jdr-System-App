@@ -33,6 +33,7 @@ select {
 select:disabled {
 	background-color: #2b2b2b;
 	color: grey;
+	background-size:0;
 }
 
 input[type="radio"] {

@@ -25,6 +25,7 @@ select {
 select:disabled {
 	background-color: white;
 	color: grey;
+	background-size:0;
 }
 
 input[type="radio"]{

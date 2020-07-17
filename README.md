@@ -1,46 +1,6 @@
 <dl>
 <link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
 <link rel="alternate stylesheet" href="res/css/readme/light.css" title="light">
-<style type="text/css">
-    button {
-        width:100%;
-        height:50px;
-        top:0;
-        }
-
-        div#readme{
-            border:0;
-        }
-        p{
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: large;
-        }
-        .element.style{
-            background-color:transparent;
-        }
-        .index {
-            background-color:#383838;
-        }
-        .active {
-            background-color:#2d2d2d
-        }
-        li {
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: large;
-        }
-        h2{
-            font-family: 'M PLUS Rounded 1c', sans-serif;
-        }
-        h1{
-            font-family: 'M PLUS Rounded 1c', sans-serif;
-        }
-        h3{
-            font-family: 'M PLUS Rounded 1c', sans-serif;
-        }
-        h4{
-            font-family: 'M PLUS Rounded 1c', sans-serif;
-        }
-</style>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
 <link rel="alternate stylesheet" href="res/css/readme/light.css" title="light">
@@ -57,12 +17,11 @@
 <header>
     <div class="icon-bar">
 			  <a class="index" href="index.html"><i class="fas fa-calculator"></i></a>
-        <a class="active" href><i class="fab fa-readme"></i></a>
+        <a class="active" href=""><i class="fab fa-readme"></i></a>
     </div>
 </header>
 </dl>
 <button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
-
 <script src="res/js/main.js"></script>
 <title>Règle de jeux</title>
 
@@ -76,7 +35,31 @@
 
 </dl>
 
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+- [Résumé](#rsum)
+- [La défense](#la-dfense)
+- [Dégâts](#dgts)
+- [Bouclier](#bouclier)
+- [Cases et déplacement](#cases-et-dplacement)
+- [Effets des réussites critiques](#effets-des-russites-critiques)
+	- [Sur les capacités](#sur-les-capacits)
+	- [Sur les attaques "normales" (hors capacités)](#sur-les-attaques-normales-hors-capacits)
+- [Armes](#armes)
+	- [Armes liées à la force](#armes-lies-la-force)
+		- [Arme blanche :](#arme-blanche-)
+			- [Couteau  :](#couteau-)
+			- [**Epée**](#epe)
+		- [Arme contondante](#arme-contondante)
+	- [Arme liée à la précision](#arme-lie-la-prcision)
+		- [**PROJECTILES**](#projectiles)
+		- [**ARME À FEU** :](#arme-feu-)
+			- [Pistolet :](#pistolet-)
+			- [Fusil :](#fusil-)
+		- [Canon :](#canon-)
+- [Calculs](#calculs)
+
+<!-- /TOC -->
 
 Avant de rentrer dans le vif du sujet, je dois vous parler du système de combat. Tout d'abord, il faut savoir que tout est automatisé, vous n'avez pas à calculer vos dégâts, je m'occupe de tout.
 
@@ -260,6 +243,9 @@ Dans la majorité des cas, les armes blanches et contondantes ne sont utilisable
 Après avoir vérifié la table, on récupère les dégâts. Ainsi $$d=dégâts\hspace{10px}de\hspace{10px} la\hspace{10px} table + bonus$$
 
 * **PV perdus** : $$d=d*100$$
+
 * **Bouclier* :** $$d *(1-bouclier)$$
+
 * **Endurance et dégâts finaux : ** $$finaux = bouclier * \frac{1-[10*(endurance-défense)+1]}{100}$$
+
 * **PV restants : ** $$PV\hspace{10px}max - finaux$$
