@@ -1,3 +1,4 @@
+<meta>
 <link rel="stylesheet" href="res/css/readme/style_readme.css">
 <link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
 <link rel="alternate stylesheet" href="res/css/readme/light.css" title="light">
@@ -16,46 +17,48 @@
 <script>
 function openNav() {
   document.getElementById("sidenav").style.width = "100%";
+	document.getElementById("truc").style.display = "none";
+
 }
 function closeNav() {
   document.getElementById("sidenav").style.width = "0";
-
+	document.getElementById("truc").style.display = "inline-block";
 }
 </script>
 </head>
+<div id="truc"><button id="burger" type="button" onclick="openNav()">&nbsp;</i>
+</button></div>
+<div id="sidenav"><ul class="nav nav-list">
+<a href="javascript:void(0)" id="burger_close" onclick="closeNav()">&times;</a>
+	<div id="link">
+	<li class="sidebar-h1"><a href="#r-sum-" onclick="closeNav()" >R&#xE9;sum&#xE9;</a></li>
+	<li class="sidebar-h1"><a href="#la-d-fense" onclick="closeNav()">La d&#xE9;fense</a></li>
+	<li class="sidebar-h1"><a href="#d-g-ts" onclick="closeNav()">D&#xE9;g&#xE2;ts</a></li>
+	<li class="sidebar-h1">	<a href="#bouclier" onclick="closeNav()">Bouclier</a></li>
+	<li class="sidebar-h1"><a href="#cases-et-d-placement" onclick="closeNav()">Cases et d&#xE9;placement</a></li>
+	<li class="sidebar-h1"><a href="effets-des-r-ussites-critiques" onclick="closeNav()">Effets des r&#xE9;ussites critiques</a></li>
+	<li class="sidebar-h2"><a href="#sur-les-capacit-s" onclick="closeNav()">Capacités</a></li>
+	<li class="sidebar-h2"><a href="#sur-les-attaques-normales-hors-capacit-s-" onclick="closeNav()">Attaques normales</a></li>
+	<li class="sidebar-h1"><a href="#armes" onclick="closeNav()">Armes</a></li>
+	<li class="sidebar-h2"><a href="#armes-li-es-la-force" onclick="closeNav()">Armes li&#xE9;es &#xE0; la force</a></li>
+	<li class="sidebar-h3"><a href="#arme-blanche-" onclick="closeNav()">Arme blanche</a></li>
+	<li class="sidebar-h4"><a href="#couteau-" onclick="closeNav()">Couteau</a></li>
+	<li class="sidebar-h4"><a href="#ep-e" onclick="closeNav()">Ep&#xE9;e</a></li>
+	<li class="sidebar-h3">	<a href="#arme-contondante" onclick="closeNav()">Arme contondante</a></li>
+	<li class="sidebar-h2"><a href="#arme-li-e-la-pr-cision" onclick="closeNav()">Arme li&#xE9;e &#xE0; la pr&#xE9;cision</a></li>
+	<li class="sidebar-h3"><a href="#projectiles" onclick="closeNav()">Projectiles</a></li>
+	<li class="sidebar-h3"><a href="#arme-feu-" onclick="closeNav()">Armes à feu</a></li>
+	<li class="sidebar-h4"><a href="#pistolet-" onclick="closeNav()">Pistolet</a></li>
+	<li class="sidebar-h4"><a href="#fusil-" onclick="closeNav()">Fusil</a></li>
+	<li class="sidebar-h4"><a href="#canon-" onclick="closeNav()">Canon</a></li>
+	<li class="sidebar-h1"><a href="#calculs" onclick="closeNav()">Calculs</a></li></ul>
+</div>
 <header>
-	<a href="javascript:void(0);" class="burger" onclick="openNav()"><i class="fa fa-bars"></i></a>
     <div class="icon-bar">
 			<a href="index.html" class="readme"><i class="fas fa-calculator"></i></a>
       <a href="" class="active"><i class="fab fa-readme"></i></a>
 			<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
 		</div>
-			<div id="sidenav"><ul class="nav nav-list">
-				<a href="javascript:void(0)" id="burger_close" onclick="closeNav()">&times;</a>
-				<div id="link">
-				<li class="sidebar-h1"><a href="#r-sum-" onclick="closeNav()" >R&#xE9;sum&#xE9;</a></li>
-				<li class="sidebar-h1"><a href="#la-d-fense" onclick="closeNav()">La d&#xE9;fense</a></li>
-				<li class="sidebar-h1"><a href="#d-g-ts" onclick="closeNav()">D&#xE9;g&#xE2;ts</a></li>
-				<li class="sidebar-h1">	<a href="#bouclier" onclick="closeNav()">Bouclier</a></li>
-				<li class="sidebar-h1"><a href="#cases-et-d-placement" onclick="closeNav()">Cases et d&#xE9;placement</a></li>
-				<li class="sidebar-h1"><a href="effets-des-r-ussites-critiques" onclick="closeNav()">Effets des r&#xE9;ussites critiques</a></li>
-				<li class="sidebar-h2"><a href="#sur-les-capacit-s" onclick="closeNav()">Capacités</a></li>
-				<li class="sidebar-h2"><a href="#sur-les-attaques-normales-hors-capacit-s-" onclick="closeNav()">Attaques normales</a></li>
-				<li class="sidebar-h1"><a href="#armes" onclick="closeNav()">Armes</a></li>
-				<li class="sidebar-h2"><a href="#armes-li-es-la-force" onclick="closeNav()">Armes li&#xE9;es &#xE0; la force</a></li>
-				<li class="sidebar-h3"><a href="#arme-blanche-" onclick="closeNav()">Arme blanche</a></li>
-				<li class="sidebar-h4"><a href="#couteau-" onclick="closeNav()">Couteau</a></li>
-				<li class="sidebar-h4"><a href="#ep-e" onclick="closeNav()">Ep&#xE9;e</a></li>
-				<li class="sidebar-h3">	<a href="#arme-contondante" onclick="closeNav()">Arme contondante</a></li>
-				<li class="sidebar-h2"><a href="#arme-li-e-la-pr-cision" onclick="closeNav()">Arme li&#xE9;e &#xE0; la pr&#xE9;cision</a></li>
-				<li class="sidebar-h3"><a href="#projectiles" onclick="closeNav()">Projectiles</a></li>
-				<li class="sidebar-h3"><a href="#arme-feu-" onclick="closeNav()">Armes à feu</a></li>
-				<li class="sidebar-h4"><a href="#pistolet-" onclick="closeNav()">Pistolet</a></li>
-				<li class="sidebar-h4"><a href="#fusil-" onclick="closeNav()">Fusil</a></li>
-				<li class="sidebar-h4"><a href="#canon-" onclick="closeNav()">Canon</a></li>
-				<li class="sidebar-h1"><a href="#calculs" onclick="closeNav()">Calculs</a></li></ul>
-			</div>
 			</div>
     </div>
 </header>
-<body>
