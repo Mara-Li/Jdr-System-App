@@ -219,7 +219,6 @@ header {
 	text-align: center;
 	width: 100%;
 	font-size: 15px;
-	position:sticky;
 	top:0;
 }
 
@@ -353,6 +352,10 @@ select {
 	padding-left: 1%;
 }
 
+.markdown-body {
+	padding-right:15%;
+	padding-top:15px;
+}
 
 /**********
 * Classes *
@@ -373,12 +376,58 @@ select {
 	font-size: 36px;
 }
 
-.icon-bar a:hover {
-	background-color: #000;
+div#sidenav {
+	height: 100%;
+  width: 0;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index: 99999;
+  overflow-x: hidden;
+  transition: 0.5s;
+  text-align:center;
+	background-size:cover;
 }
 
-div#sidenav {
-	display:none;
+#sidenav a{
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+transition: 0.3s;
+float:none;
+display:flex;
+}
+.nav-list {
+  font-size: 17px;
+	list-style: none;
+}
+
+.sidebar-h1 {
+  font-weight: bold;
+}
+
+.sidebar-h2 {
+  margin-left: 10px;
+
+}
+
+.sidebar-h3 {
+  margin-left: 20px;
+  border-left-width: 2px;
+}
+
+.sidebar-h4 {
+  margin-left: 30px;
+  border-left-width: 2px;
+	border-left-style:dotted;
+}
+
+.sidebar-h5 {
+  margin-left: 40px;
+	list-style: initial;
+  border-left-color:white;
+  border-left-width: 2px;
+
 }
 
 .active {
@@ -390,7 +439,28 @@ div#sidenav {
 }
 
 .burger {
-	width:10%;
+	position:fixed;
+	top:15%;
+	font-size: 36px;
+	right:0;
+	padding-right: 2%;
+}
+
+#burger_close {
+	position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+
+}
+
+#burger_close a:hover {
+	background-color:transparent;
+}
+
+#link a:hover{
+	background-color:teal;
 }
 
 .flex-column {
@@ -524,4 +594,8 @@ div#sidenav {
 
 #endu_stats, #esquive_stats {
 	display:inline-block;
+}
+
+.math{
+  font-size:100%;
 }

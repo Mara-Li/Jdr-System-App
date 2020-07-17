@@ -73,10 +73,6 @@ a {
 	background-color: #383838;
 }
 
-.burger {
-	background-color: lightgrey;
-}
-
 .card {
 	background-color: rgb(35, 38, 39);
 }
@@ -116,4 +112,8 @@ a {
 	background-color:#63636a;
 	border:0;
 	border-radius: 0;
+}
+
+#sidenav {
+	background-color: black;
 }

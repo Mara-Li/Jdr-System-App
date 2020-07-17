@@ -69,10 +69,6 @@ a {
 	background-color: white;
 }
 
-.burger {
-	background-color: #3b5259
-}
-
 .titre-card {
 	color: teal;
 }
@@ -111,4 +107,8 @@ a {
 	border:0;
 	background-color: teal;
 	border-radius: 0;
+}
+
+#sidenav {
+	background-color:#cfcfcf;
 }
