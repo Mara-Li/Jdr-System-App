@@ -1,18 +1,13 @@
-/***************************
-	* 	media queries *
-****************************/
-
 /************
 * Html tags *
 *************/
 body {
-  color: black;
-  background-color: rgb(207, 207, 207);
+	color: black;
+	background-color: rgb(207, 207, 207);
 }
 
 input[type="number"] {
-	border: 1px solid grey;
-	font-size:100%;
+	border-color: grey;
 }
 
 input[type=number]:disabled{
@@ -22,26 +17,23 @@ input[type=number]:disabled{
 
 select {
 	background-image: url("../img/arrow_white.svg");
-	border: 1px solid grey;
+	border-color: grey;
 	color:black;
 	background-color: white;
-
 }
 
 select:disabled {
 	background-color: white;
-	border: 1px solid #cfcfcf80;
-	background-size: 0px;
 	color: grey;
 }
 
 input[type="radio"]{
-background-color: #e7e6e7;
+	background-color: #e7e6e7;
 }
 
 /* appearance for checked radiobutton */
 input[type="radio"]:checked {
-  background-color: teal;
+	background-color: teal;
 }
 
 input[type="checkbox"] {
@@ -50,7 +42,7 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked{
 	background-color: teal;
-	border: 1px solid teal;
+	border-color: teal;
 }
 
 /**********
@@ -58,15 +50,15 @@ input[type="checkbox"]:checked{
 ***********/
 
 .active {
-  background-color: #1abc9c ;
+	background-color: #1abc9c ;
 }
 
 .card {
-  background-color: white;
+	background-color: white;
 }
 
 .titre-card {
-  color: teal;
+	color: teal;
 }
 
 .titre-card-button {
@@ -74,15 +66,15 @@ input[type="checkbox"]:checked{
 }
 
 .titre-card-resultat {
-  color: teal;
+	color: teal;
 }
 
 .log-date{
-  color: teal;
+	color: teal;
 }
 
 .log-title{
-  color: teal;
+	color: teal;
 }
 
 
@@ -95,9 +87,9 @@ input[type="checkbox"]:checked{
 }
 
 #clr-btn, #dl-btn {
-  color: teal;
+	color: teal;
 }
 
 #refresh-btn, #theme{
-  color:teal;
+	color:teal;
 }
