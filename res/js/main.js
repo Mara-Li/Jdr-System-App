@@ -1,7 +1,9 @@
 window.onkeydown = function(evt) {
 	evt = evt || window.event;
 	if (evt.keyCode == 13) {
-		calculate()
+		document.getElementsByClassName("titre-card-resultat")[0].classList.add("activeCalc");
+		calculate();
+		setTimeout(function () {document.getElementsByClassName("titre-card-resultat")[0].classList.remove("activeCalc")}, 100);
 	}
 }
 

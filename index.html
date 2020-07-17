@@ -123,7 +123,7 @@
 	<div class="flex-break"></div>
 	<div id="submit" class="card">
 		<div class="input-zone">
-			<input type="button" title="Calculer le résultat" class="titre-card-resultat" value="Résultat" onclick="calculate()">
+			<button id="calc-btn" type="button" title="Calculer le résultat" class="titre-card-resultat" onmouseup="calculate()">Résultat</button>
 		</div>
 		<p>
 			<label for="res_deg">Dégats finaux : </label>
@@ -135,8 +135,8 @@
 			<br>
 		</p>
 		<div class="result-btn-group">
-			<button id="refresh-btn" title="Effacer tout les champs avec les valeurs par défaut" type="button" onclick="clearInput()"><i class="fas fa-sync-alt"></i></button>
-			<button id="theme" title="Changer le theme de couleur" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
+			<button id="refresh-btn" title="Effacer tout les champs avec les valeurs par défaut" type="button" onmouseup="clearInput()"><i class="fas fa-sync-alt"></i></button>
+			<button id="theme" title="Changer le theme de couleur" type="button" onmouseup="toggletheme()"><i class="fas fa-adjust"></i></button>
 		</div>
 	</div>
 
@@ -144,8 +144,8 @@
 	<div id="log" class="card">
 		<span class="titre-card">Logs</span>
 		<div class="titre-card-button">
-			<button id="clr-btn" type="button" onclick="clearLog()"><i class="fas fa-trash"></i></button>
-			<button id="dl-btn" type="button" onclick="downloadLogs()"><i class="fas fa-file-download"></i></button>
+			<button id="clr-btn" type="button" onmouseup="clearLog()"><i class="fas fa-trash"></i></button>
+			<button id="dl-btn" type="button" onmouseup="downloadLogs()"><i class="fas fa-file-download"></i></button>
 		</div>
 		<div id="log_box" class="input-zone">
 		</div>

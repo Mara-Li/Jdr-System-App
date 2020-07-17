@@ -99,12 +99,7 @@ input[type="checkbox"]:checked{
 	color: #3d74c5;
 }
 
-#clr-btn, #dl-btn {
-	color: #3d74c5;
-	background-color: #2d2f2f;
-}
-
-#refresh-btn, #theme {
+#clr-btn, #dl-btn, #refresh-btn, #theme, #calc-btn {
 	color: #3d74c5;
 	background-color: #2d2f2f;
 }

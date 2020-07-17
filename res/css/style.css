@@ -16,16 +16,7 @@
 	.card {
 		width: 95%;
 		flex-wrap: wrap;
-	}
-
-	.titre-card {
-		flex-basis: 100%;
-	}
-
-	.titre-card-resultat {
-		flex-basis: 100%
-	}
-
+	}..
 	.titre-card-button {
 		flex-basis: 100%;
 		margin: 10px;
@@ -438,25 +429,23 @@ select {
 	flex: 10;
 }
 
-#clr-btn, #dl-btn {
+#clr-btn, #dl-btn, #refresh-btn, #theme, #calc-btn {
 	border: 1px solid;
 	border-radius: 5px;
 }
 
-#clr-btn:active, #dl-btn:active{
+#calc-btn.activeCalc {
+	box-shadow: 0 1px #666;
+	transform: translateY(4px);
+}
+
+#clr-btn:active, #dl-btn:active, #refresh-btn:active, #theme:active, #calc-btn:active {
 	box-shadow: 0 1px #666;
 	transform: translateY(4px);
 }
 
 #refresh-btn, #theme {
-	border: 1px solid;
-	border-radius: 5px;
 	margin-left: 12%;
-}
-
-#refresh-btn:active, #theme:active{
-	box-shadow: 0 1px #666;
-	transform: translateY(4px);
 }
 
 #capacite_type, #arme {
