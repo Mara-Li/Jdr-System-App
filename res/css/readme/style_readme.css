@@ -343,7 +343,6 @@ select {
 }
 
 .markdown-body ul, .markdown-body ol {
-	list-style: none;
 	padding-left: 1%;
 }
 

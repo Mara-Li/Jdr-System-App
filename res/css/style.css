@@ -269,7 +269,7 @@ label[for="capacite"] {
 }
 
 label[for="bonus"] {
-	width: 35%;
+	width: 30%;
 	vertical-align: text-bottom;
 	display: inline-block;
 }
