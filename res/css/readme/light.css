@@ -102,7 +102,7 @@ a {
 	color: teal;
 }
 
-#refresh-btn, #theme{
+#refresh-btn, #theme, .burger{
 	color:white;
 	border:0;
 	background-color: teal;

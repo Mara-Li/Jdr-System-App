@@ -107,7 +107,7 @@ a {
 	color: #3d74c5;
 }
 
-#theme {
+#theme, .burger {
 	color: white;
 	background-color:#63636a;
 	border:0;
