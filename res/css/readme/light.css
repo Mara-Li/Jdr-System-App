@@ -53,8 +53,16 @@ a {
 * Classes *
 ***********/
 
+.icon-bar {
+	background-color: #1abc9c;
+}
+
 .active {
 	background-color: #1abc9c ;
+}
+
+.readme {
+	background-color: grey;
 }
 
 .card {
@@ -99,4 +107,8 @@ a {
 	border:0;
 	background-color: teal;
 	border-radius: 0;
+}
+
+#sidenav {
+	background-color:#cfcfcf;
 }

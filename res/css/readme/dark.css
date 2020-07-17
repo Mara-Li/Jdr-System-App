@@ -61,6 +61,10 @@ a {
 * Classes *
 ***********/
 
+.icon-bar {
+	background-color: #2d2d2d;
+}
+
 .active {
 	background-color: #2d2d2d;
 }
@@ -108,4 +112,8 @@ a {
 	background-color:#63636a;
 	border:0;
 	border-radius: 0;
+}
+
+#sidenav {
+	background-color: black;
 }

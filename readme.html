@@ -36,53 +36,56 @@
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+<script>
+function openNav() {
+  document.getElementById("sidenav").style.width = "100%";
+}
+function closeNav() {
+  document.getElementById("sidenav").style.width = "0";
+
+}
+</script>
 </head>
 <header>
+	<a href="javascript:void(0);" class="burger" onclick="openNav()"><i class="fa fa-bars"></i></a>
     <div class="icon-bar">
-			<a class="readme" href="index.html"><i class="fas fa-calculator"></i></a>
-      <a class="active" href=""><i class="fab fa-readme"></i></a>
+			<a href="index.html" class="readme"><i class="fas fa-calculator"></i></a>
+      <a href="" class="active"><i class="fab fa-readme"></i></a>
+			<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
+		</div>
+			<div id="sidenav"><ul class="nav nav-list">
+				<a href="javascript:void(0)" id="burger_close" onclick="closeNav()">&times;</a>
+				<div id="link">
+				<li class="sidebar-h1"><a href="#r-sum-" onclick="closeNav()" >R&#xE9;sum&#xE9;</a></li>
+				<li class="sidebar-h1"><a href="#la-d-fense" onclick="closeNav()">La d&#xE9;fense</a></li>
+				<li class="sidebar-h1"><a href="#d-g-ts" onclick="closeNav()">D&#xE9;g&#xE2;ts</a></li>
+				<li class="sidebar-h1">	<a href="#bouclier" onclick="closeNav()">Bouclier</a></li>
+				<li class="sidebar-h1"><a href="#cases-et-d-placement" onclick="closeNav()">Cases et d&#xE9;placement</a></li>
+				<li class="sidebar-h1"><a href="effets-des-r-ussites-critiques" onclick="closeNav()">Effets des r&#xE9;ussites critiques</a></li>
+				<li class="sidebar-h2"><a href="#sur-les-capacit-s" onclick="closeNav()">Capacités</a></li>
+				<li class="sidebar-h2"><a href="#sur-les-attaques-normales-hors-capacit-s-" onclick="closeNav()">Attaques normales</a></li>
+				<li class="sidebar-h1"><a href="#armes" onclick="closeNav()">Armes</a></li>
+				<li class="sidebar-h2"><a href="#armes-li-es-la-force" onclick="closeNav()">Armes li&#xE9;es &#xE0; la force</a></li>
+				<li class="sidebar-h3"><a href="#arme-blanche-" onclick="closeNav()">Arme blanche</a></li>
+				<li class="sidebar-h4"><a href="#couteau-" onclick="closeNav()">Couteau</a></li>
+				<li class="sidebar-h4"><a href="#ep-e" onclick="closeNav()">Ep&#xE9;e</a></li>
+				<li class="sidebar-h3">	<a href="#arme-contondante" onclick="closeNav()">Arme contondante</a></li>
+				<li class="sidebar-h2"><a href="#arme-li-e-la-pr-cision" onclick="closeNav()">Arme li&#xE9;e &#xE0; la pr&#xE9;cision</a></li>
+				<li class="sidebar-h3"><a href="#projectiles" onclick="closeNav()">Projectiles</a></li>
+				<li class="sidebar-h3"><a href="#arme-feu-" onclick="closeNav()">Armes à feu</a></li>
+				<li class="sidebar-h4"><a href="#pistolet-" onclick="closeNav()">Pistolet</a></li>
+				<li class="sidebar-h4"><a href="#fusil-" onclick="closeNav()">Fusil</a></li>
+				<li class="sidebar-h4"><a href="#canon-" onclick="closeNav()">Canon</a></li>
+				<li class="sidebar-h1"><a href="#calculs" onclick="closeNav()">Calculs</a></li></ul>
+			</div>
+			</div>
     </div>
 </header>
-<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
 <body>
-<div id="readme" class="container"><article class="markdown-body entry-content"><dl>
-<ul>
-<li><a href="#r-sum-">R&#xE9;sum&#xE9;</a></li>
-<li><a href="#la-d-fense">La d&#xE9;fense</a></li>
-<li><a href="#d-g-ts">D&#xE9;g&#xE2;ts</a></li>
-<li><a href="#bouclier">Bouclier</a></li>
-<li><a href="#cases-et-d-placement">Cases et d&#xE9;placement</a></li>
-<li><a href="effets-des-r-ussites-critiques">Effets des r&#xE9;ussites critiques</a><ul>
-<li><a href="#sur-les-capacit-s">Capacités</a></li>
-<li><a href="#sur-les-attaques-normales-hors-capacit-s-">Attaques normales</a></li>
-</ul>
-</li>
-<li><a href="#armes">Armes</a><ul>
-<li><a href="#armes-li-es-la-force">Armes li&#xE9;es &#xE0; la force</a><ul>
-<li><a href="#arme-blanche-">Arme blanche</a><ul>
-<li><a href="#couteau-">Couteau</a></li>
-<li><a href="#ep-e"><strong>Ep&#xE9;e</strong></a></li>
-</ul>
-</li>
-<li><a href="#arme-contondante">Arme contondante</a></li>
-</ul>
-</li>
-<li><a href="#arme-li-e-la-pr-cision">Arme li&#xE9;e &#xE0; la pr&#xE9;cision</a><ul>
-<li><a href="#projectiles"><strong>PROJECTILES</strong></a></li>
-<li><a href="#arme-feu-"><strong>ARME &#xC0; FEU</strong></a><ul>
-<li><a href="#pistolet-">Pistolet</a></li>
-<li><a href="#fusil-">Fusil</a></li>
-</ul>
-</li>
-<li><a href="#canon-">Canon</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#calculs">Calculs</a></li>
-</ul>
+
 <!-- /TOC -->
-<hr>
+<div id="readme" class="container"><article class="markdown-body entry-content">
+
 <p>Avant de rentrer dans le vif du sujet, je dois vous parler du syst&#xE8;me de combat. Tout d&apos;abord, il faut savoir que tout est automatis&#xE9;, vous n&apos;avez pas &#xE0; calculer vos d&#xE9;g&#xE2;ts, je m&apos;occupe de tout.</p>
 <p>Les combats se d&#xE9;roulent au tour par tour, avec un lanc&#xE9; d&apos;un d&#xE9; 10 d&apos;attaque et de d&#xE9;fense.</p>
 <p>Un tour est lorsque tous les combattants (ennemis compris) ont jou&#xE9;. Mais les cooldown ne s&apos;actualise que durant le tour personnel du joueur et non pas le tour &quot;g&#xE9;n&#xE9;ral&quot; du combat (comme dans la majorit&#xE9; des jeux tactiques, notamment dofus).</p>
@@ -227,7 +230,7 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 <li><strong>Bonus de placement</strong> : +5% (rang 1)</li>
 <li><strong>Malus de placement</strong> : +1 Pr&#xE9;cision (rang 1)</li>
 </ul>
-<h3 id="canon-">Canon</h3>
+<h4 id="canon-">Canon</h4>
 <ul>
 <li><strong>Bonus</strong> : 20%</li>
 <li><strong>Malus</strong> : +2 en agilit&#xE9;</li>
@@ -245,15 +248,15 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 <p>Les artilleurs n&apos;ont pas de malus d&apos;agilit&#xE9;s et n&apos;ont pas besoin d&apos;avoir 4 en force pour pouvoir porter ses armes.</p>
 </blockquote>
 <h1 id="calculs">Calculs</h1>
-<p>Apr&#xE8;s avoir v&#xE9;rifi&#xE9; la table, on r&#xE9;cup&#xE8;re les d&#xE9;g&#xE2;ts. Ainsi $$d=d&#xE9;g&#xE2;ts\hspace{10px}de\hspace{10px} la\hspace{10px} table + bonus$$</p>
+<p>Apr&#xE8;s avoir v&#xE9;rifi&#xE9; la table, on r&#xE9;cup&#xE8;re les d&#xE9;g&#xE2;ts. Ainsi, </p><p class="math"> $$d=d&#xE9;g&#xE2;ts\hspace{10px}de\hspace{10px} la\hspace{10px} table + bonus$$</p>
 <ul>
-<li><p><strong>PV perdus</strong> : $$d=d*100$$</p>
+<li><p><strong>PV perdus : </strong></p><p class="math">$$d=d*100$$</p>
 </li>
-<li><p><strong>Bouclier :</strong> $$d *(1-bouclier)$$</p>
+<li><p><strong>Bouclier :</strong></p><p class="math"> $$d *(1-bouclier)$$</p>
 </li>
-<li><p><strong>Endurance et d&#xE9;g&#xE2;ts finaux : </strong> $$finaux = bouclier * \frac{1-[10</em>(endurance-d&#xE9;fense)+1]}{100}$$</p>
+<li><p><strong>Endurance et d&#xE9;g&#xE2;ts finaux : </strong></p><p class="math"> $$finaux = bouclier * \frac{1-[10</em>(endurance-d&#xE9;fense)+1]}{100}$$</p>
 </li>
-<li><p><strong>PV restants : </strong> $$PV\hspace{10px}max - finaux$$</p>
+<li><p><strong>PV restants : </strong></p><p class="math"> $$PV\hspace{10px}max - finaux$$</p>
 </li>
 </ul>
 </article></div><div style="width: 50px;height:50px;line-height: 50px;text-align: center;position: fixed;bottom: 10px;right: 10px;padding-top:5px;" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">
