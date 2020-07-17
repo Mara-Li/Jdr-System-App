@@ -61,12 +61,20 @@ a {
 * Classes *
 ***********/
 
+.icon-bar {
+	background-color: #2d2d2d;
+}
+
 .active {
 	background-color: #2d2d2d;
 }
 
 .readme {
 	background-color: #383838;
+}
+
+.burger {
+	background-color: lightgrey;
 }
 
 .card {

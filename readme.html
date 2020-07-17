@@ -36,53 +36,55 @@
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+<script>
+function myFunction() {
+  var x = document.getElementById("sidenav");
+  if (x.style.display === "grid") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "grid";
+		var truc = document.getgetElementById("body");
+		body.style.overflow="hidden";
+  }
+}
+</script>
 </head>
 <header>
     <div class="icon-bar">
-			<a class="readme" href="index.html"><i class="fas fa-calculator"></i></a>
-      <a class="active" href=""><i class="fab fa-readme"></i></a>
+			<a href="javascript:void(0);" class="burger" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+			<a href="index.html" class="readme"><i class="fas fa-calculator"></i></a>
+      <a href="" class="active"><i class="fab fa-readme"></i></a>
+			<div id="sidenav" class="icon-bar">
+				<a href="#r-sum-">R&#xE9;sum&#xE9;</a>
+				<a href="#la-d-fense">La d&#xE9;fense</a>
+				<a href="#d-g-ts">D&#xE9;g&#xE2;ts</a>
+				<a href="#bouclier">Bouclier</a></li>
+				<a href="#cases-et-d-placement">Cases et d&#xE9;placement</a></li>
+				<a href="effets-des-r-ussites-critiques">Effets des r&#xE9;ussites critiques</a>
+				<a href="#sur-les-capacit-s">Capacités</a>
+				<a href="#sur-les-attaques-normales-hors-capacit-s-">Attaques normales</a>
+				<a href="#armes">Armes</a>
+				<a href="#armes-li-es-la-force">Armes li&#xE9;es &#xE0; la force</a>
+				<a href="#arme-blanche-">Arme blanche</a><ul>
+				<a href="#couteau-">Couteau</a>
+				<a href="#ep-e"><strong>Ep&#xE9;e</strong></a>
+				<a href="#arme-contondante">Arme contondante</a>
+				<a href="#arme-li-e-la-pr-cision">Arme li&#xE9;e &#xE0; la pr&#xE9;cision</a>
+				<a href="#projectiles"><strong>PROJECTILES</strong></a>
+				<a href="#arme-feu-"><strong>ARME &#xC0; FEU</strong></a>
+				<a href="#pistolet-">Pistolet</a>
+				<a href="#fusil-">Fusil</a>
+				<a href="#canon-">Canon</a>
+				<a href="#calculs">Calculs</a>
+			</div>
     </div>
+		<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
 </header>
-<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
 <body>
-<div id="readme" class="container"><article class="markdown-body entry-content"><dl>
-<ul>
-<li><a href="#r-sum-">R&#xE9;sum&#xE9;</a></li>
-<li><a href="#la-d-fense">La d&#xE9;fense</a></li>
-<li><a href="#d-g-ts">D&#xE9;g&#xE2;ts</a></li>
-<li><a href="#bouclier">Bouclier</a></li>
-<li><a href="#cases-et-d-placement">Cases et d&#xE9;placement</a></li>
-<li><a href="effets-des-r-ussites-critiques">Effets des r&#xE9;ussites critiques</a><ul>
-<li><a href="#sur-les-capacit-s">Capacités</a></li>
-<li><a href="#sur-les-attaques-normales-hors-capacit-s-">Attaques normales</a></li>
-</ul>
-</li>
-<li><a href="#armes">Armes</a><ul>
-<li><a href="#armes-li-es-la-force">Armes li&#xE9;es &#xE0; la force</a><ul>
-<li><a href="#arme-blanche-">Arme blanche</a><ul>
-<li><a href="#couteau-">Couteau</a></li>
-<li><a href="#ep-e"><strong>Ep&#xE9;e</strong></a></li>
-</ul>
-</li>
-<li><a href="#arme-contondante">Arme contondante</a></li>
-</ul>
-</li>
-<li><a href="#arme-li-e-la-pr-cision">Arme li&#xE9;e &#xE0; la pr&#xE9;cision</a><ul>
-<li><a href="#projectiles"><strong>PROJECTILES</strong></a></li>
-<li><a href="#arme-feu-"><strong>ARME &#xC0; FEU</strong></a><ul>
-<li><a href="#pistolet-">Pistolet</a></li>
-<li><a href="#fusil-">Fusil</a></li>
-</ul>
-</li>
-<li><a href="#canon-">Canon</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#calculs">Calculs</a></li>
-</ul>
+
 <!-- /TOC -->
-<hr>
+<div id="readme" class="container"><article class="markdown-body entry-content">
+
 <p>Avant de rentrer dans le vif du sujet, je dois vous parler du syst&#xE8;me de combat. Tout d&apos;abord, il faut savoir que tout est automatis&#xE9;, vous n&apos;avez pas &#xE0; calculer vos d&#xE9;g&#xE2;ts, je m&apos;occupe de tout.</p>
 <p>Les combats se d&#xE9;roulent au tour par tour, avec un lanc&#xE9; d&apos;un d&#xE9; 10 d&apos;attaque et de d&#xE9;fense.</p>
 <p>Un tour est lorsque tous les combattants (ennemis compris) ont jou&#xE9;. Mais les cooldown ne s&apos;actualise que durant le tour personnel du joueur et non pas le tour &quot;g&#xE9;n&#xE9;ral&quot; du combat (comme dans la majorit&#xE9; des jeux tactiques, notamment dofus).</p>

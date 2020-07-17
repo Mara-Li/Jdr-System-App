@@ -53,12 +53,24 @@ a {
 * Classes *
 ***********/
 
+.icon-bar {
+	background-color: #1abc9c;
+}
+
 .active {
 	background-color: #1abc9c ;
 }
 
+.readme {
+	background-color: grey;
+}
+
 .card {
 	background-color: white;
+}
+
+.burger {
+	background-color: #3b5259
 }
 
 .titre-card {
