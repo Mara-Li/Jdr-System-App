@@ -121,6 +121,5 @@ a {
 #burger {
 	background-image: linear-gradient(180deg, transparent 33.33%, white 33.33%, white 50%, transparent 50%, transparent 83.33%, white 83.33%, white 100%);
 	background-size: 18.00px 18.00px;
-	border: 1px dotted white;
 
 }
