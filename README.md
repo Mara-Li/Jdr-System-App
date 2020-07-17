@@ -1,42 +1,3 @@
-<dl>
-<link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
-<link rel="alternate stylesheet" href="res/css/readme/light.css" title="light">
-<meta charset="UTF-8">
-<link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
-<link rel="alternate stylesheet" href="res/css/readme/light.css" title="light">
-<script src="res/js/style_regle.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="res/img/logo.png">
-<link rel="apple-touch-icon" href="res/img/logo.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-<title>Système JdR</title>
-</head>
-
-<header>
-    <div class="icon-bar">
-			  <a class="index" href="index.html"><i class="fas fa-calculator"></i></a>
-        <a class="active" href=""><i class="fab fa-readme"></i></a>
-    </div>
-</header>
-</dl>
-<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
-<script src="res/js/main.js"></script>
-<title>Règle de jeux</title>
-
-<header>
-	<div class="icon-bar">
-		<a class="active" href=""><i class="fa fa-home"></i></a>
-		<a class="readme" href="readme.html"><i class="fab fa-readme"></i></a>
-	</div>
-	<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
-</header>
-
-</dl>
-
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
 - [Résumé](#rsum)
 - [La défense](#la-dfense)
 - [Dégâts](#dgts)
@@ -59,7 +20,7 @@
 		- [Canon :](#canon-)
 - [Calculs](#calculs)
 
-<!-- /TOC -->
+
 
 Avant de rentrer dans le vif du sujet, je dois vous parler du système de combat. Tout d'abord, il faut savoir que tout est automatisé, vous n'avez pas à calculer vos dégâts, je m'occupe de tout.
 
@@ -153,7 +114,7 @@ Les compétences et les pouvoirs ne prennent pas en compte la distance, contrair
 
 # Effets des réussites critiques
 
-## Sur les capacités
+## Capacités
 
 Les réussites critiques ont pour effets de multipliés les effets d'une compétences, que ce soit en terme de dégâts pour les compétences offensives, qu'en terme de bonus ou malus.
 
@@ -165,7 +126,7 @@ Dans le cas où votre personnage fait :
 
 Le calculs des dégâts des compétences offensives sont automatisés, vous n'avez donc pas besoin de vérifier le bonus multiplicateur. Cependant pour les compétences non- offensives, vous devrez calculer en fonction du multiplicateur.
 
-## Sur les attaques "normales" (hors capacités)
+## Attaques normales
 
 A savoir que seuls les implants permettent d'atteindre le score de 0.
 
@@ -182,9 +143,9 @@ A noter que lors d'une UC d'esquive, le combattant bénéficie d'une riposte ave
 
 Dans la majorité des cas, les armes blanches et contondantes ne sont utilisables qu'au corps à corps, mais le programme permet d'utiliser des armes blanches à distances. Cela permet donc la création d'arme blanche de semi-distance.
 
-### Arme blanche :
+### Armes blanches
 
-#### Couteau  :
+#### Couteau
 
 - **Bonus** : 5%
 - Utilisation gratuite un tour sur deux. Si double couteau, il est possible d'activer le bonus en même temps et de donner 4 coups un tour sur deux.
@@ -200,23 +161,22 @@ Dans la majorité des cas, les armes blanches et contondantes ne sont utilisable
 
 ## Arme liée à la précision
 
-###  **PROJECTILES**
+###  **Projectiles**
 
 - **Bonus** : 5 %
 - **Placement** : Rang 1 à 2
 > Exemple : Grenade, bombe, couteau...
 
-###  **ARME À FEU** :
+###  Arme à feu
 
-#### Pistolet :
+#### Pistolet 
 
 - **Nombre de balles (ou charges)** : 8
 - **Bonus** : 8%
 - **Placement** : 1 à 2
 - **Malus de placement ** : +2 Précision (rang 3)
 
-
-#### Fusil :
+#### Fusil 
 
 - **Nombre de balles (ou charges) ** : 12
 - **Bonus** : 10%
@@ -224,7 +184,7 @@ Dans la majorité des cas, les armes blanches et contondantes ne sont utilisable
 - ** Bonus de placement** : +5% (rang 1)
 - **Malus de placement** : +1 Précision (rang 1)
 
-### Canon :
+### Canon
 
 - **Bonus** : 20%
 - **Malus** : +2 en agilité
@@ -244,7 +204,7 @@ Après avoir vérifié la table, on récupère les dégâts. Ainsi $$d=dégâts\
 
 * **PV perdus** : $$d=d*100$$
 
-* **Bouclier* :** $$d *(1-bouclier)$$
+* **Bouclier :** $$d *(1-bouclier)$$
 
 * **Endurance et dégâts finaux : ** $$finaux = bouclier * \frac{1-[10*(endurance-défense)+1]}{100}$$
 
