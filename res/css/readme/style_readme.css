@@ -431,7 +431,7 @@ display:flex;
 }
 
 .active {
-	width:25%;
+	width:50%;
 }
 
 .readme {
@@ -439,11 +439,19 @@ display:flex;
 }
 
 .burger {
-	position:fixed;
-	top:15%;
-	font-size: 36px;
-	right:0;
-	padding-right: 2%;
+	position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+	color:white;
+  padding: 1%;
+  font-size: 20px;
+	display:flex;
+	padding-left: 50%;
+	padding-right:50%;
+}
+
+#icon {
+
 }
 
 #burger_close {
@@ -571,6 +579,8 @@ display:flex;
 #clr-btn, #dl-btn, #refresh-btn, #theme, #calc-btn {
 	border: 1px solid;
 	border-radius: 5px;
+	padding-left: 50%;
+	padding-right: 50%;
 }
 
 
