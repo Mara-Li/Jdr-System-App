@@ -20,72 +20,67 @@
     }
   }
 
-	button {
-	width:100%;
-	height:50px;
-	top:0;
+	 button {
+		width:100%;
+		height:50px;
+	 	top:0;
 	}
 
 	div#readme{
-		border:0;
-	}
-	p{
-		font-family: 'Josefin Sans', sans-serif;
-		font-size: large;
-	}
-	.element.style{
-		background-color:transparent;
-	}
-	.index {
-		background-color:#383838;
-	}
-	.active {
-		background-color:#2d2d2d
-	}
-	li {
-		font-family: 'Josefin Sans', sans-serif;
-		font-size: large;
-	}
-	h2{
-		font-family: 'M PLUS Rounded 1c', sans-serif;
-	}
-	h1{
-		font-family: 'M PLUS Rounded 1c', sans-serif;
-	}
-	h3{
-		font-family: 'M PLUS Rounded 1c', sans-serif;
-	}
-	h4{
-		font-family: 'M PLUS Rounded 1c', sans-serif;
-	}
-
-
+	        border:0;
+	    }
+	    p{
+	        font-family: &#39;Josefin Sans&#39;, sans-serif;
+	        font-size: large;
+	    }
+	    .element.style{
+	        background-color:transparent;
+	    }
+	    .index {
+	        background-color:#383838;
+	    }
+	    .active {
+	        background-color:#2d2d2d
+	    }
+	    li {
+	        font-family: &#39;Josefin Sans&#39;, sans-serif;
+	        font-size: large;
+	    }
+	    h2{
+	        font-family: &#39;M PLUS Rounded 1c&#39;, sans-serif;
+	    }
+	    h1{
+	        font-family: &#39;M PLUS Rounded 1c&#39;, sans-serif;
+	    }
+	    h3{
+	        font-family: &#39;M PLUS Rounded 1c&#39;, sans-serif;
+	    }
+	    h4{
+	        font-family: &#39;M PLUS Rounded 1c&#39;, sans-serif;
+	    }
+	</style>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
+	<link rel="alternate stylesheet" href="res/css/readme/light.css" title="light">
+	<script src="res/js/style_regle.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="res/img/logo.png">
+	<link rel="apple-touch-icon" href="res/img/logo.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<title>Règle de jeux</title>
 </style>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
-<link rel="alternate stylesheet" href="res/css/readme/light.css" title="light">
-<script src="res/js/style_regle.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="res/img/logo.png">
-<link rel="apple-touch-icon" href="res/img/logo.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-<title>Système JdR</title>
 </head>
-
 <header>
     <div class="icon-bar">
-			  <a class="index" href="index.html"><i class="fas fa-calculator"></i></a>
-        <a class="active" href><i class="fab fa-readme"></i></a>
+        <a class="active" href><i class="fa fa-home"></i></a>
+        <a class="readme" href="readme.html"><i class="fab fa-readme"></i></a>
+				<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
     </div>
 </header>
-
-</dl>
-<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
-
-<body>
-<div id="readme" class="container"><article class="markdown-body entry-content"><dl>
+<body><div id="readme" class="container"><article class="markdown-body entry-content">
 
 <p>Avant de rentrer dans le vif du sujet, je dois vous parler du syst&#xE8;me de combat. Tout d&apos;abord, il faut savoir que tout est automatis&#xE9;, vous n&apos;avez pas &#xE0; calculer vos d&#xE9;g&#xE2;ts, je m&apos;occupe de tout.</p>
 <p>Les combats se d&#xE9;roulent au tour par tour, avec un lanc&#xE9; d&apos;un d&#xE9; 10 d&apos;attaque et de d&#xE9;fense.</p>
@@ -225,7 +220,7 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 </ul>
 <h4 id="fusil-">Fusil :</h4>
 <ul>
-<li><strong>Nombre de balles (ou charges)</strong> : 12</li>
+<li>*<em>Nombre de balles (ou charges) *</em> : 12</li>
 <li><strong>Bonus</strong> : 10%</li>
 <li><strong>Placement</strong> : Rang 2 &#xE0; 3</li>
 <li>** Bonus de placement** : +5% (rang 1)</li>
@@ -233,7 +228,6 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 </ul>
 <h3 id="canon-">Canon :</h3>
 <ul>
-<li><strong>Nombre de balles (ou charges)</strong> : 20 </li>
 <li><strong>Bonus</strong> : 20%</li>
 <li><strong>Malus</strong> : +2 en agilit&#xE9;</li>
 <li><strong>Pr&#xE9;-requis</strong> : 4 en force</li>
@@ -249,7 +243,15 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 <blockquote>
 <p>Les artilleurs n&apos;ont pas de malus d&apos;agilit&#xE9;s et n&apos;ont pas besoin d&apos;avoir 4 en force pour pouvoir porter ses armes.</p>
 </blockquote>
-</article></div><div style="width: 50px;height:50px;line-height: 50px;text-align: center;position: fixed;bottom: 10px;right: 10px;padding-top:5px;" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">
+<h1 id="calculs">Calculs</h1>
+<p>Apr&#xE8;s avoir v&#xE9;rifi&#xE9; la table, on r&#xE9;cup&#xE8;re les d&#xE9;g&#xE2;ts. Ainsi $$d=d&#xE9;g&#xE2;ts\hspace{10px}de\hspace{10px} la\hspace{10px} table + bonus$$</p>
+<ul>
+<li><strong>PV perdus</strong> : $$d=d*100$$</li>
+<li><strong>Bouclier :</strong> $$d *(1-bouclier)$$</li>
+<li><strong>Endurance et d&#xE9;g&#xE2;ts finaux :</strong> $$ finaux = bouclier * \frac{1-[10*(endurance - défense)+1]}{100}$$ </li>
+<li><strong>PV restants :</strong> $$PV\hspace{10px}max - finaux$$</li>
+</ul>
+</article></div><div style="background-color: #b4b2b2;width: 50px;height:50px;line-height: 50px;text-align: center;position: fixed;bottom: 10px;right: 10px;padding-top:5px;" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">
   <svg t="1533629773982" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1035" xlink="http://www.w3.org/1999/xlink" width="40" height="40"><defs><style type="text/css">@font-face { font-family: uc-nexus-iconfont; src: url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff") format("woff"), url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf") format("truetype"); }
   </style></defs><path d="M536.255427 195.182354c-7.804756-7.804756-17.966187-11.615549-28.311813-11.615549-9.43693 0-18.874883 3.449565-26.496467 10.163477-2.360767 1.452071-4.356214 3.267417-6.352685 5.262864L218.47792 455.611735c-15.607466 15.60542-15.607466 40.834011 0 56.43943 15.607466 15.607466 41.558511 15.607466 57.167001 0l193.46013-192.733583 0 600.526219c0 22.1423 17.787108 39.927361 39.927361 39.927361 22.140253 0 39.927361-17.785062 39.927361-39.927361L548.959773 319.317583 737.15704 508.422522c15.607466 15.607466 40.469714 15.607466 56.078203 0 15.607466-15.607466 15.425318-40.834011-0.182149-56.441477L536.255427 195.182354 536.255427 195.182354z" p-id="1036" fill="#333"/><path d="M101.784174 143.097092l816.674071 0c22.140253 0 39.925315-17.785062 39.925315-39.927361 0-22.140253-17.784038-39.925315-39.925315-39.925315L101.784174 63.244416c-22.140253 0-39.927361 17.785062-39.927361 39.925315C61.856813 125.31203 79.643921 143.097092 101.784174 143.097092L101.784174 143.097092z" p-id="1037" fill="#333"/></svg>
 </div>

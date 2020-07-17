@@ -1,47 +1,45 @@
 <dl>
 <link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
 <link rel="alternate stylesheet" href="res/css/readme/light.css" title="light">
+<style type="text/css">
+    button {
+        width:100%;
+        height:50px;
+        top:0;
+        }
 
-button {
-	width:100%;
-	height:50px;
-	top:0;
-	}
-
-	div#readme{
-		border:0;
-	}
-	p{
-		font-family: 'Josefin Sans', sans-serif;
-		font-size: large;
-	}
-	.element.style{
-		background-color:transparent;
-	}
-	.index {
-		background-color:#383838;
-	}
-	.active {
-		background-color:#2d2d2d
-	}
-	li {
-		font-family: 'Josefin Sans', sans-serif;
-		font-size: large;
-	}
-	h2{
-		font-family: 'M PLUS Rounded 1c', sans-serif;
-	}
-	h1{
-		font-family: 'M PLUS Rounded 1c', sans-serif;
-	}
-	h3{
-		font-family: 'M PLUS Rounded 1c', sans-serif;
-	}
-	h4{
-		font-family: 'M PLUS Rounded 1c', sans-serif;
-	}
-
-
+        div#readme{
+            border:0;
+        }
+        p{
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: large;
+        }
+        .element.style{
+            background-color:transparent;
+        }
+        .index {
+            background-color:#383838;
+        }
+        .active {
+            background-color:#2d2d2d
+        }
+        li {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: large;
+        }
+        h2{
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+        h1{
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+        h3{
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+        h4{
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
 </style>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
@@ -75,7 +73,9 @@ button {
 	</div>
 	<button id="theme" type="button" onclick="toggletheme()"><i class="fas fa-adjust"></i></button>
 </header>
+
 </dl>
+
 
 
 Avant de rentrer dans le vif du sujet, je dois vous parler du système de combat. Tout d'abord, il faut savoir que tout est automatisé, vous n'avez pas à calculer vos dégâts, je m'occupe de tout.
@@ -241,7 +241,6 @@ Dans la majorité des cas, les armes blanches et contondantes ne sont utilisable
 - ** Bonus de placement** : +5% (rang 1)
 - **Malus de placement** : +1 Précision (rang 1)
 
-
 ### Canon :
 
 - **Bonus** : 20%
@@ -256,5 +255,11 @@ Dans la majorité des cas, les armes blanches et contondantes ne sont utilisable
 
 > Les artilleurs n'ont pas de malus d'agilités et n'ont pas besoin d'avoir 4 en force pour pouvoir porter ses armes.
 
-# Calculs 
+# Calculs
 
+Après avoir vérifié la table, on récupère les dégâts. Ainsi $$d=dégâts\hspace{10px}de\hspace{10px} la\hspace{10px} table + bonus$$
+
+* **PV perdus** : $$d=d*100$$
+* **Bouclier* :** $$d *(1-bouclier)$$
+* **Endurance et dégâts finaux : ** $$finaux = bouclier * \frac{1-[10*(endurance-défense)+1]}{100}$$
+* **PV restants : ** $$PV\hspace{10px}max - finaux$$
