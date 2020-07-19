@@ -23,6 +23,10 @@ input[type=number]:disabled {
 	background-image: radial-gradient(circle, #c3c3c3 10%, transparent 10%), radial-gradient(circle, #c3c3c3 10%, transparent 10%);
 }
 
+input[type=number]:disabled+label{
+	color:#535454;
+}
+
 select {
 	background-image: url("../img/arrow.svg");
 	border-color: #3c3c3c;
@@ -43,6 +47,14 @@ input[type="radio"] {
 /* appearance for checked radiobutton */
 input[type="radio"]:checked {
 	background-color: #3d74c5;
+}
+
+input[type="radio"]:disabled+label{
+	color:#535454;
+}
+
+input[type="radio"][checked][disabled]{
+	background-color:#3c4d67;
 }
 
 input[type="checkbox"] {

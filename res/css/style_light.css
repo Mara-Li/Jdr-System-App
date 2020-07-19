@@ -15,6 +15,10 @@ input[type=number]:disabled{
 	background-image: radial-gradient(circle, black 10%, transparent 10%), radial-gradient(circle, black 10%, transparent 10%);
 }
 
+input[type="number"]:disabled+label{
+	color:#dadada;
+}
+
 select {
 	background-image: url("../img/arrow_white.svg");
 	border-color: grey;
@@ -35,6 +39,14 @@ input[type="radio"]{
 /* appearance for checked radiobutton */
 input[type="radio"]:checked {
 	background-color: teal;
+}
+
+input[type="radio"]:disabled+label{
+	color:#dadada;
+}
+
+input[type="radio"][disabled][checked]{
+	background-color: #00808038;
 }
 
 input[type="checkbox"] {
