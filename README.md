@@ -14,7 +14,7 @@
 		- [Arme contondante](#arme-contondante)
 	- [Arme liée à la précision](#arme-lie-la-prcision)
 		- [**PROJECTILES**](#projectiles)
-		- [**ARME À FEU** :](#arme-feu-)
+		- [**ARME À FEU**](#arme-feu-)
 			- [Pistolet](#pistolet-)
 			- [Fusil](#fusil-)
 		- [Canon](#canon-)
@@ -114,9 +114,13 @@ Les compétences et les pouvoirs ne prennent pas en compte la distance, contrair
 
 
 
-Naturellement, on considère que les personnages "tireurs" sont systématiquement à couvert. L'action "de se couvrir" permet à un personnage (blessé, par exemple) de se protéger efficacement (derrière un gros meuble, un mur) sans bouger. Les ennemis ont alors bien plus de mal à le viser et ont un malus de +3 en précision lorsqu'ils souhaitent tirer sur lui.
+Naturellement, on considère que les personnages "tireurs" sont systématiquement à couvert.
 
-En contrepartie, tant qu'il est à couvert il ne peut plus ni attaquer, ni esquiver (il peut endurer les dégâts).
+
+
+L'action "de s'abriter" permet à un personnage (blessé, par exemple) de se protéger efficacement (derrière un gros meuble, un mur) sans bouger. Les ennemis ont alors bien plus de mal à le viser et ont un malus de +3 en précision lorsqu'ils souhaitent tirer sur lui.
+
+En contrepartie, tant qu'il est abrité, il ne peut plus ni attaquer, ni esquiver (il ne peut qu'endurer les dégâts).
 
 
 
@@ -130,15 +134,15 @@ La position à découvert est analogue à la position "en duel", la seule diffé
 
 Il y a donc trois positions :
 
-- Couvert : +3 en précision pour les attaquant, mais ne peut ni attaquer, ni esquiver.
-- A découvert : -1 en précision pour les attaquants.
-- Duel : -1 en précisions pour les attaquants, et +2 en précision si visée sur les autres rangs.
+- Abrité : +3 en précision pour les attaquants, mais ne peut ni attaquer, ni esquiver.
+- A découvert : -1 aux jets d'attaques (pour les attaquants).
+- Duel : -1 aux jets d'attaques (pour les attaquants), et +2 en précision si visée sur les autres rangs.
 
 # Effets des réussites critiques
 
 ## Capacités
 
-Les réussites critiques ont pour effets de multipliés les effets d'une compétences, que ce soit en terme de dégâts pour les compétences offensives, qu'en terme de bonus ou malus.
+Les réussites critiques ont pour effets de multiplier les effets d'une compétences, que ce soit en terme de dégâts pour les compétences offensives, qu'en terme de bonus ou malus.
 
 Dans le cas où votre personnage fait :
 

@@ -58,7 +58,7 @@ function closeNav() {
 	<li class="sidebar-h1"><a href="#d-g-ts" onclick="closeNav()">D&#xE9;g&#xE2;ts</a></li>
 	<li class="sidebar-h1">	<a href="#bouclier" onclick="closeNav()">Bouclier</a></li>
 	<li class="sidebar-h1"><a href="#cases-et-d-placement" onclick="closeNav()">Cases et d&#xE9;placement</a></li>
-	<li class="sidebar-h1"><a href="#effets-des-r-ussites-critiques" onclick="closeNav()">Effets des réussites critiques</a></li>
+	<li class="sidebar-h1"><a href="#effets-des-r-ussites-critiques" onclick="closeNav()">Effets des r&#xE9;ussites critiques</a></li>
 	<li class="sidebar-h2"><a href="#sur-les-capacit-s" onclick="closeNav()">Capacités</a></li>
 	<li class="sidebar-h2"><a href="#sur-les-attaques-normales" onclick="closeNav()">Attaques normales</a></li>
 	<li class="sidebar-h1"><a href="#armes" onclick="closeNav()">Armes</a></li>
@@ -84,7 +84,8 @@ function closeNav() {
 			</div>
     </div>
 </header>
-<body><div id="readme" class="container"><article class="markdown-body entry-content"><ul>
+<body>
+<div id="readme" class="container"><article class="markdown-body entry-content"><ul>
 <p>Avant de rentrer dans le vif du sujet, je dois vous parler du syst&#xE8;me de combat. Tout d&apos;abord, il faut savoir que tout est automatis&#xE9;, vous n&apos;avez pas &#xE0; calculer vos d&#xE9;g&#xE2;ts, je m&apos;occupe de tout.</p>
 <p>Les combats se d&#xE9;roulent au tour par tour, avec un lanc&#xE9; d&apos;un d&#xE9; 10 d&apos;attaque et de d&#xE9;fense.</p>
 <p>Un tour est lorsque tous les combattants (ennemis compris) ont jou&#xE9;. Mais les cooldown ne s&apos;actualise que durant le tour personnel du joueur et non pas le tour &quot;g&#xE9;n&#xE9;ral&quot; du combat (comme dans la majorit&#xE9; des jeux tactiques, notamment dofus).</p>
@@ -166,19 +167,20 @@ A noter que pour les d&#xE9;g&#xE2;ts persistants, le d&#xE9;s de karma est &#xE
 Au contraire, si un alli&#xE9; se trouve au rang 1 et qu&apos;un ennemi va au rang 3, l&apos;alli&#xE9; sera alors au rang 3 de l&apos;ennemi, mais restera au corps &#xE0; corps des autres.</p>
 <p>Tous les joueurs peuvent se d&#xE9;placer sur les cases comme ils veulent : ils peuvent donc remonter au premier rang en &#xE9;tant au dernier. Cependant, un joueur ne peut pas faire plusieurs d&#xE9;placement par tour.</p>
 <p>Les comp&#xE9;tences et les pouvoirs ne prennent pas en compte la distance, contrairement aux armes.</p>
-<p>Naturellement, on consid&#xE8;re que les personnages &quot;tireurs&quot; sont syst&#xE9;matiquement &#xE0; couvert. L&apos;action &quot;de se couvrir&quot; permet &#xE0; un personnage (bless&#xE9;, par exemple) de se prot&#xE9;ger efficacement (derri&#xE8;re un gros meuble, un mur) sans bouger. Les ennemis ont alors bien plus de mal &#xE0; le viser et ont un malus de +3 en pr&#xE9;cision lorsqu&apos;ils souhaitent tirer sur lui.</p>
-<p>En contrepartie, tant qu&apos;il est &#xE0; couvert il ne peut plus ni attaquer, ni esquiver (il peut endurer les d&#xE9;g&#xE2;ts).</p>
+<p>Naturellement, on consid&#xE8;re que les personnages &quot;tireurs&quot; sont syst&#xE9;matiquement &#xE0; couvert.</p>
+<p>L&apos;action &quot;de s&apos;abriter&quot; permet &#xE0; un personnage (bless&#xE9;, par exemple) de se prot&#xE9;ger efficacement (derri&#xE8;re un gros meuble, un mur) sans bouger. Les ennemis ont alors bien plus de mal &#xE0; le viser et ont un malus de +3 en pr&#xE9;cision lorsqu&apos;ils souhaitent tirer sur lui.</p>
+<p>En contrepartie, tant qu&apos;il est abrit&#xE9;, il ne peut plus ni attaquer, ni esquiver (il ne peut qu&apos;endurer les d&#xE9;g&#xE2;ts).</p>
 <p>Quand un personnage au corps &#xE0; corps s&apos;attaque &#xE0; un autre personnage (notamment les tireurs), ce dernier est automatiquement mis &quot;en duel&quot;, ce qui octroies aux attaquants un bonus de pr&#xE9;cision de -1. En outre, le d&#xE9;fenseur &#xE0; d&#xE9;couvert a un malus de pr&#xE9;cision s&apos;il veut tirer sur une personne en dehors du rang sur lequel il se trouve.</p>
 <p>La position &#xE0; d&#xE9;couvert est analogue &#xE0; la position &quot;en duel&quot;, la seule diff&#xE9;rence &#xE9;tant que le tireur n&apos;a pas de malus de vis&#xE9;e sur les autres rangs. Les personnages de corps &#xE0; corps sont automatiquement &#xE0; d&#xE9;couvert, contrairement aux tireurs.</p>
 <p>Il y a donc trois positions :</p>
 <ul>
-<li>Couvert : +3 en pr&#xE9;cision pour les attaquant, mais ne peut ni attaquer, ni esquiver.</li>
-<li>A d&#xE9;couvert : -1 en pr&#xE9;cision pour les attaquants.</li>
-<li>Duel : -1 en pr&#xE9;cisions pour les attaquants, et +2 en pr&#xE9;cision si vis&#xE9;e sur les autres rangs.</li>
+<li>Abrit&#xE9; : +3 en pr&#xE9;cision pour les attaquants, mais ne peut ni attaquer, ni esquiver.</li>
+<li>A d&#xE9;couvert : -1 aux jets d&apos;attaques (pour les attaquants).</li>
+<li>Duel : -1 aux jets d&apos;attaques (pour les attaquants), et +2 en pr&#xE9;cision si vis&#xE9;e sur les autres rangs.</li>
 </ul>
 <h1 id="effets-des-r-ussites-critiques">Effets des r&#xE9;ussites critiques</h1>
 <h2 id="capacit-s">Capacit&#xE9;s</h2>
-<p>Les r&#xE9;ussites critiques ont pour effets de multipli&#xE9;s les effets d&apos;une comp&#xE9;tences, que ce soit en terme de d&#xE9;g&#xE2;ts pour les comp&#xE9;tences offensives, qu&apos;en terme de bonus ou malus.</p>
+<p>Les r&#xE9;ussites critiques ont pour effets de multiplier les effets d&apos;une comp&#xE9;tences, que ce soit en terme de d&#xE9;g&#xE2;ts pour les comp&#xE9;tences offensives, qu&apos;en terme de bonus ou malus.</p>
 <p>Dans le cas o&#xF9; votre personnage fait :</p>
 <ul>
 <li>Une r&#xE9;ussite critique : Son bonus sera multipli&#xE9; par 1,4.</li>
@@ -257,20 +259,20 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 <blockquote>
 <p>Les artilleurs n&apos;ont pas de malus d&apos;agilit&#xE9;s et n&apos;ont pas besoin d&apos;avoir 4 en force pour pouvoir porter ses armes.</p>
 </blockquote>
-	<h1 id="calculs">Calculs</h1>
-	<p>Apr&#xE8;s avoir v&#xE9;rifi&#xE9; la table, on r&#xE9;cup&#xE8;re les d&#xE9;g&#xE2;ts. Ainsi, </p><p class="math"> $$d=d&#xE9;g&#xE2;ts\hspace{10px}de\hspace{10px} la\hspace{10px} table + bonus$$</p>
-	<ul>
-	<li><p><strong>PV perdus : </strong></p><p class="math">$$d=d*100$$</p>
-	</li>
-	<li><p><strong>Bouclier :</strong></p><p class="math"> $$d *(1-bouclier)$$</p>
-	</li>
-	<li><p><strong>Endurance et d&#xE9;g&#xE2;ts finaux : </strong></p><p class="math"> $$finaux = bouclier * \frac{1-[10</em>(endurance-d&#xE9;fense)+1]}{100}$$</p>
-	</li>
-	<li><p><strong>PV restants : </strong></p><p class="math"> $$PV\hspace{10px}max - finaux$$</p>
-	</li>
-	</ul>
-	</article></div><div style="width: 50px;height:50px;line-height: 50px;text-align: center;position: fixed;bottom: 10px;right: 10px;padding-top:5px;" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">
-	  <svg t="1533629773982" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1035" xlink="http://www.w3.org/1999/xlink" width="40" height="40"><defs><style type="text/css">@font-face { font-family: uc-nexus-iconfont; src: url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff") format("woff"), url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf") format("truetype"); }
-	  </style></defs><path d="M536.255427 195.182354c-7.804756-7.804756-17.966187-11.615549-28.311813-11.615549-9.43693 0-18.874883 3.449565-26.496467 10.163477-2.360767 1.452071-4.356214 3.267417-6.352685 5.262864L218.47792 455.611735c-15.607466 15.60542-15.607466 40.834011 0 56.43943 15.607466 15.607466 41.558511 15.607466 57.167001 0l193.46013-192.733583 0 600.526219c0 22.1423 17.787108 39.927361 39.927361 39.927361 22.140253 0 39.927361-17.785062 39.927361-39.927361L548.959773 319.317583 737.15704 508.422522c15.607466 15.607466 40.469714 15.607466 56.078203 0 15.607466-15.607466 15.425318-40.834011-0.182149-56.441477L536.255427 195.182354 536.255427 195.182354z" p-id="1036" fill="#333"/><path d="M101.784174 143.097092l816.674071 0c22.140253 0 39.925315-17.785062 39.925315-39.927361 0-22.140253-17.784038-39.925315-39.925315-39.925315L101.784174 63.244416c-22.140253 0-39.927361 17.785062-39.927361 39.925315C61.856813 125.31203 79.643921 143.097092 101.784174 143.097092L101.784174 143.097092z" p-id="1037" fill="#333"/></svg>
-	</div>
-	</body></html>
+<h1 id="calculs">Calculs</h1>
+<p>Apr&#xE8;s avoir v&#xE9;rifi&#xE9; la table, on r&#xE9;cup&#xE8;re les d&#xE9;g&#xE2;ts. Ainsi, </p><p class="math"> $$d=d&#xE9;g&#xE2;ts\hspace{10px}de\hspace{10px} la\hspace{10px} table + bonus$$</p>
+<ul>
+<li><p><strong>PV perdus : </strong></p><p class="math">$$d=d*100$$</p>
+</li>
+<li><p><strong>Bouclier :</strong></p><p class="math"> $$d *(1-bouclier)$$</p>
+</li>
+<li><p><strong>Endurance et d&#xE9;g&#xE2;ts finaux : </strong></p><p class="math"> $$finaux = bouclier * \frac{1-[10</em>(endurance-d&#xE9;fense)+1]}{100}$$</p>
+</li>
+<li><p><strong>PV restants : </strong></p><p class="math"> $$PV\hspace{10px}max - finaux$$</p>
+</li>
+</ul>
+</article></div><div style="width: 50px;height:50px;line-height: 50px;text-align: center;position: fixed;bottom: 10px;right: 10px;padding-top:5px;" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">
+	<svg t="1533629773982" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1035" xlink="http://www.w3.org/1999/xlink" width="40" height="40"><defs><style type="text/css">@font-face { font-family: uc-nexus-iconfont; src: url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff") format("woff"), url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf") format("truetype"); }
+	</style></defs><path d="M536.255427 195.182354c-7.804756-7.804756-17.966187-11.615549-28.311813-11.615549-9.43693 0-18.874883 3.449565-26.496467 10.163477-2.360767 1.452071-4.356214 3.267417-6.352685 5.262864L218.47792 455.611735c-15.607466 15.60542-15.607466 40.834011 0 56.43943 15.607466 15.607466 41.558511 15.607466 57.167001 0l193.46013-192.733583 0 600.526219c0 22.1423 17.787108 39.927361 39.927361 39.927361 22.140253 0 39.927361-17.785062 39.927361-39.927361L548.959773 319.317583 737.15704 508.422522c15.607466 15.607466 40.469714 15.607466 56.078203 0 15.607466-15.607466 15.425318-40.834011-0.182149-56.441477L536.255427 195.182354 536.255427 195.182354z" p-id="1036" fill="#333"/><path d="M101.784174 143.097092l816.674071 0c22.140253 0 39.925315-17.785062 39.925315-39.927361 0-22.140253-17.784038-39.925315-39.925315-39.925315L101.784174 63.244416c-22.140253 0-39.927361 17.785062-39.927361 39.925315C61.856813 125.31203 79.643921 143.097092 101.784174 143.097092L101.784174 143.097092z" p-id="1037" fill="#333"/></svg>
+</div>
+</body></html>
