@@ -118,6 +118,10 @@ Naturellement, on considère que les personnages "tireurs" sont systématiquemen
 
 En contrepartie, tant qu'il est à couvert il ne peut plus ni attaquer, ni esquiver (il peut endurer les dégâts).
 
+
+
+Quand un personnage au corps à corps s'attaque à un autre personnage (notamment les tireurs), ce dernier est automatiquement mis "à découvert" (certaines actions peuvent aussi mettre à découvert), ce qui octroies aux attaquants un bonus de précision de -1. En outre, le défenseur à découvert a un malus de précision s'il veut tirer sur une personne en dehors du rang sur lequel il se trouve.
+
 # Effets des réussites critiques
 
 ## Capacités
@@ -148,6 +152,8 @@ A noter que lors d'une UC d'esquive, le combattant bénéficie d'une riposte ave
 ##  Armes liées à la force
 
 Les armes liées à la force sont toutes au corps à corps. Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de créer une arme "spécifique" avec le champ autre.
+
+
 
 A savoir aussi que le programme bloque aussi au corps à corps pour la partie "aucun" qui correspond en réalité à un simple coup de poing d'une personne sans aucun équipement (donc, sans gants de boxe, par exemple).
 
