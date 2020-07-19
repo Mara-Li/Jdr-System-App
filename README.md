@@ -141,7 +141,9 @@ A noter que lors d'une UC d'esquive, le combattant bénéficie d'une riposte ave
 
 ##  Armes liées à la force
 
-Dans la majorité des cas, les armes blanches et contondantes ne sont utilisables qu'au corps à corps, mais le programme permet d'utiliser des armes blanches à distances. Cela permet donc la création d'arme blanche de semi-distance.
+Les armes liées à la force sont toutes au corps à corps. Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de créer une arme "spécifique" avec le champ autre.
+
+A savoir aussi que le programme bloque aussi au corps à corps pour la partie "aucun" qui correspond en réalité à un simple coup de poing d'une personne sans aucun équipement (donc, sans gants de boxe, par exemple).
 
 ### Armes blanches
 
@@ -169,14 +171,14 @@ Dans la majorité des cas, les armes blanches et contondantes ne sont utilisable
 
 ###  Arme à feu
 
-#### Pistolet 
+#### Pistolet
 
 - **Nombre de balles (ou charges)** : 8
 - **Bonus** : 8%
 - **Placement** : 1 à 2
 - **Malus de placement ** : +2 Précision (rang 3)
 
-#### Fusil 
+#### Fusil
 
 - **Nombre de balles (ou charges) ** : 12
 - **Bonus** : 10%

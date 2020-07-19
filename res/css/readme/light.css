@@ -49,6 +49,11 @@ a {
 	color:black;
 }
 
+.markdown-body blockquote {
+	border-left-color: #5c8686;
+	color:#a0a0a0
+}
+
 /**********
 * Classes *
 ***********/

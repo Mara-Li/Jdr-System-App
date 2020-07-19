@@ -84,12 +84,7 @@ function closeNav() {
 			</div>
     </div>
 </header>
-
-<body>
-
-<!-- /TOC -->
-<div id="readme" class="container"><article class="markdown-body entry-content">
-
+<body><div id="readme" class="container"><article class="markdown-body entry-content"><ul>
 <p>Avant de rentrer dans le vif du sujet, je dois vous parler du syst&#xE8;me de combat. Tout d&apos;abord, il faut savoir que tout est automatis&#xE9;, vous n&apos;avez pas &#xE0; calculer vos d&#xE9;g&#xE2;ts, je m&apos;occupe de tout.</p>
 <p>Les combats se d&#xE9;roulent au tour par tour, avec un lanc&#xE9; d&apos;un d&#xE9; 10 d&apos;attaque et de d&#xE9;fense.</p>
 <p>Un tour est lorsque tous les combattants (ennemis compris) ont jou&#xE9;. Mais les cooldown ne s&apos;actualise que durant le tour personnel du joueur et non pas le tour &quot;g&#xE9;n&#xE9;ral&quot; du combat (comme dans la majorit&#xE9; des jeux tactiques, notamment dofus).</p>
@@ -172,7 +167,7 @@ Au contraire, si un alli&#xE9; se trouve au rang 1 et qu&apos;un ennemi va au ra
 <p>Tous les joueurs peuvent se d&#xE9;placer sur les cases comme ils veulent : ils peuvent donc remonter au premier rang en &#xE9;tant au dernier. Cependant, un joueur ne peut pas faire plusieurs d&#xE9;placement par tour.</p>
 <p>Les comp&#xE9;tences et les pouvoirs ne prennent pas en compte la distance, contrairement aux armes.</p>
 <h1 id="effets-des-r-ussites-critiques">Effets des r&#xE9;ussites critiques</h1>
-<h2 id="sur-les-capacit-s">Sur les capacit&#xE9;s</h2>
+<h2 id="capacit-s">Capacit&#xE9;s</h2>
 <p>Les r&#xE9;ussites critiques ont pour effets de multipli&#xE9;s les effets d&apos;une comp&#xE9;tences, que ce soit en terme de d&#xE9;g&#xE2;ts pour les comp&#xE9;tences offensives, qu&apos;en terme de bonus ou malus.</p>
 <p>Dans le cas o&#xF9; votre personnage fait :</p>
 <ul>
@@ -181,7 +176,7 @@ Au contraire, si un alli&#xE9; se trouve au rang 1 et qu&apos;un ennemi va au ra
 Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot; (la division par 100).</li>
 </ul>
 <p>Le calculs des d&#xE9;g&#xE2;ts des comp&#xE9;tences offensives sont automatis&#xE9;s, vous n&apos;avez donc pas besoin de v&#xE9;rifier le bonus multiplicateur. Cependant pour les comp&#xE9;tences non- offensives, vous devrez calculer en fonction du multiplicateur.</p>
-<h2 id="sur-les-attaques-normales-hors-capacit-s-">Sur les attaques &quot;normales&quot; (hors capacit&#xE9;s)</h2>
+<h2 id="attaques-normales">Attaques normales</h2>
 <p>A savoir que seuls les implants permettent d&apos;atteindre le score de 0.</p>
 <ul>
 <li>Les Ultra critiques d&apos;attaque : Les d&#xE9;g&#xE2;ts sont multipli&#xE9;s par 1.8 et on outrepasse la d&#xE9;fense de l&apos;adversaire.</li>
@@ -193,9 +188,10 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 <p>A noter que lors d&apos;une UC d&apos;esquive, le combattant b&#xE9;n&#xE9;ficie d&apos;une riposte avec un bonus de d&#xE9;g&#xE2;ts de 5%, en plus de ses bonus pr&#xE9;- existants. Les RC donnent droit &#xE0; une riposte, sans bonus d&apos;attaque.</p>
 <h1 id="armes">Armes</h1>
 <h2 id="armes-li-es-la-force">Armes li&#xE9;es &#xE0; la force</h2>
-<p>Dans la majorit&#xE9; des cas, les armes blanches et contondantes ne sont utilisables qu&apos;au corps &#xE0; corps, mais le programme permet d&apos;utiliser des armes blanches &#xE0; distances. Cela permet donc la cr&#xE9;ation d&apos;arme blanche de semi-distance.</p>
-<h3 id="arme-blanche-">Arme blanche</h3>
-<h4 id="couteau-">Couteau</h4>
+<p>Les armes li&#xE9;es &#xE0; la force sont toutes au corps &#xE0; corps. Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de cr&#xE9;er une arme &quot;sp&#xE9;cifique&quot; avec le champ autre.</p>
+<p>A savoir aussi que le programme bloque aussi au corps &#xE0; corps pour la partie &quot;aucun&quot; qui correspond en r&#xE9;alit&#xE9; &#xE0; un simple coup de poing d&apos;une personne sans aucun &#xE9;quipement (donc, sans gants de boxe, par exemple).</p>
+<h3 id="armes-blanches">Armes blanches</h3>
+<h4 id="couteau">Couteau</h4>
 <ul>
 <li><strong>Bonus</strong> : 5%</li>
 <li>Utilisation gratuite un tour sur deux. Si double couteau, il est possible d&apos;activer le bonus en m&#xEA;me temps et de donner 4 coups un tour sur deux.</li>
@@ -210,7 +206,7 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 <li><strong>Pr&#xE9;-requis</strong> : 4 en force</li>
 </ul>
 <h2 id="arme-li-e-la-pr-cision">Arme li&#xE9;e &#xE0; la pr&#xE9;cision</h2>
-<h3 id="projectiles"><strong>PROJECTILES</strong></h3>
+<h3 id="projectiles"><strong>Projectiles</strong></h3>
 <ul>
 <li><strong>Bonus</strong> : 5 %</li>
 <li><strong>Placement</strong> : Rang 1 &#xE0; 2<blockquote>
@@ -218,23 +214,23 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 </blockquote>
 </li>
 </ul>
-<h3 id="arme-feu-"><strong>ARME &#xC0; FEU</strong></h3>
-<h4 id="pistolet-">Pistolet :</h4>
+<h3 id="arme-feu">Arme &#xE0; feu</h3>
+<h4 id="pistolet">Pistolet</h4>
 <ul>
 <li><strong>Nombre de balles (ou charges)</strong> : 8</li>
 <li><strong>Bonus</strong> : 8%</li>
 <li><strong>Placement</strong> : 1 &#xE0; 2</li>
-<li><strong>Malus de placement</strong> : +2 Pr&#xE9;cision (rang 3)</li>
+<li><strong>Malus de placement</strong>: +2 Pr&#xE9;cision (rang 3)</li>
 </ul>
-<h4 id="fusil-">Fusil</h4>
+<h4 id="fusil">Fusil</h4>
 <ul>
-<li><strong>Nombre de balles (ou charges)</strong> : 12</li>
+<li><strong>Nombre de balles (ou charges) </strong> : 12</li>
 <li><strong>Bonus</strong> : 10%</li>
 <li><strong>Placement</strong> : Rang 2 &#xE0; 3</li>
-<li><strong>Bonus de placement</strong> : +5% (rang 1)</li>
+<li><strong> Bonus de placement</strong> : +5% (rang 1)</li>
 <li><strong>Malus de placement</strong> : +1 Pr&#xE9;cision (rang 1)</li>
 </ul>
-<h4 id="canon-">Canon</h4>
+<h3 id="canon">Canon</h3>
 <ul>
 <li><strong>Bonus</strong> : 20%</li>
 <li><strong>Malus</strong> : +2 en agilit&#xE9;</li>
@@ -264,7 +260,7 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 </li>
 </ul>
 </article></div><div style="width: 50px;height:50px;line-height: 50px;text-align: center;position: fixed;bottom: 10px;right: 10px;padding-top:5px;" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">
-  <svg t="1533629773982" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1035" xlink="http://www.w3.org/1999/xlink" width="40" height="40"><defs><style type="text/css">@font-face { font-family: uc-nexus-iconfont; src: url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff") format("woff"), url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf") format("truetype"); }
-  </style></defs><path d="M536.255427 195.182354c-7.804756-7.804756-17.966187-11.615549-28.311813-11.615549-9.43693 0-18.874883 3.449565-26.496467 10.163477-2.360767 1.452071-4.356214 3.267417-6.352685 5.262864L218.47792 455.611735c-15.607466 15.60542-15.607466 40.834011 0 56.43943 15.607466 15.607466 41.558511 15.607466 57.167001 0l193.46013-192.733583 0 600.526219c0 22.1423 17.787108 39.927361 39.927361 39.927361 22.140253 0 39.927361-17.785062 39.927361-39.927361L548.959773 319.317583 737.15704 508.422522c15.607466 15.607466 40.469714 15.607466 56.078203 0 15.607466-15.607466 15.425318-40.834011-0.182149-56.441477L536.255427 195.182354 536.255427 195.182354z" p-id="1036" fill="#333"/><path d="M101.784174 143.097092l816.674071 0c22.140253 0 39.925315-17.785062 39.925315-39.927361 0-22.140253-17.784038-39.925315-39.925315-39.925315L101.784174 63.244416c-22.140253 0-39.927361 17.785062-39.927361 39.925315C61.856813 125.31203 79.643921 143.097092 101.784174 143.097092L101.784174 143.097092z" p-id="1037" fill="#333"/></svg>
+	<svg t="1533629773982" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1035" xlink="http://www.w3.org/1999/xlink" width="40" height="40"><defs><style type="text/css">@font-face { font-family: uc-nexus-iconfont; src: url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff") format("woff"), url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf") format("truetype"); }
+	</style></defs><path d="M536.255427 195.182354c-7.804756-7.804756-17.966187-11.615549-28.311813-11.615549-9.43693 0-18.874883 3.449565-26.496467 10.163477-2.360767 1.452071-4.356214 3.267417-6.352685 5.262864L218.47792 455.611735c-15.607466 15.60542-15.607466 40.834011 0 56.43943 15.607466 15.607466 41.558511 15.607466 57.167001 0l193.46013-192.733583 0 600.526219c0 22.1423 17.787108 39.927361 39.927361 39.927361 22.140253 0 39.927361-17.785062 39.927361-39.927361L548.959773 319.317583 737.15704 508.422522c15.607466 15.607466 40.469714 15.607466 56.078203 0 15.607466-15.607466 15.425318-40.834011-0.182149-56.441477L536.255427 195.182354 536.255427 195.182354z" p-id="1036" fill="#333"/><path d="M101.784174 143.097092l816.674071 0c22.140253 0 39.925315-17.785062 39.925315-39.927361 0-22.140253-17.784038-39.925315-39.925315-39.925315L101.784174 63.244416c-22.140253 0-39.927361 17.785062-39.927361 39.925315C61.856813 125.31203 79.643921 143.097092 101.784174 143.097092L101.784174 143.097092z" p-id="1037" fill="#333"/></svg>
 </div>
 </body></html>
