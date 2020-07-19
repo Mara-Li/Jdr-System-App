@@ -72,6 +72,12 @@ function capa_arme_toggle(elem) {
 		elem_inputs.arme.disabled = true;
 		elem_inputs.arme.value = 9;
 		bonus_toggle()
+		if (elem_inputs.dist_atq.value == 1){
+			elem_inputs.dist_atq.checked = false;
+			elem_inputs.dist_atq = document.getElementsByName("dist_atq")[0];
+			}
+		elem_inputs.dist_atq.checked = true;
+		document.getElementsByName("dist_atq").forEach( elem => {elem.disabled = true})
 	} else {
 		elem_inputs.arme.disabled = false;
 		elem_inputs.arme.value = 0;
@@ -90,6 +96,7 @@ function capa_toggle(elem) {
 		elem_inputs.arme.value = 0;
 		bonus_toggle();
 	}
+
 }
 
 function bonus_toggle() {
@@ -116,7 +123,7 @@ function bonus_toggle() {
  			elem_inputs.dist_atq.checked = true;
 			document.getElementsByName("dist_atq").forEach( elem => {elem.disabled = false})
 			}
-		else if ((elem_inputs.arme.value == 4)||(elem_inputs.arme.value == 5)||(elem_inputs.arme.value == 6)){
+		else if ((elem_inputs.arme.value == 4)||(elem_inputs.arme.value == 5)||(elem_inputs.arme.value == 6) || (elem_inputs.arme.value == 1)) {
 			if (elem_inputs.dist_atq.value == 1){
 				elem_inputs.dist_atq.checked = false;
 				elem_inputs.dist_atq = document.getElementsByName("dist_atq")[0];

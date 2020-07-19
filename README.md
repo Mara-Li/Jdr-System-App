@@ -112,6 +112,12 @@ Tous les joueurs peuvent se déplacer sur les cases comme ils veulent : ils peuv
 
 Les compétences et les pouvoirs ne prennent pas en compte la distance, contrairement aux armes.
 
+
+
+Naturellement, on considère que les personnages "tireurs" sont systématiquement à couvert. L'action "de se couvrir" permet à un personnage (blessé, par exemple) de se protéger efficacement (derrière un gros meuble, un mur) sans bouger. Les ennemis ont alors bien plus de mal à le viser et ont un malus de +3 en précision lorsqu'ils souhaitent tirer sur lui.
+
+En contrepartie, tant qu'il est à couvert il ne peut plus ni attaquer, ni esquiver (il peut endurer les dégâts).
+
 # Effets des réussites critiques
 
 ## Capacités
@@ -183,7 +189,7 @@ A savoir aussi que le programme bloque aussi au corps à corps pour la partie "a
 - **Nombre de balles (ou charges) ** : 12
 - **Bonus** : 10%
 - **Placement** : Rang 2 à 3
-- ** Bonus de placement** : +5% (rang 1)
+- **Bonus de placement** : +5% (rang 1)
 - **Malus de placement** : +1 Précision (rang 1)
 
 ### Canon
