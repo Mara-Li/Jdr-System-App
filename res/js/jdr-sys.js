@@ -579,7 +579,6 @@ function degat_type() {
 			[d, endu_val] = degat_autre(bonus, atq, defe, endu_val);
 			break;
 	}
-
 	finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
 	max = finaux;
 	if ((pv >= 100) && (pv < 200)) {
@@ -659,7 +658,7 @@ function reussite_endurance(endu_de, endu_val, pv, d, shield) {
 		} else if (endu_val == 0) {
 			finaux = bouclier;
 		} else {
-			finaux = bouclier * (1 - (10 * (Math.abs(endu_val - endu_de) + 1)) / 100);
+			finaux = roundir(bouclier * (1 - (10 * (Math.abs(endu_val - endu_de) + 1)) / 100));
 		}
 	} else {
 		if (endu_de > endu_val) {
@@ -667,7 +666,7 @@ function reussite_endurance(endu_de, endu_val, pv, d, shield) {
 		} else if (endu_val == 0) {
 			finaux = bouclier;
 		} else {
-			finaux = bouclier * (1 - (10 * (Math.abs(endu_val - endu_de) + 1)) / 100);
+			finaux = roundir(bouclier * (1 - (10 * (Math.abs(endu_val - endu_de) + 1)) / 100));
 		}
 	}
 	if (finaux >= pv) {
@@ -798,12 +797,22 @@ function phrase_esquive(finaux) {
 		}
 	}
 	return finaux;
+}
 
+function aucun_deg (finaux) {
+	sel_def = parseInt(elem_inputs.des_esquive.value);
+	if (!sel_def) {
+		if (finaux == 0) {
+			finaux = "Aucun"
+		}
+	}
+	return finaux;
 }
 
 function vie_restante(finaux) {
 	var vie = parseInt(elem_inputs.pv_reste.value) - finaux; //champ pv restant
-	finaux = phrase_esquive(finaux)
+	finaux = phrase_esquive(finaux);
+	finaux=aucun_deg(finaux);
 	if (isNaN(finaux)) {
 		vie = elem_inputs.pv_max.value;
 	}

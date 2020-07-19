@@ -30,14 +30,14 @@ Un tour est lorsque tous les combattants (ennemis compris) ont joué. Mais les c
 
 # Résumé
 
--   Lancé de dés d'attaque et de défense
+-   <u>Lancer de dés d'attaque et de défense</u>
     -   L'endurance permet d'encaisser les dégâts.
-    -   L'esquive permet de ne pas prendre de dégât. Elle est réussie si le dé est moitié moins du dé d'attaque de l'adversaire.
--   Dés de 10 lié à votre caractéristiques
-    -   Implant : Valeur seuil = strictement inférieure à votre caractéristique (7 pour 8, 6 pour 7, etc).
-    -   Pas d'implant : Seuil = caractéristique
--   Meilleur jet : 0, pire jet : 10
-    -   Un 0 correspond à une "Ultra réussite critique" et un 1 à une "réussite critique".
+    -   L'esquive permet de ne pas prendre de dégât. Elle est réussie si le dé est moitié moins de la statistiques utilisée pour esquiver (en général, c'est l'agilité).
+-   <u>Dés de 10 lié à votre caractéristiques</u>
+    -   Implant : Valeur seuil : strictement inférieure à votre caractéristique (7 pour 8, 6 pour 7, etc...).
+    -   Pas d'implant : Seuil : caractéristique
+-   <u>Meilleur jet : 0, pire jet : 10</u>
+    -   Un 0 correspond à un "Ultra critique" et un 1 à une "réussite critique".
     -   Seul un implant (ou remise) permet d'avoir de faire un URC.
 
 # La défense
@@ -45,37 +45,41 @@ Un tour est lorsque tous les combattants (ennemis compris) ont joué. Mais les c
 La caractéristique que vous lancez pour votre défense est soit un dé d'endurance ou d'agilité.
 
 -   L'endurance vous permet d'encaisser le coup, il recevra donc moins de dégâts.
--   L'agilité vous permet d'esquiver le coup (et donc de ne pas prendre de dégâts). De plus, pour réussir votre esquive, vous devez faire moitié moins que votre statistiques d'agilité. Le dé $esquive a été créée spécifiquement pour ça !
+-   L'agilité vous permet d'esquiver le coup (et donc de ne pas prendre de dégâts). De plus, pour réussir votre esquive, vous devez faire moitié moins que votre statistiques d'agilité. L'action d'esquive faite peut aussi être aider par un pouvoir, et dans ce cas, c'est un dé lié à ce pouvoir qui doit être utilisé. Les conditions restent identiques.
 
 Il existe cependant des attaques qui ne rentrent dans cette catégorie : les altérations d'état.
 
--   Les attaques mentales : Elles nécessitent une défense avec un dé d'intelligence.
--   Les attaques liés aux poisons, maladie et blessures : Elles nécessitent un dé de karma.
-    A noter que pour les dégâts persistants, le dés de karma est à lancer chaque tour pour supprimé l'altération. Sinon, cette dernière dure 3 tours au maximum.
+-   <u>Les attaques mentales</u> : Elles nécessitent une défense avec un dé d'intelligence.
+-   <u>Les attaques liés aux poisons, maladie et blessures :</u> Elles nécessitent un dé de karma.
+    A noter que pour les dégâts persistants, le dés de karma est à lancer chaque tour pour supprimer l'altération. Sinon, cette dernière dure 3 tours au maximum.
 
 Choisissez donc bien en fonction de vos caractéristiques !
 
+
+
 Vous devez OBLIGATOIREMENT lancer votre dé avant de déterminer votre action. Mais vous n'êtes pas obligé d'attendre le dé de défense de votre adversaire. Dans tous les cas, l'action finale avec les dégâts sera après le lancé des protagonistes de l'action.
+
+
 
 Dans le cas où il y aurait un 1 VS plusieurs, la personne en sous nombre doit lancer un dé de défense pour chaque attaque reçu et peut attaquer un certain nombre de personnage en fonction de son niveau.
 
 # Dégâts
 
-Les dégâts sont déterminés en fonction de l'écart de dé entre l'attaquant et le défenseur dans le cas où le défenseur n'a pas réussi à esquiver l'attaque. Ainsi, plus la différence est haute, plus le défenseur perdra de pv. Il est à savoir que les dégâts sont calculés sur une base de 100 PV. Ainsi :
+Les dégâts sont déterminés en fonction de l'écart de dé entre l'attaquant et le défenseur dans le cas où le défenseur n'a pas réussi à esquiver l'attaque. Ainsi, plus la différence est haute, plus le défenseur perdra de PV. Il est à savoir que les dégâts sont calculés sur une base de 100 PV. Ainsi :
 
-- Ecart de 9 (voire+): Coup critique : L'adversaire perd 50 PV.
+- **Ecart de 9 (voire +) :** <u>Coup critique :</u> L'adversaire perd 50 PV.
 
-- De 8 à 7 : Très Bon dégât : Le défenseur perd 40 PV.
+- **De 8 à 7 :** <u>Très Bon dégât :</u> Le défenseur perd 40 PV.
 
-- De 6 à 5 : Bon dégât : Le défenseur perd 30 PV.
+- **De 6 à 5 :** <u>Bon dégât :</u> Le défenseur perd 30 PV.
 
-- De 4 à 3 : Dégât moyen: Le défenseur perd 20 PV.
+- **De 4 à 3 :** <u>Dégât moyen :</u> Le défenseur perd 20 PV.
 
-- De 1 à 2  : Dégât faible : Le défenseur perd 10 PV.
+- **De 1 à 2  :** <u>Dégât faible</u> : Le défenseur perd 10 PV.
 
-- 0 : Dégâts très faible, le défenseur perd 5 PV.
+- **0** : <u>Dégâts très faible :</u> le défenseur perd 5 PV.
 
-Dans le cas où le défenseur aurait encaissé le coup (dé d'endurance), il perd moins de pv. La valeur de sa caractéristique est une valeur seuil, et plus le dés sera bas mieux le défenseur encaisse. Un score de 0 étant un URC, la personne encaisse tous les dégâts.
+Dans le cas où le défenseur aurait encaissé le coup (dé d'endurance), il perd moins de PV. La valeur de sa caractéristique est une valeur seuil, et plus le dés sera bas mieux le défenseur encaisse. Un score de 0 étant un UC, la personne encaisse tous les dégâts.
 
 > La valeur de la caractéristique détermine le montant maximum qu'il est possible d'encaisser.
 
@@ -85,15 +89,15 @@ Les boucliers protègent des dégâts. Dans les faits, cela fonctionne exactemen
 
 Cependant, les résistances sont fixes et liés soit à votre équipement, soit au rang de votre adversaire. En général, il existe :
 
--   Armure légère : Diminution de 10%
--   Armure moyenne : Diminution de 25%
--   Pré- requis : Force = 3
--   Malus si porté sans les pré- requis : +1 aux dés d'agilité
--   Armure lourde : Diminution de 50%
--   Pré- requis : Force = 5
--   Malus si porté sans les pré- requis : +2 aux dés d'agilité
+-   **Armure légère :** Diminution de 10%
+-   **Armure moyenne :** Diminution de 25%
+    -   *Pré- requis* : Force : 3
+    -   *Malus si porté sans les pré-requis* : +1 aux dés d'agilité
+-   **Armure lourde** : Diminution de 50%
+    -   *Pré-requis* : Force : 5
+    -   *Malus si porté sans les pré-requis* : +2 aux dés d'agilité
 
-Si votre personnage fait un ultra critique,, ou si vous utilisez une capacité perforante, le bouclier est ignoré.
+Si votre personnage fait un ultra critique, ou si vous utilisez une capacité perforante, le bouclier est ignoré.
 
 # Cases et déplacement
 
@@ -132,11 +136,19 @@ La position à découvert est analogue à la position "en duel", la seule diffé
 
 
 
+Enfin, les personnages inconscients ne peuvent pas esquiver mais seulement endurer. Ils sont automatiquement à découvert.
+
+
+
 Il y a donc trois positions :
 
-- Abrité : +3 en précision pour les attaquants, mais ne peut ni attaquer, ni esquiver.
-- A découvert : -1 aux jets d'attaques (pour les attaquants).
-- Duel : -1 aux jets d'attaques (pour les attaquants), et +2 en précision si visée sur les autres rangs.
+- **Abrité** : +3 en précision pour les attaquants, mais ne peut ni attaquer, ni esquiver.
+
+- **Découvert** : Bonus de -1 pour les attaquants.
+
+- **Duel** : Bonus de -1 pour les attaquants, et +2 en précision si visée sur les autres rangs.
+
+
 
 # Effets des réussites critiques
 
@@ -147,7 +159,7 @@ Les réussites critiques ont pour effets de multiplier les effets d'une compéte
 Dans le cas où votre personnage fait :
 
 -   Une réussite critique : Son bonus sera multiplié par 1,4.
--   Une Ultra réussite critique : Son bonus sera multiplié par 1.8.
+-   Un Ultra critique : Son bonus sera multiplié par 1.8.
     Lorsque l'on multiplie, on ne prend pas en compte le "pourcentage" (la division par 100).
 
 Le calculs des dégâts des compétences offensives sont automatisés, vous n'avez donc pas besoin de vérifier le bonus multiplicateur. Cependant pour les compétences non- offensives, vous devrez calculer en fonction du multiplicateur.
@@ -156,12 +168,19 @@ Le calculs des dégâts des compétences offensives sont automatisés, vous n'av
 
 A savoir que seuls les implants permettent d'atteindre le score de 0.
 
--   Les Ultra critiques d'attaque : Les dégâts sont multipliés par 1.8 et on outrepasse la défense de l'adversaire.
--   Les Ultra critique de défense: Lorsqu'un combattant a un score de dés d'endurance ou d'agilité égal à 0, il annule automatiquement l'attaque de son adversaire, quelque soit la valeur de son dé, sauf dans le cas où l'autre attaquant aura un 0 en endurance. Dans ce cas, le défenseur perdra 9 PV.
+- <u>Les ultra critiques d'attaque :</u> Les dégâts sont multipliés par 1.8 et on outrepasse la défense de l'adversaire.
 
--   Les réussite- critique d'attaque :  Lorsqu'un combattant a un score de dés égal à 1, le score est multiplié par 1.4, exactement comme dans le cas d'une compétence.
 
-A noter que lors d'une UC d'esquive, le combattant bénéficie d'une riposte avec un bonus de dégâts de 5%, en plus de ses bonus pré- existants. Les RC donnent droit à une riposte, sans bonus d'attaque.
+
+- <u>Les ultra critique de défense :</u> Lorsqu'un combattant a un score de dés d'endurance ou d'agilité égal à 0, il annule automatiquement l'attaque de son adversaire, quelque soit la valeur de son dé, sauf dans le cas où l'autre attaquant aura un 0 en endurance. Dans ce cas, le défenseur perdra 9 PV. A noter que lors d'un UC d'esquive, le combattant bénéficie d'une riposte avec un bonus de dégâts de 5% (cumulable).
+
+
+
+-   <u>Les réussites critiques d'attaque :</u>  Lorsqu'un combattant a un score de dés égal à 1, le score est multiplié par 1.4, exactement comme dans le cas d'une compétence.
+
+
+
+* <u>Les réussite critiques de défense :</u> Il n'y a pas d'effets particulier pour l'endurance, mais en plus de la réussite de l'esquive, le défenseur bénéficie d'une riposte (sans bonus).
 
 # Armes
 
@@ -236,6 +255,6 @@ Après avoir vérifié la table, on récupère les dégâts. Ainsi $$d=dégâts\
 
 * **Bouclier :** $$d * (1-bouclier)$$
 
-* **Endurance et dégâts finaux** : $$finaux = bouclier * \frac{1-[10*(endurance-défense)+1]}{100}$$
+* **Endurance et dégâts finaux** : $$finaux = bouclier * \frac{1-[10*(1+(endurance-défense))]}{100}$$
 
 * **PV restants : ** $$PV\hspace{10px}max - finaux$$
