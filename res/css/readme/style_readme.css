@@ -447,43 +447,6 @@ div#sidenav {
 	width: 50%;
 }
 
-#burger {
-	overflow-x: hidden;
-	/* Disable horizontal scroll */
-	height: 100%;
-	display: inline-block;
-	height: 100%;
-}
-
-#truc {
-	position: fixed;
-	/* Fixed Sidebar (stay in place on scroll) */
-	z-index: 999999;
-	/* Stay on top */
-	/* Stay at the top */
-	left: 0;
-	overflow-x: hidden;
-	/* Disable horizontal scroll */
-	height: 100%;
-	display: inline-block;
-	height: 100%;
-}
-
-#burger_close {
-	position: absolute;
-	top: 0;
-	right: 25px;
-	font-size: 36px;
-	margin-left: 50px;
-}
-
-#burger_close a:hover {
-	background-color: transparent;
-}
-
-#link a:hover {
-	background-color: teal;
-}
 
 .flex-column {
 	margin: auto;
@@ -557,9 +520,52 @@ div#sidenav {
 	justify-content: flex-end;
 }
 
+.math {
+	font-size: 100%;
+}
+
 /*****
 * ID *
 ******/
+
+#burger {
+	overflow-x: hidden;
+	/* Disable horizontal scroll */
+	height: 100%;
+	display: inline-block;
+	height: 100%;
+}
+
+#truc {
+	position: fixed;
+	/* Fixed Sidebar (stay in place on scroll) */
+	z-index: 999999;
+	/* Stay on top */
+	/* Stay at the top */
+	left: 0;
+	overflow-x: hidden;
+	/* Disable horizontal scroll */
+	height: 100%;
+	display: inline-block;
+	height: 100%;
+}
+
+#burger_close {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+#burger_close a:hover {
+	background-color: transparent;
+}
+
+#link a:hover {
+	background-color: teal;
+}
+
 #des_def {
 	margin-right: 10px;
 }
@@ -616,8 +622,4 @@ div#sidenav {
 
 #endu_stats, #esquive_stats {
 	display: inline-block;
-}
-
-.math {
-	font-size: 100%;
 }
