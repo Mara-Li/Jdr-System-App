@@ -41,6 +41,7 @@
 
 	select {
 		font-size:80%;
+		width: 100px;
 	}
 
 	#submit {
@@ -115,6 +116,7 @@
 
 	select {
 		font-size:100%;
+		width:120px;
 	}
 
 	select:disabled {
@@ -299,7 +301,6 @@ select {
 	background-repeat: no-repeat;
 	text-indent:2px;
 	padding:1px;
-	width:100px;
 	border-radius: 5px;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 	border: 1px solid;
