@@ -128,7 +128,7 @@ La position à découvert est analogue à la position "en duel", la seule diffé
 
 
 
-Il y a donc trois position :
+Il y a donc trois positions :
 
 - Couvert : +3 en précision pour les attaquant, mais ne peut ni attaquer, ni esquiver.
 - A découvert : -1 en précision pour les attaquants.
@@ -228,9 +228,9 @@ A savoir aussi que le programme bloque aussi au corps à corps pour la partie "a
 
 Après avoir vérifié la table, on récupère les dégâts. Ainsi $$d=dégâts\hspace{10px}de\hspace{10px} la\hspace{10px} table + bonus$$
 
-* **PV perdus** : $$d=d*100$$
+* **PV perdus** : $$d = d * 100$$
 
-* **Bouclier :** $$d *(1-bouclier)$$
+* **Bouclier :** $$d * (1-bouclier)$$
 
 * **Endurance et dégâts finaux** : $$finaux = bouclier * \frac{1-[10*(endurance-défense)+1]}{100}$$
 
