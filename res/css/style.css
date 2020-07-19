@@ -297,9 +297,9 @@ select {
 	background-position-x: 100%;
 	background-position-y: center;
 	background-repeat: no-repeat;
-	text-indent:5px;
+	text-indent:2px;
 	padding:1px;
-	width:120px;
+	width:100px;
 	border-radius: 5px;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 	border: 1px solid;
