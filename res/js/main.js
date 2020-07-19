@@ -115,7 +115,7 @@ function bonus_toggle() {
 		elem_inputs.bonus.onchange = function() {
 			capage(this, 0, 100);
 		}
-		if ((elem_inputs.arme.value == 2) || (elem_inputs.arme.value == 8) || (elem_inputs.arme.value == 7)) {
+		if ((elem_inputs.arme.value == 2) || (elem_inputs.arme.value == 8)) {
 			if (elem_inputs.dist_atq.value == 0){
 				elem_inputs.dist_atq.checked = false;
 				elem_inputs.dist_atq = document.getElementsByName("dist_atq")[1];
@@ -132,8 +132,13 @@ function bonus_toggle() {
 				document.getElementsByName("dist_atq").forEach( elem => {elem.disabled = true})
 		 	}
 		else {
+			if (elem_inputs.dist_atq.value == 1){
+				elem_inputs.dist_atq.checked = false;
+				elem_inputs.dist_atq = document.getElementsByName("dist_atq")[0];
+			}
+			elem_inputs.dist_atq.checked = true;
 			document.getElementsByName("dist_atq").forEach( elem => {elem.disabled = false})
-		}
+			}
 		elem_inputs.bonus.onchange();
 	}
 }
