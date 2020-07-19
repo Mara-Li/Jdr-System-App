@@ -59,6 +59,10 @@
 	#esquive_stats {
 		padding-left: 10%;
 	}
+
+	.titre-card {
+		flex-basis: 100%;
+	}
 }
 
 @media only screen and (min-width: 1101px) {

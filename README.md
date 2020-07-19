@@ -8,16 +8,16 @@
 	- [Sur les attaques "normales" (hors capacités)](#sur-les-attaques-normales-hors-capacits)
 - [Armes](#armes)
 	- [Armes liées à la force](#armes-lies-la-force)
-		- [Arme blanche :](#arme-blanche-)
-			- [Couteau  :](#couteau-)
+		- [Arme blanche](#arme-blanche-)
+			- [Couteau ](#couteau-)
 			- [**Epée**](#epe)
 		- [Arme contondante](#arme-contondante)
 	- [Arme liée à la précision](#arme-lie-la-prcision)
 		- [**PROJECTILES**](#projectiles)
 		- [**ARME À FEU** :](#arme-feu-)
-			- [Pistolet :](#pistolet-)
-			- [Fusil :](#fusil-)
-		- [Canon :](#canon-)
+			- [Pistolet](#pistolet-)
+			- [Fusil](#fusil-)
+		- [Canon](#canon-)
 - [Calculs](#calculs)
 
 
@@ -120,7 +120,19 @@ En contrepartie, tant qu'il est à couvert il ne peut plus ni attaquer, ni esqui
 
 
 
-Quand un personnage au corps à corps s'attaque à un autre personnage (notamment les tireurs), ce dernier est automatiquement mis "à découvert" (certaines actions peuvent aussi mettre à découvert), ce qui octroies aux attaquants un bonus de précision de -1. En outre, le défenseur à découvert a un malus de précision s'il veut tirer sur une personne en dehors du rang sur lequel il se trouve.
+Quand un personnage au corps à corps s'attaque à un autre personnage (notamment les tireurs), ce dernier est automatiquement mis "en duel", ce qui octroies aux attaquants un bonus de précision de -1. En outre, le défenseur à découvert a un malus de précision s'il veut tirer sur une personne en dehors du rang sur lequel il se trouve.
+
+
+
+La position à découvert est analogue à la position "en duel", la seule différence étant que le tireur n'a pas de malus de visée sur les autres rangs. Les personnages de corps à corps sont automatiquement à découvert, contrairement aux tireurs.
+
+
+
+Il y a donc trois position :
+
+- Couvert : +3 en précision pour les attaquant, mais ne peut ni attaquer, ni esquiver.
+- A découvert : -1 en précision pour les attaquants.
+- Duel : -1 en précisions pour les attaquants, et +2 en précision si visée sur les autres rangs.
 
 # Effets des réussites critiques
 
@@ -220,6 +232,6 @@ Après avoir vérifié la table, on récupère les dégâts. Ainsi $$d=dégâts\
 
 * **Bouclier :** $$d *(1-bouclier)$$
 
-* **Endurance et dégâts finaux : ** $$finaux = bouclier * \frac{1-[10*(endurance-défense)+1]}{100}$$
+* **Endurance et dégâts finaux** : $$finaux = bouclier * \frac{1-[10*(endurance-défense)+1]}{100}$$
 
 * **PV restants : ** $$PV\hspace{10px}max - finaux$$
