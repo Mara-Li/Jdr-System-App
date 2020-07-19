@@ -224,7 +224,9 @@ input[type="radio"] {
 	/* background-color only for content */
 	background-clip: content-box;
 	border-radius: 50%;
+	text-align: baseline;
 }
+
 
 input[type="checkbox"] {
 	-webkit-appearance: none;
@@ -238,7 +240,7 @@ input[type="checkbox"] {
 }
 
 label {
-	margin-top:3%;
+	margin-top:2%;
 }
 
 label[for="bouclier"], label[for="endurance"], label[for="agi"] {
@@ -297,7 +299,7 @@ select {
 	background-repeat: no-repeat;
 	text-indent:5px;
 	padding:1px;
-	width:100px;
+	width:120px;
 	border-radius: 5px;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 	border: 1px solid;
