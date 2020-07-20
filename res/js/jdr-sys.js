@@ -814,7 +814,7 @@ function vie_restante(finaux) {
 	finaux = phrase_esquive(finaux);
 	finaux=aucun_deg(finaux);
 	if (isNaN(finaux)) {
-		vie = elem_inputs.pv_max.value;
+		vie = elem_inputs.pv_reste.value;
 	}
 	elem_inputs.res_deg.innerHTML = finaux;
 	elem_inputs.pv_reste.value = (vie <= 0 || isNaN(vie)) ? 0 : vie;
