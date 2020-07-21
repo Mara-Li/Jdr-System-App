@@ -234,18 +234,15 @@ class LogObject {
 			if (type_capa == 0) {
 				//burst
 				if (shield != 0) {
-					bonus_type = choix_bonus() + 20;
-					bonus = capacite_bonus(bonus_type);
+					bonus = 20;
 
 				} else {
-					bonus_type = choix_bonus() + 30;
-					bonus = capacite_bonus(bonus_type);
+					bonus = c30;
 				}
 			} else if (type_capa == 1) {
-				bonus_type = choix_bonus() + 20;
-				bonus = capacite_bonus(bonus_type);
+				bonus = 20;
 			} else if (type_capa == 2) {
-				bonus = capacite_bonus(bonus);
+				bonus = bonus ;
 			}
 		}
 		var res =
@@ -287,18 +284,15 @@ class LogObject {
 			if (type_capa == 0) {
 				//burst
 				if (shield != 0) {
-					bonus_type = choix_bonus() + 20;
-					bonus = capacite_bonus(bonus_type);
+					bonus = 20;
 
 				} else {
-					bonus_type = choix_bonus() + 30;
-					bonus = capacite_bonus(bonus_type);
+					bonus = 30 ;
 				}
 			} else if (type_capa == 1) {
-				bonus_type = choix_bonus() + 20;
-				bonus = capacite_bonus(bonus_type);
+				bonus = 20;
 			} else if (type_capa == 2) {
-				bonus = capacite_bonus(bonus);
+				bonus = bonus ;
 			}
 		}
 
@@ -549,35 +543,34 @@ function degat_type() {
 	switch (type_capa) {
 		case 0: //burst
 			if (shield != 0) {
-				bonus_type = capacite_bonus(20);
+				bonus_type = 20 ;
 				bonus = (bonus_type + bonus) / 100;
-				[d, endu_val] = degat_burst_bouclier(bonus, atq, defe, endu_val);
+				[d, endu_val] = degat_capacite (bonus, atq, defe, endu_val);
 			} else {
-				bonus_type = capacite_bonus(30);
+				bonus_type = 30 ;
 				bonus = ((bonus + bonus_type) / 100);
-				[d, endu_val] = degat_burst(bonus, atq, defe, endu_val);
+				[d, endu_val] = degat_capacite (bonus, atq, defe, endu_val);
 			}
 			break;
 
 		case 1: //Perforant
-			bonus_type = capacite_bonus(20);
+			bonus_type = 20 ;
 			bonus = ((bonus_type + bonus) / 100);
 			endu_val = 0;
 			shield = 0;
-			[d, endu_val] = degat_perforant(bonus, atq, defe, endu_val);
+			[d, endu_val] = degat_capacite (bonus, atq, defe, endu_val);
 			break;
 
 		case 2: //Autre
-			if (isNaN(bonus)) {
-				bonus = 0;
-			}
-			bonus_attaque = choix_bonus();
-			bonus = ((bonus_attaque + bonus) / 100);
-			bonus = capacite_bonus(bonus);
-			endu_val = parseInt(elem_inputs.endurance.value); //récupérer la valeur du champ d'endurance
-			shield = parseInt(elem_inputs.bouclier.value);
-			[d, endu_val] = degat_autre(bonus, atq, defe, endu_val);
-			break;
+		if (isNaN(bonus)) {
+	 				bonus = 0;
+	 			}
+	 			bonus = choix_bonus();
+	 			bonus = (bonus / 100);
+	 			endu_val = parseInt(elem_inputs.endurance.value); //récupérer la valeur du champ d'endurance
+	 			shield = parseInt(elem_inputs.bouclier.value);
+	 			[d, endu_val] = degat_capacite(bonus, atq, defe, endu_val);
+	 			break;
 	}
 	finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
 	max = finaux;
@@ -675,18 +668,6 @@ function reussite_endurance(endu_de, endu_val, pv, d, shield) {
 	return Math.trunc(finaux);
 }
 
-function capacite_bonus(bonus) {
-	var atq = parseInt(elem_inputs.des_atq.value) //valeur dé champ Attaque
-	if (atq == 0) {
-		bonus = bonus * 1.8;
-		bonus=roundir(bonus);
-	} else if (atq == 1) {
-		bonus = bonus * 1.4;
-		bonus=roundir(bonus);
-	}
-	return bonus;
-}
-
 function calculate_degat(bonus, atq, defe) {
 	var d;
 	d = Math.abs(atq - defe);
@@ -716,68 +697,26 @@ function calculate_degat(bonus, atq, defe) {
 			d = (0.5 + bonus);
 			break;
 	}
-	return d;
+	return roundir (d);
 }
 
-function degat_burst(bonus, atq, defe, endu_val) {
+function degat_capacite (bonus, atq, defe, endu_val) {
 	let d;
 	if (atq == 0) {
-		d = calculate_degat(bonus, atq, defe);
+		d = roundir(calculate_degat(bonus, atq, defe));
+		d = d * 1.8
 		endu_val = 0;
 	} else if (defe == 0) {
 		d = 0;
 	} else if (atq == 1) {
-		d = calculate_degat(bonus, atq, defe);
+		d = roundir(calculate_degat(bonus, atq, defe));
+		d = d * 1.4
 	} else {
-		d = calculate_degat(bonus, atq, defe);
+		d = roundir(calculate_degat(bonus, atq, defe));
 	}
 	return [d, endu_val];
 }
 
-function degat_burst_bouclier(bonus, atq, defe, endu_val) {
-	let d;
-	if (atq == 0) {
-		d = calculate_degat(bonus, atq, defe);
-		endu_val = 0;
-	} else if (defe == 0) {
-		d = 0;
-	} else if (atq == 1) {
-		d = calculate_degat(bonus, atq, defe);
-	} else {
-		d = calculate_degat(bonus, atq, defe);
-	}
-	return [d, endu_val];
-}
-
-function degat_perforant(bonus, atq, defe, endu_val) {
-	var d;
-	if (atq == 0) {
-		d = calculate_degat(bonus, atq, defe);
-		endu_val = 0;
-	} else if (defe == 0) {
-		d = 0;
-	} else if (atq == 1) {
-		d = calculate_degat(bonus, atq, defe);
-	} else {
-		d = calculate_degat(bonus, atq, defe);
-	}
-	return [d, endu_val];
-}
-
-function degat_autre(bonus, atq, defe, endu_val) {
-	var d;
-	if (atq == 0) {
-		d = calculate_degat(bonus, atq, defe);
-		endu_val = 0;
-	} else if (defe == 0) {
-		d = 0;
-	} else if (atq == 1) {
-		d = calculate_degat(bonus, atq, defe);
-	} else {
-		d = calculate_degat(bonus, atq, defe);
-	}
-	return [d, endu_val];
-}
 
 function phrase_esquive(finaux) {
 	var remise = elem_inputs.des_bonus_def.checked;
