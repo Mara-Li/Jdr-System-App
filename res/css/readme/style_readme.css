@@ -181,6 +181,7 @@ button {
 div#readme {
 	border: 0;
 	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 p {
