@@ -172,6 +172,11 @@ body {
 	position:relative;
 }
 
+html {
+	overflow-x: hidden;
+	position:relative;
+}
+
 button {
 	width: 10px;
 	height: 50px;
