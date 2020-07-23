@@ -164,10 +164,6 @@ input[type="submit"],
 	-webkit-appearance: none !important;
 }
 
-* {
-	touch-action: none;
-
-}
 
 body, html {
 	width: 100%;
