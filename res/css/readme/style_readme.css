@@ -171,7 +171,6 @@ body, html {
 	font-family: 'Josefin Sans', sans-serif;
 	overflow-x: hidden;
 	position:relative;
-	transform: translate3d(0,0,0);
 }
 
 
