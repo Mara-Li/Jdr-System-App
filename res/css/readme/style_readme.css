@@ -165,24 +165,10 @@ input[type="submit"],
 }
 
 
-* {
-  touch-action: none;
-}
-
-pre {
-  overflow-x: scroll;
-  touch-action: pan-x;
-}
-
 body, html {
 	width: 100%;
 	height: 100%;
 	font-family: 'Josefin Sans', sans-serif;
-<<<<<<< HEAD
-=======
-	overflow-x: hidden !important;
-	position:relative;
->>>>>>> master
 }
 
 
@@ -194,6 +180,8 @@ button {
 
 div#readme {
 	border: 0;
+	overflow-x: hidden;
+	position:relative;
 }
 
 p {
