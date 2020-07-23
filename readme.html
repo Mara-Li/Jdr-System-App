@@ -21,10 +21,10 @@
     }
   }
 </style>
-<title> Règle d'utilisation </title>
 <link rel="stylesheet" href="res/css/readme/style_readme.css">
 <link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
 <link rel="alternate stylesheet" href="res/css/readme/light.css" title="light">
+<meta charset="UTF-8">
 <link rel="stylesheet" href="res/css/readme/dark.css" title="dark">
 <link rel="alternate stylesheet" href="res/css/readme/light.css" title="light">
 <script src="res/js/style_regle.js"></script>
@@ -62,12 +62,11 @@ function closeNav() {
 	<li class="sidebar-h2"><a href="#sur-les-capacit-s" onclick="closeNav()">Capacités</a></li>
 	<li class="sidebar-h2"><a href="#sur-les-attaques-normales" onclick="closeNav()">Attaques normales</a></li>
 	<li class="sidebar-h1"><a href="#armes" onclick="closeNav()">Armes</a></li>
-	<li class="sidebar-h2"><a href="#armes-li-es-la-force" onclick="closeNav()">Armes li&#xE9;es &#xE0; la force</a></li>
-	<li class="sidebar-h3"><a href="#armes-blanches" onclick="closeNav()">Arme blanche</a></li>
-	<li class="sidebar-h4"><a href="#couteau" onclick="closeNav()">Couteau</a></li>
-	<li class="sidebar-h4"><a href="#ep-e" onclick="closeNav()">Ep&#xE9;e</a></li>
-	<li class="sidebar-h3">	<a href="#arme-contondante" onclick="closeNav()">Arme contondante</a></li>
-	<li class="sidebar-h2"><a href="#arme-li-e-la-pr-cision" onclick="closeNav()">Arme li&#xE9;e &#xE0; la pr&#xE9;cision</a></li>
+	<li class="sidebar-h2"><a href="#cac" onclick="closeNav()">Armes li&#xE9;es &#xE0; la force</a></li>
+	<li class="sidebar-h3"><a href="#courte" onclick="closeNav()">Couteau</a></li>
+	<li class="sidebar-h3"><a href="#ep-e" onclick="closeNav()">Ep&#xE9;e</a></li>
+	<li class="sidebar-h3">	<a href="#masse" onclick="closeNav()">Arme contondante</a></li>
+	<li class="sidebar-h2"><a href="#dist" onclick="closeNav()">Arme à distance</a></li>
 	<li class="sidebar-h3"><a href="#projectiles" onclick="closeNav()">Projectiles</a></li>
 	<li class="sidebar-h3"><a href="#arme-feu" onclick="closeNav()">Armes à feu</a></li>
 	<li class="sidebar-h4"><a href="#pistolet" onclick="closeNav()">Pistolet</a></li>
@@ -84,8 +83,7 @@ function closeNav() {
 			</div>
     </div>
 </header>
-<body>
-<div id="readme" class="container"><article class="markdown-body entry-content"><ul>
+<body><div id="readme" class="container"><article class="markdown-body entry-content">
 <p>Avant de rentrer dans le vif du sujet, je dois vous parler du syst&#xE8;me de combat. Tout d&apos;abord, il faut savoir que tout est automatis&#xE9;, vous n&apos;avez pas &#xE0; calculer vos d&#xE9;g&#xE2;ts, je m&apos;occupe de tout.</p>
 <p>Les combats se d&#xE9;roulent au tour par tour, avec un lanc&#xE9; d&apos;un d&#xE9; 10 d&apos;attaque et de d&#xE9;fense.</p>
 <p>Un tour est lorsque tous les combattants (ennemis compris) ont jou&#xE9;. Mais les cooldown ne s&apos;actualise que durant le tour personnel du joueur et non pas le tour &quot;g&#xE9;n&#xE9;ral&quot; du combat (comme dans la majorit&#xE9; des jeux tactiques, notamment dofus).</p>
@@ -211,30 +209,30 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 <li><u>Les r&#xE9;ussite critiques de d&#xE9;fense :</u> Il n&apos;y a pas d&apos;effets particulier pour l&apos;endurance, mais en plus de la r&#xE9;ussite de l&apos;esquive, le d&#xE9;fenseur b&#xE9;n&#xE9;ficie d&apos;une riposte (sans bonus).</li>
 </ul>
 <h1 id="armes">Armes</h1>
-<h2 id="armes-li-es-la-force">Armes li&#xE9;es &#xE0; la force</h2>
+<h2 id="cac">Les armes blanches :</h2>
 <p>Les armes li&#xE9;es &#xE0; la force sont toutes au corps &#xE0; corps. Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de cr&#xE9;er une arme &quot;sp&#xE9;cifique&quot; avec le champ autre.</p>
 <p>A savoir aussi que le programme bloque aussi au corps &#xE0; corps pour la partie &quot;aucun&quot; qui correspond en r&#xE9;alit&#xE9; &#xE0; un simple coup de poing d&apos;une personne sans aucun &#xE9;quipement (donc, sans gants de boxe, par exemple).</p>
-<h3 id="armes-blanches">Armes blanches</h3>
-<h4 id="couteau">Couteau</h4>
+<h2 id="courte">Courte :</h2>
 <ul>
 <li><strong>Bonus</strong> : 5%</li>
 <li>Utilisation gratuite un tour sur deux. Si double couteau, il est possible d&apos;activer le bonus en m&#xEA;me temps et de donner 4 coups un tour sur deux.</li>
 </ul>
-<h4 id="ep-e"><strong>Ep&#xE9;e</strong></h4>
+<h3 id="ep-e">Ep&#xE9;e</h3>
 <ul>
 <li><strong>Bonus</strong> : 10%</li>
 </ul>
-<h3 id="arme-contondante">Arme contondante</h3>
+<h3 id="masse">Masse</h3>
 <ul>
 <li><strong>Bonus</strong> : 15%</li>
 <li><strong>Pr&#xE9;-requis</strong> : 4 en force</li>
 </ul>
-<h2 id="arme-li-e-la-pr-cision">Arme li&#xE9;e &#xE0; la pr&#xE9;cision</h2>
-<h3 id="projectiles"><strong>Projectiles</strong></h3>
+<h2 id="dist">Arme à distance :</h2>
+<h3 id="projectiles">Projectiles</h3>
 <ul>
 <li><strong>Bonus</strong> : 5 %</li>
 <li><strong>Placement</strong> : Rang 1 &#xE0; 2<blockquote>
-<p>Exemple : Grenade, bombe, couteau...</p>
+<p>Exemple : Grenade, bombe, couteau...
+A savoir que les grenades ont des bonus en plus &#xE0; fixer manuellement.</p>
 </blockquote>
 </li>
 </ul>
@@ -244,7 +242,7 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 <li><strong>Nombre de balles (ou charges)</strong> : 8</li>
 <li><strong>Bonus</strong> : 8%</li>
 <li><strong>Placement</strong> : 1 &#xE0; 2</li>
-<li>*<em>Malus de placement *</em> : +2 Pr&#xE9;cision (rang 3)</li>
+<li><strong>Malus de placement</strong> : +2 Pr&#xE9;cision (rang 3)</li>
 </ul>
 <h4 id="fusil">Fusil</h4>
 <ul>
@@ -254,7 +252,7 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 <li><strong>Bonus de placement</strong> : +5% (rang 1)</li>
 <li><strong>Malus de placement</strong> : +1 Pr&#xE9;cision (rang 1)</li>
 </ul>
-<h3 id="canon">Canon</h3>
+<h4 id="canon">Canon</h4>
 <ul>
 <li><strong>Bonus</strong> : 20%</li>
 <li><strong>Malus</strong> : +2 en agilit&#xE9;</li>

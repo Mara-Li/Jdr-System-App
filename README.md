@@ -184,7 +184,7 @@ A savoir que seuls les implants permettent d'atteindre le score de 0.
 
 # Armes
 
-##  Armes liées à la force
+##  Armes liées à la force : Les armes blanches
 
 Les armes liées à la force sont toutes au corps à corps. Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de créer une arme "spécifique" avec le champ autre.
 
@@ -192,29 +192,28 @@ Les armes liées à la force sont toutes au corps à corps. Le programme bloque 
 
 A savoir aussi que le programme bloque aussi au corps à corps pour la partie "aucun" qui correspond en réalité à un simple coup de poing d'une personne sans aucun équipement (donc, sans gants de boxe, par exemple).
 
-### Armes blanches
-
-#### Couteau
+## Courte :
 
 - **Bonus** : 5%
 - Utilisation gratuite un tour sur deux. Si double couteau, il est possible d'activer le bonus en même temps et de donner 4 coups un tour sur deux.
 
-#### **Epée**
+### Epée
 
 - **Bonus** : 10%
 
-###  Arme contondante
+###  Masse
 
 - **Bonus** : 15%
 - **Pré-requis** : 4 en force
 
 ## Arme liée à la précision
 
-###  **Projectiles**
+### Projectiles
 
 - **Bonus** : 5 %
 - **Placement** : Rang 1 à 2
 > Exemple : Grenade, bombe, couteau...
+> A savoir que les grenades ont des bonus en plus à fixer manuellement.
 
 ###  Arme à feu
 
@@ -223,7 +222,7 @@ A savoir aussi que le programme bloque aussi au corps à corps pour la partie "a
 - **Nombre de balles (ou charges)** : 8
 - **Bonus** : 8%
 - **Placement** : 1 à 2
-- **Malus de placement ** : +2 Précision (rang 3)
+- **Malus de placement** : +2 Précision (rang 3)
 
 #### Fusil
 
@@ -233,7 +232,7 @@ A savoir aussi que le programme bloque aussi au corps à corps pour la partie "a
 - **Bonus de placement** : +5% (rang 1)
 - **Malus de placement** : +1 Précision (rang 1)
 
-### Canon
+#### Canon
 
 - **Bonus** : 20%
 - **Malus** : +2 en agilité
