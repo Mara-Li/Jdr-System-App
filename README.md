@@ -192,7 +192,7 @@ Les armes liées à la force sont toutes au corps à corps. Le programme bloque 
 
 A savoir aussi que le programme bloque aussi au corps à corps pour la partie "aucun" qui correspond en réalité à un simple coup de poing d'une personne sans aucun équipement (donc, sans gants de boxe, par exemple).
 
-## Courte :
+## Poigne :
 
 - **Bonus** : 5%
 - Utilisation gratuite un tour sur deux. Si double couteau, il est possible d'activer le bonus en même temps et de donner 4 coups un tour sur deux.
