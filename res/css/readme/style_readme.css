@@ -165,7 +165,7 @@ input[type="submit"],
 }
 
 
-body {
+body, html {
 	width: 100%;
 	height: 100%;
 	font-family: 'Josefin Sans', sans-serif;
