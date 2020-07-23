@@ -1,27 +1,3 @@
-- [Résumé](#rsum)
-- [La défense](#la-dfense)
-- [Dégâts](#dgts)
-- [Bouclier](#bouclier)
-- [Cases et déplacement](#cases-et-dplacement)
-- [Effets des réussites critiques](#effets-des-russites-critiques)
-	- [Sur les capacités](#sur-les-capacits)
-	- [Sur les attaques "normales" (hors capacités)](#sur-les-attaques-normales-hors-capacits)
-- [Armes](#armes)
-	- [Armes liées à la force](#armes-lies-la-force)
-		- [Arme blanche](#arme-blanche-)
-			- [Couteau ](#couteau-)
-			- [**Epée**](#epe)
-		- [Arme contondante](#arme-contondante)
-	- [Arme liée à la précision](#arme-lie-la-prcision)
-		- [**PROJECTILES**](#projectiles)
-		- [**ARME À FEU**](#arme-feu-)
-			- [Pistolet](#pistolet-)
-			- [Fusil](#fusil-)
-		- [Canon](#canon-)
-- [Calculs](#calculs)
-
-
-
 Avant de rentrer dans le vif du sujet, je dois vous parler du système de combat. Tout d'abord, il faut savoir que tout est automatisé, vous n'avez pas à calculer vos dégâts, je m'occupe de tout.
 
 Les combats se déroulent au tour par tour, avec un lancé d'un dé 10 d'attaque et de défense.
@@ -184,7 +160,7 @@ A savoir que seuls les implants permettent d'atteindre le score de 0.
 
 # Armes
 
-##  Armes liées à la force : Les armes blanches
+##  Les armes blanches
 
 Les armes liées à la force sont toutes au corps à corps. Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de créer une arme "spécifique" avec le champ autre.
 
@@ -192,10 +168,10 @@ Les armes liées à la force sont toutes au corps à corps. Le programme bloque 
 
 A savoir aussi que le programme bloque aussi au corps à corps pour la partie "aucun" qui correspond en réalité à un simple coup de poing d'une personne sans aucun équipement (donc, sans gants de boxe, par exemple).
 
-## Poigne :
+## Poigne
 
 - **Bonus** : 5%
-- Utilisation gratuite un tour sur deux. Si double couteau, il est possible d'activer le bonus en même temps et de donner 4 coups un tour sur deux.
+- Utilisation gratuite un tour sur deux. Si double poigne, il est possible d'activer le bonus en même temps et de donner 4 coups un tour sur deux.
 
 ### Epée
 
@@ -206,7 +182,7 @@ A savoir aussi que le programme bloque aussi au corps à corps pour la partie "a
 - **Bonus** : 15%
 - **Pré-requis** : 4 en force
 
-## Arme liée à la précision
+## Armes à distance
 
 ### Projectiles
 
