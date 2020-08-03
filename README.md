@@ -58,6 +58,9 @@ Les dégâts sont déterminés en fonction de l'écart de dé entre l'attaquant 
 Dans le cas où le défenseur aurait encaissé le coup (dé d'endurance), il perd moins de PV. La valeur de sa caractéristique est une valeur seuil, et plus le dés sera bas mieux le défenseur encaisse. Un score de 0 étant un UC, la personne encaisse tous les dégâts.
 
 > La valeur de la caractéristique détermine le montant maximum qu'il est possible d'encaisser.
+> Les dégâts finaux d'une attaque normale sont divisés par deux, dans des soucis d'équilibrage.
+
+Les armes et les capacités ont des bonus passifs qui augmentent les dégâts.
 
 # Bouclier
 
@@ -158,7 +161,16 @@ A savoir que seuls les implants permettent d'atteindre le score de 0.
 
 * <u>Les réussite critiques de défense :</u> Il n'y a pas d'effets particulier pour l'endurance, mais en plus de la réussite de l'esquive, le défenseur bénéficie d'une riposte (sans bonus).
 
-# Armes
+# Bonus
+## Les Capacités
+
+Les capacités offrent des bonus d'attaque, mais leur utilisation est limité, que ce soit en terme de points d'action, que d'utilisation par tour. Ce sont donc des attaques très puissantes, ou avec des passifs avantageux.
+
+Il existe deux types principaux :
+
+* <u>Les Burst</u> : Ce sont de puissantes attaques, mais qui ont du mal à passer à travers les boucliers. Ainsi, elles ont un bonus de 50% en absence de bouclier, mais en présence de ce dernier, on descend à 30%, et le bouclier a un effet sur lui. 
+* <u> Les perforants </u> : Ce sont des attaques moins puissante qu'un burst, mais traversant toutes les défenses. Ainsi, les dégâts seront les mêmes qu'une attaque à 30% sans bouclier.
+* <u> Le champ "autre"</u> : Ce dernier n'a aucun bonus, mais permet d'utiliser les armes et de bénéficier des légères différences en termes de bonus de coup-critique.
 
 ##  Les armes blanches
 
@@ -231,5 +243,6 @@ Après avoir vérifié la table, on récupère les dégâts. Ainsi $$d=dégâts\
 * **Bouclier :** $$d * (1-bouclier)$$
 
 * **Endurance et dégâts finaux** : $$finaux = bouclier * \frac{1-[10*(1+(endurance-défense))]}{100}$$
+> Les dégâts finaux sont divisés par 2 dans le cas d'une attaque normale, afin d'équilibrer par rapport aux système de PA.
 
 * **PV restants : ** $$PV\hspace{10px}max - finaux$$

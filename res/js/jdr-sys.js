@@ -479,7 +479,6 @@ function degat_normaux() {
 			}
 		}
 	}
-	console.log("dé défense lié endurance :",endu_de, "endurance :",endu_val, "atq :" ,atq, "malus_atq:", malus_atq/2)
 
 	if (atq == 0) {
 		d = d-bonus;
@@ -496,6 +495,7 @@ function degat_normaux() {
 	}
 
 	finaux = degat_finaux(endu_de, endu_val, pv, d, shield);
+	finaux= Math.trunc(finaux/2)
 	max = finaux;
 	if ((pv >= 100) && (pv < 200)) {
 		max = pv/2;
@@ -550,18 +550,18 @@ function degat_type() {
 	switch (type_capa) {
 		case 0: //burst
 			if (shield != 0) {
-				bonus_type = 20 ;
+				bonus_type = 30 ;
 				bonus = (bonus_type + bonus) / 100;
 				d = degat_capacite (bonus, atq, defe);
 			} else {
-				bonus_type = 30 ;
+				bonus_type = 50 ;
 				bonus = ((bonus + bonus_type) / 100);
 				d = degat_capacite (bonus, atq, defe);
 			}
 			break;
 
 		case 1: //Perforant
-			bonus_type = 20 ;
+			bonus_type = 30 ;
 			bonus = ((bonus_type + bonus) / 100);
 			endu_val = 0;
 			shield = 0;

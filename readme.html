@@ -61,8 +61,9 @@ function closeNav() {
 	<li class="sidebar-h1"><a href="#effets-des-r-ussites-critiques" onclick="closeNav()">Effets des r&#xE9;ussites critiques</a></li>
 	<li class="sidebar-h2"><a href="#capacit-s" onclick="closeNav()">Capacités</a></li>
 	<li class="sidebar-h2"><a href="#attaques-normales" onclick="closeNav()">Attaques normales</a></li>
-	<li class="sidebar-h1"><a href="#armes" onclick="closeNav()">Armes</a></li>
+	<li class="sidebar-h1"><a href="#bonus" onclick="closeNav()">Bonus</a></li>
 	<li class="sidebar-h2"><a href="les-armes-blanches" onclick="closeNav()">Armes blanches</a></li>
+	<li class="sidebar-h2"><a href="capacit-s" onclick="closeNav()">Capacités</a></li>
 	<li class="sidebar-h3"><a href="#poigne" onclick="closeNav()">Couteau</a></li>
 	<li class="sidebar-h3"><a href="#ep-e" onclick="closeNav()">Ep&#xE9;e</a></li>
 	<li class="sidebar-h3">	<a href="#masse" onclick="closeNav()">Arme contondante</a></li>
@@ -83,8 +84,7 @@ function closeNav() {
 			</div>
     </div>
 </header>
-<body><div id="readme" class="container"><article class="markdown-body entry-content">
-	<p>Avant de rentrer dans le vif du sujet, je dois vous parler du syst&#xE8;me de combat. Tout d&apos;abord, il faut savoir que tout est automatis&#xE9;, vous n&apos;avez pas &#xE0; calculer vos d&#xE9;g&#xE2;ts, je m&apos;occupe de tout.</p>
+<body><div id="readme" class="container"><article class="markdown-body entry-content"><p>Avant de rentrer dans le vif du sujet, je dois vous parler du syst&#xE8;me de combat. Tout d&apos;abord, il faut savoir que tout est automatis&#xE9;, vous n&apos;avez pas &#xE0; calculer vos d&#xE9;g&#xE2;ts, je m&apos;occupe de tout.</p>
 <p>Les combats se d&#xE9;roulent au tour par tour, avec un lanc&#xE9; d&apos;un d&#xE9; 10 d&apos;attaque et de d&#xE9;fense.</p>
 <p>Un tour est lorsque tous les combattants (ennemis compris) ont jou&#xE9;. Mais les cooldown ne s&apos;actualise que durant le tour personnel du joueur et non pas le tour &quot;g&#xE9;n&#xE9;ral&quot; du combat (comme dans la majorit&#xE9; des jeux tactiques, notamment dofus).</p>
 <h1 id="r-sum-">R&#xE9;sum&#xE9;</h1>
@@ -138,8 +138,10 @@ A noter que pour les d&#xE9;g&#xE2;ts persistants, le d&#xE9;s de karma est &#xE
 </ul>
 <p>Dans le cas o&#xF9; le d&#xE9;fenseur aurait encaiss&#xE9; le coup (d&#xE9; d&apos;endurance), il perd moins de PV. La valeur de sa caract&#xE9;ristique est une valeur seuil, et plus le d&#xE9;s sera bas mieux le d&#xE9;fenseur encaisse. Un score de 0 &#xE9;tant un UC, la personne encaisse tous les d&#xE9;g&#xE2;ts.</p>
 <blockquote>
-<p>La valeur de la caract&#xE9;ristique d&#xE9;termine le montant maximum qu&apos;il est possible d&apos;encaisser.</p>
+<p>La valeur de la caract&#xE9;ristique d&#xE9;termine le montant maximum qu&apos;il est possible d&apos;encaisser.
+Les d&#xE9;g&#xE2;ts finaux d&apos;une attaque normale sont divis&#xE9;s par deux, dans des soucis d&apos;&#xE9;quilibrage.</p>
 </blockquote>
+<p>Les armes et les capacit&#xE9;s ont des bonus passifs qui augmentent les d&#xE9;g&#xE2;ts.</p>
 <h1 id="bouclier">Bouclier</h1>
 <p>Les boucliers prot&#xE8;gent des d&#xE9;g&#xE2;ts. Dans les faits, cela fonctionne exactement comme un encaissement avec un d&#xE9; d&apos;endurance.</p>
 <p>Cependant, les r&#xE9;sistances sont fixes et li&#xE9;s soit &#xE0; votre &#xE9;quipement, soit au rang de votre adversaire. En g&#xE9;n&#xE9;ral, il existe :</p>
@@ -208,7 +210,15 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 <ul>
 <li><u>Les r&#xE9;ussite critiques de d&#xE9;fense :</u> Il n&apos;y a pas d&apos;effets particulier pour l&apos;endurance, mais en plus de la r&#xE9;ussite de l&apos;esquive, le d&#xE9;fenseur b&#xE9;n&#xE9;ficie d&apos;une riposte (sans bonus).</li>
 </ul>
-<h1 id="armes">Armes</h1>
+<h1 id="bonus">Bonus</h1>
+<h2 id="capacit-s">Capacit&#xE9;s</h2>
+<p>Les capacit&#xE9;s offrent des bonus d&apos;attaque, mais leur utilisation est limit&#xE9;, que ce soit en terme de points d&apos;action, que d&apos;utilisation par tour. Ce sont donc des attaques tr&#xE8;s puissantes, ou avec des passifs avantageux.</p>
+<p>Il existe deux types principaux :</p>
+<ul>
+<li><u>Les Burst</u> : Ce sont de puissantes attaques, mais qui ont du mal &#xE0; passer &#xE0; travers les boucliers. Ainsi, elles ont un bonus de 50% en absence de bouclier, mais en pr&#xE9;sence de ce dernier, on descend &#xE0; 30%, et le bouclier a un effet sur lui. </li>
+<li><u> Les perforants </u> : Ce sont des attaques moins puissante qu&apos;un burst, mais traversant toutes les d&#xE9;fenses. Ainsi, les d&#xE9;g&#xE2;ts seront les m&#xEA;mes qu&apos;une attaque &#xE0; 30% sans bouclier.</li>
+<li><u> Le champ &quot;autre&quot;</u> : Ce dernier n&apos;a aucun bonus, mais permet d&apos;utiliser les armes et de b&#xE9;n&#xE9;ficier des l&#xE9;g&#xE8;res diff&#xE9;rences en termes de bonus de coup-critique.</li>
+</ul>
 <h2 id="les-armes-blanches">Les armes blanches</h2>
 <p>Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de cr&#xE9;er une arme &quot;sp&#xE9;cifique&quot; avec le champ autre.</p>
 <p>A savoir aussi que le programme bloque aussi au corps &#xE0; corps pour la partie &quot;aucun&quot; qui correspond en r&#xE9;alit&#xE9; &#xE0; un simple coup de poing d&apos;une personne sans aucun &#xE9;quipement (donc, sans gants de boxe, par exemple).</p>
