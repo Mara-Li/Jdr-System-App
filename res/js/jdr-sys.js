@@ -741,22 +741,32 @@ function phrase_esquive(finaux) {
 				if (defe<=1) {
 					finaux = 'Esquive critique';
 				}
+				else {
+					if ((defe < agi_val) && (defe < atq)) {
+						finaux = 'Esquive — Aucun dégâts';
+					}
+				}
 			}
 		} else {
 			if (defe <= agi_val) {
 				if (defe<=1) {
 					finaux = 'Esquive critique';
 				}
+				else {
+					if ((defe <= agi_val) && (defe <= atq)) {
+						finaux = 'Esquive — Aucun dégâts';
+					}
+				}
 			}
 			else {
 				if (finaux == 0) {
-					finaux = "Aucun"
+					finaux = "Aucun dégâts";
 				}
 			}
 		}
 	} else {
-		if (finaux ==0){
-			finaux ="Aucun"
+		if (finaux == 0){
+			finaux ="Aucun dégâts";
 		}
 	}
 	return finaux;
