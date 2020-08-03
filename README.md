@@ -166,10 +166,11 @@ A savoir que seuls les implants permettent d'atteindre le score de 0.
 
 Les capacités offrent des bonus d'attaque, mais leur utilisation est limité, que ce soit en terme de points d'action, que d'utilisation par tour. Ce sont donc des attaques très puissantes, ou avec des passifs avantageux.
 
-Il existe deux types principaux :
+Il existe trois types principaux :
 
-* <u>Les Burst</u> : Ce sont de puissantes attaques, mais qui ont du mal à passer à travers les boucliers. Ainsi, elles ont un bonus de 50% en absence de bouclier, mais en présence de ce dernier, on descend à 30%, et le bouclier a un effet sur lui. 
+* <u>Les Burst</u> : Ce sont de puissantes attaques, mais qui ont du mal à passer à travers les boucliers. Ainsi, elles ont un bonus de 50% en absence de bouclier, mais en présence de ce dernier, on descend à 30%, et le bouclier a un effet sur lui.
 * <u> Les perforants </u> : Ce sont des attaques moins puissante qu'un burst, mais traversant toutes les défenses. Ainsi, les dégâts seront les mêmes qu'une attaque à 30% sans bouclier.
+* <u> Les pouvoirs </u> : Les pouvoirs sont capacités ayant un bonus de 10%.
 * <u> Le champ "autre"</u> : Ce dernier n'a aucun bonus, mais permet d'utiliser les armes et de bénéficier des légères différences en termes de bonus de coup-critique.
 
 ##  Les armes blanches

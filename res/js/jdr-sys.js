@@ -578,6 +578,12 @@ function degat_type() {
 	 			shield = parseInt(elem_inputs.bouclier.value);
 	 			d = degat_capacite(bonus, atq, defe);
 	 			break;
+
+		case 3: //Pouvoir
+			bonus_type = 10 ;
+			bonus = ((bonus_type + bonus) / 100);
+			d = degat_capacite (bonus, atq, defe);
+			break;
 	}
 	finaux = degat_finaux(endu_de, endu_val, pv, d, shield);
 	max = finaux;
@@ -602,9 +608,6 @@ function choix_bonus() {
 	switch (bonus) {
 		case 0: //Aucun
 			b = 0;
-			break;
-		case 1: //Pouvoir
-			b = 10 + bonus_val;
 			break;
 		case 2: //Fusil
 			b = 10 + bonus_val;
