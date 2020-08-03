@@ -443,7 +443,8 @@ function roundir(x) {
 
 function degat_normaux() {
 	var remise = elem_inputs.des_bonus_def.checked;
-	var d, endu_de, finaux, max;
+	var d, endu_de, finaux, max, malus_atq;
+	malus_atq=0;
 	var bonus = choix_bonus();
 	var bonus = (bonus / 100);
 	var pv = parseInt(elem_inputs.pv_max.value); //champ pv du programme
@@ -452,29 +453,33 @@ function degat_normaux() {
 	var endu_val = parseInt(elem_inputs.endurance.value); //valeur de l'endurance dans les stats
 	var agi_val = parseInt(elem_inputs.agi.value); //valeur de l'agi dans les stats
 	var shield = parseInt(elem_inputs.bouclier.value) / 100; //valeur du champ "bouclier"
-	d = calculate_degat(bonus, atq, defe);
 	sel_def = parseInt(elem_inputs.des_esquive.value); //insérer le nom qui correspond
+	d = calculate_degat(bonus, atq, defe);
 	if (!sel_def) { //Endurance (valeur = 0)
 		endu_de = defe;
 	} else { //Esquive & test (valeur = 1)
 		if (remise) {
-			if (defe < (agi_val / 2)) { //esquive réussi : Pas de dégât
+			if ((defe < agi_val) && (defe < atq)){ // esquive réussie
 				defe = 0;
-				endu_de = 0;
+				endu_de=0;
+				endu_val=0
 			} else { //esquive raté
 				endu_val = 0;
 				endu_de = 10;
 			}
 		} else {
-			if (defe <= (agi_val / 2)) { //esquive réussi : pas de dégât
+			if ((defe <= agi_val) && (defe <= atq)){ // Esquive réussie
 				defe = 0;
-				endu_de = 0;
+				endu_de=0;
+				endu_val=0
+
 			} else { //esquive raté
 				endu_val = 0;
 				endu_de = 10;
 			}
 		}
 	}
+	console.log("dé défense lié endurance :",endu_de, "endurance :",endu_val, "atq :" ,atq, "malus_atq:", malus_atq/2)
 
 	if (atq == 0) {
 		d = d-bonus;
@@ -490,7 +495,7 @@ function degat_normaux() {
 		d=roundir(d);
 	}
 
-	finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
+	finaux = degat_finaux(endu_de, endu_val, pv, d, shield);
 	max = finaux;
 	if ((pv >= 100) && (pv < 200)) {
 		max = pv/2;
@@ -504,7 +509,7 @@ function degat_normaux() {
 
 function degat_type() {
 	var remise = elem_inputs.des_bonus_def.checked;
-	var bonus_attaque, bonus_type, d, endu_de, finaux, max;
+	var bonus_attaque, bonus_type, d, endu_de, finaux, max, malus_atq;
 	var bonus = parseInt(elem_inputs.bonus.value); //valeur du champ "bonus"
 	var pv = parseInt(elem_inputs.pv_max.value); //valeur du champ PV au départ
 	var atq = parseInt(elem_inputs.des_atq.value); //valeur du dés d'Attaque
@@ -521,18 +526,20 @@ function degat_type() {
 			break;
 		case 1: //Esquive
 			if (remise) {
-				if (defe < (agi_val / 2)) {
+				if ((defe < agi_val) && (defe < atq)){ // esquive réussie
 					defe = 0;
-					endu_de = 0;
-				} else {
+					endu_de=0;
+					endu_val=0
+				} else { //esquive raté
 					endu_val = 0;
 					endu_de = 10;
 				}
 			} else {
-				if (defe <= (agi_val / 2)) {
+				if ((defe <= agi_val) && (defe <= atq)){ // Esquive réussie
 					defe = 0;
-					endu_de = 0;
-				} else {
+					endu_de=0;
+					endu_val=0
+				} else { //esquive raté
 					endu_val = 0;
 					endu_de = 10;
 				}
@@ -545,11 +552,11 @@ function degat_type() {
 			if (shield != 0) {
 				bonus_type = 20 ;
 				bonus = (bonus_type + bonus) / 100;
-				[d, endu_val] = degat_capacite (bonus, atq, defe, endu_val);
+				d = degat_capacite (bonus, atq, defe);
 			} else {
 				bonus_type = 30 ;
 				bonus = ((bonus + bonus_type) / 100);
-				[d, endu_val] = degat_capacite (bonus, atq, defe, endu_val);
+				d = degat_capacite (bonus, atq, defe);
 			}
 			break;
 
@@ -558,7 +565,7 @@ function degat_type() {
 			bonus = ((bonus_type + bonus) / 100);
 			endu_val = 0;
 			shield = 0;
-			[d, endu_val] = degat_capacite (bonus, atq, defe, endu_val);
+			d = degat_capacite (bonus, atq, defe);
 			break;
 
 		case 2: //Autre
@@ -569,10 +576,10 @@ function degat_type() {
 	 			bonus = (bonus / 100);
 	 			endu_val = parseInt(elem_inputs.endurance.value); //récupérer la valeur du champ d'endurance
 	 			shield = parseInt(elem_inputs.bouclier.value);
-	 			[d, endu_val] = degat_capacite(bonus, atq, defe, endu_val);
+	 			d = degat_capacite(bonus, atq, defe);
 	 			break;
 	}
-	finaux = reussite_endurance(endu_de, endu_val, pv, d, shield);
+	finaux = degat_finaux(endu_de, endu_val, pv, d, shield);
 	max = finaux;
 	if ((pv >= 100) && (pv < 200)) {
 		max = Math.trunc((pv)/2);
@@ -639,7 +646,7 @@ function choix_bonus() {
 	return b;
 }
 
-function reussite_endurance(endu_de, endu_val, pv, d, shield) {
+function degat_finaux(endu_de, endu_val, pv, d, shield) {
 	var finaux;
 	var d = Math.abs(Math.trunc(d * 100));
 	var bouclier = Math.abs(Math.trunc(d * (1 - shield))); //au besoin, placé des int pour convertir les valeurs
@@ -697,10 +704,14 @@ function calculate_degat(bonus, atq, defe) {
 			d = (0.5 + bonus);
 			break;
 	}
+	if ((atq==10)||(atq==9))
+	{
+		d=0;
+	}
 	return roundir (d);
 }
 
-function degat_capacite (bonus, atq, defe, endu_val) {
+function degat_capacite (bonus, atq, defe) {
 	let d;
 	if (atq == 0) {
 		d = roundir(calculate_degat(bonus, atq, defe));
@@ -714,7 +725,7 @@ function degat_capacite (bonus, atq, defe, endu_val) {
 	} else {
 		d = roundir(calculate_degat(bonus, atq, defe));
 	}
-	return [d, endu_val];
+	return d;
 }
 
 
@@ -726,23 +737,26 @@ function phrase_esquive(finaux) {
 	var agi_val = parseInt(elem_inputs.agi.value); //valeur de l'agi dans les stats
 	if (sel_def) {
 		if (remise) {
-			if (defe < (agi_val / 2)) {
-				finaux = 'Esquive réussie';
+			if (defe < agi_val) {
+				if (defe<=1) {
+					finaux = 'Esquive critique';
+				}
 			}
 		} else {
-			if (defe <= (agi_val / 2)) {
-				finaux = 'Esquive réussie';
+			if (defe <= agi_val) {
+				if (defe<=1) {
+					finaux = 'Esquive critique';
+				}
+			}
+			else {
+				if (finaux == 0) {
+					finaux = "Aucun"
+				}
 			}
 		}
-	}
-	return finaux;
-}
-
-function aucun_deg (finaux) {
-	sel_def = parseInt(elem_inputs.des_esquive.value);
-	if (!sel_def) {
-		if (finaux == 0) {
-			finaux = "Aucun"
+	} else {
+		if (finaux ==0){
+			finaux ="Aucun"
 		}
 	}
 	return finaux;
@@ -751,7 +765,6 @@ function aucun_deg (finaux) {
 function vie_restante(finaux) {
 	var vie = parseInt(elem_inputs.pv_reste.value) - finaux; //champ pv restant
 	finaux = phrase_esquive(finaux);
-	finaux=aucun_deg(finaux);
 	if (isNaN(finaux)) {
 		vie = elem_inputs.pv_reste.value;
 	}
