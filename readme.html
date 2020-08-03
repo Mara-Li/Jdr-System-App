@@ -84,14 +84,14 @@ function closeNav() {
     </div>
 </header>
 <body><div id="readme" class="container"><article class="markdown-body entry-content">
-<p>Avant de rentrer dans le vif du sujet, je dois vous parler du syst&#xE8;me de combat. Tout d&apos;abord, il faut savoir que tout est automatis&#xE9;, vous n&apos;avez pas &#xE0; calculer vos d&#xE9;g&#xE2;ts, je m&apos;occupe de tout.</p>
+	<p>Avant de rentrer dans le vif du sujet, je dois vous parler du syst&#xE8;me de combat. Tout d&apos;abord, il faut savoir que tout est automatis&#xE9;, vous n&apos;avez pas &#xE0; calculer vos d&#xE9;g&#xE2;ts, je m&apos;occupe de tout.</p>
 <p>Les combats se d&#xE9;roulent au tour par tour, avec un lanc&#xE9; d&apos;un d&#xE9; 10 d&apos;attaque et de d&#xE9;fense.</p>
 <p>Un tour est lorsque tous les combattants (ennemis compris) ont jou&#xE9;. Mais les cooldown ne s&apos;actualise que durant le tour personnel du joueur et non pas le tour &quot;g&#xE9;n&#xE9;ral&quot; du combat (comme dans la majorit&#xE9; des jeux tactiques, notamment dofus).</p>
 <h1 id="r-sum-">R&#xE9;sum&#xE9;</h1>
 <ul>
 <li><u>Lancer de d&#xE9;s d&apos;attaque et de d&#xE9;fense</u><ul>
 <li>L&apos;endurance permet d&apos;encaisser les d&#xE9;g&#xE2;ts.</li>
-<li>L&apos;esquive permet de ne pas prendre de d&#xE9;g&#xE2;t. Elle est r&#xE9;ussie si le d&#xE9; est moiti&#xE9; moins de la statistiques utilis&#xE9;e pour esquiver (en g&#xE9;n&#xE9;ral, c&apos;est l&apos;agilit&#xE9;).</li>
+<li>L&apos;esquive permet de ne pas prendre de d&#xE9;g&#xE2;t. Elle est r&#xE9;ussie si le d&#xE9; est inf&#xE9;rieur &#xE0; l&apos;attaque.</li>
 </ul>
 </li>
 <li><u>D&#xE9;s de 10 li&#xE9; &#xE0; votre caract&#xE9;ristiques</u><ul>
@@ -109,7 +109,7 @@ function closeNav() {
 <p>La caract&#xE9;ristique que vous lancez pour votre d&#xE9;fense est soit un d&#xE9; d&apos;endurance ou d&apos;agilit&#xE9;.</p>
 <ul>
 <li>L&apos;endurance vous permet d&apos;encaisser le coup, il recevra donc moins de d&#xE9;g&#xE2;ts.</li>
-<li>L&apos;agilit&#xE9; vous permet d&apos;esquiver le coup (et donc de ne pas prendre de d&#xE9;g&#xE2;ts). De plus, pour r&#xE9;ussir votre esquive, vous devez faire moiti&#xE9; moins que votre statistiques d&apos;agilit&#xE9;. L&apos;action d&apos;esquive faite peut aussi &#xEA;tre aider par un pouvoir, et dans ce cas, c&apos;est un d&#xE9; li&#xE9; &#xE0; ce pouvoir qui doit &#xEA;tre utilis&#xE9;. Les conditions restent identiques.</li>
+<li>L&apos;agilit&#xE9; vous permet d&apos;esquiver le coup (et donc de ne pas prendre de d&#xE9;g&#xE2;ts). De plus, pour r&#xE9;ussir votre esquive, vous devez avoir un d&#xE9; inf&#xE9;rieur &#xE0; l&apos;attaque. L&apos;action d&apos;esquive faite peut aussi &#xEA;tre aider par un pouvoir, et dans ce cas, c&apos;est un d&#xE9; li&#xE9; &#xE0; ce pouvoir qui doit &#xEA;tre utilis&#xE9;. Les conditions restent identiques.</li>
 </ul>
 <p>Il existe cependant des attaques qui ne rentrent dans cette cat&#xE9;gorie : les alt&#xE9;rations d&apos;&#xE9;tat.</p>
 <ul>
@@ -210,18 +210,18 @@ Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot
 </ul>
 <h1 id="armes">Armes</h1>
 <h2 id="les-armes-blanches">Les armes blanches</h2>
-<p>Les armes li&#xE9;es &#xE0; la force sont toutes au corps &#xE0; corps. Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de cr&#xE9;er une arme &quot;sp&#xE9;cifique&quot; avec le champ autre.</p>
+<p>Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de cr&#xE9;er une arme &quot;sp&#xE9;cifique&quot; avec le champ autre.</p>
 <p>A savoir aussi que le programme bloque aussi au corps &#xE0; corps pour la partie &quot;aucun&quot; qui correspond en r&#xE9;alit&#xE9; &#xE0; un simple coup de poing d&apos;une personne sans aucun &#xE9;quipement (donc, sans gants de boxe, par exemple).</p>
-<h2 id="poigne">Poigne</h2>
+<h2 id="poigne-agilit-">Poigne - Agilit&#xE9;</h2>
 <ul>
 <li><strong>Bonus</strong> : 5%</li>
 <li>Utilisation gratuite un tour sur deux. Si double poigne, il est possible d&apos;activer le bonus en m&#xEA;me temps et de donner 4 coups un tour sur deux.</li>
 </ul>
-<h3 id="ep-e">Ep&#xE9;e</h3>
+<h3 id="ep-e-force">Ep&#xE9;e - Force</h3>
 <ul>
 <li><strong>Bonus</strong> : 10%</li>
 </ul>
-<h3 id="masse">Masse</h3>
+<h3 id="masse-force">Masse - Force</h3>
 <ul>
 <li><strong>Bonus</strong> : 15%</li>
 <li><strong>Pr&#xE9;-requis</strong> : 4 en force</li>

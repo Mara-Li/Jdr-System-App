@@ -8,7 +8,7 @@ Un tour est lorsque tous les combattants (ennemis compris) ont joué. Mais les c
 
 -   <u>Lancer de dés d'attaque et de défense</u>
     -   L'endurance permet d'encaisser les dégâts.
-    -   L'esquive permet de ne pas prendre de dégât. Elle est réussie si le dé est moitié moins de la statistiques utilisée pour esquiver (en général, c'est l'agilité).
+    -   L'esquive permet de ne pas prendre de dégât. Elle est réussie si le dé est inférieur à l'attaque.
 -   <u>Dés de 10 lié à votre caractéristiques</u>
     -   Implant : Valeur seuil : strictement inférieure à votre caractéristique (7 pour 8, 6 pour 7, etc...).
     -   Pas d'implant : Seuil : caractéristique
@@ -21,7 +21,7 @@ Un tour est lorsque tous les combattants (ennemis compris) ont joué. Mais les c
 La caractéristique que vous lancez pour votre défense est soit un dé d'endurance ou d'agilité.
 
 -   L'endurance vous permet d'encaisser le coup, il recevra donc moins de dégâts.
--   L'agilité vous permet d'esquiver le coup (et donc de ne pas prendre de dégâts). De plus, pour réussir votre esquive, vous devez faire moitié moins que votre statistiques d'agilité. L'action d'esquive faite peut aussi être aider par un pouvoir, et dans ce cas, c'est un dé lié à ce pouvoir qui doit être utilisé. Les conditions restent identiques.
+-   L'agilité vous permet d'esquiver le coup (et donc de ne pas prendre de dégâts). De plus, pour réussir votre esquive, vous devez avoir un dé inférieur à l'attaque. L'action d'esquive faite peut aussi être aider par un pouvoir, et dans ce cas, c'est un dé lié à ce pouvoir qui doit être utilisé. Les conditions restent identiques.
 
 Il existe cependant des attaques qui ne rentrent dans cette catégorie : les altérations d'état.
 
@@ -162,22 +162,22 @@ A savoir que seuls les implants permettent d'atteindre le score de 0.
 
 ##  Les armes blanches
 
-Les armes liées à la force sont toutes au corps à corps. Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de créer une arme "spécifique" avec le champ autre.
+Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de créer une arme "spécifique" avec le champ autre.
 
 
 
 A savoir aussi que le programme bloque aussi au corps à corps pour la partie "aucun" qui correspond en réalité à un simple coup de poing d'une personne sans aucun équipement (donc, sans gants de boxe, par exemple).
 
-## Poigne
+## Poigne - Agilité
 
 - **Bonus** : 5%
 - Utilisation gratuite un tour sur deux. Si double poigne, il est possible d'activer le bonus en même temps et de donner 4 coups un tour sur deux.
 
-### Epée
+### Epée - Force
 
 - **Bonus** : 10%
 
-###  Masse
+###  Masse - Force
 
 - **Bonus** : 15%
 - **Pré-requis** : 4 en force
