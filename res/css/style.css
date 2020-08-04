@@ -471,3 +471,7 @@ select {
 #endu_stats, #esquive_stats {
 	display:inline-block;
 }
+
+#pv_reste:invalid{
+	box-shadow: none;
+}
