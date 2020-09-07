@@ -225,6 +225,7 @@ class LogObject {
 		var bonus_type;
 		var bonus_attaque;
 		var type_capa = parseInt(elem_inputs.capacite_type.value);
+		var atq = parseInt(elem_inputs.des_atq.value); //valeur du dés d'Attaque
 		if (isNaN(this.val_bonus)) {
 			bonus = 0;
 		}
@@ -233,17 +234,14 @@ class LogObject {
 		if (this.atq_type) {
 			if (type_capa == 0) {
 				//burst
-				if (shield != 0) {
-					bonus = 20;
-
-				} else {
-					bonus = c30;
-				}
+					bonus = 40;
 			} else if (type_capa == 1) {
 				bonus = 20;
 			} else if (type_capa == 2) {
 				bonus = bonus ;
-			}
+			} else if (type_capa == 3) {
+				bonus = 15 ;
+		}
 		}
 		var res =
 			"**Attaquant :**\n" +
@@ -284,15 +282,17 @@ class LogObject {
 			if (type_capa == 0) {
 				//burst
 				if (shield != 0) {
-					bonus = 20;
+					bonus = 40;
 
 				} else {
-					bonus = 30 ;
+					bonus = 40 ;
 				}
 			} else if (type_capa == 1) {
 				bonus = 20;
 			} else if (type_capa == 2) {
 				bonus = bonus ;
+			}	else if (type_capa == 3) {
+				bonus = 15 ;
 			}
 		}
 
@@ -550,18 +550,22 @@ function degat_type() {
 	switch (type_capa) {
 		case 0: //burst
 			if (shield != 0) {
-				bonus_type = 30 ;
+				bonus_type = 40 ;
 				bonus = (bonus_type + bonus) / 100;
 				d = degat_capacite (bonus, atq, defe);
+				console.log(d);
 			} else {
-				bonus_type = 50 ;
+				bonus_type = 40 ;
 				bonus = ((bonus + bonus_type) / 100);
 				d = degat_capacite (bonus, atq, defe);
+				console.log(d);
+				console.log(atq);
+				console.log(defe);
 			}
 			break;
 
 		case 1: //Perforant
-			bonus_type = 30 ;
+			bonus_type = 20 ;
 			bonus = ((bonus_type + bonus) / 100);
 			endu_val = 0;
 			shield = 0;
@@ -580,7 +584,7 @@ function degat_type() {
 	 			break;
 
 		case 3: //Pouvoir
-			bonus_type = 10 ;
+			bonus_type = 15 ;
 			bonus = ((bonus_type + bonus) / 100);
 			d = degat_capacite (bonus, atq, defe);
 			break;
@@ -671,6 +675,7 @@ function degat_finaux(endu_de, endu_val, pv, d, shield) {
 		} else {
 			finaux = roundir(bouclier * (1 - (10 * (Math.abs(endu_val - endu_de) + 1)) / 100));
 		}
+		console.log(finaux)
 	}
 	if (finaux >= pv) {
 		finaux = pv;
@@ -727,7 +732,10 @@ function degat_capacite (bonus, atq, defe) {
 		d = d * 1.4
 	} else {
 		d = roundir(calculate_degat(bonus, atq, defe));
+		console.log ("coucou")
 	}
+	console.log(bonus, atq, defe)
+	console.log (d)
 	return d;
 }
 

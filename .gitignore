@@ -133,3 +133,4 @@ test/
 log.txt
 *.log
 old_logo.ico
+*.history
