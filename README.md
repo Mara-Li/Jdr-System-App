@@ -170,7 +170,7 @@ Il existe trois types principaux :
 
 * <u>Les Burst</u> : Ce sont de puissantes attaques, mais qui ont du mal à passer à travers les boucliers. Ainsi, elles ont un bonus de 40% mais les boucliers impactent grandement les dégâts finaux. 
 * <u> Les perforants </u> : Ce sont des attaques moins puissante qu'un burst, mais traversant toutes les défenses. Ainsi, les dégâts seront les mêmes qu'une attaque à 20% sans bouclier.
-* <u> Les pouvoirs </u> : Les pouvoirs sont capacités ayant un bonus de 15%.
+* <u> Les pouvoirs </u> : Les pouvoirs sont capacités ayant un bonus de 10%.
 * <u> Le champ "autre"</u> : Ce dernier n'a aucun bonus, mais permet d'utiliser les armes et de bénéficier des légères différences en termes de bonus de coup-critique.
 
 ##  Les armes blanches

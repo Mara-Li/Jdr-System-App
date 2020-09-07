@@ -240,7 +240,7 @@ class LogObject {
 			} else if (type_capa == 2) {
 				bonus = bonus ;
 			} else if (type_capa == 3) {
-				bonus = 15 ;
+				bonus = 10 ;
 		}
 		}
 		var res =
@@ -292,7 +292,7 @@ class LogObject {
 			} else if (type_capa == 2) {
 				bonus = bonus ;
 			}	else if (type_capa == 3) {
-				bonus = 15 ;
+				bonus = 10 ;
 			}
 		}
 
@@ -584,7 +584,7 @@ function degat_type() {
 	 			break;
 
 		case 3: //Pouvoir
-			bonus_type = 15 ;
+			bonus_type = 10 ;
 			bonus = ((bonus_type + bonus) / 100);
 			d = degat_capacite (bonus, atq, defe);
 			break;
