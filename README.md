@@ -1,20 +1,11 @@
+<!-- TOC -->autoauto- [La défense](#la-défense)auto- [Dégâts](#dégâts)auto- [Bouclier](#bouclier)auto- [Cases et déplacement](#cases-et-déplacement)auto- [Effets des réussites critiques](#effets-des-réussites-critiques)auto  - [Capacités](#capacités)auto  - [Attaques normales](#attaques-normales)auto- [Bonus](#bonus)auto  - [Les Capacités](#les-capacités)auto  - [Les armes blanches](#les-armes-blanches)auto  - [Poigne - Agilité](#poigne---agilité)auto    - [Epée - Force](#epée---force)auto    - [Masse - Force](#masse---force)auto  - [Armes à distance](#armes-à-distance)auto    - [Projectiles](#projectiles)auto    - [Arme à feu](#arme-à-feu)auto      - [Pistolet](#pistolet)auto      - [Fusil](#fusil)auto      - [Canon](#canon)auto- [Calculs](#calculs)autoauto<!-- /TOC -->
+
+
 Avant de rentrer dans le vif du sujet, je dois vous parler du système de combat. Tout d'abord, il faut savoir que tout est automatisé, vous n'avez pas à calculer vos dégâts, je m'occupe de tout.
 
 Les combats se déroulent au tour par tour, avec un lancé d'un dé 10 d'attaque et de défense.
 
 Un tour est lorsque tous les combattants (ennemis compris) ont joué. Mais les cooldown ne s'actualise que durant le tour personnel du joueur et non pas le tour "général" du combat (comme dans la majorité des jeux tactiques, notamment dofus).
-
-# Résumé
-
--   <u>Lancer de dés d'attaque et de défense</u>
-    -   L'endurance permet d'encaisser les dégâts.
-    -   L'esquive permet de ne pas prendre de dégât. Elle est réussie si le dé est inférieur à l'attaque.
--   <u>Dés de 10 lié à votre caractéristiques</u>
-    -   Implant : Valeur seuil : strictement inférieure à votre caractéristique (7 pour 8, 6 pour 7, etc...).
-    -   Pas d'implant : Seuil : caractéristique
--   <u>Meilleur jet : 0, pire jet : 10</u>
-    -   Un 0 correspond à un "Ultra critique" et un 1 à une "réussite critique".
-    -   Seul un implant (ou remise) permet d'avoir de faire un URC.
 
 # La défense
 
@@ -131,6 +122,13 @@ Il y a donc trois positions :
 
 # Effets des réussites critiques
 
+Les deux sont le résultat d'un dé naturel égal à 1, mais :
+
+- Une personne bénéficiant d'un bonus de dé (remise) aura toujours un ultra critique.
+- Une personne sans aucun bonus aura une réussite critique.
+
+Notons que les résultats des attaques se fera toujours sur le dé modifié par les bonus et implants.
+
 ## Capacités
 
 Les réussites critiques ont pour effets de multiplier les effets d'une compétences, que ce soit en terme de dégâts pour les compétences offensives, qu'en terme de bonus ou malus.
@@ -145,21 +143,18 @@ Le calculs des dégâts des compétences offensives sont automatisés, vous n'av
 
 ## Attaques normales
 
-A savoir que seuls les implants permettent d'atteindre le score de 0.
+-  Les Ultra-critiques d'attaque : Les dégâts sont multipliés par 1.8 et on outrepasse la défense par endurance de l'adversaire (et non pas le bouclier). 
 
-- <u>Les ultra critiques d'attaque :</u> Les dégâts sont multipliés par 1.8 et on outrepasse la défense de l'adversaire.
+- Les Ultra-critique de défense : 
 
+    - Dans le cas d'une esquive, le personnage bénéficiera d'une contre-attaque avec un léger bonus, car il surprend son adversaire.
+    - Dans le cas d'une endurance, il absorbera tous les dégâts.
 
+- Les critiques de défense : Le personnage va absorber une majeure partie des dégâts. 
 
-- <u>Les ultra critique de défense :</u> Lorsqu'un combattant a un score de dés d'endurance ou d'agilité égal à 0, il annule automatiquement l'attaque de son adversaire, quelque soit la valeur de son dé, sauf dans le cas où l'autre attaquant aura un 0 en endurance. Dans ce cas, le défenseur perdra 9 PV. A noter que lors d'un UC d'esquive, le combattant bénéficie d'une riposte avec un bonus de dégâts de 5% (cumulable).
+- Les réussite-critique d'attaque : Les dégâts sont multipliés par 1.4, exactement comme dans le cas d'une compétence.
 
-
-
--   <u>Les réussites critiques d'attaque :</u>  Lorsqu'un combattant a un score de dés égal à 1, le score est multiplié par 1.4, exactement comme dans le cas d'une compétence.
-
-
-
-* <u>Les réussite critiques de défense :</u> Il n'y a pas d'effets particulier pour l'endurance, mais en plus de la réussite de l'esquive, le défenseur bénéficie d'une riposte (sans bonus).
+A noter que lors d'une UC d'esquive, le combattant bénéficie d'une riposte avec un bonus de dégâts de 5%, en plus de ses bonus pré-existants. Les RC donnent droit à une riposte, sans bonus d'attaque.
 
 # Bonus
 ## Les Capacités
@@ -184,7 +179,8 @@ A savoir aussi que le programme bloque aussi au corps à corps pour la partie "a
 ## Poigne - Agilité
 
 - **Bonus** : 5%
-- Utilisation gratuite un tour sur deux. Si double poigne, il est possible d'activer le bonus en même temps et de donner 4 coups un tour sur deux.
+- Les poignes offrent deux attaques gratuite (sans coût de PA) un tour sur deux, cumulable s'il y a plusieurs poignes (au maximum de deux). Ainsi, il est possibles de donner 6 à 8 coups pour 4 PA.
+Les poignes regroupent toutes les armes de "close-combat" : Couteau de combat, poing américain, gants de boxe....
 
 ### Epée - Force
 
@@ -194,6 +190,7 @@ A savoir aussi que le programme bloque aussi au corps à corps pour la partie "a
 
 - **Bonus** : 15%
 - **Pré-requis** : 4 en force
+- **Malus** : Bonus d'agilité de -2 pour l'adversaire.
 
 ## Armes à distance
 
@@ -215,7 +212,7 @@ A savoir aussi que le programme bloque aussi au corps à corps pour la partie "a
 
 #### Fusil
 
-- **Nombre de balles (ou charges) ** : 12
+- **Nombre de balles (ou charges)** : 12
 - **Bonus** : 10%
 - **Placement** : Rang 2 à 3
 - **Bonus de placement** : +5% (rang 1)
@@ -246,4 +243,4 @@ Après avoir vérifié la table, on récupère les dégâts. Ainsi $$d=dégâts\
 * **Endurance et dégâts finaux** : $$finaux = bouclier * \frac{1-[10*(1+(endurance-défense))]}{100}$$
 > Les dégâts finaux sont divisés par 2 dans le cas d'une attaque normale, afin d'équilibrer par rapport aux système de PA.
 
-* **PV restants : ** $$PV\hspace{10px}max - finaux$$
+* **PV restants :** $$PV\hspace{10px}max - finaux$$

@@ -54,7 +54,6 @@ function closeNav() {
 <div id="sidenav"><ul class="nav nav-list">
 <a href="javascript:void(0)" id="burger_close" onclick="closeNav()">&times;</a>
 	<div id="link">
-	<li class="sidebar-h1"><a href="#r-sum-" onclick="closeNav()" >R&#xE9;sum&#xE9;</a></li>
 	<li class="sidebar-h1"><a href="#la-d-fense" onclick="closeNav()">La d&#xE9;fense</a></li>
 	<li class="sidebar-h1"><a href="#d-g-ts" onclick="closeNav()">D&#xE9;g&#xE2;ts</a></li>
 	<li class="sidebar-h1">	<a href="#bouclier" onclick="closeNav()">Bouclier</a></li>
@@ -85,202 +84,211 @@ function closeNav() {
 			</div>
     </div>
 </header>
-<body><div id="readme" class="container"><article class="markdown-body entry-content"><p>Avant de rentrer dans le vif du sujet, je dois vous parler du syst&#xE8;me de combat. Tout d&apos;abord, il faut savoir que tout est automatis&#xE9;, vous n&apos;avez pas &#xE0; calculer vos d&#xE9;g&#xE2;ts, je m&apos;occupe de tout.</p>
-<p>Les combats se d&#xE9;roulent au tour par tour, avec un lanc&#xE9; d&apos;un d&#xE9; 10 d&apos;attaque et de d&#xE9;fense.</p>
-<p>Un tour est lorsque tous les combattants (ennemis compris) ont jou&#xE9;. Mais les cooldown ne s&apos;actualise que durant le tour personnel du joueur et non pas le tour &quot;g&#xE9;n&#xE9;ral&quot; du combat (comme dans la majorit&#xE9; des jeux tactiques, notamment dofus).</p>
-<h1 id="r-sum-">R&#xE9;sum&#xE9;</h1>
+<body><div id="readme" class="container"><article class="markdown-body entry-content"><p>Avant de rentrer dans le vif du sujet, je dois vous parler du système de combat. Tout d'abord, il faut savoir que tout est automatisé, vous n'avez pas à calculer vos dégâts, je m'occupe de tout.</p>
+<p>Les combats se déroulent au tour par tour, avec un lancé d'un dé 10 d'attaque et de défense.</p>
+<p>Un tour est lorsque tous les combattants (ennemis compris) ont joué. Mais les cooldown ne s'actualise que durant le tour personnel du joueur et non pas le tour &quot;général&quot; du combat (comme dans la majorité des jeux tactiques, notamment dofus).</p>
+<h1 id="la-d-fense">La défense</h1>
+<p>La caractéristique que vous lancez pour votre défense est soit un dé d'endurance ou d'agilité.</p>
 <ul>
-<li><u>Lancer de d&#xE9;s d&apos;attaque et de d&#xE9;fense</u><ul>
-<li>L&apos;endurance permet d&apos;encaisser les d&#xE9;g&#xE2;ts.</li>
-<li>L&apos;esquive permet de ne pas prendre de d&#xE9;g&#xE2;t. Elle est r&#xE9;ussie si le d&#xE9; est inf&#xE9;rieur &#xE0; l&apos;attaque.</li>
+<li>L'endurance vous permet d'encaisser le coup, il recevra donc moins de dégâts.</li>
+<li>L'agilité vous permet d'esquiver le coup (et donc de ne pas prendre de dégâts). De plus, pour réussir votre esquive, vous devez avoir un dé inférieur à l'attaque. L'action d'esquive faite peut aussi être aider par un pouvoir, et dans ce cas, c'est un dé lié à ce pouvoir qui doit être utilisé. Les conditions restent identiques.</li>
 </ul>
-</li>
-<li><u>D&#xE9;s de 10 li&#xE9; &#xE0; votre caract&#xE9;ristiques</u><ul>
-<li>Implant : Valeur seuil : strictement inf&#xE9;rieure &#xE0; votre caract&#xE9;ristique (7 pour 8, 6 pour 7, etc...).</li>
-<li>Pas d&apos;implant : Seuil : caract&#xE9;ristique</li>
-</ul>
-</li>
-<li><u>Meilleur jet : 0, pire jet : 10</u><ul>
-<li>Un 0 correspond &#xE0; un &quot;Ultra critique&quot; et un 1 &#xE0; une &quot;r&#xE9;ussite critique&quot;.</li>
-<li>Seul un implant (ou remise) permet d&apos;avoir de faire un URC.</li>
-</ul>
-</li>
-</ul>
-<h1 id="la-d-fense">La d&#xE9;fense</h1>
-<p>La caract&#xE9;ristique que vous lancez pour votre d&#xE9;fense est soit un d&#xE9; d&apos;endurance ou d&apos;agilit&#xE9;.</p>
+<p>Il existe cependant des attaques qui ne rentrent dans cette catégorie : les altérations d'état.</p>
 <ul>
-<li>L&apos;endurance vous permet d&apos;encaisser le coup, il recevra donc moins de d&#xE9;g&#xE2;ts.</li>
-<li>L&apos;agilit&#xE9; vous permet d&apos;esquiver le coup (et donc de ne pas prendre de d&#xE9;g&#xE2;ts). De plus, pour r&#xE9;ussir votre esquive, vous devez avoir un d&#xE9; inf&#xE9;rieur &#xE0; l&apos;attaque. L&apos;action d&apos;esquive faite peut aussi &#xEA;tre aider par un pouvoir, et dans ce cas, c&apos;est un d&#xE9; li&#xE9; &#xE0; ce pouvoir qui doit &#xEA;tre utilis&#xE9;. Les conditions restent identiques.</li>
+<li><u>Les attaques mentales</u> : Elles nécessitent une défense avec un dé d'intelligence.</li>
+<li><u>Les attaques liés aux poisons, maladie et blessures </u> Elles nécessitent un dé de karma.
+A noter que pour les dégâts persistants, le dés de karma est à lancer chaque tour pour supprimer l'altération. Sinon, cette dernière dure 3 tours au maximum.</li>
 </ul>
-<p>Il existe cependant des attaques qui ne rentrent dans cette cat&#xE9;gorie : les alt&#xE9;rations d&apos;&#xE9;tat.</p>
+<p>Choisissez donc bien en fonction de vos caractéristiques !</p>
+<p>Vous devez OBLIGATOIREMENT lancer votre dé avant de déterminer votre action. Mais vous n'êtes pas obligé d'attendre le dé de défense de votre adversaire. Dans tous les cas, l'action finale avec les dégâts sera après le lancé des protagonistes de l'action.</p>
+<p>Dans le cas où il y aurait un 1 VS plusieurs, la personne en sous nombre doit lancer un dé de défense pour chaque attaque reçu et peut attaquer un certain nombre de personnage en fonction de son niveau.</p>
+<h1 id ="d-g-ts">Dégâts</h1>
+<p>Les dégâts sont déterminés en fonction de l'écart de dé entre l'attaquant et le défenseur dans le cas où le défenseur n'a pas réussi à esquiver l'attaque. Ainsi, plus la différence est haute, plus le défenseur perdra de PV. Il est à savoir que les dégâts sont calculés sur une base de 100 PV. Ainsi :</p>
 <ul>
-<li><u>Les attaques mentales</u> : Elles n&#xE9;cessitent une d&#xE9;fense avec un d&#xE9; d&apos;intelligence.</li>
-<li><u>Les attaques li&#xE9;s aux poisons, maladie et blessures :</u> Elles n&#xE9;cessitent un d&#xE9; de karma.
-A noter que pour les d&#xE9;g&#xE2;ts persistants, le d&#xE9;s de karma est &#xE0; lancer chaque tour pour supprimer l&apos;alt&#xE9;ration. Sinon, cette derni&#xE8;re dure 3 tours au maximum.</li>
-</ul>
-<p>Choisissez donc bien en fonction de vos caract&#xE9;ristiques !</p>
-<p>Vous devez OBLIGATOIREMENT lancer votre d&#xE9; avant de d&#xE9;terminer votre action. Mais vous n&apos;&#xEA;tes pas oblig&#xE9; d&apos;attendre le d&#xE9; de d&#xE9;fense de votre adversaire. Dans tous les cas, l&apos;action finale avec les d&#xE9;g&#xE2;ts sera apr&#xE8;s le lanc&#xE9; des protagonistes de l&apos;action.</p>
-<p>Dans le cas o&#xF9; il y aurait un 1 VS plusieurs, la personne en sous nombre doit lancer un d&#xE9; de d&#xE9;fense pour chaque attaque re&#xE7;u et peut attaquer un certain nombre de personnage en fonction de son niveau.</p>
-<h1 id="d-g-ts">D&#xE9;g&#xE2;ts</h1>
-<p>Les d&#xE9;g&#xE2;ts sont d&#xE9;termin&#xE9;s en fonction de l&apos;&#xE9;cart de d&#xE9; entre l&apos;attaquant et le d&#xE9;fenseur dans le cas o&#xF9; le d&#xE9;fenseur n&apos;a pas r&#xE9;ussi &#xE0; esquiver l&apos;attaque. Ainsi, plus la diff&#xE9;rence est haute, plus le d&#xE9;fenseur perdra de PV. Il est &#xE0; savoir que les d&#xE9;g&#xE2;ts sont calcul&#xE9;s sur une base de 100 PV. Ainsi :</p>
-<ul>
-<li><p><strong>Ecart de 9 (voire +) :</strong> <u>Coup critique :</u> L&apos;adversaire perd 50 PV.</p>
+<li>
+<p><strong>Ecart de 9 (voire +) :</strong> <u>Coup critique</u> L'adversaire perd 50 PV.</p>
 </li>
-<li><p><strong>De 8 &#xE0; 7 :</strong> <u>Tr&#xE8;s Bon d&#xE9;g&#xE2;t :</u> Le d&#xE9;fenseur perd 40 PV.</p>
+<li>
+<p><strong>De 8 à 7 :</strong> <u>Très Bon dégât</u> Le défenseur perd 40 PV.</p>
 </li>
-<li><p><strong>De 6 &#xE0; 5 :</strong> <u>Bon d&#xE9;g&#xE2;t :</u> Le d&#xE9;fenseur perd 30 PV.</p>
+<li>
+<p><strong>De 6 à 5 :</strong> <u>Bon dégât </u> Le défenseur perd 30 PV.</p>
 </li>
-<li><p><strong>De 4 &#xE0; 3 :</strong> <u>D&#xE9;g&#xE2;t moyen :</u> Le d&#xE9;fenseur perd 20 PV.</p>
+<li>
+<p><strong>De 4 à 3 :</strong> <u>Dégât moyen </u> Le défenseur perd 20 PV.</p>
 </li>
-<li><p><strong>De 1 &#xE0; 2  :</strong> <u>D&#xE9;g&#xE2;t faible</u> : Le d&#xE9;fenseur perd 10 PV.</p>
+<li>
+<p><strong>De 1 à 2  :</strong> <u>Dégât faible</u> : Le défenseur perd 10 PV.</p>
 </li>
-<li><p><strong>0</strong> : <u>D&#xE9;g&#xE2;ts tr&#xE8;s faible :</u> le d&#xE9;fenseur perd 5 PV.</p>
+<li>
+<p><strong>0</strong> : <u>Dégâts très faible </u> le défenseur perd 5 PV.</p>
 </li>
 </ul>
-<p>Dans le cas o&#xF9; le d&#xE9;fenseur aurait encaiss&#xE9; le coup (d&#xE9; d&apos;endurance), il perd moins de PV. La valeur de sa caract&#xE9;ristique est une valeur seuil, et plus le d&#xE9;s sera bas mieux le d&#xE9;fenseur encaisse. Un score de 0 &#xE9;tant un UC, la personne encaisse tous les d&#xE9;g&#xE2;ts.</p>
+<p>Dans le cas où le défenseur aurait encaissé le coup (dé d'endurance), il perd moins de PV. La valeur de sa caractéristique est une valeur seuil, et plus le dés sera bas mieux le défenseur encaisse. Un score de 0 étant un UC, la personne encaisse tous les dégâts.</p>
 <blockquote>
-<p>La valeur de la caract&#xE9;ristique d&#xE9;termine le montant maximum qu&apos;il est possible d&apos;encaisser.
-Les d&#xE9;g&#xE2;ts finaux d&apos;une attaque normale sont divis&#xE9;s par deux, dans des soucis d&apos;&#xE9;quilibrage.</p>
+<p>La valeur de la caractéristique détermine le montant maximum qu'il est possible d'encaisser.
+Les dégâts finaux d'une attaque normale sont divisés par deux, dans des soucis d'équilibrage.</p>
 </blockquote>
-<p>Les armes et les capacit&#xE9;s ont des bonus passifs qui augmentent les d&#xE9;g&#xE2;ts.</p>
+<p>Les armes et les capacités ont des bonus passifs qui augmentent les dégâts.</p>
 <h1 id="bouclier">Bouclier</h1>
-<p>Les boucliers prot&#xE8;gent des d&#xE9;g&#xE2;ts. Dans les faits, cela fonctionne exactement comme un encaissement avec un d&#xE9; d&apos;endurance.</p>
-<p>Cependant, les r&#xE9;sistances sont fixes et li&#xE9;s soit &#xE0; votre &#xE9;quipement, soit au rang de votre adversaire. En g&#xE9;n&#xE9;ral, il existe :</p>
+<p>Les boucliers protègent des dégâts. Dans les faits, cela fonctionne exactement comme un encaissement avec un dé d'endurance.</p>
+<p>Cependant, les résistances sont fixes et liés soit à votre équipement, soit au rang de votre adversaire. En général, il existe :</p>
 <ul>
-<li><strong>Armure l&#xE9;g&#xE8;re :</strong> Diminution de 10%</li>
-<li><strong>Armure moyenne :</strong> Diminution de 25%<ul>
-<li><em>Pr&#xE9;- requis</em> : Force : 3</li>
-<li><em>Malus si port&#xE9; sans les pr&#xE9;-requis</em> : +1 aux d&#xE9;s d&apos;agilit&#xE9;</li>
+<li><strong>Armure légère :</strong> Diminution de 10%</li>
+<li><strong>Armure moyenne :</strong> Diminution de 25%
+<ul>
+<li><em>Pré- requis</em> : Force : 3</li>
+<li><em>Malus si porté sans les pré-requis</em> : +1 aux dés d'agilité</li>
 </ul>
 </li>
-<li><strong>Armure lourde</strong> : Diminution de 50%<ul>
-<li><em>Pr&#xE9;-requis</em> : Force : 5</li>
-<li><em>Malus si port&#xE9; sans les pr&#xE9;-requis</em> : +2 aux d&#xE9;s d&apos;agilit&#xE9;</li>
+<li><strong>Armure lourde</strong> : Diminution de 50%
+<ul>
+<li><em>Pré-requis</em> : Force : 5</li>
+<li><em>Malus si porté sans les pré-requis</em> : +2 aux dés d'agilité</li>
 </ul>
 </li>
 </ul>
-<p>Si votre personnage fait un ultra critique, ou si vous utilisez une capacit&#xE9; perforante, le bouclier est ignor&#xE9;.</p>
-<h1 id="cases-et-d-placement">Cases et d&#xE9;placement</h1>
-<p>Lors d&apos;un d&#xE9;but de combat, la pi&#xE8;ce se s&#xE9;pare en trois rangs :</p>
+<p>Si votre personnage fait un ultra critique, ou si vous utilisez une capacité perforante, le bouclier est ignoré.</p>
+<h1 id="cases-et-d-placement">Cases et déplacement</h1>
+<p>Lors d'un début de combat, la pièce se sépare en trois rangs :</p>
 <ul>
-<li>Rang 1 : Corps &#xE0; corps</li>
+<li>Rang 1 : Corps à corps</li>
 <li>Rang 2 : Semi- distance</li>
 <li>Rang 3 : Distance</li>
 </ul>
-<p>Les joueurs commencent toujours au rang 3, et les ennemis se trouvent au d&#xE9;but au rang 1.</p>
-<p>Si un ennemi se d&#xE9;place sur le Rang 3 et qu&apos;il y a un alli&#xE9;, alors cet alli&#xE9; sera au rang 1 de cet ennemi, mais ne bougera pas pour les autres.
-Au contraire, si un alli&#xE9; se trouve au rang 1 et qu&apos;un ennemi va au rang 3, l&apos;alli&#xE9; sera alors au rang 3 de l&apos;ennemi, mais restera au corps &#xE0; corps des autres.</p>
-<p>Tous les joueurs peuvent se d&#xE9;placer sur les cases comme ils veulent : ils peuvent donc remonter au premier rang en &#xE9;tant au dernier. Cependant, un joueur ne peut pas faire plusieurs d&#xE9;placement par tour.</p>
-<p>Les comp&#xE9;tences et les pouvoirs ne prennent pas en compte la distance, contrairement aux armes.</p>
-<p>Naturellement, on consid&#xE8;re que les personnages &quot;tireurs&quot; sont syst&#xE9;matiquement &#xE0; couvert.</p>
-<p>L&apos;action &quot;de s&apos;abriter&quot; permet &#xE0; un personnage (bless&#xE9;, par exemple) de se prot&#xE9;ger efficacement (derri&#xE8;re un gros meuble, un mur) sans bouger. Les ennemis ont alors bien plus de mal &#xE0; le viser et ont un malus de +3 en pr&#xE9;cision lorsqu&apos;ils souhaitent tirer sur lui.</p>
-<p>En contrepartie, tant qu&apos;il est abrit&#xE9;, il ne peut plus ni attaquer, ni esquiver (il ne peut qu&apos;endurer les d&#xE9;g&#xE2;ts).</p>
-<p>Quand un personnage au corps &#xE0; corps s&apos;attaque &#xE0; un autre personnage (notamment les tireurs), ce dernier est automatiquement mis &quot;en duel&quot;, ce qui octroies aux attaquants un bonus de pr&#xE9;cision de -1. En outre, le d&#xE9;fenseur &#xE0; d&#xE9;couvert a un malus de pr&#xE9;cision s&apos;il veut tirer sur une personne en dehors du rang sur lequel il se trouve.</p>
-<p>La position &#xE0; d&#xE9;couvert est analogue &#xE0; la position &quot;en duel&quot;, la seule diff&#xE9;rence &#xE9;tant que le tireur n&apos;a pas de malus de vis&#xE9;e sur les autres rangs. Les personnages de corps &#xE0; corps sont automatiquement &#xE0; d&#xE9;couvert, contrairement aux tireurs.</p>
-<p>Enfin, les personnages inconscients ne peuvent pas esquiver mais seulement endurer. Ils sont automatiquement &#xE0; d&#xE9;couvert.</p>
+<p>Les joueurs commencent toujours au rang 3, et les ennemis se trouvent au début au rang 1.</p>
+<p>Si un ennemi se déplace sur le Rang 3 et qu'il y a un allié, alors cet allié sera au rang 1 de cet ennemi, mais ne bougera pas pour les autres.
+Au contraire, si un allié se trouve au rang 1 et qu'un ennemi va au rang 3, l'allié sera alors au rang 3 de l'ennemi, mais restera au corps à corps des autres.</p>
+<p>Tous les joueurs peuvent se déplacer sur les cases comme ils veulent : ils peuvent donc remonter au premier rang en étant au dernier. Cependant, un joueur ne peut pas faire plusieurs déplacement par tour.</p>
+<p>Les compétences et les pouvoirs ne prennent pas en compte la distance, contrairement aux armes.</p>
+<p>Naturellement, on considère que les personnages &quot;tireurs&quot; sont systématiquement à couvert.</p>
+<p>L'action &quot;de s'abriter&quot; permet à un personnage (blessé, par exemple) de se protéger efficacement (derrière un gros meuble, un mur) sans bouger. Les ennemis ont alors bien plus de mal à le viser et ont un malus de +3 en précision lorsqu'ils souhaitent tirer sur lui.</p>
+<p>En contrepartie, tant qu'il est abrité, il ne peut plus ni attaquer, ni esquiver (il ne peut qu'endurer les dégâts).</p>
+<p>Quand un personnage au corps à corps s'attaque à un autre personnage (notamment les tireurs), ce dernier est automatiquement mis &quot;en duel&quot;, ce qui octroies aux attaquants un bonus de précision de -1. En outre, le défenseur à découvert a un malus de précision s'il veut tirer sur une personne en dehors du rang sur lequel il se trouve.</p>
+<p>La position à découvert est analogue à la position &quot;en duel&quot;, la seule différence étant que le tireur n'a pas de malus de visée sur les autres rangs. Les personnages de corps à corps sont automatiquement à découvert, contrairement aux tireurs.</p>
+<p>Enfin, les personnages inconscients ne peuvent pas esquiver mais seulement endurer. Ils sont automatiquement à découvert.</p>
 <p>Il y a donc trois positions :</p>
 <ul>
-<li><p><strong>Abrit&#xE9;</strong> : +3 en pr&#xE9;cision pour les attaquants, mais ne peut ni attaquer, ni esquiver.</p>
+<li>
+<p><strong>Abrité</strong> : +3 en précision pour les attaquants, mais ne peut ni attaquer, ni esquiver.</p>
 </li>
-<li><p><strong>D&#xE9;couvert</strong> : Bonus de -1 pour les attaquants.</p>
+<li>
+<p><strong>Découvert</strong> : Bonus de -1 pour les attaquants.</p>
 </li>
-<li><p><strong>Duel</strong> : Bonus de -1 pour les attaquants, et +2 en pr&#xE9;cision si vis&#xE9;e sur les autres rangs.</p>
+<li>
+<p><strong>Duel</strong> : Bonus de -1 pour les attaquants, et +2 en précision si visée sur les autres rangs.</p>
 </li>
 </ul>
-<h1 id="effets-des-r-ussites-critiques">Effets des r&#xE9;ussites critiques</h1>
-<h2 id="capacit-s">Capacit&#xE9;s</h2>
-<p>Les r&#xE9;ussites critiques ont pour effets de multiplier les effets d&apos;une comp&#xE9;tences, que ce soit en terme de d&#xE9;g&#xE2;ts pour les comp&#xE9;tences offensives, qu&apos;en terme de bonus ou malus.</p>
-<p>Dans le cas o&#xF9; votre personnage fait :</p>
+<h1 id="effets-des-r-ussites-critiques">Effets des réussites critiques</h1>
+<p>Les deux sont le résultat d'un dé naturel égal à 1, mais :</p>
 <ul>
-<li>Une r&#xE9;ussite critique : Son bonus sera multipli&#xE9; par 1,4.</li>
-<li>Un Ultra critique : Son bonus sera multipli&#xE9; par 1.8.
-Lorsque l&apos;on multiplie, on ne prend pas en compte le &quot;pourcentage&quot; (la division par 100).</li>
+<li>Une personne bénéficiant d'un bonus de dé (remise) aura toujours un ultra critique.</li>
+<li>Une personne sans aucun bonus aura une réussite critique.</li>
 </ul>
-<p>Le calculs des d&#xE9;g&#xE2;ts des comp&#xE9;tences offensives sont automatis&#xE9;s, vous n&apos;avez donc pas besoin de v&#xE9;rifier le bonus multiplicateur. Cependant pour les comp&#xE9;tences non- offensives, vous devrez calculer en fonction du multiplicateur.</p>
+<p>Notons que les résultats des attaques se fera toujours sur le dé modifié par les bonus et implants.</p>
+<h2 id="capacit-s">Capacités</h2>
+<p>Les réussites critiques ont pour effets de multiplier les effets d'une compétences, que ce soit en terme de dégâts pour les compétences offensives, qu'en terme de bonus ou malus.</p>
+<p>Dans le cas où votre personnage fait :</p>
+<ul>
+<li>Une réussite critique : Son bonus sera multiplié par 1,4.</li>
+<li>Un Ultra critique : Son bonus sera multiplié par 1.8.
+Lorsque l'on multiplie, on ne prend pas en compte le &quot;pourcentage&quot; (la division par 100).</li>
+</ul>
+<p>Le calculs des dégâts des compétences offensives sont automatisés, vous n'avez donc pas besoin de vérifier le bonus multiplicateur. Cependant pour les compétences non- offensives, vous devrez calculer en fonction du multiplicateur.</p>
 <h2 id="attaques-normales">Attaques normales</h2>
-<p>A savoir que seuls les implants permettent d&apos;atteindre le score de 0.</p>
 <ul>
-<li><u>Les ultra critiques d&apos;attaque :</u> Les d&#xE9;g&#xE2;ts sont multipli&#xE9;s par 1.8 et on outrepasse la d&#xE9;fense de l&apos;adversaire.</li>
-</ul>
+<li>
+<p>Les Ultra-critiques d'attaque : Les dégâts sont multipliés par 1.8 et on outrepasse la défense par endurance de l'adversaire (et non pas le bouclier).</p>
+</li>
+<li>
+<p>Les Ultra-critique de défense :</p>
 <ul>
-<li><u>Les ultra critique de d&#xE9;fense :</u> Lorsqu&apos;un combattant a un score de d&#xE9;s d&apos;endurance ou d&apos;agilit&#xE9; &#xE9;gal &#xE0; 0, il annule automatiquement l&apos;attaque de son adversaire, quelque soit la valeur de son d&#xE9;, sauf dans le cas o&#xF9; l&apos;autre attaquant aura un 0 en endurance. Dans ce cas, le d&#xE9;fenseur perdra 9 PV. A noter que lors d&apos;un UC d&apos;esquive, le combattant b&#xE9;n&#xE9;ficie d&apos;une riposte avec un bonus de d&#xE9;g&#xE2;ts de 5% (cumulable).</li>
+<li>Dans le cas d'une esquive, le personnage bénéficiera d'une contre-attaque avec un léger bonus, car il surprend son adversaire.</li>
+<li>Dans le cas d'une endurance, il absorbera tous les dégâts.</li>
 </ul>
-<ul>
-<li><u>Les r&#xE9;ussites critiques d&apos;attaque :</u>  Lorsqu&apos;un combattant a un score de d&#xE9;s &#xE9;gal &#xE0; 1, le score est multipli&#xE9; par 1.4, exactement comme dans le cas d&apos;une comp&#xE9;tence.</li>
+</li>
+<li>
+<p>Les critiques de défense : Le personnage va absorber une majeure partie des dégâts.</p>
+</li>
+<li>
+<p>Les réussite-critique d'attaque : Les dégâts sont multipliés par 1.4, exactement comme dans le cas d'une compétence.</p>
+</li>
 </ul>
-<ul>
-<li><u>Les r&#xE9;ussite critiques de d&#xE9;fense :</u> Il n&apos;y a pas d&apos;effets particulier pour l&apos;endurance, mais en plus de la r&#xE9;ussite de l&apos;esquive, le d&#xE9;fenseur b&#xE9;n&#xE9;ficie d&apos;une riposte (sans bonus).</li>
-</ul>
+<p>A noter que lors d'une UC d'esquive, le combattant bénéficie d'une riposte avec un bonus de dégâts de 5%, en plus de ses bonus pré-existants. Les RC donnent droit à une riposte, sans bonus d'attaque.</p>
 <h1 id="bonus">Bonus</h1>
-<h2 id="les-capacit-s">Les Capacit&#xE9;s</h2>
-<p>Les capacit&#xE9;s offrent des bonus d&apos;attaque, mais leur utilisation est limit&#xE9;, que ce soit en terme de points d&apos;action, que d&apos;utilisation par tour. Ce sont donc des attaques tr&#xE8;s puissantes, ou avec des passifs avantageux.</p>
+<h2 id="les-capacit-s">Les Capacités</h2>
+<p>Les capacités offrent des bonus d'attaque, mais leur utilisation est limité, que ce soit en terme de points d'action, que d'utilisation par tour. Ce sont donc des attaques très puissantes, ou avec des passifs avantageux.</p>
 <p>Il existe trois types principaux :</p>
 <ul>
-<li><u>Les Burst</u> : Ce sont de puissantes attaques, mais qui ont du mal &#xE0; passer &#xE0; travers les boucliers. Ainsi, elles ont un bonus de 40% mais les boucliers impactent grandement les dégâts finaux. </li>
-<li><u> Les perforants </u> : Ce sont des attaques moins puissante qu&apos;un burst, mais traversant toutes les d&#xE9;fenses. Ainsi, les d&#xE9;g&#xE2;ts seront les m&#xEA;mes qu&apos;une attaque &#xE0; 20% sans bouclier.</li>
-<li><u> Les pouvoirs </u> : Les pouvoirs sont capacit&#xE9;s ayant un bonus de 10%.</li>
-<li><u> Le champ &quot;autre&quot;</u> : Ce dernier n&apos;a aucun bonus, mais permet d&apos;utiliser les armes et de b&#xE9;n&#xE9;ficier des l&#xE9;g&#xE8;res diff&#xE9;rences en termes de bonus de coup-critique.</li>
+<li><u>Les Burst</u> : Ce sont de puissantes attaques, mais qui ont du mal à passer à travers les boucliers. Ainsi, elles ont un bonus de 40% mais les boucliers impactent grandement les dégâts finaux.</li>
+<li><u> Les perforants </u> : Ce sont des attaques moins puissante qu'un burst, mais traversant toutes les défenses. Ainsi, les dégâts seront les mêmes qu'une attaque à 20% sans bouclier.</li>
+<li><u> Les pouvoirs </u> : Les pouvoirs sont capacités ayant un bonus de 10%.</li>
+<li><u> Le champ &quot;autre&quot;</u> : Ce dernier n'a aucun bonus, mais permet d'utiliser les armes et de bénéficier des légères différences en termes de bonus de coup-critique.</li>
 </ul>
-<h2 id="les-armes-blanches">Les armes blanches</h2>
-<p>Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de cr&#xE9;er une arme &quot;sp&#xE9;cifique&quot; avec le champ autre.</p>
-<p>A savoir aussi que le programme bloque aussi au corps &#xE0; corps pour la partie &quot;aucun&quot; qui correspond en r&#xE9;alit&#xE9; &#xE0; un simple coup de poing d&apos;une personne sans aucun &#xE9;quipement (donc, sans gants de boxe, par exemple).</p>
-<h2 id="poigne-agilit-">Poigne - Agilit&#xE9;</h2>
+<h2 id=les-armes-blanches>Les armes blanches</h2>
+<p>Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de créer une arme &quot;spécifique&quot; avec le champ autre.</p>
+<p>A savoir aussi que le programme bloque aussi au corps à corps pour la partie &quot;aucun&quot; qui correspond en réalité à un simple coup de poing d'une personne sans aucun équipement (donc, sans gants de boxe, par exemple).</p>
+<h3 id="poigne-agilit-">Poigne - Agilité</h3>
 <ul>
 <li><strong>Bonus</strong> : 5%</li>
-<li>Utilisation gratuite un tour sur deux. Si double poigne, il est possible d&apos;activer le bonus en m&#xEA;me temps et de donner 4 coups un tour sur deux.</li>
+<li>Les poignes offrent deux attaques gratuite (sans coût de PA) un tour sur deux, cumulable s'il y a plusieurs poignes (au maximum de deux). Ainsi, il est possibles de donner 6 à 8 coups pour 4 PA.
+Les poignes regroupent toutes les armes de &quot;close-combat&quot; : Couteau de combat, poing américain, gants de boxe....</li>
 </ul>
-<h3 id="ep-e-force">Ep&#xE9;e - Force</h3>
+<h3 id="ep-e-force">Epée - Force</h3>
 <ul>
 <li><strong>Bonus</strong> : 10%</li>
 </ul>
 <h3 id="masse-force">Masse - Force</h3>
 <ul>
 <li><strong>Bonus</strong> : 15%</li>
-<li><strong>Pr&#xE9;-requis</strong> : 4 en force</li>
+<li><strong>Pré-requis</strong> : 4 en force</li>
+<li><strong>Malus</strong> : Bonus d'agilité de -2 pour l'adversaire.</li>
 </ul>
-<h2 id="armes-distance">Armes &#xE0; distance</h2>
+<h2 id="armes-distance">Armes à distance</h2>
 <h3 id="projectiles">Projectiles</h3>
 <ul>
 <li><strong>Bonus</strong> : 5 %</li>
-<li><strong>Placement</strong> : Rang 1 &#xE0; 2<blockquote>
-<p>Exemple : Grenade, bombe, couteau...
-A savoir que les grenades ont des bonus en plus &#xE0; fixer manuellement.</p>
-</blockquote>
-</li>
+<li><strong>Placement</strong> : Rang 1 à 2</li>
 </ul>
-<h3 id="arme-feu">Arme &#xE0; feu</h3>
+<blockquote>
+<p>Exemple : Grenade, bombe, couteau...
+A savoir que les grenades ont des bonus en plus à fixer manuellement.</p>
+</blockquote>
+<h3 id="arme-feu">Arme à feu</h3>
 <h4 id="pistolet">Pistolet</h4>
 <ul>
 <li><strong>Nombre de balles (ou charges)</strong> : 8</li>
 <li><strong>Bonus</strong> : 8%</li>
-<li><strong>Placement</strong> : 1 &#xE0; 2</li>
-<li><strong>Malus de placement</strong> : +2 Pr&#xE9;cision (rang 3)</li>
+<li><strong>Placement</strong> : 1 à 2</li>
+<li><strong>Malus de placement</strong> : +2 Précision (rang 3)</li>
 </ul>
 <h4 id="fusil">Fusil</h4>
 <ul>
-<li>*<em>Nombre de balles (ou charges) *</em> : 12</li>
+<li><strong>Nombre de balles (ou charges)</strong> : 12</li>
 <li><strong>Bonus</strong> : 10%</li>
-<li><strong>Placement</strong> : Rang 2 &#xE0; 3</li>
+<li><strong>Placement</strong> : Rang 2 à 3</li>
 <li><strong>Bonus de placement</strong> : +5% (rang 1)</li>
-<li><strong>Malus de placement</strong> : +1 Pr&#xE9;cision (rang 1)</li>
+<li><strong>Malus de placement</strong> : +1 Précision (rang 1)</li>
 </ul>
 <h4 id="canon">Canon</h4>
 <ul>
 <li><strong>Bonus</strong> : 20%</li>
-<li><strong>Malus</strong> : +2 en agilit&#xE9;</li>
-<li><strong>Pr&#xE9;-requis</strong> : 4 en force</li>
-<li><strong>Placement</strong> : Rang 2 &#xE0; 3</li>
-<li><strong>Limitation</strong> :<ul>
+<li><strong>Malus</strong> : +2 en agilité</li>
+<li><strong>Pré-requis</strong> : 4 en force</li>
+<li><strong>Placement</strong> : Rang 2 à 3</li>
+<li><strong>Limitation</strong> :
+<ul>
 <li>Une fois tous les 3 tours.</li>
 <li>Ne peut pas porter de modules</li>
 </ul>
 </li>
 <li><strong>Bonus de placement</strong> : +10% (rang 1)</li>
-<li><strong>Malus de placement</strong> : +2 pr&#xE9;cision</li>
+<li><strong>Malus de placement</strong> : +2 précision</li>
 </ul>
 <blockquote>
-<p>Les artilleurs n&apos;ont pas de malus d&apos;agilit&#xE9;s et n&apos;ont pas besoin d&apos;avoir 4 en force pour pouvoir porter ses armes.</p>
+<p>Les artilleurs n'ont pas de malus d'agilités et n'ont pas besoin d'avoir 4 en force pour pouvoir porter ses armes.</p>
 </blockquote>
+
 <h1 id="calculs">Calculs</h1>
 <p>Apr&#xE8;s avoir v&#xE9;rifi&#xE9; la table, on r&#xE9;cup&#xE8;re les d&#xE9;g&#xE2;ts. Ainsi, </p><p class="math"> $$d=d&#xE9;g&#xE2;ts\hspace{10px}de\hspace{10px} la\hspace{10px} table + bonus$$</p>
 <ul>
