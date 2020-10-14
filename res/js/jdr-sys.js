@@ -23,7 +23,6 @@ const elemIDs = [
 	["arme", 0],
 	["bonus", ''],
 	["capacite_type", 0],
-	["des_bonus_def", null],
 	["res_deg", null],
 	["res_pv", null],
 	["log_box", null]
@@ -81,7 +80,7 @@ class Elements_getter {
 }
 
 class LogObject {
-	constructor(pv_max, bouclier, endurance, agi, arme, bonus, atq_type, capa_type, dist, des_atq, des_def, des_bonus_def, des_esquive, res_deg, pv_reste, date) {
+	constructor(pv_max, bouclier, endurance, agi, arme, bonus, atq_type, capa_type, dist, des_atq, des_def, des_esquive, res_deg, pv_reste, date) {
 		this.pv_max = parseInt(pv_max);
 		this.bouclier = parseInt(bouclier);
 		this.endurance = parseInt(endurance);
@@ -93,7 +92,6 @@ class LogObject {
 		this.dist = parseInt(dist);
 		this.des_atq = parseInt(des_atq);
 		this.des_def = parseInt(des_def);
-		this.des_bonus_def = des_bonus_def;
 		this.des_esquive = parseInt(des_esquive);
 		this.res_deg = parseInt(res_deg);
 		this.pv_reste = parseInt(pv_reste);
@@ -328,13 +326,7 @@ class LogObject {
 			"**Dés :**\n" +
 			"- *Atq :* {des_atq}\n" +
 			"- *Def :* {des_def}\n" +
-			"- *Remise :* {remise}\n" +
 			"- *Type de défense :* {des_esquive}\n";
-		if (this.des_bonus_def) {
-			res = res.replace("{remise}", "Oui");
-		} else {
-			res = res.replace("{remise}", "Non");
-		}
 
 		if (!this.des_esquive) {
 			res = res.replace("{des_esquive}", "Endurance");
@@ -352,14 +344,8 @@ class LogObject {
 			"<ul>\n" +
 			" <li><i>ATQ</i> : {des_atq}</li>\n" +
 			" <li><i>DEF :</i> {des_def}</li>\n" +
-			" <li><i>Remise :</i> {remise}</li>\n" +
 			" <li><i>Type de défense :</i> {des_esquive}</li>\n" +
 			"</ul>\n";
-		if (this.des_bonus_def) {
-			res = res.replace("{remise}", "Oui");
-		} else {
-			res = res.replace("{remise}", "Non");
-		}
 
 		if (!this.des_esquive) {
 			res = res.replace("{des_esquive}", "Endurance");
@@ -442,7 +428,6 @@ function roundir(x) {
 }
 
 function degat_normaux() {
-	var remise = elem_inputs.des_bonus_def.checked;
 	var d, endu_de, finaux, max, malus_atq;
 	malus_atq=0;
 	var bonus = choix_bonus();
@@ -458,16 +443,6 @@ function degat_normaux() {
 	if (!sel_def) { //Endurance (valeur = 0)
 		endu_de = defe;
 	} else { //Esquive & test (valeur = 1)
-		if (remise) {
-			if ((defe < agi_val) && (defe < atq)){ // esquive réussie
-				defe = 0;
-				endu_de=0;
-				endu_val=0
-			} else { //esquive raté
-				endu_val = 0;
-				endu_de = 10;
-			}
-		} else {
 			if ((defe <= agi_val) && (defe <= atq)){ // Esquive réussie
 				defe = 0;
 				endu_de=0;
@@ -477,7 +452,6 @@ function degat_normaux() {
 				endu_val = 0;
 				endu_de = 10;
 			}
-		}
 	}
 
 	if (atq == 0) {
@@ -508,7 +482,6 @@ function degat_normaux() {
 }
 
 function degat_type() {
-	var remise = elem_inputs.des_bonus_def.checked;
 	var bonus_attaque, bonus_type, d, endu_de, finaux, max, malus_atq;
 	var bonus = parseInt(elem_inputs.bonus.value); //valeur du champ "bonus"
 	var pv = parseInt(elem_inputs.pv_max.value); //valeur du champ PV au départ
@@ -525,16 +498,6 @@ function degat_type() {
 			endu_de = defe;
 			break;
 		case 1: //Esquive
-			if (remise) {
-				if ((defe < agi_val) && (defe < atq)){ // esquive réussie
-					defe = 0;
-					endu_de=0;
-					endu_val=0
-				} else { //esquive raté
-					endu_val = 0;
-					endu_de = 10;
-				}
-			} else {
 				if ((defe <= agi_val) && (defe <= atq)){ // Esquive réussie
 					defe = 0;
 					endu_de=0;
@@ -543,7 +506,6 @@ function degat_type() {
 					endu_val = 0;
 					endu_de = 10;
 				}
-			}
 			break;
 	}
 
@@ -657,25 +619,12 @@ function degat_finaux(endu_de, endu_val, pv, d, shield) {
 	var finaux;
 	var d = Math.abs(Math.trunc(d * 100));
 	var bouclier = Math.abs(Math.trunc(d * (1 - shield))); //au besoin, placé des int pour convertir les valeurs
-	var remise = elem_inputs.des_bonus_def.checked; //checkbox "bonus"
-
-	if (remise) { //est check
-		if ((endu_de > endu_val) || (endu_de == endu_val)) {
-			finaux = bouclier;
-		} else if (endu_val == 0) {
-			finaux = bouclier;
-		} else {
-			finaux = roundir(bouclier * (1 - (10 * (Math.abs(endu_val - endu_de) + 1)) / 100));
-		}
+	if (endu_de > endu_val) {
+		finaux = bouclier;
+	} else if (endu_val == 0) {
+		finaux = bouclier;
 	} else {
-		if (endu_de > endu_val) {
-			finaux = bouclier;
-		} else if (endu_val == 0) {
-			finaux = bouclier;
-		} else {
-			finaux = roundir(bouclier * (1 - (10 * (Math.abs(endu_val - endu_de) + 1)) / 100));
-		}
-		console.log(finaux)
+		finaux = roundir(bouclier * (1 - (10 * (Math.abs(endu_val - endu_de) + 1)) / 100));
 	}
 	if (finaux >= pv) {
 		finaux = pv;
@@ -741,24 +690,11 @@ function degat_capacite (bonus, atq, defe) {
 
 
 function phrase_esquive(finaux) {
-	var remise = elem_inputs.des_bonus_def.checked;
 	var atq = parseInt(elem_inputs.des_atq.value); //champ attaque dans dé
 	var defe = parseInt(elem_inputs.des_def.value); //champ défense dans dé
 	sel_def = parseInt(elem_inputs.des_esquive.value);
 	var agi_val = parseInt(elem_inputs.agi.value); //valeur de l'agi dans les stats
 	if (sel_def) {
-		if (remise) {
-			if (defe < agi_val) {
-				if (defe<=1) {
-					finaux = 'Esquive critique';
-				}
-				else {
-					if ((defe < agi_val) && (defe < atq)) {
-						finaux = 'Esquive — Aucun dégâts';
-					}
-				}
-			}
-		} else {
 			if (defe <= agi_val) {
 				if (defe<=1) {
 					finaux = 'Esquive critique';
@@ -774,7 +710,6 @@ function phrase_esquive(finaux) {
 					finaux = "Aucun dégâts";
 				}
 			}
-		}
 	} else {
 		if (finaux == 0){
 			finaux ="Aucun dégâts";
@@ -799,8 +734,7 @@ function createLogFromActualInput() {
 	return new LogObject(elem_inputs.pv_max.valueAsNumber, elem_inputs.bouclier.valueAsNumber,
 		elem_inputs.endurance.valueAsNumber, elem_inputs.agi.valueAsNumber, elem_inputs.arme.selectedOptions[0].innerText,
 		elem_inputs.bonus.valueAsNumber, elem_inputs.atq_type.value, elem_inputs.capacite_type.selectedOptions[0].innerText,
-		elem_inputs.dist_atq.value, elem_inputs.des_atq.valueAsNumber, elem_inputs.des_def.valueAsNumber,
-		elem_inputs.des_bonus_def.checked, elem_inputs.des_esquive.value, parseInt(elem_inputs.res_deg.innerText),
+		elem_inputs.dist_atq.value, elem_inputs.des_atq.valueAsNumber, elem_inputs.des_def.valueAsNumber, elem_inputs.des_esquive.value, parseInt(elem_inputs.res_deg.innerText),
 		elem_inputs.pv_reste.valueAsNumber, new Date())
 }
 
