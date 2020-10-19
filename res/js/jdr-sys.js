@@ -456,15 +456,17 @@ function degat_normaux() {
 
 	if (atq == 0) {
 		d = d-bonus;
-		d = d*1.8+bonus;
+		d = (d*1.8+0.15+bonus);
 		d = roundir(d);
 		endu_val = 0;
+		shield = 0;
 
 	} else if (defe == 0) {
 		d = 0;
 	} else if (atq == 1) {
 		d=d-bonus;
-		d=d*1.4+bonus;
+		d=d*1.4+bonus+0.1;
+		shield = roundir (shield /2);
 		d=roundir(d);
 	}
 

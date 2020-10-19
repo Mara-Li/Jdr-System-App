@@ -1,5 +1,24 @@
-<!-- TOC -->autoauto- [La défense](#la-défense)auto- [Dégâts](#dégâts)auto- [Bouclier](#bouclier)auto- [Cases et déplacement](#cases-et-déplacement)auto- [Effets des réussites critiques](#effets-des-réussites-critiques)auto  - [Capacités](#capacités)auto  - [Attaques normales](#attaques-normales)auto- [Bonus](#bonus)auto  - [Les Capacités](#les-capacités)auto  - [Les armes blanches](#les-armes-blanches)auto  - [Poigne - Agilité](#poigne---agilité)auto    - [Epée - Force](#epée---force)auto    - [Masse - Force](#masse---force)auto  - [Armes à distance](#armes-à-distance)auto    - [Projectiles](#projectiles)auto    - [Arme à feu](#arme-à-feu)auto      - [Pistolet](#pistolet)auto      - [Fusil](#fusil)auto      - [Canon](#canon)auto- [Calculs](#calculs)autoauto<!-- /TOC -->
+<!-- vscode-markdown-toc -->
+* [Capacités](#Capacits)
+* [Attaques normales](#Attaquesnormales)
+* [Défenses normales](#Dfensesnormales)
+* [Les Capacités](#LesCapacits)
+* [ Les armes blanches](#Lesarmesblanches)
+	* [Poigne - Agilité](#Poigne-Agilit)
+	* [Epée - Force](#Epe-Force)
+	* [ Masse - Force](#Masse-Force)
+* [Armes à distance](#Armesdistance)
+	* [Projectiles](#Projectiles)
+	* [ Arme à feu](#Armefeu)
+		* [Pistolet](#Pistolet)
+		* [Fusil](#Fusil)
+		* [Canon](#Canon)
 
+<!-- vscode-markdown-toc-config
+	numbering=false
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
 
 Avant de rentrer dans le vif du sujet, je dois vous parler du système de combat. Tout d'abord, il faut savoir que tout est automatisé, vous n'avez pas à calculer vos dégâts, je m'occupe de tout.
 
@@ -129,7 +148,7 @@ Les deux sont le résultat d'un dé naturel égal à 1, mais :
 
 Notons que les résultats des attaques se fera toujours sur le dé modifié par les bonus et implants.
 
-## Capacités
+## <a name='Capacits'></a>Capacités
 
 Les réussites critiques ont pour effets de multiplier les effets d'une compétences, que ce soit en terme de dégâts pour les compétences offensives, qu'en terme de bonus ou malus.
 
@@ -141,23 +160,25 @@ Dans le cas où votre personnage fait :
 
 Le calculs des dégâts des compétences offensives sont automatisés, vous n'avez donc pas besoin de vérifier le bonus multiplicateur. Cependant pour les compétences non- offensives, vous devrez calculer en fonction du multiplicateur.
 
-## Attaques normales
+## <a name='Attaquesnormales'></a>Attaques normales
 
--  Les Ultra-critiques d'attaque : Les dégâts sont multipliés par 1.8 et on outrepasse la défense par endurance de l'adversaire (et non pas le bouclier). 
+-  Les Ultra-critiques d'attaque : Les dégâts sont multipliés par 1.8, avec un bonus de 15%, et on outrepasse les défenses de son adversaires. 
+
+- Les réussite-critique d'attaque : Les dégâts sont multipliés par 1.4 avec un bonus de 10% et le bouclier est diminué de moitié. 
+
+## <a name='Dfensesnormales'></a>Défenses normales
 
 - Les Ultra-critique de défense : 
 
-    - Dans le cas d'une esquive, le personnage bénéficiera d'une contre-attaque avec un léger bonus, car il surprend son adversaire.
+    - Dans le cas d'une esquive, le personnage bénéficiera d'une contre-attaque avec un léger bonus (de 5%), car il surprend son adversaire.
     - Dans le cas d'une endurance, il absorbera tous les dégâts.
 
-- Les critiques de défense : Le personnage va absorber une majeure partie des dégâts. 
-
-- Les réussite-critique d'attaque : Les dégâts sont multipliés par 1.4, exactement comme dans le cas d'une compétence.
-
-A noter que lors d'une UC d'esquive, le combattant bénéficie d'une riposte avec un bonus de dégâts de 5%, en plus de ses bonus pré-existants. Les RC donnent droit à une riposte, sans bonus d'attaque.
+- Les critiques de défense : 
+    - En endurance, le personnage va absorber une majeure partie des dégâts. 
+    - Dans une esquive, le personnage esquivera et bénificiera d'une contre-attaque simple. 
 
 # Bonus
-## Les Capacités
+## <a name='LesCapacits'></a>Les Capacités
 
 Les capacités offrent des bonus d'attaque, mais leur utilisation est limité, que ce soit en terme de points d'action, que d'utilisation par tour. Ce sont donc des attaques très puissantes, ou avec des passifs avantageux.
 
@@ -168,48 +189,48 @@ Il existe trois types principaux :
 * <u> Les pouvoirs </u> : Les pouvoirs sont capacités ayant un bonus de 10%.
 * <u> Le champ "autre"</u> : Ce dernier n'a aucun bonus, mais permet d'utiliser les armes et de bénéficier des légères différences en termes de bonus de coup-critique.
 
-##  Les armes blanches
+## <a name='Lesarmesblanches'></a> Les armes blanches
 
 Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de créer une arme "spécifique" avec le champ autre.
 
 
 A savoir aussi que le programme bloque aussi au corps à corps pour la partie "aucun" qui correspond en réalité à un simple coup de poing d'une personne sans aucun équipement (donc, sans gants de boxe, par exemple).
 
-### Poigne - Agilité
+### <a name='Poigne-Agilit'></a>Poigne - Agilité
 
 - **Bonus** : 5%
 - Les poignes offrent deux attaques gratuite (sans coût de PA) un tour sur deux, cumulable s'il y a plusieurs poignes (au maximum de deux). Ainsi, il est possibles de donner 6 à 8 coups pour 4 PA.
 Les poignes regroupent toutes les armes de "close-combat" : Couteau de combat, poing américain, gants de boxe....
 
-### Epée - Force
+### <a name='Epe-Force'></a>Epée - Force
 
 - **Bonus** : 10%
 
-###  Masse - Force
+### <a name='Masse-Force'></a> Masse - Force
 
 - **Bonus** : 15%
 - **Pré-requis** : 4 en force
 - **Malus** : Bonus d'agilité de -2 pour l'adversaire.
 
-## Armes à distance
+## <a name='Armesdistance'></a>Armes à distance
 
-### Projectiles
+### <a name='Projectiles'></a>Projectiles
 
 - **Bonus** : 5 %
 - **Placement** : Rang 1 à 2
 > Exemple : Grenade, bombe, couteau...
 > A savoir que les grenades ont des bonus en plus à fixer manuellement.
 
-###  Arme à feu
+### <a name='Armefeu'></a> Arme à feu
 
-#### Pistolet
+#### <a name='Pistolet'></a>Pistolet
 
 - **Nombre de balles (ou charges)** : 8
 - **Bonus** : 8%
 - **Placement** : 1 à 2
 - **Malus de placement** : +2 Précision (rang 3)
 
-#### Fusil
+#### <a name='Fusil'></a>Fusil
 
 - **Nombre de balles (ou charges)** : 12
 - **Bonus** : 10%
@@ -217,7 +238,7 @@ Les poignes regroupent toutes les armes de "close-combat" : Couteau de combat, p
 - **Bonus de placement** : +5% (rang 1)
 - **Malus de placement** : +1 Précision (rang 1)
 
-#### Canon
+#### <a name='Canon'></a>Canon
 
 - **Bonus** : 20%
 - **Malus** : +2 en agilité
