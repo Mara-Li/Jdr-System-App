@@ -4,19 +4,7 @@ Les combats se déroulent au tour par tour, avec un lancé d'un dé 10 d'attaque
 
 Un tour est lorsque tous les combattants (ennemis compris) ont joué. Mais les cooldown ne s'actualise que durant le tour personnel du joueur et non pas le tour "général" du combat (comme dans la majorité des jeux tactiques, notamment dofus).
 
-# Résumé
-
--   <u>Lancer de dés d'attaque et de défense</u>
-    -   L'endurance permet d'encaisser les dégâts.
-    -   L'esquive permet de ne pas prendre de dégât. Elle est réussie si le dé est inférieur à l'attaque.
--   <u>Dés de 10 lié à votre caractéristiques</u>
-    -   Implant : Valeur seuil : strictement inférieure à votre caractéristique (7 pour 8, 6 pour 7, etc...).
-    -   Pas d'implant : Seuil : caractéristique
--   <u>Meilleur jet : 0, pire jet : 10</u>
-    -   Un 0 correspond à un "Ultra critique" et un 1 à une "réussite critique".
-    -   Seul un implant (ou remise) permet d'avoir de faire un URC.
-
-# La défense
+<h1 id="la-d-fense"> La défense </h1>
 
 La caractéristique que vous lancez pour votre défense est soit un dé d'endurance ou d'agilité.
 
@@ -39,7 +27,7 @@ Vous devez OBLIGATOIREMENT lancer votre dé avant de déterminer votre action. M
 
 Dans le cas où il y aurait un 1 VS plusieurs, la personne en sous nombre doit lancer un dé de défense pour chaque attaque reçu et peut attaquer un certain nombre de personnage en fonction de son niveau.
 
-# Dégâts
+<h1 id="d-g-ts"> Dégâts </h1>
 
 Les dégâts sont déterminés en fonction de l'écart de dé entre l'attaquant et le défenseur dans le cas où le défenseur n'a pas réussi à esquiver l'attaque. Ainsi, plus la différence est haute, plus le défenseur perdra de PV. Il est à savoir que les dégâts sont calculés sur une base de 100 PV. Ainsi :
 
@@ -58,8 +46,11 @@ Les dégâts sont déterminés en fonction de l'écart de dé entre l'attaquant 
 Dans le cas où le défenseur aurait encaissé le coup (dé d'endurance), il perd moins de PV. La valeur de sa caractéristique est une valeur seuil, et plus le dés sera bas mieux le défenseur encaisse. Un score de 0 étant un UC, la personne encaisse tous les dégâts.
 
 > La valeur de la caractéristique détermine le montant maximum qu'il est possible d'encaisser.
+> Les dégâts finaux d'une attaque normale sont divisés par deux, dans des soucis d'équilibrage.
 
-# Bouclier
+Les armes et les capacités ont des bonus passifs qui augmentent les dégâts.
+
+<h1 id="bouclier">Bouclier</h1>
 
 Les boucliers protègent des dégâts. Dans les faits, cela fonctionne exactement comme un encaissement avec un dé d'endurance.
 
@@ -75,7 +66,7 @@ Cependant, les résistances sont fixes et liés soit à votre équipement, soit 
 
 Si votre personnage fait un ultra critique, ou si vous utilisez une capacité perforante, le bouclier est ignoré.
 
-# Cases et déplacement
+<h1 id="cases-et-d-placement"> Cases et déplacement </h1>
 
 Lors d'un début de combat, la pièce se sépare en trois rangs :
 
@@ -126,89 +117,110 @@ Il y a donc trois positions :
 
 
 
-# Effets des réussites critiques
+<h1 id="effets-des-r-ussites-critiques"> Effets des réussites critiques</h1>
 
-## Capacités
+Les deux sont le résultat d'un dé naturel égal à 1, mais :
+
+- Une personne bénéficiant d'un bonus de dé (remise) aura toujours un ultra critique.
+- Une personne sans aucun bonus aura une réussite critique.
+
+Notons que les résultats des attaques se fera toujours sur le dé modifié par les bonus et implants. Il est possible de choisir si le résultat naturel a été une réussite normale, un critique ou un ultra critique, grâce au menu déroulant affilié aux réussites. 
+
+<h2 id="capacit-s">Capacités</h2>
 
 Les réussites critiques ont pour effets de multiplier les effets d'une compétences, que ce soit en terme de dégâts pour les compétences offensives, qu'en terme de bonus ou malus.
 
 Dans le cas où votre personnage fait :
 
--   Une réussite critique : Son bonus sera multiplié par 1,4.
--   Un Ultra critique : Son bonus sera multiplié par 1.8.
-    Lorsque l'on multiplie, on ne prend pas en compte le "pourcentage" (la division par 100).
+-   Une réussite critique : Les dégâts multipliés par 1,4, et bénéficie d'un bonus de 15%. De plus, la défense par endurance est ignorée. 
+    - Pour un burst : L'armure est divisée par 2.
+    - Pour les autres : L'armure est annulée. 
+-   Un Ultra critique : Son bonus sera multiplié par 1.8 et bénéfice d'un bonus de 10%.
+    - Pour un burst : L'armure est divisée par 1.5.
+    - Pour les autres : L'armure est annulée. 
 
-Le calculs des dégâts des compétences offensives sont automatisés, vous n'avez donc pas besoin de vérifier le bonus multiplicateur. Cependant pour les compétences non- offensives, vous devrez calculer en fonction du multiplicateur.
+Le calculs des dégâts des compétences offensives sont automatisés, vous n'avez donc pas besoin de vérifier le bonus multiplicateur. Cependant pour les compétences non- offensives, vous devrez le calculer.
 
-## Attaques normales
+<h2 id="attaques-normales">Attaques normales</h2>
 
-A savoir que seuls les implants permettent d'atteindre le score de 0.
+-  Les Ultra-critiques d'attaque : Les dégâts sont multipliés par 1.8, avec un bonus de 15%, et on outrepasse les défenses de son adversaires. 
 
-- <u>Les ultra critiques d'attaque :</u> Les dégâts sont multipliés par 1.8 et on outrepasse la défense de l'adversaire.
+- Les réussite-critique d'attaque : Les dégâts sont multipliés par 1.4 avec un bonus de 10% et le bouclier est diminué de moitié. 
+
+<h2 id="defense-normales">Défenses normales</h2>
+
+- Les Ultra-critique : 
+
+    - Dans le cas d'une esquive, le personnage bénéficiera d'une contre-attaque avec un léger bonus (de 5%), car il surprend son adversaire.
+    - Dans le cas d'une endurance, il absorbera tous les dégâts.
+
+- Les critiques : 
+    - En endurance, le personnage va absorber une majeure partie des dégâts. 
+    - Dans une esquive, le personnage esquivera et bénificiera d'une contre-attaque simple. 
+
+<h1 id="bonus" Bonus</h1>
+
+<h2 id="capacit-s"> Les Capacités</h2>
+
+Les capacités offrent des bonus d'attaque, mais leur utilisation est limité, que ce soit en terme de points d'action, que d'utilisation par tour. Ce sont donc des attaques très puissantes, ou avec des passifs avantageux.
 
 
-
-- <u>Les ultra critique de défense :</u> Lorsqu'un combattant a un score de dés d'endurance ou d'agilité égal à 0, il annule automatiquement l'attaque de son adversaire, quelque soit la valeur de son dé, sauf dans le cas où l'autre attaquant aura un 0 en endurance. Dans ce cas, le défenseur perdra 9 PV. A noter que lors d'un UC d'esquive, le combattant bénéficie d'une riposte avec un bonus de dégâts de 5% (cumulable).
-
+Il existe trois types principaux :
 
 
--   <u>Les réussites critiques d'attaque :</u>  Lorsqu'un combattant a un score de dés égal à 1, le score est multiplié par 1.4, exactement comme dans le cas d'une compétence.
+- <u> Les Burst</u> : Ce sont de puissantes attaques, mais qui ont du mal à passer à travers les boucliers. Ainsi, elles ont un bonus de 40% mais les boucliers impactent grandement les dégâts finaux. 
+- <u> Les perforants </u> : Ce sont des attaques moins puissante qu'un burst, mais traversant toutes les défenses. Ainsi, les dégâts seront les mêmes qu'une attaque à 20% sans bouclier.
+- <u> Les pouvoirs </u> : Les pouvoirs sont capacités ayant un bonus de 10%.
+- <u> Le champ "autre"</u> : Ce dernier n'a aucun bonus, mais permet d'utiliser les armes et de bénéficier des légères différences en termes de bonus de coup-critique.
 
-
-
-* <u>Les réussite critiques de défense :</u> Il n'y a pas d'effets particulier pour l'endurance, mais en plus de la réussite de l'esquive, le défenseur bénéficie d'une riposte (sans bonus).
-
-# Armes
-
-##  Les armes blanches
+<h2 id=les-armes-blanches>Les armes blanches</h2>
 
 Le programme bloque donc automatiquement sur cette valeur. Il est cependant possible de créer une arme "spécifique" avec le champ autre.
 
 
-
 A savoir aussi que le programme bloque aussi au corps à corps pour la partie "aucun" qui correspond en réalité à un simple coup de poing d'une personne sans aucun équipement (donc, sans gants de boxe, par exemple).
 
-## Poigne - Agilité
+<h3 id="poigne-agilit-">Poigne - Agilité</h3>
 
 - **Bonus** : 5%
-- Utilisation gratuite un tour sur deux. Si double poigne, il est possible d'activer le bonus en même temps et de donner 4 coups un tour sur deux.
+- Les poignes offrent deux attaques gratuite (sans coût de PA) un tour sur deux, cumulable s'il y a plusieurs poignes (au maximum de deux). Ainsi, il est possibles de donner 6 à 8 coups pour 4 PA.
+Les poignes regroupent toutes les armes de "close-combat" : Couteau de combat, poing américain, gants de boxe....
 
-### Epée - Force
+<h3 id="ep-e-force">Epée - Force</h3>
 
 - **Bonus** : 10%
 
-###  Masse - Force
+<h3 id="masse-force">Masse - Force</h3>
 
 - **Bonus** : 15%
 - **Pré-requis** : 4 en force
+- **Malus** : Bonus d'agilité de -2 pour l'adversaire.
 
-## Armes à distance
-
-### Projectiles
+<h2 id="armes-distance">Armes à distance</h2>
+<h3 id="projectiles">Projectiles</h3>
 
 - **Bonus** : 5 %
 - **Placement** : Rang 1 à 2
 > Exemple : Grenade, bombe, couteau...
 > A savoir que les grenades ont des bonus en plus à fixer manuellement.
 
-###  Arme à feu
-
-#### Pistolet
+<h3 id="arme-feu">Arme à feu</h3>
+<h4 id="pistolet">Pistolet</h4>
 
 - **Nombre de balles (ou charges)** : 8
 - **Bonus** : 8%
 - **Placement** : 1 à 2
 - **Malus de placement** : +2 Précision (rang 3)
 
-#### Fusil
+<h4 id="fusil">Fusil</h4>
 
-- **Nombre de balles (ou charges) ** : 12
+- **Nombre de balles (ou charges)** : 12
 - **Bonus** : 10%
 - **Placement** : Rang 2 à 3
 - **Bonus de placement** : +5% (rang 1)
 - **Malus de placement** : +1 Précision (rang 1)
 
-#### Canon
+<h4 id="canon">Canon</h4>
 
 - **Bonus** : 20%
 - **Malus** : +2 en agilité
@@ -222,14 +234,15 @@ A savoir aussi que le programme bloque aussi au corps à corps pour la partie "a
 
 > Les artilleurs n'ont pas de malus d'agilités et n'ont pas besoin d'avoir 4 en force pour pouvoir porter ses armes.
 
-# Calculs
+<h1 id="calculs">Calculs</h1>
 
-Après avoir vérifié la table, on récupère les dégâts. Ainsi $$d=dégâts\hspace{10px}de\hspace{10px} la\hspace{10px} table + bonus$$
+Après avoir vérifié la table, on récupère les dégâts. Ainsi <p class="math"> $$d=dégâts\hspace{10px}de\hspace{10px} la\hspace{10px} table + bonus$$</p>
 
-* **PV perdus** : $$d = d * 100$$
+* **PV perdus** : <p class="math">$$d=d*100$$</p>
 
-* **Bouclier :** $$d * (1-bouclier)$$
+* **Bouclier :** <p class="math">$$d * (1-bouclier)$$</p>
 
-* **Endurance et dégâts finaux** : $$finaux = bouclier * \frac{1-[10*(1+(endurance-défense))]}{100}$$
+* **Endurance et dégâts finaux** : <p class="math">$$finaux = bouclier * \frac{1-[10*(1+(endurance-défense))]}{100}$$</p>
+> Les dégâts finaux sont divisés par 2 dans le cas d'une attaque normale, afin d'équilibrer par rapport aux système de PA.
 
-* **PV restants : ** $$PV\hspace{10px}max - finaux$$
+* **PV restants :** <p class="math">$$PV\hspace{10px}max - finaux$$</p>

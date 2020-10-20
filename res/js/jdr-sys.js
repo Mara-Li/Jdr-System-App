@@ -701,7 +701,7 @@ function degat_critique_capa(bonus, atq, defe, shield, endu) {
 	if (crit == 1) { //Dégât critique
 		if (type_capa == 0) { //burst
 			shield = roundir(shield/1.5);
-		} else if (type_capa == 3) {
+		} else if ((type_capa == 3)||(type_capa==2)) {
 			shield=roundir(shield/2);
 		}
 		d= roundir(calculate_degat(bonus, atq, defe))
@@ -712,7 +712,7 @@ function degat_critique_capa(bonus, atq, defe, shield, endu) {
 		d=d*1.8+0.15;
 		if (type_capa == 0) { //burst
 			shield = roundir(shield/2);
-		} else if (type_capa == 3) {
+		} else if ((type_capa == 3)||(type_capa==2)) {
 			shield=0;
 		}
 	} else if (crit == 0){

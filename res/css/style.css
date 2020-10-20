@@ -64,6 +64,10 @@
 	.titre-card {
 		flex-basis: 100%;
 	}
+
+	#capacite_type {
+    margin-left: 10%;
+}
 }
 
 @media only screen and (min-width: 1101px) {
@@ -213,6 +217,10 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-o-inner-
 	margin: 0;
 }
 
+input[type="number"] {
+	text-indent:5%;
+}
+
 input[type=number]:disabled {
 	border: 0px;
 	background-size: 7px 5px;
@@ -273,7 +281,7 @@ label[for="des_attaque"], label[for=des_defense] {
 }
 
 label[for="capacite"] {
-	width: calc(35% - 20px);
+	width: 25%;
 	display:inline-block;
 }
 
@@ -415,15 +423,18 @@ select {
 
 #des_def {
 	margin-right:10px;
-  max-width : 50%;
+	max-width : 50%;
+	width: 25%;
 }
 
 #des_atq {
-  max-width: 50%;
+	max-width: 50%;
+	width: 25%;
 } 
 
 #critique {
-  margin-right: 5%;
+	margin-right: 5%;
+	width: calc(25% + 5px);
 }
 #res_pv, #res_deg {
 	font-family: 'Pangolin', cursive;
