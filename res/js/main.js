@@ -166,8 +166,6 @@ function def_toggle() {
 	}
 }
 
-
-
 function formatNumber(num) {
 	if (num < 10) {
 		return "0" + num.toString();
