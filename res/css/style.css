@@ -58,7 +58,7 @@
 
 	#esquive_stats, #endu_stats {
 		padding-left: 10%;
-		display: ruby-base-container;
+		display: inline-block;
 		margin-left:25%;
 	}
 
