@@ -464,6 +464,12 @@ select {
 	transform: translateY(4px);
 }
 
+#critique {
+	vertical-align: inline-block;
+	margin-left: 15%;
+	margin-right:15%;
+}
+
 #capacite_type, #arme {
 	vertical-align: baseline;
 }
