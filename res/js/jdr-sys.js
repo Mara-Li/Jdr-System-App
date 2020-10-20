@@ -474,7 +474,7 @@ function degat_normaux() {
 				endu_de = 10;
 			}
 	}
-	[d, shield, endu_val] = degat_critique_capa (bonus, atq, defe, shield, endu_val);
+	[d, shield, endu_val] = degat_critique (bonus, atq, defe, shield, endu_val);
 	finaux = degat_finaux(endu_de, endu_val, pv, d, shield);
 	finaux= Math.trunc(finaux/2)
 	max = finaux;
@@ -495,11 +495,11 @@ function degat_critique(bonus, atq, defe, shield, endu) {
 		shield= roundir(shield/2);
 		d= roundir(calculate_degat(bonus, atq, defe))
 		d=d*1.4+0.1;
-	} else if (crit ==2) { //ultra
+	} else if (crit == 2) { //ultra
 		d=roundir(calculate_degat(bonus, atq, defe));
 		d=d*1.8+0.15;
 		endu=0;
-	} else if (crit == 0){
+	} else if (crit == 0) {
 		d = roundir(calculate_degat(bonus, atq, defe));
 	}
 	if (defe == 0) {
@@ -539,16 +539,10 @@ function degat_type() {
 
 	switch (type_capa) {
 		case 0: //burst
-			if (shield != 0) {
-				bonus_type = 40 ;
-				bonus = (bonus_type + bonus) / 100;
-				[d, shield, endu_val] = degat_critique_capa (bonus, atq, defe, shield, endu_val);
-			} else {
-				bonus_type = 40 ;
-				bonus = ((bonus + bonus_type) / 100);
-				[d, shield, endu_val] = degat_critique_capa (bonus, atq, defe, shield, endu_val);
-			}
-			break;
+		  bonus_type = 40 ;
+		  bonus = (bonus_type + bonus) / 100;
+		  [d, shield, endu_val] = degat_critique_capa (bonus, atq, defe, shield, endu_val);
+		break;
 
 		case 1: //Perforant
 			bonus_type = 20 ;
@@ -556,30 +550,29 @@ function degat_type() {
 			endu_val = 0;
 			shield = 0;
 			[d, shield, endu_val] = degat_critique_capa (bonus, atq, defe, shield, endu_val);
-			break;
+		break;
 
 		case 2: //Autre
-		if (isNaN(bonus)) {
+		  if (isNaN(bonus)) {
 	 				bonus = 0;
 	 			}
-	 			bonus = choix_bonus();
-	 			bonus = (bonus / 100);
-	 			endu_val = parseInt(elem_inputs.endurance.value); //récupérer la valeur du champ d'endurance
+	 		bonus = choix_bonus();
+	 		bonus = (bonus / 100);
+	 		endu_val = parseInt(elem_inputs.endurance.value); //récupérer la valeur du champ d'endurance
 	 			shield = parseInt(elem_inputs.bouclier.value);
-				[d, shield, endu_val] = degat_critique_capa (bonus, atq, defe, shield, endu_val);
-	 			break;
+        [d, shield, endu_val] = degat_critique_capa (bonus, atq, defe, shield, endu_val);
+	 	  break;
 
 		case 3: //Pouvoir
 			bonus_type = 10 ;
 			bonus = ((bonus_type + bonus) / 100);
-			endu_val = parseInt(elem_inputs.endurance.value); //récupérer la valeur du champ d'endurance
+			endu_val = parseInt(elem_inputs.endurance.value); 
 	 		shield = parseInt(elem_inputs.bouclier.value);
-			[d, shield, endu_val] = degat_critique_capa (bonus, atq, defe, shield, endu_val);
-			console.log(shield)
-			console.log(endu_val)
+      [d, shield, endu_val] = degat_critique_capa (bonus, atq, defe, shield, endu_val);
 			break;
 	}
 	finaux = degat_finaux(endu_de, endu_val, pv, d, shield);
+  finaux= Math.trunc(finaux/2)
 	max = finaux;
 	if ((pv >= 100) && (pv < 200)) {
 		max = Math.trunc((pv)/2);
@@ -669,17 +662,16 @@ function degat_finaux(endu_de, endu_val, pv, d, shield) {
 function calculate_degat(bonus, atq, defe) {
 	var d;
 	d = Math.abs(atq - defe);
+  console.log(d)
 	switch (d) {
 		case 0:
 			d = (0.05 + bonus);
 			break;
 		case 1:
-			d = (0.10 + bonus);
-			break;
 		case 2:
 			d = (0.10 + bonus);
 			break;
-		case 3: //En cas de 3 ou de 4, faire d = 0.2 + bonus
+		case 3:
 		case 4:
 			d = (0.2 + bonus);
 			break;
@@ -695,17 +687,17 @@ function calculate_degat(bonus, atq, defe) {
 			d = (0.5 + bonus);
 			break;
 	}
-	if ((atq==10)||(atq==9))
-	{
+  console.log(roundir(d));
+	if ((atq==10)||(atq==9)||(defe==0)){
 		d=0;
 	}
 	return roundir (d);
 }
 
-function degat_critique_capa (bonus, atq, defe, shield, endu) {
+function degat_critique_capa(bonus, atq, defe, shield, endu) {
 	var d;
 	var crit = parseInt(elem_inputs.critique.value);
-	var type_capa = parseInt(elem_inputs.capacite_type.value); //Valeur de la spinbox dans capacité ["Burst", "Autre", "Perforante"]
+	var type_capa = parseInt(elem_inputs.capacite_type.value);
 	if (crit == 1) { //Dégât critique
 		if (type_capa == 0) { //burst
 			shield = roundir(shield/1.5);
@@ -725,9 +717,6 @@ function degat_critique_capa (bonus, atq, defe, shield, endu) {
 		}
 	} else if (crit == 0){
 		d = roundir(calculate_degat(bonus, atq, defe));
-	}
-	if (defe == 0) {
-		d = 0;
 	}
 	return [d, shield, endu];
 }

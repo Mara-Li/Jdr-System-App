@@ -68,7 +68,7 @@ window.onload = function() {
 }
 
 function capa_arme_toggle(elem) {
-	if (parseInt(elem.value) == 0 || parseInt(elem.value) == 1) {
+	if (parseInt(elem.value) == 0 || parseInt(elem.value) == 1 || parseInt(elem.value) == 3){
 		elem_inputs.arme.disabled = true;
 		elem_inputs.arme.value = 9;
 		bonus_toggle()
@@ -165,8 +165,6 @@ function def_toggle() {
 		elem_inputs.agi.onchange();
 	}
 }
-
-
 
 function formatNumber(num) {
 	if (num < 10) {

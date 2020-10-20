@@ -56,8 +56,9 @@
 		margin-right: 1%;
 	}
 
-	#esquive_stats {
+	#esquive_stats, #endu_stats {
 		padding-left: 10%;
+    display: inline-block;
 	}
 
 	.titre-card {
@@ -414,8 +415,16 @@ select {
 
 #des_def {
 	margin-right:10px;
+  max-width : 50%;
 }
 
+#des_atq {
+  max-width: 50%;
+} 
+
+#critique {
+  margin-right: 5%;
+}
 #res_pv, #res_deg {
 	font-family: 'Pangolin', cursive;
 	display: inline-block;
@@ -464,12 +473,6 @@ select {
 	transform: translateY(4px);
 }
 
-#critique {
-	vertical-align: inline-block;
-	margin-left: 15%;
-	margin-right:15%;
-}
-
 #capacite_type, #arme {
 	vertical-align: baseline;
 }
@@ -477,3 +480,7 @@ select {
 #endu_stats, #esquive_stats {
 	display:inline-block;
 }
+
+#pv_reste:invalid{
+	box-shadow: none;
+  }
