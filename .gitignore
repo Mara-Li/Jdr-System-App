@@ -133,9 +133,5 @@ test/
 log.txt
 *.log
 old_logo.ico
-<<<<<<< HEAD
 
 .history/
-=======
-*.history
->>>>>>> master

@@ -1,25 +1,3 @@
-<!-- vscode-markdown-toc -->
-* [Capacités](#Capacits)
-* [Attaques normales](#Attaquesnormales)
-* [Défenses normales](#Dfensesnormales)
-* [Les Capacités](#LesCapacits)
-* [ Les armes blanches](#Lesarmesblanches)
-	* [Poigne - Agilité](#Poigne-Agilit)
-	* [Epée - Force](#Epe-Force)
-	* [ Masse - Force](#Masse-Force)
-* [Armes à distance](#Armesdistance)
-	* [Projectiles](#Projectiles)
-	* [ Arme à feu](#Armefeu)
-		* [Pistolet](#Pistolet)
-		* [Fusil](#Fusil)
-		* [Canon](#Canon)
-
-<!-- vscode-markdown-toc-config
-	numbering=false
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc -->
-
 Avant de rentrer dans le vif du sujet, je dois vous parler du système de combat. Tout d'abord, il faut savoir que tout est automatisé, vous n'avez pas à calculer vos dégâts, je m'occupe de tout.
 
 Les combats se déroulent au tour par tour, avec un lancé d'un dé 10 d'attaque et de défense.
@@ -186,10 +164,6 @@ Le calculs des dégâts des compétences offensives sont automatisés, vous n'av
 
 Les capacités offrent des bonus d'attaque, mais leur utilisation est limité, que ce soit en terme de points d'action, que d'utilisation par tour. Ce sont donc des attaques très puissantes, ou avec des passifs avantageux.
 
-* <u>Les Burst</u> : Ce sont de puissantes attaques, mais qui ont du mal à passer à travers les boucliers. Ainsi, elles ont un bonus de 40% mais les boucliers impactent grandement les dégâts finaux. 
-* <u> Les perforants </u> : Ce sont des attaques moins puissante qu'un burst, mais traversant toutes les défenses. Ainsi, les dégâts seront les mêmes qu'une attaque à 20% sans bouclier.
-* <u> Les pouvoirs </u> : Les pouvoirs sont capacités ayant un bonus de 10%.
-* <u> Le champ "autre"</u> : Ce dernier n'a aucun bonus, mais permet d'utiliser les armes et de bénéficier des légères différences en termes de bonus de coup-critique.
 
 Il existe trois types principaux :
 

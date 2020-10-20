@@ -181,7 +181,7 @@ button {
 div#readme {
 	border: 0;
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: scroll;
 }
 
 p {
@@ -527,7 +527,6 @@ div#sidenav {
 .math {
 	font-size: 100%;
 }
-
 
 /*****
 * ID *
