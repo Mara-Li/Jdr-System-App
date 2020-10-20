@@ -323,6 +323,9 @@ label[for="des_def"], label[for="des_atq"], label[for="crit"] {
 	width:35%;
 	float:left;
 }
+label[for="crit"] {
+	margin-top: 2%;
+}
 
 p {
 	margin: auto;
