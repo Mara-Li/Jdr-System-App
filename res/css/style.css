@@ -34,6 +34,7 @@
 
 	input[type="number"] {
 		width: 100px;
+		max-width: 20%;
 		border: 1px solid;
 		-moz-appearance: none;
 	}
@@ -69,9 +70,11 @@
 	}
 	#des_def, #des_atq {
 		width:45%;
+		max-width: 100%;
 	}
 	#critique {
 		width: 45%;
+		max-width: 100%;
 	}
 }
 
