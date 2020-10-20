@@ -58,7 +58,8 @@
 
 	#esquive_stats, #endu_stats {
 		padding-left: 10%;
-    display: inline-block;
+		display: ruby-base-container;
+		margin-left:25%;
 	}
 
 	.titre-card {
@@ -496,10 +497,6 @@ select {
 
 #capacite_type, #arme {
 	vertical-align: baseline;
-}
-
-#endu_stats, #esquive_stats {
-	display:inline-block;
 }
 
 #pv_reste:invalid{
