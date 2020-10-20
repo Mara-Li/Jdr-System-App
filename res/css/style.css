@@ -67,7 +67,12 @@
 	#capacite_type {
     margin-left: 10%;
 	}
-
+	#des_def, #des_atq {
+		width:45%;
+	}
+	#critique {
+		width: 45%;
+	}
 }
 
 @media only screen and (min-width: 1101px) {
