@@ -287,7 +287,7 @@ label[for="cac"]{
 	margin-right:10%;
 }
 
-label[for="des_def"], label[for="des_atq"] {
+label[for="des_def"], label[for="des_atq"], label[for="crit"] {
 	display:block;
 	width:35%;
 	float:left;
