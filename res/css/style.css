@@ -75,6 +75,11 @@
 	#critique {
 		width: 50%;
 	}
+  label[for="crit"] {
+	margin-top: 3%;
+  display:inline-block;
+}
+  
 }
 
 @media only screen and (min-width: 1101px) {
@@ -321,9 +326,6 @@ label[for="des_def"], label[for="des_atq"], label[for="crit"] {
 	display:block;
 	width:35%;
 	float:left;
-}
-label[for="crit"] {
-	margin-top: 2%;
 }
 
 p {
