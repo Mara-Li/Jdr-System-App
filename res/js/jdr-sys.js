@@ -517,14 +517,15 @@ function degat_type() {
 				bonus_type = 40 ;
 				bonus = (bonus_type + bonus) / 100;
 				d = degat_capacite (bonus, atq, defe);
-				console.log(d);
 			} else {
 				bonus_type = 40 ;
 				bonus = ((bonus + bonus_type) / 100);
 				d = degat_capacite (bonus, atq, defe);
-				console.log(d);
-				console.log(atq);
-				console.log(defe);
+				if (atq == 0) {
+						shield = roundir (shield /2)
+					} else if (atq == 1) {
+						shield = roundir (shield /1.5)
+					}
 			}
 			break;
 
@@ -551,6 +552,11 @@ function degat_type() {
 			bonus_type = 10 ;
 			bonus = ((bonus_type + bonus) / 100);
 			d = degat_capacite (bonus, atq, defe);
+			if (atq == 0) {
+				shield = 0
+			} else if (atq == 1) {
+				shield = roundir (shield /2)
+			}
 			break;
 	}
 	finaux = degat_finaux(endu_de, endu_val, pv, d, shield);
@@ -674,19 +680,17 @@ function degat_capacite (bonus, atq, defe) {
 	let d;
 	if (atq == 0) {
 		d = roundir(calculate_degat(bonus, atq, defe));
-		d = d * 1.8
+		d = d * 1.8 + 0.15
 		endu_val = 0;
+
 	} else if (defe == 0) {
 		d = 0;
 	} else if (atq == 1) {
 		d = roundir(calculate_degat(bonus, atq, defe));
-		d = d * 1.4
+		d = d * 1.4 + 0.10
 	} else {
 		d = roundir(calculate_degat(bonus, atq, defe));
-		console.log ("coucou")
 	}
-	console.log(bonus, atq, defe)
-	console.log (d)
 	return d;
 }
 
