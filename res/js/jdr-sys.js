@@ -572,6 +572,8 @@ function degat_type() {
 		case 3: //Pouvoir
 			bonus_type = 10 ;
 			bonus = ((bonus_type + bonus) / 100);
+			endu_val = parseInt(elem_inputs.endurance.value); //récupérer la valeur du champ d'endurance
+	 		shield = parseInt(elem_inputs.bouclier.value);
 			[d, shield, endu_val] = degat_critique_capa (bonus, atq, defe, shield, endu_val);
 			console.log(shield)
 			console.log(endu_val)
@@ -642,9 +644,12 @@ function choix_bonus() {
 }
 
 function degat_finaux(endu_de, endu_val, pv, d, shield) {
+	console.log(d)
 	var finaux;
 	var d = Math.abs(Math.trunc(d * 100));
+	console.log(d)
 	var bouclier = Math.abs(Math.trunc(d * (1 - shield))); //au besoin, placé des int pour convertir les valeurs
+	console.log(bouclier)
 	if (endu_de > endu_val) {
 		finaux = bouclier;
 		console.log(finaux)
