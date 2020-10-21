@@ -76,6 +76,7 @@
 	#critique {
 		width: 50%;
 	}
+  
   label[for="crit"] {
 	margin-top: 3%;
   display:inline-block;
@@ -176,8 +177,14 @@
 
 #critique {
 	margin-right: 5%;
-	width: calc(25% + 5px);
+	width: calc(25% + 20px);
 }
+
+#bonus {
+  width: 15%;
+  text-indent: 0;
+}
+
 
 }
 
